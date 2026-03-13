@@ -1,10 +1,101 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+US-005: Rewrite /negotiations/index.html to show groups with counts.
+Reads negotiations-mapping.json and rewrites negotiations/index.html
+to list all 24 threat-actor groups with transcript counts and links
+to each group's index page.
+"""
+
+import json
+import os
+import sys
+import argparse
+from pathlib import Path
+
+# Nice display names for each group slug
+GROUP_DISPLAY_NAMES = {
+    "akira": "Akira",
+    "avaddon": "Avaddon",
+    "avos": "AvosLocker",
+    "babuk": "Babuk",
+    "blackbasta": "BlackBasta",
+    "blackmatter": "BlackMatter",
+    "cloak": "Cloak",
+    "conti": "Conti",
+    "darkside": "DarkSide",
+    "dragonforce": "DragonForce",
+    "fog": "Fog",
+    "hive": "Hive",
+    "hunters-international": "Hunters International",
+    "lockbit3-0": "LockBit 3.0",
+    "mallox": "Mallox",
+    "mount-locker": "Mount Locker",
+    "noescape": "NoEscape",
+    "pear": "Pear",
+    "qilin": "Qilin",
+    "ransomhub": "RansomHub",
+    "ranzy": "Ranzy",
+    "revil": "REvil",
+    "runsomewares": "RunSomeWares",
+    "trinity": "Trinity",
+}
+
+
+def load_mapping(repo_root: Path) -> dict:
+    mapping_path = repo_root / "negotiations-mapping.json"
+    if not mapping_path.exists():
+        raise FileNotFoundError(f"negotiations-mapping.json not found at {mapping_path}")
+    with open(mapping_path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def build_groups(mapping: dict) -> list:
+    """Return list of (slug, display_name, count) sorted by count desc, then alpha."""
+    groups = []
+    for slug, files in mapping.items():
+        display = GROUP_DISPLAY_NAMES.get(slug, slug.replace("-", " ").title())
+        groups.append((slug, display, len(files)))
+    # Sort by count descending, then alphabetically
+    groups.sort(key=lambda x: (-x[2], x[1].lower()))
+    return groups
+
+
+def build_hasPart_json(groups: list) -> str:
+    """Build JSON-LD hasPart entries for each group index."""
+    parts = []
+    for slug, display, count in groups:
+        parts.append(
+            f'      {{"@type":"CollectionPage","name":"{display} Negotiation Transcripts",'
+            f'"url":"https://binary-response.com/negotiations/{slug}/"}}'
+        )
+    return ",\n".join(parts)
+
+
+def generate_group_rows(groups: list) -> str:
+    rows = []
+    for slug, display, count in groups:
+        label = "transcript" if count == 1 else "transcripts"
+        rows.append(
+            f'<tr>\n'
+            f'<td><a href="{slug}/">{display}</a></td>\n'
+            f'<td style="font-family:var(--mono);text-align:right">{count}</td>\n'
+            f'<td style="color:var(--text-secondary)">{label}</td>\n'
+            f'</tr>'
+        )
+    return "\n".join(rows)
+
+
+def generate_index_html(groups: list, total: int) -> str:
+    hasPart = build_hasPart_json(groups)
+    group_rows = generate_group_rows(groups)
+
+    return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Ransomware Negotiation Transcripts — 235 Real-World Negotiations Across 24 Groups | Binary Response</title>
-<meta name="description" content="235 real-world ransomware negotiation transcripts across 24 groups, browseable by threat actor. The largest public archive. Study tactics, see what professional negotiation achieves.">
+<title>Ransomware Negotiation Transcripts — {total} Real-World Negotiations Across 24 Groups | Binary Response</title>
+<meta name="description" content="{total} real-world ransomware negotiation transcripts across 24 groups, browseable by threat actor. The largest public archive. Study tactics, see what professional negotiation achieves.">
 <link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
 <link rel="icon" type="image/png" href="../img/logo-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +104,10 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
 <link rel="stylesheet" href="../css/style.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
 <link rel="canonical" href="https://binary-response.com/negotiations/">
-<meta property="og:title" content="Ransomware Negotiation Transcripts — 235 Real-World Negotiations Across 24 Groups">
-<meta property="og:description" content="235 real-world ransomware negotiation transcripts across 24 groups. The largest public archive of ransomware negotiations.">
+<meta property="og:title" content="Ransomware Negotiation Transcripts — {total} Real-World Negotiations Across 24 Groups">
+<meta property="og:description" content="{total} real-world ransomware negotiation transcripts across 24 groups. The largest public archive of ransomware negotiations.">
 <meta property="og:url" content="https://binary-response.com/negotiations/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
@@ -24,51 +115,28 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
 <script type="application/ld+json">
-{
+{{
   "@context": "https://schema.org",
   "@graph": [
-    {
+    {{
       "@type": "CollectionPage",
       "name": "Ransomware Negotiation Transcripts",
-      "description": "235 real-world ransomware negotiation transcripts across 24 groups.",
+      "description": "{total} real-world ransomware negotiation transcripts across 24 groups.",
       "url": "https://binary-response.com/negotiations/",
-      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {{"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"}},
       "hasPart": [
-      {"@type":"CollectionPage","name":"Akira Negotiation Transcripts","url":"https://binary-response.com/negotiations/akira/"},
-      {"@type":"CollectionPage","name":"LockBit 3.0 Negotiation Transcripts","url":"https://binary-response.com/negotiations/lockbit3-0/"},
-      {"@type":"CollectionPage","name":"Conti Negotiation Transcripts","url":"https://binary-response.com/negotiations/conti/"},
-      {"@type":"CollectionPage","name":"REvil Negotiation Transcripts","url":"https://binary-response.com/negotiations/revil/"},
-      {"@type":"CollectionPage","name":"DragonForce Negotiation Transcripts","url":"https://binary-response.com/negotiations/dragonforce/"},
-      {"@type":"CollectionPage","name":"Trinity Negotiation Transcripts","url":"https://binary-response.com/negotiations/trinity/"},
-      {"@type":"CollectionPage","name":"Hive Negotiation Transcripts","url":"https://binary-response.com/negotiations/hive/"},
-      {"@type":"CollectionPage","name":"Avaddon Negotiation Transcripts","url":"https://binary-response.com/negotiations/avaddon/"},
-      {"@type":"CollectionPage","name":"Fog Negotiation Transcripts","url":"https://binary-response.com/negotiations/fog/"},
-      {"@type":"CollectionPage","name":"BlackBasta Negotiation Transcripts","url":"https://binary-response.com/negotiations/blackbasta/"},
-      {"@type":"CollectionPage","name":"DarkSide Negotiation Transcripts","url":"https://binary-response.com/negotiations/darkside/"},
-      {"@type":"CollectionPage","name":"Mallox Negotiation Transcripts","url":"https://binary-response.com/negotiations/mallox/"},
-      {"@type":"CollectionPage","name":"Babuk Negotiation Transcripts","url":"https://binary-response.com/negotiations/babuk/"},
-      {"@type":"CollectionPage","name":"BlackMatter Negotiation Transcripts","url":"https://binary-response.com/negotiations/blackmatter/"},
-      {"@type":"CollectionPage","name":"Cloak Negotiation Transcripts","url":"https://binary-response.com/negotiations/cloak/"},
-      {"@type":"CollectionPage","name":"NoEscape Negotiation Transcripts","url":"https://binary-response.com/negotiations/noescape/"},
-      {"@type":"CollectionPage","name":"Qilin Negotiation Transcripts","url":"https://binary-response.com/negotiations/qilin/"},
-      {"@type":"CollectionPage","name":"Ranzy Negotiation Transcripts","url":"https://binary-response.com/negotiations/ranzy/"},
-      {"@type":"CollectionPage","name":"AvosLocker Negotiation Transcripts","url":"https://binary-response.com/negotiations/avos/"},
-      {"@type":"CollectionPage","name":"Hunters International Negotiation Transcripts","url":"https://binary-response.com/negotiations/hunters-international/"},
-      {"@type":"CollectionPage","name":"Mount Locker Negotiation Transcripts","url":"https://binary-response.com/negotiations/mount-locker/"},
-      {"@type":"CollectionPage","name":"Pear Negotiation Transcripts","url":"https://binary-response.com/negotiations/pear/"},
-      {"@type":"CollectionPage","name":"RansomHub Negotiation Transcripts","url":"https://binary-response.com/negotiations/ransomhub/"},
-      {"@type":"CollectionPage","name":"RunSomeWares Negotiation Transcripts","url":"https://binary-response.com/negotiations/runsomewares/"}
+{hasPart}
       ]
-    },
-    {
+    }},
+    {{
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"}
+        {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"}},
+        {{"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"}}
       ]
-    }
+    }}
   ]
-}
+}}
 </script>
 </head>
 <body>
@@ -96,10 +164,10 @@
 <div style="max-width:1100px;margin:0 auto">
 <span class="section-label">// Intelligence Resource</span>
 <h1 style="font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">Ransomware Negotiation <span style="color:var(--accent)">Transcripts</span></h1>
-<p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;max-width:700px">235 real-world ransomware negotiations — the largest public archive. Browse by threat actor group to study their tactics, communication patterns, and what professional negotiation achieves.</p>
+<p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;max-width:700px">{total} real-world ransomware negotiations — the largest public archive. Browse by threat actor group to study their tactics, communication patterns, and what professional negotiation achieves.</p>
 
 <div class="nego-stats-bar" style="margin-top:2rem">
-<div class="nego-stat"><span class="stat-value">235</span><span class="stat-label">Transcripts Published</span></div>
+<div class="nego-stat"><span class="stat-value">{total}</span><span class="stat-label">Transcripts Published</span></div>
 <div class="nego-stat"><span class="stat-value">24</span><span class="stat-label">Ransomware Groups</span></div>
 <div class="nego-stat"><span class="stat-value">47</span><span class="stat-label">Confirmed Payments</span></div>
 <div class="nego-stat"><span class="stat-value">63%</span><span class="stat-label">Avg Demand Reduction</span></div>
@@ -320,7 +388,7 @@
 <section class="content-section alt-bg"><div class="container" style="max-width:1100px">
 <span class="section-label">// Archive</span>
 <h2 class="section-title">Browse by Threat Actor</h2>
-<p style="color:var(--text-secondary);margin-bottom:2rem">235 transcripts across 24 ransomware and extortion groups. Select a group to see all available negotiations.</p>
+<p style="color:var(--text-secondary);margin-bottom:2rem">{total} transcripts across 24 ransomware and extortion groups. Select a group to see all available negotiations.</p>
 
 <div class="nego-table-wrap">
 <table class="nego-table" id="groupTable">
@@ -330,130 +398,11 @@
 <th></th>
 </tr></thead>
 <tbody>
-<tr>
-<td><a href="akira/">Akira</a></td>
-<td style="font-family:var(--mono);text-align:right">60</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="lockbit3-0/">LockBit 3.0</a></td>
-<td style="font-family:var(--mono);text-align:right">43</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="conti/">Conti</a></td>
-<td style="font-family:var(--mono);text-align:right">32</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="revil/">REvil</a></td>
-<td style="font-family:var(--mono);text-align:right">20</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="dragonforce/">DragonForce</a></td>
-<td style="font-family:var(--mono);text-align:right">14</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="trinity/">Trinity</a></td>
-<td style="font-family:var(--mono);text-align:right">14</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="hive/">Hive</a></td>
-<td style="font-family:var(--mono);text-align:right">8</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="avaddon/">Avaddon</a></td>
-<td style="font-family:var(--mono);text-align:right">7</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="fog/">Fog</a></td>
-<td style="font-family:var(--mono);text-align:right">6</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="blackbasta/">BlackBasta</a></td>
-<td style="font-family:var(--mono);text-align:right">5</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="darkside/">DarkSide</a></td>
-<td style="font-family:var(--mono);text-align:right">5</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="mallox/">Mallox</a></td>
-<td style="font-family:var(--mono);text-align:right">3</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="babuk/">Babuk</a></td>
-<td style="font-family:var(--mono);text-align:right">2</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="blackmatter/">BlackMatter</a></td>
-<td style="font-family:var(--mono);text-align:right">2</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="cloak/">Cloak</a></td>
-<td style="font-family:var(--mono);text-align:right">2</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="noescape/">NoEscape</a></td>
-<td style="font-family:var(--mono);text-align:right">2</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="qilin/">Qilin</a></td>
-<td style="font-family:var(--mono);text-align:right">2</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="ranzy/">Ranzy</a></td>
-<td style="font-family:var(--mono);text-align:right">2</td>
-<td style="color:var(--text-secondary)">transcripts</td>
-</tr>
-<tr>
-<td><a href="avos/">AvosLocker</a></td>
-<td style="font-family:var(--mono);text-align:right">1</td>
-<td style="color:var(--text-secondary)">transcript</td>
-</tr>
-<tr>
-<td><a href="hunters-international/">Hunters International</a></td>
-<td style="font-family:var(--mono);text-align:right">1</td>
-<td style="color:var(--text-secondary)">transcript</td>
-</tr>
-<tr>
-<td><a href="mount-locker/">Mount Locker</a></td>
-<td style="font-family:var(--mono);text-align:right">1</td>
-<td style="color:var(--text-secondary)">transcript</td>
-</tr>
-<tr>
-<td><a href="pear/">Pear</a></td>
-<td style="font-family:var(--mono);text-align:right">1</td>
-<td style="color:var(--text-secondary)">transcript</td>
-</tr>
-<tr>
-<td><a href="ransomhub/">RansomHub</a></td>
-<td style="font-family:var(--mono);text-align:right">1</td>
-<td style="color:var(--text-secondary)">transcript</td>
-</tr>
-<tr>
-<td><a href="runsomewares/">RunSomeWares</a></td>
-<td style="font-family:var(--mono);text-align:right">1</td>
-<td style="color:var(--text-secondary)">transcript</td>
-</tr>
+{group_rows}
 </tbody>
 </table>
 </div>
-<p style="font-size:0.8rem;color:var(--text-secondary);margin-top:1rem">235 transcripts total across 24 groups. Sorted by transcript count.</p>
+<p style="font-size:0.8rem;color:var(--text-secondary);margin-top:1rem">{total} transcripts total across 24 groups. Sorted by transcript count.</p>
 </div></section>
 
 <!-- Disclaimer -->
@@ -489,4 +438,44 @@ Any organisation wishing their information removed or updated should contact <a 
 <script src="../js/main.js"></script>
 <script src="/js/footer.js"></script>
 <script src="/js/nav.js"></script>
-</body></html>
+</body></html>"""
+
+
+def main(dry_run: bool = False, repo_root: Path = None) -> int:
+    if repo_root is None:
+        # Default: repo root is parent of scripts/
+        repo_root = Path(__file__).parent.parent
+
+    try:
+        mapping = load_mapping(repo_root)
+    except FileNotFoundError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+
+    groups = build_groups(mapping)
+    total = sum(c for _, _, c in groups)
+
+    if len(groups) != 24:
+        print(f"WARNING: expected 24 groups, got {len(groups)}", file=sys.stderr)
+
+    html = generate_index_html(groups, total)
+
+    output_path = repo_root / "negotiations" / "index.html"
+
+    if dry_run:
+        print(f"[dry-run] Would write {len(html)} bytes to {output_path}")
+        print(f"[dry-run] {len(groups)} groups, {total} total transcripts")
+        for slug, display, count in groups:
+            print(f"  {slug}: {display} ({count})")
+        return 0
+
+    output_path.write_text(html, encoding="utf-8")
+    print(f"Written {output_path} ({len(groups)} groups, {total} transcripts)")
+    return 0
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Rewrite negotiations/index.html with group listing")
+    parser.add_argument("--dry-run", action="store_true", help="Print what would be done without writing")
+    args = parser.parse_args()
+    sys.exit(main(dry_run=args.dry_run))
