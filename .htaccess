@@ -36,3 +36,265 @@ ErrorDocument 404 /404.html
 
 # Prevent directory listing
 Options -Indexes
+
+# BEGIN negotiations-redirects
+# akira
+Redirect 301 /negotiations/akira-20230529.html /negotiations/akira/akira-20230529.html
+Redirect 301 /negotiations/akira-20230606.html /negotiations/akira/akira-20230606.html
+Redirect 301 /negotiations/akira-20230616.html /negotiations/akira/akira-20230616.html
+Redirect 301 /negotiations/akira-20230628.html /negotiations/akira/akira-20230628.html
+Redirect 301 /negotiations/akira-20230707.html /negotiations/akira/akira-20230707.html
+Redirect 301 /negotiations/akira-20230719.html /negotiations/akira/akira-20230719.html
+Redirect 301 /negotiations/akira-20230722.html /negotiations/akira/akira-20230722.html
+Redirect 301 /negotiations/akira-20230727.html /negotiations/akira/akira-20230727.html
+Redirect 301 /negotiations/akira-20230728.html /negotiations/akira/akira-20230728.html
+Redirect 301 /negotiations/akira-20230815.html /negotiations/akira/akira-20230815.html
+Redirect 301 /negotiations/akira-20230929.html /negotiations/akira/akira-20230929.html
+Redirect 301 /negotiations/akira-20231112.html /negotiations/akira/akira-20231112.html
+Redirect 301 /negotiations/akira-20231115.html /negotiations/akira/akira-20231115.html
+Redirect 301 /negotiations/akira-20231209.html /negotiations/akira/akira-20231209.html
+Redirect 301 /negotiations/akira-20231217.html /negotiations/akira/akira-20231217.html
+Redirect 301 /negotiations/akira-20231227.html /negotiations/akira/akira-20231227.html
+Redirect 301 /negotiations/akira-20240127.html /negotiations/akira/akira-20240127.html
+Redirect 301 /negotiations/akira-20240129.html /negotiations/akira/akira-20240129.html
+Redirect 301 /negotiations/akira-20240131.html /negotiations/akira/akira-20240131.html
+Redirect 301 /negotiations/akira-20240201.html /negotiations/akira/akira-20240201.html
+Redirect 301 /negotiations/akira-20240301.html /negotiations/akira/akira-20240301.html
+Redirect 301 /negotiations/akira-20240317.html /negotiations/akira/akira-20240317.html
+Redirect 301 /negotiations/akira-20240329.html /negotiations/akira/akira-20240329.html
+Redirect 301 /negotiations/akira-20240410.html /negotiations/akira/akira-20240410.html
+Redirect 301 /negotiations/akira-20240424.html /negotiations/akira/akira-20240424.html
+Redirect 301 /negotiations/akira-20240509.html /negotiations/akira/akira-20240509.html
+Redirect 301 /negotiations/akira-20240531.html /negotiations/akira/akira-20240531.html
+Redirect 301 /negotiations/akira-20240611.html /negotiations/akira/akira-20240611.html
+Redirect 301 /negotiations/akira-20240618.html /negotiations/akira/akira-20240618.html
+Redirect 301 /negotiations/akira-20240620.html /negotiations/akira/akira-20240620.html
+Redirect 301 /negotiations/akira-20240718.html /negotiations/akira/akira-20240718.html
+Redirect 301 /negotiations/akira-20240719.html /negotiations/akira/akira-20240719.html
+Redirect 301 /negotiations/akira-20240723.html /negotiations/akira/akira-20240723.html
+Redirect 301 /negotiations/akira-20240803.html /negotiations/akira/akira-20240803.html
+Redirect 301 /negotiations/akira-20250104.html /negotiations/akira/akira-20250104.html
+Redirect 301 /negotiations/akira-20250108.html /negotiations/akira/akira-20250108.html
+Redirect 301 /negotiations/akira-20250110.html /negotiations/akira/akira-20250110.html
+Redirect 301 /negotiations/akira-20250112.html /negotiations/akira/akira-20250112.html
+Redirect 301 /negotiations/akira-20250117.html /negotiations/akira/akira-20250117.html
+Redirect 301 /negotiations/akira-20250120.html /negotiations/akira/akira-20250120.html
+Redirect 301 /negotiations/akira-20250121.html /negotiations/akira/akira-20250121.html
+Redirect 301 /negotiations/akira-20250125.html /negotiations/akira/akira-20250125.html
+Redirect 301 /negotiations/akira-20250216.html /negotiations/akira/akira-20250216.html
+Redirect 301 /negotiations/akira-20250217.html /negotiations/akira/akira-20250217.html
+Redirect 301 /negotiations/akira-20250222.html /negotiations/akira/akira-20250222.html
+Redirect 301 /negotiations/akira-20250227.html /negotiations/akira/akira-20250227.html
+Redirect 301 /negotiations/akira-20250306.html /negotiations/akira/akira-20250306.html
+Redirect 301 /negotiations/akira-20250310.html /negotiations/akira/akira-20250310.html
+Redirect 301 /negotiations/akira-20250312.html /negotiations/akira/akira-20250312.html
+Redirect 301 /negotiations/akira-20250313.html /negotiations/akira/akira-20250313.html
+Redirect 301 /negotiations/akira-20250321.html /negotiations/akira/akira-20250321.html
+Redirect 301 /negotiations/akira-20250328.html /negotiations/akira/akira-20250328.html
+Redirect 301 /negotiations/akira-20250330.html /negotiations/akira/akira-20250330.html
+Redirect 301 /negotiations/akira-20250331.html /negotiations/akira/akira-20250331.html
+Redirect 301 /negotiations/akira-20250408.html /negotiations/akira/akira-20250408.html
+Redirect 301 /negotiations/akira-20250417.html /negotiations/akira/akira-20250417.html
+Redirect 301 /negotiations/akira-20250423.html /negotiations/akira/akira-20250423.html
+Redirect 301 /negotiations/akira-20250424.html /negotiations/akira/akira-20250424.html
+Redirect 301 /negotiations/akira-20250425.html /negotiations/akira/akira-20250425.html
+Redirect 301 /negotiations/akira-20250425b.html /negotiations/akira/akira-20250425b.html
+# avaddon
+Redirect 301 /negotiations/avaddon-20210112.html /negotiations/avaddon/avaddon-20210112.html
+Redirect 301 /negotiations/avaddon-20210324.html /negotiations/avaddon/avaddon-20210324.html
+Redirect 301 /negotiations/avaddon-20210430.html /negotiations/avaddon/avaddon-20210430.html
+Redirect 301 /negotiations/avaddon-20210512.html /negotiations/avaddon/avaddon-20210512.html
+Redirect 301 /negotiations/avaddon-20210518-2.html /negotiations/avaddon/avaddon-20210518-2.html
+Redirect 301 /negotiations/avaddon-20210518-3.html /negotiations/avaddon/avaddon-20210518-3.html
+Redirect 301 /negotiations/avaddon-20210518.html /negotiations/avaddon/avaddon-20210518.html
+# avos
+Redirect 301 /negotiations/avos-20210903.html /negotiations/avos/avos-20210903.html
+# babuk
+Redirect 301 /negotiations/babuk-20210203.html /negotiations/babuk/babuk-20210203.html
+Redirect 301 /negotiations/babuk-20210428.html /negotiations/babuk/babuk-20210428.html
+# blackbasta
+Redirect 301 /negotiations/blackbasta-20221011.html /negotiations/blackbasta/blackbasta-20221011.html
+Redirect 301 /negotiations/blackbasta-20221229.html /negotiations/blackbasta/blackbasta-20221229.html
+Redirect 301 /negotiations/blackbasta-20230410.html /negotiations/blackbasta/blackbasta-20230410.html
+Redirect 301 /negotiations/blackbasta-20230501.html /negotiations/blackbasta/blackbasta-20230501.html
+Redirect 301 /negotiations/blackbasta-20240814.html /negotiations/blackbasta/blackbasta-20240814.html
+# blackmatter
+Redirect 301 /negotiations/blackmatter-20210829.html /negotiations/blackmatter/blackmatter-20210829.html
+Redirect 301 /negotiations/blackmatter-20210907.html /negotiations/blackmatter/blackmatter-20210907.html
+# cloak
+Redirect 301 /negotiations/cloak-20230802-2.html /negotiations/cloak/cloak-20230802-2.html
+Redirect 301 /negotiations/cloak-20230802.html /negotiations/cloak/cloak-20230802.html
+# conti
+Redirect 301 /negotiations/conti-20201017.html /negotiations/conti/conti-20201017.html
+Redirect 301 /negotiations/conti-20201019.html /negotiations/conti/conti-20201019.html
+Redirect 301 /negotiations/conti-20201109.html /negotiations/conti/conti-20201109.html
+Redirect 301 /negotiations/conti-20201121.html /negotiations/conti/conti-20201121.html
+Redirect 301 /negotiations/conti-20201230.html /negotiations/conti/conti-20201230.html
+Redirect 301 /negotiations/conti-20210107.html /negotiations/conti/conti-20210107.html
+Redirect 301 /negotiations/conti-20210126.html /negotiations/conti/conti-20210126.html
+Redirect 301 /negotiations/conti-20210219.html /negotiations/conti/conti-20210219.html
+Redirect 301 /negotiations/conti-20210305.html /negotiations/conti/conti-20210305.html
+Redirect 301 /negotiations/conti-20210315.html /negotiations/conti/conti-20210315.html
+Redirect 301 /negotiations/conti-20210316.html /negotiations/conti/conti-20210316.html
+Redirect 301 /negotiations/conti-20210426.html /negotiations/conti/conti-20210426.html
+Redirect 301 /negotiations/conti-20210428.html /negotiations/conti/conti-20210428.html
+Redirect 301 /negotiations/conti-20210513.html /negotiations/conti/conti-20210513.html
+Redirect 301 /negotiations/conti-20210517-b.html /negotiations/conti/conti-20210517-b.html
+Redirect 301 /negotiations/conti-20210517.html /negotiations/conti/conti-20210517.html
+Redirect 301 /negotiations/conti-20210520.html /negotiations/conti/conti-20210520.html
+Redirect 301 /negotiations/conti-20210602.html /negotiations/conti/conti-20210602.html
+Redirect 301 /negotiations/conti-20210611.html /negotiations/conti/conti-20210611.html
+Redirect 301 /negotiations/conti-20210628.html /negotiations/conti/conti-20210628.html
+Redirect 301 /negotiations/conti-20210708.html /negotiations/conti/conti-20210708.html
+Redirect 301 /negotiations/conti-20210715.html /negotiations/conti/conti-20210715.html
+Redirect 301 /negotiations/conti-20210805.html /negotiations/conti/conti-20210805.html
+Redirect 301 /negotiations/conti-20210812.html /negotiations/conti/conti-20210812.html
+Redirect 301 /negotiations/conti-20210820.html /negotiations/conti/conti-20210820.html
+Redirect 301 /negotiations/conti-20210902.html /negotiations/conti/conti-20210902.html
+Redirect 301 /negotiations/conti-20210904.html /negotiations/conti/conti-20210904.html
+Redirect 301 /negotiations/conti-20210923.html /negotiations/conti/conti-20210923.html
+Redirect 301 /negotiations/conti-20211108.html /negotiations/conti/conti-20211108.html
+Redirect 301 /negotiations/conti-20211112.html /negotiations/conti/conti-20211112.html
+Redirect 301 /negotiations/conti-20211205.html /negotiations/conti/conti-20211205.html
+Redirect 301 /negotiations/conti-20211217.html /negotiations/conti/conti-20211217.html
+# darkside
+Redirect 301 /negotiations/darkside-20200811.html /negotiations/darkside/darkside-20200811.html
+Redirect 301 /negotiations/darkside-20201115.html /negotiations/darkside/darkside-20201115.html
+Redirect 301 /negotiations/darkside-20210215.html /negotiations/darkside/darkside-20210215.html
+Redirect 301 /negotiations/darkside-20210413.html /negotiations/darkside/darkside-20210413.html
+Redirect 301 /negotiations/darkside-20210418.html /negotiations/darkside/darkside-20210418.html
+# dragonforce
+Redirect 301 /negotiations/dragonforce-058f4b92-ae99-45c7-bf35-5d2d6754b3de.html /negotiations/dragonforce/dragonforce-058f4b92-ae99-45c7-bf35-5d2d6754b3de.html
+Redirect 301 /negotiations/dragonforce-05f724f8-906e-4739-8177-815852cc2c3f.html /negotiations/dragonforce/dragonforce-05f724f8-906e-4739-8177-815852cc2c3f.html
+Redirect 301 /negotiations/dragonforce-29bbe03074fdbb8d.html /negotiations/dragonforce/dragonforce-29bbe03074fdbb8d.html
+Redirect 301 /negotiations/dragonforce-7a313d13eb6b4e58.html /negotiations/dragonforce/dragonforce-7a313d13eb6b4e58.html
+Redirect 301 /negotiations/dragonforce-89716d29d2cee36f.html /negotiations/dragonforce/dragonforce-89716d29d2cee36f.html
+Redirect 301 /negotiations/dragonforce-ab0404e049514b50.html /negotiations/dragonforce/dragonforce-ab0404e049514b50.html
+Redirect 301 /negotiations/dragonforce-b8e14e1a-548f-4eec-bd6e-a590126e57c9.html /negotiations/dragonforce/dragonforce-b8e14e1a-548f-4eec-bd6e-a590126e57c9.html
+Redirect 301 /negotiations/dragonforce-bd004d632d87dba0.html /negotiations/dragonforce/dragonforce-bd004d632d87dba0.html
+Redirect 301 /negotiations/dragonforce-c2a3c7249797f5ed.html /negotiations/dragonforce/dragonforce-c2a3c7249797f5ed.html
+Redirect 301 /negotiations/dragonforce-c42cdf65b97d0e92.html /negotiations/dragonforce/dragonforce-c42cdf65b97d0e92.html
+Redirect 301 /negotiations/dragonforce-c7cd31eaaf9de9ac.html /negotiations/dragonforce/dragonforce-c7cd31eaaf9de9ac.html
+Redirect 301 /negotiations/dragonforce-c8479b30418b331e.html /negotiations/dragonforce/dragonforce-c8479b30418b331e.html
+Redirect 301 /negotiations/dragonforce-d6ddd9b26d7d41db.html /negotiations/dragonforce/dragonforce-d6ddd9b26d7d41db.html
+Redirect 301 /negotiations/dragonforce-fda8141b6dd392e3.html /negotiations/dragonforce/dragonforce-fda8141b6dd392e3.html
+# fog
+Redirect 301 /negotiations/fog-20240517.html /negotiations/fog/fog-20240517.html
+Redirect 301 /negotiations/fog-20240729.html /negotiations/fog/fog-20240729.html
+Redirect 301 /negotiations/fog-20240830.html /negotiations/fog/fog-20240830.html
+Redirect 301 /negotiations/fog-20240910.html /negotiations/fog/fog-20240910.html
+Redirect 301 /negotiations/fog-20240927.html /negotiations/fog/fog-20240927.html
+Redirect 301 /negotiations/fog-20241119.html /negotiations/fog/fog-20241119.html
+# hive
+Redirect 301 /negotiations/hive-20211004.html /negotiations/hive/hive-20211004.html
+Redirect 301 /negotiations/hive-20211005.html /negotiations/hive/hive-20211005.html
+Redirect 301 /negotiations/hive-20211026.html /negotiations/hive/hive-20211026.html
+Redirect 301 /negotiations/hive-20211102.html /negotiations/hive/hive-20211102.html
+Redirect 301 /negotiations/hive-20211113.html /negotiations/hive/hive-20211113.html
+Redirect 301 /negotiations/hive-20211126.html /negotiations/hive/hive-20211126.html
+Redirect 301 /negotiations/hive-20211213.html /negotiations/hive/hive-20211213.html
+Redirect 301 /negotiations/hive-20211220.html /negotiations/hive/hive-20211220.html
+# hunters-international
+Redirect 301 /negotiations/hunters-international-20240510.html /negotiations/hunters-international/hunters-international-20240510.html
+# lockbit3-0
+Redirect 301 /negotiations/lockbit3-0-149576.html /negotiations/lockbit3-0/lockbit3-0-149576.html
+Redirect 301 /negotiations/lockbit3-0-aguasdoporto-pt.html /negotiations/lockbit3-0/lockbit3-0-aguasdoporto-pt.html
+Redirect 301 /negotiations/lockbit3-0-bakkerheftrucks-com.html /negotiations/lockbit3-0/lockbit3-0-bakkerheftrucks-com.html
+Redirect 301 /negotiations/lockbit3-0-bankbsi-co-id.html /negotiations/lockbit3-0/lockbit3-0-bankbsi-co-id.html
+Redirect 301 /negotiations/lockbit3-0-chsf-fr.html /negotiations/lockbit3-0/lockbit3-0-chsf-fr.html
+Redirect 301 /negotiations/lockbit3-0-colonialgeneral-com.html /negotiations/lockbit3-0/lockbit3-0-colonialgeneral-com.html
+Redirect 301 /negotiations/lockbit3-0-continental-com.html /negotiations/lockbit3-0/lockbit3-0-continental-com.html
+Redirect 301 /negotiations/lockbit3-0-datair-com.html /negotiations/lockbit3-0/lockbit3-0-datair-com.html
+Redirect 301 /negotiations/lockbit3-0-emunworks-com.html /negotiations/lockbit3-0/lockbit3-0-emunworks-com.html
+Redirect 301 /negotiations/lockbit3-0-entrust-com.html /negotiations/lockbit3-0/lockbit3-0-entrust-com.html
+Redirect 301 /negotiations/lockbit3-0-gavresorts-com-br.html /negotiations/lockbit3-0/lockbit3-0-gavresorts-com-br.html
+Redirect 301 /negotiations/lockbit3-0-genusplc-com.html /negotiations/lockbit3-0/lockbit3-0-genusplc-com.html
+Redirect 301 /negotiations/lockbit3-0-gocontec-com.html /negotiations/lockbit3-0/lockbit3-0-gocontec-com.html
+Redirect 301 /negotiations/lockbit3-0-guardiananalytics-com.html /negotiations/lockbit3-0/lockbit3-0-guardiananalytics-com.html
+Redirect 301 /negotiations/lockbit3-0-hgc-com-hk.html /negotiations/lockbit3-0/lockbit3-0-hgc-com-hk.html
+Redirect 301 /negotiations/lockbit3-0-kaycan-com.html /negotiations/lockbit3-0/lockbit3-0-kaycan-com.html
+Redirect 301 /negotiations/lockbit3-0-lapostemobile-fr.html /negotiations/lockbit3-0/lockbit3-0-lapostemobile-fr.html
+Redirect 301 /negotiations/lockbit3-0-leaked2025-clientid-124.html /negotiations/lockbit3-0/lockbit3-0-leaked2025-clientid-124.html
+Redirect 301 /negotiations/lockbit3-0-leaked2025-clientid-154.html /negotiations/lockbit3-0/lockbit3-0-leaked2025-clientid-154.html
+Redirect 301 /negotiations/lockbit3-0-leaked2025-clientid-206.html /negotiations/lockbit3-0/lockbit3-0-leaked2025-clientid-206.html
+Redirect 301 /negotiations/lockbit3-0-leaked2025-clientid-36.html /negotiations/lockbit3-0/lockbit3-0-leaked2025-clientid-36.html
+Redirect 301 /negotiations/lockbit3-0-millennia-pro.html /negotiations/lockbit3-0/lockbit3-0-millennia-pro.html
+Redirect 301 /negotiations/lockbit3-0-myerspower-com.html /negotiations/lockbit3-0/lockbit3-0-myerspower-com.html
+Redirect 301 /negotiations/lockbit3-0-newbridge-org.html /negotiations/lockbit3-0/lockbit3-0-newbridge-org.html
+Redirect 301 /negotiations/lockbit3-0-nicklaus-com.html /negotiations/lockbit3-0/lockbit3-0-nicklaus-com.html
+Redirect 301 /negotiations/lockbit3-0-okcu-edu.html /negotiations/lockbit3-0/lockbit3-0-okcu-edu.html
+Redirect 301 /negotiations/lockbit3-0-omscomponents-it.html /negotiations/lockbit3-0/lockbit3-0-omscomponents-it.html
+Redirect 301 /negotiations/lockbit3-0-plasticproductsco-com.html /negotiations/lockbit3-0/lockbit3-0-plasticproductsco-com.html
+Redirect 301 /negotiations/lockbit3-0-porcelanosa-usa-com.html /negotiations/lockbit3-0/lockbit3-0-porcelanosa-usa-com.html
+Redirect 301 /negotiations/lockbit3-0-preflooring-com.html /negotiations/lockbit3-0/lockbit3-0-preflooring-com.html
+Redirect 301 /negotiations/lockbit3-0-psenergy-com.html /negotiations/lockbit3-0/lockbit3-0-psenergy-com.html
+Redirect 301 /negotiations/lockbit3-0-qsi-q3-de.html /negotiations/lockbit3-0/lockbit3-0-qsi-q3-de.html
+Redirect 301 /negotiations/lockbit3-0-royalmailgroup-com.html /negotiations/lockbit3-0/lockbit3-0-royalmailgroup-com.html
+Redirect 301 /negotiations/lockbit3-0-samyang-com.html /negotiations/lockbit3-0/lockbit3-0-samyang-com.html
+Redirect 301 /negotiations/lockbit3-0-scohil-com.html /negotiations/lockbit3-0/lockbit3-0-scohil-com.html
+Redirect 301 /negotiations/lockbit3-0-sirva-com.html /negotiations/lockbit3-0/lockbit3-0-sirva-com.html
+Redirect 301 /negotiations/lockbit3-0-software-line-it.html /negotiations/lockbit3-0/lockbit3-0-software-line-it.html
+Redirect 301 /negotiations/lockbit3-0-tapcocu-org.html /negotiations/lockbit3-0/lockbit3-0-tapcocu-org.html
+Redirect 301 /negotiations/lockbit3-0-vitalityhp-net.html /negotiations/lockbit3-0/lockbit3-0-vitalityhp-net.html
+Redirect 301 /negotiations/lockbit3-0-vsainc-com.html /negotiations/lockbit3-0/lockbit3-0-vsainc-com.html
+Redirect 301 /negotiations/lockbit3-0-wabteccorp-com.html /negotiations/lockbit3-0/lockbit3-0-wabteccorp-com.html
+Redirect 301 /negotiations/lockbit3-0-wcinet-com.html /negotiations/lockbit3-0/lockbit3-0-wcinet-com.html
+Redirect 301 /negotiations/royal-mail-lockbit-3.html /negotiations/lockbit3-0/royal-mail-lockbit-3.html
+# mallox
+Redirect 301 /negotiations/mallox-20230427.html /negotiations/mallox/mallox-20230427.html
+Redirect 301 /negotiations/mallox-20230529.html /negotiations/mallox/mallox-20230529.html
+Redirect 301 /negotiations/mallox-20230530.html /negotiations/mallox/mallox-20230530.html
+# mount-locker
+Redirect 301 /negotiations/mount-locker-20201016.html /negotiations/mount-locker/mount-locker-20201016.html
+# noescape
+Redirect 301 /negotiations/noescape-20230911.html /negotiations/noescape/noescape-20230911.html
+Redirect 301 /negotiations/noescape-20230912.html /negotiations/noescape/noescape-20230912.html
+# pear
+Redirect 301 /negotiations/pear-20250720.html /negotiations/pear/pear-20250720.html
+# qilin
+Redirect 301 /negotiations/qilin-20240429.html /negotiations/qilin/qilin-20240429.html
+Redirect 301 /negotiations/qilin-20250203-from-rakeshkrish12.html /negotiations/qilin/qilin-20250203-from-rakeshkrish12.html
+# ransomhub
+Redirect 301 /negotiations/ransomhub-20240810.html /negotiations/ransomhub/ransomhub-20240810.html
+# ranzy
+Redirect 301 /negotiations/ranzy-20201015.html /negotiations/ranzy/ranzy-20201015.html
+Redirect 301 /negotiations/ranzy-20210223.html /negotiations/ranzy/ranzy-20210223.html
+# revil
+Redirect 301 /negotiations/revil-20201014.html /negotiations/revil/revil-20201014.html
+Redirect 301 /negotiations/revil-20201104.html /negotiations/revil/revil-20201104.html
+Redirect 301 /negotiations/revil-20201126.html /negotiations/revil/revil-20201126.html
+Redirect 301 /negotiations/revil-20210320.html /negotiations/revil/revil-20210320.html
+Redirect 301 /negotiations/revil-20210329.html /negotiations/revil/revil-20210329.html
+Redirect 301 /negotiations/revil-20210331.html /negotiations/revil/revil-20210331.html
+Redirect 301 /negotiations/revil-20210401.html /negotiations/revil/revil-20210401.html
+Redirect 301 /negotiations/revil-20210407.html /negotiations/revil/revil-20210407.html
+Redirect 301 /negotiations/revil-20210413.html /negotiations/revil/revil-20210413.html
+Redirect 301 /negotiations/revil-20210603.html /negotiations/revil/revil-20210603.html
+Redirect 301 /negotiations/revil-20210604.html /negotiations/revil/revil-20210604.html
+Redirect 301 /negotiations/revil-20210609.html /negotiations/revil/revil-20210609.html
+Redirect 301 /negotiations/revil-20210613.html /negotiations/revil/revil-20210613.html
+Redirect 301 /negotiations/revil-20210616.html /negotiations/revil/revil-20210616.html
+Redirect 301 /negotiations/revil-20210617.html /negotiations/revil/revil-20210617.html
+Redirect 301 /negotiations/revil-20210622.html /negotiations/revil/revil-20210622.html
+Redirect 301 /negotiations/revil-20210628.html /negotiations/revil/revil-20210628.html
+Redirect 301 /negotiations/revil-20210630.html /negotiations/revil/revil-20210630.html
+Redirect 301 /negotiations/revil-20210708.html /negotiations/revil/revil-20210708.html
+Redirect 301 /negotiations/revil-20210709.html /negotiations/revil/revil-20210709.html
+# runsomewares
+Redirect 301 /negotiations/runsomewares-20250411.html /negotiations/runsomewares/runsomewares-20250411.html
+# trinity
+Redirect 301 /negotiations/trinity-0001.html /negotiations/trinity/trinity-0001.html
+Redirect 301 /negotiations/trinity-0002.html /negotiations/trinity/trinity-0002.html
+Redirect 301 /negotiations/trinity-0003.html /negotiations/trinity/trinity-0003.html
+Redirect 301 /negotiations/trinity-0004.html /negotiations/trinity/trinity-0004.html
+Redirect 301 /negotiations/trinity-0005.html /negotiations/trinity/trinity-0005.html
+Redirect 301 /negotiations/trinity-0006.html /negotiations/trinity/trinity-0006.html
+Redirect 301 /negotiations/trinity-0007.html /negotiations/trinity/trinity-0007.html
+Redirect 301 /negotiations/trinity-0008.html /negotiations/trinity/trinity-0008.html
+Redirect 301 /negotiations/trinity-0009.html /negotiations/trinity/trinity-0009.html
+Redirect 301 /negotiations/trinity-0010.html /negotiations/trinity/trinity-0010.html
+Redirect 301 /negotiations/trinity-0011.html /negotiations/trinity/trinity-0011.html
+Redirect 301 /negotiations/trinity-0012.html /negotiations/trinity/trinity-0012.html
+Redirect 301 /negotiations/trinity-0013.html /negotiations/trinity/trinity-0013.html
+Redirect 301 /negotiations/trinity-0014.html /negotiations/trinity/trinity-0014.html
+# END negotiations-redirects
