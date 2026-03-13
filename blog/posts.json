@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "data-breach-containment-evidence",
+    "title": "How to Contain a Data Breach Without Destroying Evidence",
+    "excerpt": "The decisions you make in the first hour determine whether your forensic evidence survives. Here's how to get containment right.",
+    "date": "2026-03-07",
+    "readTime": "9 min read",
+    "tag": "forensics",
+    "tagLabel": "Digital Forensics"
+  },
+  {
+    "slug": "ransomware-negotiation-strategies",
+    "title": "Ransomware Negotiation Strategies That Actually Work",
+    "excerpt": "What we've learned from negotiating 235 ransomware cases. Field-tested tactics that reduce demands by 63% on average.",
+    "date": "2026-03-07",
+    "readTime": "11 min read",
+    "tag": "ransomware",
+    "tagLabel": "Ransomware"
+  },
+  {
+    "slug": "complete-incident-response-playbook",
+    "title": "The Complete Incident Response Playbook (Free Download)",
+    "excerpt": "Free 45-page playbook based on 100+ real cyber attacks. Includes checklists, templates, and decision frameworks.",
+    "date": "2026-03-07",
+    "readTime": "10 min read",
+    "tag": "guide",
+    "tagLabel": "Comprehensive Guide"
+  },
+  {
+    "slug": "first-72-hours-ransomware",
+    "title": "First 72 Hours After Ransomware Attack: Critical Actions",
+    "excerpt": "Step-by-step guide for the first 72 hours after ransomware based on 235 real cases. What to do and what NOT to do.",
+    "date": "2026-03-07",
+    "readTime": "8 min read",
+    "tag": "advisory",
+    "tagLabel": "Advisory"
+  },
+  {
+    "slug": "ransomware-landscape-q1-2026",
+    "title": "Q1 2026 Ransomware Landscape: Key Trends and Emerging Groups",
+    "excerpt": "Analysis of the ransomware threat landscape in Q1 2026 \u2014 new groups, shifting tactics, ecosystem fragmentation.",
+    "date": "2026-03-01",
+    "readTime": "6 min read",
+    "tag": "threat-intel",
+    "tagLabel": "Threat Intelligence"
+  },
+  {
+    "slug": "sanctions-screening-ransom-payments",
+    "title": "Sanctions Screening and Ransom Payments: A Compliance Guide",
+    "excerpt": "With OFSI actively investigating suspected breaches, understanding compliance obligations is critical.",
+    "date": "2026-02-15",
+    "readTime": "5 min read",
+    "tag": "ransomware",
+    "tagLabel": "Ransomware"
+  },
+  {
+    "slug": "dfir-daily-brief-2026-03-04",
+    "title": "DFIR Daily Brief \u2014 4 March 2026",
+    "excerpt": "Daily roundup of ransomware incidents, threat group activity, and CVE disclosures. Covering attacks on healthcare, education and critical infrastructure.",
+    "date": "2026-03-04",
+    "readTime": "4 min read",
+    "tag": "threat-intel",
+    "tagLabel": "Threat Intelligence"
+  },
+  {
+    "slug": "dfir-daily-brief-2026-03-03",
+    "title": "DFIR Daily Brief \u2014 3 March 2026",
+    "excerpt": "Daily roundup of ransomware incidents, threat group activity, and CVE disclosures. Covering attacks on healthcare, education and critical infrastructure.",
+    "date": "2026-03-03",
+    "readTime": "4 min read",
+    "tag": "threat-intel",
+    "tagLabel": "Threat Intelligence"
+  }
+]

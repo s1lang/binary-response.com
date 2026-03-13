@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>REvil Ransomware Negotiation (June 22, 2021) — Redacted Organisation | Binary Response</title>
+<meta name="description" content="Full verbatim transcript of a REvil ransomware negotiation (June 2021). 52 messages. Study real-world ransomware negotiation tactics and threat actor behaviour.">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/revil-20210622.html">
+<meta property="og:title" content="REvil Ransomware Negotiation (June 22, 2021) — Redacted Organisation">
+<meta property="og:description" content="Full verbatim transcript of a REvil ransomware negotiation (June 2021). 52 messages. Study real-world ransomware negotiation tactics and threat actor behaviour.">
+<meta property="og:url" content="https://binary-response.com/negotiations/revil-20210622.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "REvil Ransomware Negotiation — Redacted Organisation",
+      "description": "Full verbatim transcript of a REvil ransomware negotiation. 52 messages. Outcome: Unknown.",
+      "datePublished": "2026-03-05",
+      "author": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "mainEntityOfPage": "https://binary-response.com/negotiations/revil-20210622.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "REvil — Redacted Organisation", "item": "https://binary-response.com/negotiations/revil-20210622.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Ransomware Negotiation Transcript</span>
+<h1 style="font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">REvil Ransomware Negotiation — <span style="color:var(--accent)">Redacted Organisation</span></h1>
+
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">52</span><span class="stat-label">Messages</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Duration</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Outcome</span></div>
+</div>
+</div>
+</section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Context</span>
+<h2 class="section-title">About This Negotiation</h2>
+<p>This transcript documents a <strong>REvil</strong> ransomware negotiation with a redacted victim organisation. 
+        The negotiation consisted of 52 messages exchanged.</p>
+        <p>The initial demand is not clearly stated in the transcript. The final outcome is not confirmed in the transcript.</p>
+</div></section>
+
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Reproduced from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 1/52</div>
+Hello, are you a live person
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 2/52</div>
+Hello , yes
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 3/52</div>
+what can we do if we dont have this much money?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 4/52</div>
+because we dont have $100,000
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 5/52</div>
+My boss can offer 10% discount for fast payment
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 6/52</div>
+we dont even have this money to pay in 3 days, we would have to get loans or other means of payment.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 7/52</div>
+We can add time
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 8/52</div>
+how much time do you need ?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 9/52</div>
+even if we get it, we have to buy monero and that takes time to clear 
+the funds, it takes weeks to get validated with any exchange.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 10/52</div>
+binance.com - 1 day
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 11/52</div>
+why is this much?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 12/52</div>
+why is it this much?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 13/52</div>
+The price depends on your income
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 14/52</div>
+My income is only 10,000 a month. Its in the system it shows it that way
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 15/52</div>
+You work for a company, don&#x27;t bluff with us
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 16/52</div>
+yea, i am the owner. the company is mine. Im not bluffing. I make 120k a
+ year and 10k a month I work for the company. this is [redacted] service 
+company. Our service call charge is $75 per service call. How can I pay a
+ 100,000?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 17/52</div>
+My boss can offer 10% discount
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 18/52</div>
+i understand and thank you but we need more of a discount
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 19/52</div>
+i simply cannot afford 90-100k
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 20/52</div>
+what guarantee do i have that my system will start working after i do what you ask for
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 21/52</div>
+check our name in web
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 22/52</div>
+I dont know this things. im just a [redacted]. Im asking a friend to look in to it.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 23/52</div>
+I have to borrow money from friends. So give time so i can see what i can get
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 24/52</div>
+Okay
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 23 days ago &mdash; Message 25/52</div>
+So I was able to get 35,000.00 so far from friends which i have now. I 
+understand this is your job and what your demanding so i can have mine 
+back. I respect that even when i don&#x27;t. 
+But I checked your web and there are no guarantees.
+I have family and i work for this money, so loosing it is not an option 
+for me. I need some type guarantee so i know your the guy and i wont be 
+lied to and loose the money
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 23 days ago &mdash; Message 26/52</div>
+You can try trial decryption to make sure we unblock everything
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17 days ago &mdash; Message 27/52</div>
+You messed up my entire work and life. The only way I will pay you is 
+to be 100% sure you will release the files after I pay you. 
+The only way you can prove me is I will pay 10,000.00 for 1 specific database file. If you agree let me know. 
+And I don&#x27;t know if that is also possible, 
+I don&#x27;t have any guarantee from you.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 17 days ago &mdash; Message 28/52</div>
+We can agree to 35k and we guarantee that you will be able to decrypt all your files
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 10 days ago &mdash; Message 29/52</div>
+Hello
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 10 days ago &mdash; Message 30/52</div>
+We had 70% back up and i was able to hire IT guys to build me a new 
+system and restore 70% of my data. I spent 12,250.00 for this and I 
+don&#x27;t have anymore the 35,000.00 
+I am willing to pay the balance to you to get the remaining data so I can continue with my life. 
+Let me know what you want to do. I will wait on you. 
+took long to get back to you as we were busy building a new system
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 10 days ago &mdash; Message 31/52</div>
+These are just your problems.
+Nobody made you pay other teams to get well.
+Our decryptor completed this in a few hours.
+20% discount is all that we are ready to offer
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 32/52</div>
+you made this problem for me. 
+Ok, I dont have the money. I am working on a job and will get paid in 2 
+weeks at most . so let me get the money together and will get back to 
+pay.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 33/52</div>
+28,000.00 correct ?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 34/52</div>
+I have 22,750.00 now. Let make the deal and move forward please. This is hard for me
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 35/52</div>
+price update you can pay
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 36/52</div>
+I dont understand what your saying ?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 37/52</div>
+Nothing
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 38/52</div>
+I have to go to work. leave the answer when i get back tonight i will contact
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 39/52</div>
+R u asking what i can pay ?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 40/52</div>
+are you ready to pay ?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 41/52</div>
+Yes
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 42/52</div>
+I already transferred 22,750.00 to my friends account today to help me 
+send the money or xmr to you. I dont know this things how they work. We 
+have to purchase it and send it to you
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 43/52</div>
+also monero price is 273.97 today not 82.52
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 44/52</div>
+price fixed
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 7 days ago &mdash; Message 45/52</div>
+when will i get the code after i pay
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 46/52</div>
+30 minutes
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 3 days ago &mdash; Message 47/52</div>
+Hi, I just sent money to a friends account. He will transfer to his 
+bianca account to purchase monero and send it to you. I instructed him 
+not to send the full amount. He will send an amount and you have to 
+check and let me know that number so i can make sure its coming to you 
+and I will have him send the remaining balance.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 3 days ago &mdash; Message 48/52</div>
+should be done in few days
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 3 days ago &mdash; Message 49/52</div>
+ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 hours ago &mdash; Message 50/52</div>
+we&#x27;re almost done sending the first payment. Binance.us doenst support 
+monero, and neither does kucoin or coinbase. I had to buy litecoin on 
+coinbase, send it to cakewallet, and Im using that the convert to 
+monero. Maybe will take a few hours.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 hours ago &mdash; Message 51/52</div>
+Just sent to the monero address above. Verify how much it is and let me know.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 4 hours ago &mdash; Message 52/52</div>
+5 monero receive
+</div></div>
+</div>
+</div></section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Analyst Observations</h2>
+<ul style="list-style:none;padding:0">
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">REvil (also known as Sodinokibi) was responsible for high-profile attacks including Kaseya and JBS. The group was disrupted by law enforcement in late 2021 and early 2022.</li>
+</ul>
+</div></section>
+
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

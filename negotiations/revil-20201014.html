@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>REvil Ransomware Negotiation (October 14, 2020) — Redacted Organisation | Binary Response</title>
+<meta name="description" content="Full verbatim transcript of a REvil ransomware negotiation (October 2020). 72 messages. Initial demand: $675. Study real-world ransomware negotiation tactics...">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/revil-20201014.html">
+<meta property="og:title" content="REvil Ransomware Negotiation (October 14, 2020) — Redacted Organisation">
+<meta property="og:description" content="Full verbatim transcript of a REvil ransomware negotiation (October 2020). 72 messages. Initial demand: $675. Study real-world ransomware negotiation tactics...">
+<meta property="og:url" content="https://binary-response.com/negotiations/revil-20201014.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "REvil Ransomware Negotiation — Redacted Organisation",
+      "description": "Full verbatim transcript of a REvil ransomware negotiation. 72 messages. Initial demand: $675.0M. Outcome: Unknown.",
+      "datePublished": "2026-03-05",
+      "author": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "mainEntityOfPage": "https://binary-response.com/negotiations/revil-20201014.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "REvil — Redacted Organisation", "item": "https://binary-response.com/negotiations/revil-20201014.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Ransomware Negotiation Transcript</span>
+<h1 style="font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">REvil Ransomware Negotiation — <span style="color:var(--accent)">Redacted Organisation</span></h1>
+
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">72</span><span class="stat-label">Messages</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Duration</span></div>
+<div class="nego-stat"><span class="stat-value">$675.0M</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Outcome</span></div>
+</div>
+</div>
+</section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Context</span>
+<h2 class="section-title">About This Negotiation</h2>
+<p>This transcript documents a <strong>REvil</strong> ransomware negotiation with a redacted victim organisation. 
+        The negotiation consisted of 72 messages exchanged.</p>
+        <p>The initial ransom demand was $675.0M. The final outcome is not confirmed in the transcript.</p>
+</div></section>
+
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Reproduced from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 1/72</div>
+Hello guys,
+I am the person in charge to negotiate with you on behalf of my client. 
+The amount of XMR requested to my client to get the decryption tool, the
+ files back available and not published in the dark web (I have seen 
+some exfiltrated data are published on your blog) is huge and my client 
+cannot afford to fully pay your claims. My client is trying to cope with
+ this difficult situation, since it has been heavily struck by the 
+current economic crisis due to the coronavirus pandemic, with a dramatic
+ fall of sales in the last months. My client’s net revenues amount to 
+EUR 500.000,00 in the last financial statement (2.5 billion as gross 
+revenues, which is a not relevant data if you guys are acquainted with 
+economics). The financial situation of my client has been catastrophic 
+since 2010, with a substantial decrease y/y in net revenues and gross 
+operating profits. The cyberattack you have carried out on my client’s 
+systems has blocked the company operation and all its internal 
+operations have been shut down including deliveries, and as a 
+consequence my client is not able to fulfil the market with its copper 
+products and get revenues. My client has already had to make budget cuts
+ and fire many of its employees or put them on unemployed insurance, 
+with devastating effects on families and children amid the economic 
+crisis due to Covid19. Therefore, it is impossible for my client to pay 
+you 7.5 million USD. According to my client’s financial condition, I 
+think he might be considering paying a certain amount in order to 
+protect his business and to obtain the decrypting tool for all the files
+ very quickly. However, such amount would be lower than the one you have
+ requested, due to the heavy financial situation. In my personal 
+opinion, my client has the financial availability to pay you 500.000 USD
+ very quickly. A greater amount would be very difficult (almost 
+impossible in my very personal opinion) to be paid because of the 
+current financial situation. Let me know on this point.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 2/72</div>
+Hello. We have deals with many companies every day, our pricing policy 
+takes into account the Covid19 crisis. Do not take cover by this, the 
+price is affordable for the company. 500k from a company like your is 
+not seriously, of course we can give you a discount that will depend on 
+the quickness of your payment, but price can&#x27;t be too low as you ask 
+for. We hid the post from our blog for the talks. if we will have a deal
+ this information will not be ever published.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 3/72</div>
+What kind of discount are you guys thinking about? My client is really 
+in a dire economic situation as previously said and I will try my best 
+to convince him to add few money on the negotiation table. However 
+adding money to his last offer would entail more budget cuts and firing 
+more employees, leaving families without livelihood in this dramatic 
+financial crisis.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 4/72</div>
+You have no chances with $500,000 or this level of amounts of money, even don&#x27;t try bluf by this.
+If you pay shortly, we accept $6,75M.
+If no, we start publication data part by part to speed up you.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 5/72</div>
+we are not bluffing and you do not know the financial situation of my 
+client. However I will get back to you as soon as my client gives me a 
+feedback on your so called &quot;discount&quot;
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 6/72</div>
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 7/72</div>
+[redacted]_Consolidated Financial Report 310320.pdf
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 8/72</div>
+if you cant find your insurance manual. Here is it.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 9/72</div>
+Oh well, so you guys are familiar with economics. Are you sure you are 
+able to read the numbers? My Client has been losing money since 2010. In
+ the consolidated financial report you exfiltrated you can see that in 
+the first three months of 2020 only the financial loss amounts to EUR 
+[redacted] M. And take a look at the net financial position as at 31 March 
+2020 which is negative by EUR [redacted] M. Moreover, look at bond trading 
+level (30% yield) that my client needs to repay: 
+[redacted]. The
+ financial situation of my client is negative. I think you picked the 
+wrong victim and the financial analysis you have performed prior to 
+undertaking the hacking operations is absolutely wrong. Look at the 
+chart herein attached and maybe you will be able to understand that 
+economics is not hacking and my client is not Grubman nor Travelex nor 
+[redacted] (the latter, just to remain in the [redacted] boundaries and a victim 
+you may know).
+With regard to the insurance manual you guys have exfiltrated please 
+note that the insurance company Chubb does not cover the expenses 
+related to a ransom payment but only the expenses my client is is facing
+ for business interruption and recovery.
+This being said, my client needs to resume normal operations as soon as 
+possible minimising financial losses due to inactivity caused by your 
+actions. So we need to find a trade-off between your requests and my 
+client’s capability to pay. Too much money requested and really my 
+client does not have that financial capability. My client understands 
+your position and aspirations but can’t reach that amount. Overnight I 
+convinced my client to add more money on the table. His offer now 
+amounts to 750.000,00 but this will entail more sacrifices in terms of 
+employment and debt repayment. People will be fired amid this financial 
+crisis but I guess you guys don’t care about people left without 
+livelihood.
+If you guys don’t accept it, my client will set up the new 
+infrastructure without data. It won’t be easy but my client is pretty 
+sure to go back on the business within a few weeks. I mean my client is 
+making the argument that the cost to restart the new infrastructure 
+without data will not be higher than 700-800 k USD. That amount 
+represents the break-event point for my client. If my client pays a 
+dollar more, it won’t be convenient for him. So accept these 750 k USD 
+or set a new affordable price or get nothing. If you accept or if you 
+set a price which my client is able to meet, he will start the payment 
+process as soon as possible, after finding a trusted exchange. 
+Please stop the countdown as usual during the negotiations with your hacking group.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 10/72</div>
+Good morning. Sorry, but your offer still isnt interesting for us. 
+Companies with revenue like 10kk usually pays us this value. Comeback 
+later when you will be able to pay more. We can wait but your client 
+doesnt have enough time.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 11/72</div>
+If you think its easy to restore for 800k - go and do it. we dont care.
+ first dump will be full of your client net passwords, [redacted] email 
+dump, phone and password(that he use in many other services than your 
+network). next will be with clients info, NDAs, payment infromation and 
+technical specification of your production
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 12/72</div>
+Do you mean if we do not strike a deal in 1 day 8 hours and 41 minutes you will double the price requested?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 13/72</div>
+sure not
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 14/72</div>
+i added you 7 days.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 15/72</div>
+Ok guys. What I am trying to let you understand is that my client is 
+not in a good financial position and the financial statement you have 
+had to chance to read clearly testifies what I am saying. The production
+ plants are on hold and people are put on unemployed insurances and are 
+being fired. I know that you guys don’t care because your goal is your 
+personal profit. You carried out a perfect and clean job on my client’s 
+network I have been told and you clearly deserve to be rewarded for your
+ work. The issue is not if my client is willing to pay but how much 
+money my client can afford to pay without worsening his financial 
+condition and safeguarding jobs and families. This is the main issue. 
+You guys are considering the data exfiltrated as valuable data that may 
+cause a catastrophic reputational damage to my client if disclosed to 
+the general public. Well, this is not the case. My client is not 
+interested if you guys disclose [redacted] email dump or NDAs or whatever
+ document you have in your hands. The value of the data you guys have 
+stolen is irrelevant to my client. My client resells commodities ([redacted]) with a B2B model, there’s no industrial secret to be 
+protected. And again, please believe me that I’m not bluffing on this 
+point. You have read the documents you have stolen and you guys are 
+experienced in the field: I bet you haven’t found any information worth 
+USD 6.75 M. Any. So again, my client is interested in a quick restore of
+ its network. Analysts have estimated that to restore the systems from 
+scratch it will cost around EUR 800 k. Than there is the business 
+interruption which is also covered by the insurance policy you have had 
+the chance to read. If my client gets the decrypter, the network will be
+ restored faster and the business will restart in a matter of days. 
+Otherwise it will take longer but the costs incurred by my client will 
+be integrally covered by the cybersecurity insurance policy.
+This being said, we are at a negotiation table. Your demands (USD 6.75 
+M) do not match our last offer (USD 750k ). We are way too far to reach 
+an agreement. You guys say that our last offer do not you’re your 
+expectations and to come back with a higher offer. But you guys have not
+ lowered your request and showed any availability to reach an agreement 
+and a win-win solution for both the parties involved. I mean, this is 
+not a negotiation. Are you guys willing to get a reward for your team? 
+What if I convince my client to put USD 1 M on the table? My client will
+ never pay you the amount you have requested, but with some sacrifice he
+ might be able to reach the USD 1 M threshold.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 16/72</div>
+You write a lot of text but all of this doesnt matter. Why ? [redacted] is ONE
+ of the WORLD&#x27;s LARGEST manufacturers of [redacted]. Your 
+client spent some millions on recovery software and hardware for it, but
+ admins using passwords like &quot;[weak password redacted]&quot;. But sure we cant take your 1M 
+offer because this is ridiculous. We are thinking that you are bluffing 
+and trying to make price so lower, but I understand it is just your job.
+ You working fine, price updated to $5M
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 17/72</div>
+hey, guys, thank for lowering the price.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 18/72</div>
+I mean that being one of the largest corporations does not imply to be the richest. This is the point
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 19/72</div>
+If my client had the financial resources you think the IT department would be stronger and [redacted] systems would be more secure
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 20/72</div>
+[redacted] IT department has proved to be very very little in terms of 
+capacity and you guys have been good to leverage the vulnerabilities in 
+[redacted] network. But this is not the point
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 21/72</div>
+You are sure that [redacted] has the financial capability to meet your 
+demands. If you look at the reports as well as at the newspaper news you
+ can easily see that [redacted] is in deep trouble.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 22/72</div>
+So I am not bluffing because I have been asked to keep the price as 
+lower as possible. I am an experienced negotiator, I undertook many 
+negotiations with REvil and I know how to talk with you guys. I know the
+ threshold I can or I cannot exceed. This is not the case. My client has
+ a very limited financial ability and I am not fooling you around
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 23/72</div>
+So please do reconsider your demands and go for a win-win solution as REvil usually pursue.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 24/72</div>
+If you have undertook many negotiations with REvil you have to know that much smaller companies pay more than your offer.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 25/72</div>
+Well, it hasn&#x27;t been my case fortunately! Yes, I confirm I have 
+undertaken many negotiations with REvil affiliates and I have not bumped
+ into a negotiation with a payment of more than 1 M. Two months ago a 
+REvil affilate attacked a very famous italian company. The intial 
+request was 7.5 M USD, with revenues like [redacted]. The deal was closed at 
+USD 750 K. You can ask REvil affiliates if I am not speaking the truth.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 26/72</div>
+Moreover [redacted] does not give a shit about the data you have stolen, so I 
+have been told. So please reconsider you request and maybe we can find 
+an agreement.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 27/72</div>
+I think there were reasons for that, it is not for nothing that they 
+reduce the price to 750k from 7.5m, you are too mistaken in thinking 
+that the situation is the same here. I could cite cases when companies 
+with ten times less revenue paid 3M, or paids 100k only for one personal
+ computer, but it is not create rule, it is just an exception, 
+exceptions only confirm the rule.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 28/72</div>
+I can see your point and I get it. I think I am not mistaken and the 
+situation is similar to the one I mentioned. I mean, the price paid 
+depends on many factors: 1) financial availability 2) ability to restore
+ the network without the decrypter 3) time necessary 4) consistency of 
+backups 5) profit loss for buisness interruption and so on. What I am 
+saying that this is the sixth time I bumped into REvil and my client has
+ never paid more than 1 M USD. But maybe they are exceptions that 
+confirm the rule.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 29/72</div>
+Other Data Recovery Companies has never clients with paid more $5,000, 
+but it is not means we will agree for $5,000 in case like this.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 30/72</div>
+The situation is the following: 1) [redacted] has a very limited financial 
+availability. 2) [redacted] is already working on network restoring (costs will
+ be covered by the insurance policy) 3)the time necessary to restore the
+ network from scratch will be almost 12 days 4) there are backups 
+available on LTO tapes 5) the profit loss for business interruption will
+ be limited and covered by the insurance policy
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 31/72</div>
+I get your point but [redacted] offered USD 1 M clean, not 5 k$.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 32/72</div>
+In view of this situation, $ 5M is reasonable.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 33/72</div>
+[redacted] does not have $ 5 M. I can try to convince the client to add more 
+money, but there no cash flow to pay the amount you have requested.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 34/72</div>
+Of course. Because $1M too low.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 35/72</div>
+I know that the amount offered does not meet your expectations. What&#x27;s a
+ reasonable amount for you?Take into consideration what I have just told
+ you in this talk
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 36/72</div>
+Our offer $5M
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 37/72</div>
+Waiting for your...
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 38/72</div>
+Talk to the client and get back to you in a while
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 39/72</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 40/72</div>
+good morning. do you have new information for us?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 41/72</div>
+Yes. Talked to the client and they shared that profit margins on 
+revenue that is generated is tiny, and due to the lack of business 
+having actual cash to turn into monero is hard to come by. They 
+understand you ask more money, but they wanted me to let you know that 
+they are having a hard time coming across more money. Now they have 
+access to USD 1.27 M in cash, but it won&#x27;t be available until Monday 
+since they can&#x27;t send money with the banks closed.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 42/72</div>
+We have good news to you, price $2.5M for this deal. We prefer Monero, 
+but provide you bitcoin payment method to make it easier for you. But 
+there is a nuance, if you pay in bitcoins, the additional commission is 
+10%.
+After payment we will fulfill all agreements with decryption, will 
+provide any supports, delete the data from our servers and will provide 
+you short report on how you were hacked, keep in mind we still have 
+access to the network and watching for any movements.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 43/72</div>
+Refresh the page to see changes
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 44/72</div>
+hello. are we waiting for your payment today?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 45/72</div>
+Hi guys. Sorry for being late but my client took his time over the 
+weekend to have internal meetings in order to respond to your last 
+request. Notwithstanding my client has strived to find more budget to 
+pay your claims, there is no more money available to be put on the 
+table. The financial condition of my client is terribile and you know it
+ and the economic situation of Italy has been catastrophic since a 
+decade with impactson [redacted]. My client can&#x27;t afford to take away anymore 
+money from the budget needed to run the company operations and to pay 
+employees salaries. It has been a difficult decision and my client is 
+fully aware that this decision could stop the negotiation with you guys 
+and that consequently he won&#x27;t get the decrypter. However my client has 
+reached the maximum cap and the costs he might face without the 
+decrypter are, according to cybersecurity analysts and loss adjusters, 
+close to $ 1 M. So this is it. Let me know.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 46/72</div>
+If I understand correctly, your last offer is $1.27M, if we will agree, how many time do you need to make the payment?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 47/72</div>
+Yes, correct. We will need about a day since buying Monero takes time, especially when we use a broker in the USA
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 48/72</div>
+Okay guys so medium price between your offer and our waiting is 1.5kk. 
+price updated for 48h and it is final call. Write a message when you 
+will start exchange for lock xmr rate.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 49/72</div>
+Client again took some time to think about to your last offer. Due to 
+the fact that Monero has high transaction rates (around +10%), my client
+ is willing to pay you 1.27 M within the next 48 hours. Client is not 
+able to fully meet your demands as you know and understand. Let me know 
+if this is ok for you and client starts the payment process.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 50/72</div>
+ok. price updated.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 51/72</div>
+Please do confirm that the decrypter is general and works for each and every system you guys have encyrpted
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 52/72</div>
+Yes. general decryptor works for all system that was affected
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 53/72</div>
+how much time do you need to make this payment?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 54/72</div>
+hello?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 55/72</div>
+Be patient, we are working on it. Expect the payment very soon, a matter of hours.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 56/72</div>
+Can you lock the Monero price for us? We are placing our order now.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 57/72</div>
+Ok. Freezed
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 58/72</div>
+Payment sent.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 59/72</div>
+Waiting for 10 confirmations by Monero network
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 60/72</div>
+To use a decryptor run it as administrator and turn off antivirus before.
+You can use a decryptor as gui application or through cmd.
+
+CMD commands:
+dec.exe -full
+dec.exe -path &quot;C:\folder&quot;
+dec.exe -file &quot;C:\folder\file.txt.random_ext&quot;
+
+* decryptor with -full option will decrypt all with default params.
+
+If you use it as gui application, I recommend you choose &quot;create 
+backups&quot; option. If you use decryptor without this option, you should 
+not interrupt decryption process, otherwise some files will be 
+irreversibly damaged.
+
+How it works with &quot;create backups&quot; option:
+1. Decryptor looking for encrypted file
+2. creating backup of file
+3. decrypting file
+4. removing the backup
+5. looking for a next file and loop repeating.
+
+You can collect list of extensions, input to the textarea above the chat
+ and click &quot;Download&quot; to generate General decryptor to decrypt files 
+with these extensions.
+But this way is not necessary, because we provide you the universal 
+decryptor. It just works little slowest but you don&#x27;t need collect 
+anything, just download it and use on any system with admin rights, 
+DOWNLOAD:
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 61/72</div>
+Hi guys, thanks for reciprocating with decryptor. During our talks, you
+ told me that in case of ransom payment you would have given my client a
+ sort report on how my client was hacked. Can you please provide such 
+short report? My client is very interested about it and I think that 
+after the successful transaction he deserves to know the entry point and
+ how you gained privileged access to the network. Thanks for 
+cooperation!
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 62/72</div>
+hello?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 63/72</div>
+Hi. We find a login to [REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 64/72</div>
+After that we made a kerberoasting attack and decrypt admin hash &quot;12qwer34&quot;. That&#x27;s all.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 65/72</div>
+you need to use any 2fa solution for your citrix server.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 66/72</div>
+Thank you guys. One last question, did you guys buy the citrix server 
+credentials on the dark web? Or did you obtain the credentials in 
+another way? You know, it is important for my client to understand in 
+order to prevent future attacks from other ransomware gangs.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 67/72</div>
+yes. we buy it. somebody of your clients employee was infected but not by us.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 68/72</div>
+that&#x27;s why i said to you that your client need to use 2fa on citrix server.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 1 month ago &mdash; Message 69/72</div>
+Thanks. Since you guys have been so available to answer my question, 
+can you please tell me which is the account whose credentials you have 
+purchased? It is very important for my client to ascertain 
+responsibilities of the security incident
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 1 month ago &mdash; Message 70/72</div>
+sorry. i cant give you that information.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 7 days ago &mdash; Message 71/72</div>
+Hello guys, sorry to bother you. But since the chat is still open I 
+need one more info from you. It&#x27;s very important for my client to get 
+the full file tree and the list of the files you have exfiltrated, as 
+well as the logs of the delete operations of such files. Can you help 
+me?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 72/72</div>
+Hello. We don&#x27;t store even list of files of companies which paid, and as log file too
+</div></div>
+</div>
+</div></section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Analyst Observations</h2>
+<ul style="list-style:none;padding:0">
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">The initial demand of $675.0M places this in the upper tier of ransomware demands, typically reserved for large enterprises.</li>
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">REvil (also known as Sodinokibi) was responsible for high-profile attacks including Kaseya and JBS. The group was disrupted by law enforcement in late 2021 and early 2022.</li>
+</ul>
+</div></section>
+
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

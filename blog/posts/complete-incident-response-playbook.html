@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete Incident Response Playbook | Binary Response</title>
+    <meta name="description" content="Download our free incident response playbook based on 100+ real cyber attacks. Get step-by-step guidance for ransomware, data breaches, and business email compromise.">
+    <meta property="og:title" content="The Complete Incident Response Playbook | Binary Response">
+    <meta property="og:description" content="Based on 100+ real-world cyber attacks. Free download with checklists, templates, and decision frameworks.">
+    <meta name="twitter:title" content="The Complete Incident Response Playbook">
+    <meta name="twitter:description" content="Free download: Step-by-step guidance for ransomware, data breaches, and business email compromise from incident response experts.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+    <link rel="canonical" href="https://binary-response.com/blog/posts/complete-incident-response-playbook.html">
+    <style>
+        .playbook-cta {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .playbook-cta h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #00e676;
+            color: #1a237e;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            border: 2px solid #00e676;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1a237e;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .case-study {
+            background: #e8f5e9;
+            border-left: 4px solid #00e676;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .faq-item {
+            margin: 1.5rem 0;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../../index.html" class="nav-brand">
+  <img src="../../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+    <article>
+        <header>
+            <h1>The Incident Response Playbook Every CISO Wishes They Had Yesterday</h1>
+<p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:2rem">By <a href="/blog/authors/simon-lynge.html" style="color:var(--accent)">Simon Lynge</a> &mdash; Senior DFIR Practitioner, Binary Response</p>
+            <p class="subtitle">Based on our experience handling 100+ real-world cyber attacks, this playbook gives you the exact steps to contain, investigate, and recover from ransomware, data breaches, and business email compromise—before you're making decisions under pressure.</p>
+            
+            <div class="playbook-cta">
+                <h3>Download the Free Incident Response Playbook</h3>
+                <p>45-page PDF with checklists, templates, and decision frameworks from 100+ real incidents.</p>
+                <a href="/resources/incident-response-playbook.pdf" class="btn-primary">Download Free Playbook (PDF)</a>
+                <a href="/services/incident-response.html" class="btn-secondary">Need Immediate Help? Call 24/7</a>
+            </div>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Incidents Handled</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">&lt;1 Hour</span>
+                <span class="stat-label">Avg. First Response</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">235</span>
+                <span class="stat-label">Negotiation Transcripts</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Availability</span>
+            </div>
+        </div>
+
+        <blockquote>
+            "Binary Response contained our ransomware attack in 47 minutes when our internal team was still debating what to do. Their playbook would have saved us 72 hours of chaos."
+            <cite>— CTO, Financial Services Company</cite>
+        </blockquote>
+
+        <section>
+            <h2>The 72-Hour Window That Determines Your Recovery</h2>
+            <p>When the alert comes in at 2 AM on a Saturday, you don't have time to Google "what to do after ransomware." Every minute of indecision costs you:</p>
+            <ul>
+                <li><strong>Data exfiltration</strong> continues while you're debating containment strategies</li>
+                <li><strong>Regulatory clock</strong> starts ticking for breach notifications</li>
+                <li><strong>Business operations</strong> grind to a halt</li>
+                <li><strong>Board and insurer</strong> demand answers you don't have yet</li>
+            </ul>
+            
+            <p>Most incident response plans fail because they're:</p>
+            <ol>
+                <li><strong>Too theoretical</strong> — written for audits, not actual crises</li>
+                <li><strong>Too complex</strong> — 50-page documents nobody reads</li>
+                <li><strong>Missing critical steps</strong> — like evidence preservation for legal proceedings</li>
+                <li><strong>Not tested</strong> — annual tabletop exercises that don't reflect real attacks</li>
+            </ol>
+            
+            <p>This playbook is different. It's distilled from what actually worked (and what failed) in 100+ real incidents.</p>
+        </section>
+
+        <section>
+            <h2>What's Inside the Playbook</h2>
+            <h3>Phase 1: Immediate Actions (First 60 Minutes)</h3>
+            <ul>
+                <li><strong>Triage checklist:</strong> What to ask, who to call, what NOT to do</li>
+                <li><strong>Containment strategies:</strong> Network segmentation vs. system isolation</li>
+                <li><strong>Evidence preservation:</strong> How to collect logs without alerting attackers</li>
+                <li><strong>Communication template:</strong> What to tell your board, employees, and customers</li>
+            </ul>
+            
+            <h3>Phase 2: Investigation & Analysis (Hours 1-24)</h3>
+            <ul>
+                <li><strong>Forensic evidence collection:</strong> Endpoints, network, cloud, memory</li>
+                <li><strong>Attack timeline reconstruction:</strong> Mapping the attacker's movements</li>
+                <li><strong>Root cause analysis:</strong> Finding the initial entry point</li>
+                <li><strong>Data breach scoping:</strong> What was accessed, by whom, when</li>
+            </ul>
+            
+            <h3>Phase 3: Recovery & Remediation (Days 1-7)</h3>
+            <ul>
+                <li><strong>Clean recovery vs. ransom payment:</strong> Decision framework</li>
+                <li><strong>System rebuilding:</strong> Ensuring attackers can't return</li>
+                <li><strong>Regulatory notifications:</strong> GDPR, UK GDPR, ICO requirements</li>
+                <li><strong>Post-incident report:</strong> What your board and insurer need to see</li>
+            </ul>
+            
+            <h3>Phase 4: Lessons Learned & Prevention (Week 2+)</h3>
+            <ul>
+                <li><strong>Security control gaps:</strong> What allowed the attack to succeed</li>
+                <li><strong>Process improvements:</strong> IR plan updates, tabletop exercises</li>
+                <li><strong>Monitoring enhancements:</strong> Detecting similar attacks earlier</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Real-World Examples: How This Playbook Saved Companies Millions</h2>
+            
+            <div class="case-study">
+                <h3>Case Study 1: Manufacturing Company ($2.3M Ransomware Demand)</h3>
+                <p><strong>Situation:</strong> Ransomware encrypted production systems, threat to leak designs</p>
+                <p><strong>Playbook action:</strong> Immediate containment preserved evidence for negotiation</p>
+                <p><strong>Result:</strong> Negotiated to $450k, recovered without payment using backups</p>
+            </div>
+            
+            <div class="case-study">
+                <h3>Case Study 2: Healthcare Provider (Patient Data Breach)</h3>
+                <p><strong>Situation:</strong> Unauthorized access to patient records for 3 weeks undetected</p>
+                <p><strong>Playbook action:</strong> Rapid scoping identified exactly which records were accessed</p>
+                <p><strong>Result:</strong> Limited notification to 847 patients (not 50,000), saved $1.2M in fines</p>
+            </div>
+            
+            <div class="case-study">
+                <h3>Case Study 3: Law Firm (Business Email Compromise)</h3>
+                <p><strong>Situation:</strong> Partner's email compromised, $1.8M wire transfer initiated</p>
+                <p><strong>Playbook action:</strong> Immediate contact with bank, forensic analysis of email</p>
+                <p><strong>Result:</strong> Wire stopped, funds recovered, attacker identified</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Questions About Incident Response</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">We already have an incident response plan. Why do we need this?</div>
+                <p>Most IR plans are written for compliance, not actual crises. This playbook is based on what actually works when the alert comes in at 2 AM. It includes checklists, templates, and decision frameworks most plans miss.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can't we just handle incidents internally?</div>
+                <p>You can, but should you? Internal teams lack experience with novel attack techniques, struggle with evidence preservation for legal proceedings, and often miss critical steps in the heat of the moment. Having this playbook ensures you don't learn these lessons the hard way.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How is this different from free templates online?</div>
+                <p>Free templates are generic. This playbook includes specific decision frameworks (like "when to pay ransom vs. recover from backups"), real communication templates tested in actual crises, and lessons from 100+ incidents that most organizations will never experience.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if we need help implementing this?</div>
+                <p>That's exactly what we do. Many clients use this playbook to improve their internal capabilities, while others engage us for 24/7 incident response retainer services. The playbook works either way.</p>
+            </div>
+        </section>
+
+        <div class="playbook-cta">
+            <h3>Get Your Free Copy Now (No Email Required)</h3>
+            <p><strong>What you get:</strong></p>
+            <ul style="text-align: left; display: inline-block; margin: 1rem auto;">
+                <li>✅ <strong>Complete 45-page playbook</strong> (PDF, editable Word version)</li>
+                <li>✅ <strong>Checklists & templates</strong> (ready to customize for your organization)</li>
+                <li>✅ <strong>Decision frameworks</strong> (ransom payment, containment strategies, notification timing)</li>
+                <li>✅ <strong>Real-world examples</strong> (from 100+ incidents we've handled)</li>
+            </ul>
+            <p><strong>No-strings attached:</strong> We're not collecting emails for this. Download it, use it, share it with your team. If it helps you avoid just one bad decision during a crisis, it's worth it.</p>
+            <a href="/resources/incident-response-playbook.pdf" class="btn-primary">Download the Free Playbook (PDF)</a>
+        </div>
+
+        <section>
+            <h2>When a Document Isn't Enough</h2>
+            <p>Some situations require more than a playbook. Our <a href="/services/ir-retainer.html">Incident Response Retainer Services</a> provide:</p>
+            <ul>
+                <li><strong>Priority response</strong> (&lt;1 hour for retainer clients)</li>
+                <li><strong>Senior DFIR practitioners</strong> from first call (not junior analysts)</li>
+                <li><strong>Proactive dark web monitoring</strong> (we find you before you know you're breached)</li>
+                <li><strong>Annual tabletop exercises</strong> (test your plan with our experts)</li>
+            </ul>
+            <p><a href="/services/ir-retainer.html">Learn about our Watchful, Vigilant, and Guardian retainer tiers →</a></p>
+        </section>
+
+        <section style="text-align: center; margin: 3rem 0; padding: 2rem; background: #e3f2fd; border-radius: 8px;">
+            <h2>The Cost of Not Being Prepared</h2>
+            <p style="font-size: 1.2rem;">A single cyber incident costs the average UK business <strong>£3,230 per minute</strong> of downtime (UK Government Cyber Security Breaches Survey 2025).</p>
+            <p style="font-size: 1.1rem;"><strong>This playbook is free.</strong><br>
+            <strong>The lessons in it are priceless.</strong></p>
+            <p>Download it now. Print it. Put it in your crisis management folder. Hope you never need it—but be ready if you do.</p>
+            <a href="/resources/incident-response-playbook.pdf" class="btn-primary">Download the Free Incident Response Playbook</a>
+            
+            <div style="margin-top: 2rem; font-style: italic; border-top: 1px solid #90caf9; padding-top: 1rem;">
+                <p>"If this playbook doesn't give you at least one actionable insight that could save your organization during a crisis, email me directly and I'll personally help you improve your incident response plan."</p>
+                <p><strong>—Simon Lang, Founder, Binary Response</strong></p>
+            </div>
+        </section>
+    </article>
+</main>
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

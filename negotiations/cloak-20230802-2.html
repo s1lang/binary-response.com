@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Cloak Ransomware Negotiation — 20230802 2 | Binary Response</title>
+<meta name="description" content="Full verbatim transcript of a Cloak ransomware negotiation (August 2023). Study real-world ransomware negotiation tactics and threat actor behaviour.">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/cloak-20230802-2.html">
+<meta property="og:title" content="Cloak Ransomware Negotiation — 20230802 2">
+<meta property="og:description" content="Full verbatim transcript of a Cloak ransomware negotiation (August 2023). Study real-world ransomware negotiation tactics and threat actor behaviour.">
+<meta property="og:url" content="https://binary-response.com/negotiations/cloak-20230802-2.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Cloak Ransomware Negotiation — 20230802 2",
+      "description": "Full verbatim transcript of a Cloak ransomware negotiation with 20230802 2. Outcome: Unknown.",
+      "datePublished": "2026-03-05",
+      "author": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "mainEntityOfPage": "https://binary-response.com/negotiations/cloak-20230802-2.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "Cloak — 20230802 2", "item": "https://binary-response.com/negotiations/cloak-20230802-2.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Ransomware Negotiation Transcript</span>
+<h1 style="font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">Cloak Ransomware Negotiation — <span style="color:var(--accent)">20230802 2</span></h1>
+
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">66</span><span class="stat-label">Messages</span></div>
+<div class="nego-stat"><span class="stat-value">33 days</span><span class="stat-label">Duration</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Outcome</span></div>
+</div>
+</div>
+</section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Context</span>
+<h2 class="section-title">About This Negotiation</h2>
+<p>This transcript documents a <strong>Cloak</strong> ransomware negotiation with <strong>20230802 2</strong>. 
+        The negotiation consisted of 66 messages exchanged over 33 days, beginning on 2023-08-02.</p>
+        <p>The initial ransom demand was Unknown. The final outcome is not confirmed in the transcript.</p>
+</div></section>
+
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Reproduced from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-02 22:54:31 &mdash; Message 1/66</div>
+
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-19 04:33:16 &mdash; Message 2/66</div>
+Hello! If you are reading this message, your files 
+are encrypted and your data is compromised.In order for YOU to quickly 
+and without additional losses FOR YOU to regain control over your data, 
+strictly follow the proposed scenario:1. ONLY an AUTHORIZED 
+representative authorized to enter into financial agreements and 
+negotiate on behalf of the entire company should participate in 
+negotiations on your part.All other persons not endowed with such 
+authority (system administrators, cleaners, and others) who enter into 
+negotiations can cause significant harm, primarily for your own 
+company.2. Confirm that you are an authorized representative of your 
+company and briefly describe your situation.3. Stay online throughout 
+today until further instructions.4. If you did not receive our answer 
+during the day, then indicate the time, country and city in the time 
+zone of which you are located. Set a time convenient for you for 
+follow-up negotiations.5. Keep calm and be patient, they will definitely
+ answer you and help you with the recovery of your data.6. Remember that
+ mutual respect is the key to successful negotiations.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:25:23 &mdash; Message 3/66</div>
+Hello,
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:25:46 &mdash; Message 4/66</div>
+We got infected and you asked to contact you.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:42:46 &mdash; Message 5/66</div>
+Hello
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:43:36 &mdash; Message 6/66</div>
+you have not given me confirmation that you are authorized to negotiate on behalf of the company.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:43:49 &mdash; Message 7/66</div>
+you must understand that based on your answers, appropriate decisions will be made that will affectthroughout your company. 
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:44:01 &mdash; Message 8/66</div>
+So you&#x27;re authorized to negotiate?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:55:04 &mdash; Message 9/66</div>
+I&#x27;m authorized to ask your intentions. We&#x27;re in 
+[redacted], and we&#x27;re not used to this kind of situation. I&#x27;ll
+ pass on to my manager, who will decide what to do next. This is the 1st
+ step for him.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:56:03 &mdash; Message 10/66</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:56:12 &mdash; Message 11/66</div>
+So that we do not have a misunderstanding and, as a result, undesirable consequences for you, follow these 3 rules: 
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:56:24 &mdash; Message 12/66</div>
+1 Always answer my questions. If you don&#x27;t have an 
+answer and need to consult with management, tell me so. 2 Never end 
+negotiations unilaterally. This may serve as a signal to me that you 
+refuse to cooperate with us. 3 If the negotiations are completed today, 
+be sure to indicate the time of the next meeting.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:56:55 &mdash; Message 13/66</div>
+Now I will give you a step-by-step plan of further 
+actions. Follow it strictly, as it is the shortest way to the to the 
+successful completion of the case.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:57:28 &mdash; Message 14/66</div>
+The next steps will be:
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:57:37 &mdash; Message 15/66</div>
+1. We assign you a ransom amount that you must accept*.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:57:40 &mdash; Message 16/66</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:57:45 &mdash; Message 17/66</div>
+2. you convert the approved amount into BTC or XMR.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:58:13 &mdash; Message 18/66</div>
+3. You send us 2 encrypted files to check their reverse decryption**.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:58:22 &mdash; Message 19/66</div>
+4. we decrypt them and send them to you.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:58:33 &mdash; Message 20/66</div>
+5. you make sure the decryptor works and give us confirmation.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:58:44 &mdash; Message 21/66</div>
+6. we give you a wallet to transfer BTC or XMR.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:58:54 &mdash; Message 22/66</div>
+7. You make a trial amount transfer and wait for confirmation.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:59:05 &mdash; Message 23/66</div>
+8. After our confirmation, you transfer the entire amount.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:59:15 &mdash; Message 24/66</div>
+9. We send you the key and detailed instructions.***
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:59:24 &mdash; Message 25/66</div>
+10. your data stored by us will be deleted.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:59:32 &mdash; Message 26/66</div>
+11. we provide you with a penetration report indicating the exploited vulnerabilities.****
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 13:59:45 &mdash; Message 27/66</div>
+notes:
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 14:00:20 &mdash; Message 28/66</div>
+* we know about your income so do not humiliate 
+yourself.Discounts can only be granted to those companies that have 
+applied to us in a timely manner and strictly comply with all our 
+instructions.**Files must not be important, and their maximum size must 
+be no more than 5 MB each.*** We will keep in touch with you until your 
+network is fully restored.**** The report is provided to everyone who 
+paid the full amount of the ransom.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 14:01:49 &mdash; Message 29/66</div>
+1?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 14:03:36 &mdash; Message 30/66</div>
+This is the general plan.I will discuss the specific 
+amount of the ransom only with an authorized person who owns the right 
+to conclude financial agreements.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 14:06:26 &mdash; Message 31/66</div>
+if such a person is in touch with you, then tell him this and let him join our negotiations.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-21 18:29:30 &mdash; Message 32/66</div>
+I&#x27;m still here and waiting for your representative for further negotiations
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-22 10:26:45 &mdash; Message 33/66</div>
+Your silence will only make things worse for 
+yourself.We have more than 60 GB of your private data at our 
+disposal.Urgently appoint an authorized representative and enter into 
+negotiations.Otherwise, we will sell your data to a third party
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-23 10:02:51 &mdash; Message 34/66</div>
+As I warned you, your data is for sale.While the 
+timer is running, no one else can see your files.After the time expires,
+ your data will be available to our buyers, but it will not be available
+ to you.Enter into negotiations quickly and we will stop this.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-23 10:03:18 &mdash; Message 35/66</div>
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-23 10:03:32 &mdash; Message 36/66</div>
+[redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-23 10:03:44 &mdash; Message 37/66</div>
+[redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-23 10:04:37 &mdash; Message 38/66</div>
+[redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-23 13:44:20 &mdash; Message 39/66</div>
+[redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-24 17:08:44 &mdash; Message 40/66</div>
+Why are you keeping silent?you are running out of time.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 03:14:55 &mdash; Message 41/66</div>
+[redacted].com    hi sir this data need also
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 03:16:54 &mdash; Message 42/66</div>
+[REDACTED URL]           my link not working so i contact this way
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 03:25:30 &mdash; Message 43/66</div>
+pls need decrypt tool
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 06:32:44 &mdash; Message 44/66</div>
+pls help me
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 11:38:31 &mdash; Message 45/66</div>
+Hello!To help you I need to understand who I&#x27;m 
+dealing with?Have you been authorized to negotiate on behalf of the 
+entire company?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 11:45:52 &mdash; Message 46/66</div>
+As for [redacted].com, I can tell you that we can also solve this issue.Pass this on to your management.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 12:09:24 &mdash; Message 47/66</div>
+Get the point. Without the participation of your 
+leadership, we will not be able to conclude an agreement with you.It is 
+up to your bosses to decide whether or not they should pay us to decrypt
+ the files and return the data.Therefore, I strongly recommend that you 
+tell them about it. Let them give you a representative.This is the only 
+way we will find a way out of this situation.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 12:56:03 &mdash; Message 48/66</div>
+how much price 
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 12:56:05 &mdash; Message 49/66</div>
+[redacted].com
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 14:45:16 &mdash; Message 50/66</div>
+wait a bit, I&#x27;ll make some clarifications on this
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 15:23:53 &mdash; Message 51/66</div>
+for those who want to recover files on [redacted].com. I have a question. How did you get access to this chat?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-27 15:25:08 &mdash; Message 52/66</div>
+After your answer, we will move on to discussing the price.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-28 11:30:22 &mdash; Message 53/66</div>
+Why did you stop communicating?Files on your computers won&#x27;t decrypt themselves
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-28 15:26:38 &mdash; Message 54/66</div>
+we are ready to cooperate.Give me an answer and we will move on to the question of price
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-29 16:28:31 &mdash; Message 55/66</div>
+Please note that data on [redacted].com will also 
+appear on our resource soon.You can write to me if you don&#x27;t want this 
+to happen.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-30 15:17:43 &mdash; Message 56/66</div>
+I appeal to the leaders and representatives of [redacted] The privacy period for your data on our website is about to expire.After the expiration of the time, your data will become publicly available.But you won&#x27;t be able to download them yourself.We will start receiving offers to sell your data from our partners.these are the new inputs:
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-30 15:17:58 &mdash; Message 57/66</div>
+[redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-30 15:18:08 &mdash; Message 58/66</div>
+[redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-30 15:29:30 &mdash; Message 59/66</div>
+Now I turn to the representatives of 
+[redacted].comYour data has also been put up on our website for the sale
+ of such material.Since I don&#x27;t know how you got into THIS chat, I can 
+assume that you do not want to publicly discuss your business here.I 
+give you a chance to solve your questions here:
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-08-30 15:30:12 &mdash; Message 60/66</div>
+[redacted]@cock.li
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-09-03 13:22:00 &mdash; Message 61/66</div>
+i tried contect no responceyour side
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-09-03 15:40:01 &mdash; Message 62/66</div>
+hello
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-09-04 10:07:25 &mdash; Message 63/66</div>
+hello
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-09-04 10:07:41 &mdash; Message 64/66</div>
+a message has been sent to your email
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-09-04 12:39:05 &mdash; Message 65/66</div>
+not received anything pls replay my gmail
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Cloak]</span> &mdash; 2023-09-04 13:05:21 &mdash; Message 66/66</div>
+do you want me to put your email here?
+</div></div>
+</div>
+</div></section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Analyst Observations</h2>
+<ul style="list-style:none;padding:0">
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">This transcript documents a Cloak ransomware negotiation. The exchange provides insight into the group's negotiation tactics and communication style.</li>
+</ul>
+</div></section>
+
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

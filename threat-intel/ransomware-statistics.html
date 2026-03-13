@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ransomware Statistics 2024–2026 — Victim Data & Trends | Binary Response</title>
+<meta name="description" content="Independent ransomware victim statistics tracked by Binary Response. 17,000+ victims, 180+ threat actor groups, data from 2021. Updated continuously from dark web monitoring.">
+<link rel="apple-touch-icon" href="/img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="/img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="/css/style.css">
+<meta property="og:title" content="Ransomware Statistics 2024–2026 | Binary Response">
+<meta property="og:description" content="17,000+ ransomware victims tracked across 180+ threat actor groups. Independent data from dark web monitoring. Updated continuously.">
+<meta property="og:url" content="https://binary-response.com/threat-intel/ransomware-statistics.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://binary-response.com/threat-intel/ransomware-statistics.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Ransomware Victim Statistics — Binary Response",
+  "description": "Continuously updated dataset of ransomware victims tracked from dark web leak sites and threat intelligence sources. Covers 180+ threat actor groups from 2021 to present.",
+  "url": "https://binary-response.com/threat-intel/ransomware-statistics.html",
+  "creator": {
+    "@type": "Organization",
+    "name": "Binary Response",
+    "url": "https://binary-response.com"
+  },
+  "temporalCoverage": "2021/..",
+  "variableMeasured": "Ransomware victims by group, region, and time period",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true
+}
+</script>
+
+<style>
+.stats-hero { text-align: center; padding: 4rem 0 2rem; }
+.stats-hero .hero-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent, #7eb3e0); margin-bottom: 1rem; }
+.pulse-dot { width: 8px; height: 8px; background: #00c864; border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+
+.metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+.metric-card { background: rgba(126,179,224,0.05); border: 1px solid rgba(126,179,224,0.15); border-radius: 8px; padding: 1.5rem; text-align: center; }
+.metric-number { font-size: 2.8rem; font-weight: 800; color: #7eb3e0; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+.metric-label { font-size: 0.8rem; color: #8899aa; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem; }
+.metric-sub { font-size: 0.75rem; color: #556677; margin-top: 0.3rem; }
+
+.section-title { font-size: 1.3rem; font-weight: 700; color: #e0e8f0; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(126,179,224,0.15); }
+
+/* Bar chart */
+.bar-chart { margin: 1.5rem 0; }
+.bar-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.6rem; }
+.bar-label { width: 130px; font-size: 0.82rem; color: #aabbcc; text-align: right; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-track { flex: 1; height: 22px; background: rgba(126,179,224,0.06); border-radius: 3px; position: relative; }
+.bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, #1e4a7a, #7eb3e0); transition: width 1s ease; display: flex; align-items: center; padding-left: 8px; }
+.bar-fill.danger { background: linear-gradient(90deg, #7a1e1e, #e05555); }
+.bar-count { font-size: 0.78rem; color: #fff; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+.bar-count-out { font-size: 0.78rem; color: #7eb3e0; font-weight: 600; font-family: 'JetBrains Mono', monospace; margin-left: 0.4rem; }
+
+/* Year chart */
+.year-chart { display: flex; align-items: flex-end; gap: 1.2rem; height: 200px; margin: 2rem 0; padding: 0 0.5rem; }
+.year-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; height: 100%; justify-content: flex-end; }
+.year-bar { width: 100%; background: linear-gradient(180deg, #7eb3e0, #1e4a7a); border-radius: 4px 4px 0 0; min-height: 4px; transition: height 1s ease; }
+.year-label { font-size: 0.75rem; color: #7eb3e0; font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+.year-name { font-size: 0.7rem; color: #667788; }
+
+/* Recent feed */
+.recent-feed { display: grid; gap: 0.5rem; margin: 1.5rem 0; }
+.feed-item { display: flex; align-items: center; gap: 1rem; padding: 0.65rem 1rem; background: rgba(126,179,224,0.03); border: 1px solid rgba(126,179,224,0.08); border-radius: 6px; font-size: 0.85rem; }
+.feed-org { flex: 1; color: #ccd8e0; font-weight: 500; }
+.feed-group { color: #e05555; font-size: 0.78rem; font-family: 'JetBrains Mono', monospace; font-weight: 600; background: rgba(224,85,85,0.08); padding: 2px 6px; border-radius: 3px; }
+.feed-date { color: #556677; font-size: 0.75rem; width: 80px; text-align: right; }
+
+/* Citation box */
+.citation-box { background: rgba(126,179,224,0.05); border: 1px solid rgba(126,179,224,0.2); border-left: 3px solid #7eb3e0; border-radius: 6px; padding: 1.5rem; margin: 3rem 0; }
+.citation-box h3 { color: #7eb3e0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 0.8rem; }
+.citation-box p { color: #8899aa; font-size: 0.85rem; margin: 0 0 0.75rem; line-height: 1.6; }
+.citation-code { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; background: rgba(0,0,0,0.3); padding: 0.75rem 1rem; border-radius: 4px; color: #aaccee; word-break: break-all; display: block; margin-top: 0.5rem; }
+
+.note-box { background: rgba(255,165,0,0.05); border: 1px solid rgba(255,165,0,0.15); border-radius: 6px; padding: 1rem 1.2rem; margin: 2rem 0; font-size: 0.82rem; color: #998866; line-height: 1.6; }
+
+.update-stamp { font-size: 0.78rem; color: #445566; text-align: center; margin: 2rem 0; font-family: 'JetBrains Mono', monospace; }
+
+@media(max-width:600px){
+  .metric-number{font-size:2rem}
+  .bar-label{width:90px;font-size:0.72rem}
+  .year-chart{gap:0.5rem}
+}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+
+<nav class="site-nav">
+<a href="/index.html" class="nav-brand">
+  <img src="/img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div>
+</nav>
+
+<div class="container" style="max-width:900px">
+
+  <div class="stats-hero">
+    <span class="hero-label"><span class="pulse-dot"></span> Live Data — Updated Continuously</span>
+    <h1 style="font-size:2.5rem;margin:0.5rem 0">Ransomware <span class="accent">Statistics</span></h1>
+    <p style="color:#8899aa;max-width:600px;margin:1rem auto;line-height:1.7">
+      Independent victim tracking from Binary Response's dark web monitoring platform. 
+      Data sourced from threat actor leak sites, ransomware intelligence feeds, and 
+      incident disclosures since 2021.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+      <a href="/threat-intel/ransomware-tracker.html" class="btn btn-secondary">&#128225; Group Tracker</a>
+      <a href="/contact.html" class="btn btn-primary">&#128222; IR Retainer Enquiry</a>
+    </div>
+  </div>
+
+  <!-- Key metrics -->
+  <div class="metric-grid" id="metrics">
+    <div class="metric-card">
+      <div class="metric-number" id="m-total">—</div>
+      <div class="metric-label">Victims Tracked</div>
+      <div class="metric-sub">All time, 2021–present</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number" id="m-groups">—</div>
+      <div class="metric-label">Threat Actor Groups</div>
+      <div class="metric-sub">Active &amp; historic</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number" id="m-recent">—</div>
+      <div class="metric-label">Last 30 Days</div>
+      <div class="metric-sub">New disclosures</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">2021</div>
+      <div class="metric-label">Data From</div>
+      <div class="metric-sub">Earliest tracked incident</div>
+    </div>
+  </div>
+
+  <!-- Year chart -->
+  <h2 class="section-title">&#128200; Victims by Year</h2>
+  <div class="year-chart" id="year-chart">
+    <div style="color:#445566;padding:2rem">Loading…</div>
+  </div>
+
+  <!-- Top groups -->
+  <h2 class="section-title">&#128308; Most Active Threat Actor Groups (All Time)</h2>
+  <div class="bar-chart" id="groups-chart">
+    <div style="color:#445566;padding:1rem">Loading…</div>
+  </div>
+
+  <!-- Recent victims feed -->
+  <h2 class="section-title">&#9201; Recent Disclosures</h2>
+  <p style="color:#667788;font-size:0.85rem;margin:-0.5rem 0 1rem">Latest victims published to ransomware group leak sites. Organisation names sourced directly from threat actor disclosures.</p>
+  <div class="recent-feed" id="recent-feed">
+    <div style="color:#445566;padding:1rem">Loading…</div>
+  </div>
+
+  <!-- Methodology note -->
+  <div class="note-box">
+    <strong style="color:#ccaa55">&#9888; Methodology Note:</strong> Data is aggregated from publicly accessible ransomware group leak sites (cleartext and Tor), threat intelligence APIs, and open-source disclosure feeds. Victim names appear as published by threat actors — Binary Response does not independently verify all claims. Some records may reflect exaggerated or unconfirmed claims. Data should be treated as threat intelligence, not confirmed incident reports.
+  </div>
+
+  <!-- Citation box -->
+  <div class="citation-box">
+    <h3>&#128279; Citing These Statistics</h3>
+    <p>This data is free to use for research, journalism, and educational purposes under <a href="https://creativecommons.org/licenses/by/4.0/" style="color:#7eb3e0">CC BY 4.0</a>. When referencing these statistics, please credit Binary Response with a link:</p>
+    <code class="citation-code">Source: Binary Response Ransomware Statistics — https://binary-response.com/threat-intel/ransomware-statistics.html</code>
+    <p style="margin-top:0.75rem;margin-bottom:0">For bespoke ransomware intelligence, sector-specific trend reports, or IR retainer services, <a href="/contact.html" style="color:#7eb3e0">contact our team</a>.</p>
+  </div>
+
+  <!-- Related -->
+  <h2 class="section-title">&#128196; Related Intelligence</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem">
+    <a href="/threat-intel/ransomware-tracker.html" class="blog-card" style="text-decoration:none">
+      <div class="blog-card-body">
+        <span class="blog-tag">tracker</span>
+        <h3 style="font-size:1rem">Group Status Tracker</h3>
+        <p class="excerpt">Live uptime monitoring for 90+ ransomware group leak sites.</p>
+      </div>
+    </a>
+    <a href="/blog/posts/ransomware-landscape-q1-2026.html" class="blog-card" style="text-decoration:none">
+      <div class="blog-card-body">
+        <span class="blog-tag">analysis</span>
+        <h3 style="font-size:1rem">Ransomware Landscape Q1 2026</h3>
+        <p class="excerpt">Threat actor shifts, emerging groups, and sector targeting trends.</p>
+      </div>
+    </a>
+    <a href="/services/ransomware-negotiations.html" class="blog-card" style="text-decoration:none">
+      <div class="blog-card-body">
+        <span class="blog-tag">service</span>
+        <h3 style="font-size:1rem">Ransomware Negotiations</h3>
+        <p class="excerpt">Expert negotiation support if you're facing an active ransomware incident.</p>
+      </div>
+    </a>
+  </div>
+
+  <p class="update-stamp" id="update-stamp">Loading data…</p>
+
+</div>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/main.js"></script>
+
+<script>
+async function loadStats() {
+  try {
+    const r = await fetch('/threat-intel/ransomware-stats.json?v=' + Date.now());
+    const d = await r.json();
+
+    // Metrics
+    document.getElementById('m-total').textContent = d.total_victims.toLocaleString();
+    document.getElementById('m-groups').textContent = d.total_groups.toLocaleString();
+    document.getElementById('m-recent').textContent = d.recent_30_days.toLocaleString();
+
+    // Year chart
+    const yearChart = document.getElementById('year-chart');
+    const years = d.by_year;
+    const maxYearCount = Math.max(...years.map(y => y.count));
+    yearChart.innerHTML = years.map(y => {
+      const pct = Math.round((y.count / maxYearCount) * 180);
+      return `<div class="year-col">
+        <div class="year-label">${y.count.toLocaleString()}</div>
+        <div class="year-bar" style="height:${pct}px"></div>
+        <div class="year-name">${y.year}</div>
+      </div>`;
+    }).join('');
+
+    // Groups chart
+    const groupsChart = document.getElementById('groups-chart');
+    const groups = d.top_groups;
+    const maxCount = groups[0].victims;
+    groupsChart.innerHTML = groups.map((g, i) => {
+      const pct = Math.round((g.victims / maxCount) * 100);
+      const isTop3 = i < 3;
+      return `<div class="bar-row">
+        <div class="bar-label" title="${g.group}">${g.group}</div>
+        <div class="bar-track">
+          <div class="bar-fill ${isTop3 ? 'danger' : ''}" style="width:${pct}%">
+            ${pct > 15 ? `<span class="bar-count">${g.victims.toLocaleString()}</span>` : ''}
+          </div>
+          ${pct <= 15 ? `<span class="bar-count-out">${g.victims.toLocaleString()}</span>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+
+    // Recent feed — loaded separately
+    await loadRecentFeed();
+
+    // Timestamp
+    const ts = new Date(d.last_updated);
+    document.getElementById('update-stamp').textContent =
+      `Data last refreshed: ${ts.toUTCString()} · Source: Binary Response dark web monitoring`;
+
+  } catch(e) {
+    console.error('Stats load failed:', e);
+    document.getElementById('update-stamp').textContent = 'Data temporarily unavailable.';
+  }
+}
+
+async function loadRecentFeed() {
+  try {
+    const r = await fetch('/threat-intel/ransomware-recent.json?v=' + Date.now());
+    const victims = await r.json();
+    const feed = document.getElementById('recent-feed');
+    feed.innerHTML = victims.slice(0,15).map(v => {
+      const date = v.date ? new Date(v.date).toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'}) : '—';
+      return `<div class="feed-item">
+        <span class="feed-org">${escHtml(v.name)}</span>
+        <span class="feed-group">${escHtml(v.group)}</span>
+        <span class="feed-date">${date}</span>
+      </div>`;
+    }).join('');
+  } catch(e) {
+    document.getElementById('recent-feed').innerHTML = '<div style="color:#445566;padding:1rem">Recent data temporarily unavailable.</div>';
+  }
+}
+
+function escHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+loadStats();
+</script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="apple-touch-icon" href="/img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="/img/logo-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ransomware Threat Actor Profiles | Binary Response</title>
+    <meta name="description" content="In-depth threat intelligence profiles on 24 active ransomware groups — TTPs, targets, IOCs, attack patterns, and defence guidance from Binary Response.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="/css/style.css">
+    <style>
+        .ti-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin:2rem 0}
+        .ti-card-link{text-decoration:none;color:inherit;display:block}
+        .ti-card{background:#0f1923;border:1px solid #1e3a5f;border-radius:8px;padding:1.25rem;transition:border-color .2s,transform .2s;display:flex;flex-direction:column}
+        .ti-card:hover{border-color:#7eb3e0;transform:translateY(-2px)}
+        .ti-card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;margin-bottom:.75rem}
+        .ti-card-header h3{font-size:1.1rem;font-weight:700;color:#fff;margin:0}
+        .ti-badge{font-size:.65rem;font-weight:700;letter-spacing:.5px;padding:.2rem .5rem;border-radius:3px;white-space:nowrap;flex-shrink:0}
+        .ti-badge--active{background:rgba(0,200,100,.15);color:#00c864;border:1px solid rgba(0,200,100,.3)}
+        .ti-badge--warning{background:rgba(255,165,0,.15);color:#ffa500;border:1px solid rgba(255,165,0,.3)}
+        .ti-card-body{flex:1;font-size:.85rem;color:#8899aa;line-height:1.6}
+        .ti-card-body p{margin:.2rem 0}
+        .ti-card-body strong{color:#a0b8cc}
+        .ti-card-footer{margin-top:1rem;font-size:.82rem;font-weight:600;color:#7eb3e0}
+        @media(max-width:600px){.ti-grid{grid-template-columns:1fr}}
+    </style>
+<link rel="canonical" href="https://binary-response.com/threat-intel/groups/index.html">
+<meta property="og:title" content="Ransomware Threat Actor Profiles | Binary Response">
+<meta property="og:description" content="In-depth profiles on 24 active ransomware groups — TTPs, target sectors, IOCs and defence guidance. Research by Binary Response dark web monitoring team.">
+<meta property="og:url" content="https://binary-response.com/threat-intel/groups/index.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ransomware Threat Actor Profiles | Binary Response">
+<meta name="twitter:description" content="In-depth profiles on 24 active ransomware groups — TTPs, target sectors, IOCs and defence guidance. Research by Binary Response dark web monitoring team.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="/index.html" class="nav-brand">
+  <img src="/img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+<section class="page-hero"><span class="hero-label"><span class="pulse-dot"></span> 24 Active Groups</span>
+<h1>Threat Actor <span class="accent">Profiles</span></h1>
+<p class="hero-desc">In-depth profiles on active ransomware groups — TTPs, targets, IOCs and defence guidance.</p></section>
+<section class="content-section" style="padding-top:0"><div class="container">
+  <div style="margin-bottom:1.5rem">
+    <a href="/threat-intel/" style="color:var(--accent);font-size:.9rem">&larr; Back to Threat Intelligence</a>
+  </div>
+  <div class="ti-grid">
+
+            <a href="lockbit.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>LockBit</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2019</p>
+                        <p><strong>Targets:</strong> Enterprise, critical infrastructure</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="lockbit5.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>LockBit 5.0</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2024</p>
+                        <p><strong>Targets:</strong> Enterprise, critical infrastructure</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="clop.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Clop</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2019</p>
+                        <p><strong>Targets:</strong> Large enterprises, MFT software users</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="blackcat.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>BlackCat/ALPHV</h3>
+                        <span class="ti-badge ti-badge--warning">DISRUPTED</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2021</p>
+                        <p><strong>Targets:</strong> Global enterprises, healthcare</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="play.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Play</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2022</p>
+                        <p><strong>Targets:</strong> SMBs, municipalities, healthcare</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="bianlian.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>BianLian</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2022</p>
+                        <p><strong>Targets:</strong> Healthcare, professional services</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="royal.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Royal</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2022</p>
+                        <p><strong>Targets:</strong> Healthcare, education, critical infra</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="qilin.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Qilin</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2022</p>
+                        <p><strong>Targets:</strong> Healthcare, critical infrastructure</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="akira.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Akira</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> SMBs, professional services, education</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="rhysida.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Rhysida</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> Healthcare, education, government</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="medusa.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Medusa</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> Healthcare, education, government</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="cactus.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Cactus</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> Manufacturing, technology, finance</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="8base.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>8Base</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> SMBs, professional services</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="hunters.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Hunters International</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> Global enterprises</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="incransom.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>INC Ransom</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> Healthcare, education, local govt</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="dragonforce.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>DragonForce</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> Retail, manufacturing, Asia-Pacific</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="sarcoma.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Sarcoma</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2024</p>
+                        <p><strong>Targets:</strong> Professional services, manufacturing</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="underground.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Underground</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> Windows environments, enterprises</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="interlock.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Interlock</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2024</p>
+                        <p><strong>Targets:</strong> Healthcare, technology, defence</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="ransomexx.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>RansomExx</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2020</p>
+                        <p><strong>Targets:</strong> Government, large enterprises</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="lynx.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Lynx</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2024</p>
+                        <p><strong>Targets:</strong> SMBs, professional services</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="killsec.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>KillSec</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> Healthcare, government, finance</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="threeam.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>ThreeAM</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2023</p>
+                        <p><strong>Targets:</strong> SMBs, manufacturing, logistics</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+            <a href="vanirgroup.html" class="ti-card-link">
+                <div class="ti-card">
+                    <div class="ti-card-header">
+                        <h3>Vanir Group</h3>
+                        <span class="ti-badge ti-badge--active">ACTIVE</span>
+                    </div>
+                    <div class="ti-card-body">
+                        <p><strong>Active Since:</strong> 2024</p>
+                        <p><strong>Targets:</strong> Financial services, technology</p>
+                    </div>
+                    <div class="ti-card-footer">View Full Profile &rarr;</div>
+                </div>
+            </a>
+  </div>
+  <div class="cta-section">
+    <h2>Need Proactive Threat Monitoring?</h2>
+    <p>Our dark web monitoring service tracks these groups and alerts you if your organisation appears on a leak site.</p>
+    <a href="/services/dark-web-monitoring.html" class="btn btn-primary">Dark Web Monitoring</a>
+    <a href="/contact.html" class="btn btn-secondary">Get Help Now</a>
+  </div>
+</div></section>
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

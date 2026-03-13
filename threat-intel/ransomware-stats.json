@@ -1,0 +1,137 @@
+{
+  "total_victims": 17217,
+  "total_groups": 189,
+  "recent_30_days": 17217,
+  "data_from": "2021",
+  "last_updated": "2026-03-13T11:51:09Z",
+  "by_year": [
+    {
+      "year": "2021",
+      "count": 1783
+    },
+    {
+      "year": "2022",
+      "count": 2845
+    },
+    {
+      "year": "2023",
+      "count": 4836
+    },
+    {
+      "year": "2024",
+      "count": 5267
+    },
+    {
+      "year": "2025",
+      "count": 1680
+    },
+    {
+      "year": "2026",
+      "count": 396
+    }
+  ],
+  "top_groups": [
+    {
+      "group": "lockbit3",
+      "victims": 2033
+    },
+    {
+      "group": "lockbit2",
+      "victims": 996
+    },
+    {
+      "group": "ransomhub",
+      "victims": 963
+    },
+    {
+      "group": "play",
+      "victims": 898
+    },
+    {
+      "group": "alphv",
+      "victims": 755
+    },
+    {
+      "group": "bianlian",
+      "victims": 601
+    },
+    {
+      "group": "Akira",
+      "victims": 526
+    },
+    {
+      "group": "clop",
+      "victims": 476
+    },
+    {
+      "group": "blackbasta",
+      "victims": 447
+    },
+    {
+      "group": "8base",
+      "victims": 411
+    },
+    {
+      "group": "akira",
+      "victims": 383
+    },
+    {
+      "group": "cactus",
+      "victims": 372
+    },
+    {
+      "group": "conti",
+      "victims": 333
+    },
+    {
+      "group": "hunters",
+      "victims": 308
+    },
+    {
+      "group": "pysa",
+      "victims": 307
+    }
+  ],
+  "top_regions": [
+    {
+      "region": "US",
+      "count": 337
+    },
+    {
+      "region": "CA",
+      "count": 47
+    },
+    {
+      "region": "DE",
+      "count": 38
+    },
+    {
+      "region": "GB",
+      "count": 31
+    },
+    {
+      "region": "CH",
+      "count": 19
+    },
+    {
+      "region": "IT",
+      "count": 18
+    },
+    {
+      "region": "BR",
+      "count": 17
+    },
+    {
+      "region": "AU",
+      "count": 16
+    },
+    {
+      "region": "FR",
+      "count": 16
+    },
+    {
+      "region": "ES",
+      "count": 10
+    }
+  ]
+}

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ransomware Group Tracker — Live Dark Web Monitor | Binary Response</title>
+    <meta name="description" content="Live status tracker for 90 ransomware groups and their dark web leak sites. Updated continuously by Binary Response's dark web monitoring platform.">
+    <link rel="apple-touch-icon" href="/img/logo-icon-192.webp">
+    <link rel="icon" type="image/png" href="/img/logo-icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tracker-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.9rem; }
+        .tracker-table th { background: #0f1923; color: #7eb3e0; padding: 0.75rem 1rem; text-align: left; font-weight: 600; border-bottom: 2px solid #1e3a5f; }
+        .tracker-table td { padding: 0.65rem 1rem; border-bottom: 1px solid #1a2a3a; vertical-align: top; }
+        .active-row:hover td { background: rgba(126,179,224,0.05); }
+        .offline-row td { opacity: 0.6; }
+        .tracker-badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; margin-right: 3px; }
+        .tracker-badge.active { background: rgba(0,200,100,0.15); color: #00c864; border: 1px solid rgba(0,200,100,0.3); }
+        .tracker-badge.offline { background: rgba(200,50,50,0.15); color: #e05555; border: 1px solid rgba(200,50,50,0.3); }
+        .tracker-badge.captcha { background: rgba(255,165,0,0.15); color: #ffa500; border: 1px solid rgba(255,165,0,0.3); }
+        .tracker-badge.js { background: rgba(255,220,0,0.15); color: #ffdc00; border: 1px solid rgba(255,220,0,0.3); }
+        .onion-url { font-family: monospace; font-size: 0.78rem; color: #7eb3e0; background: rgba(126,179,224,0.08); padding: 2px 6px; border-radius: 3px; word-break: break-all; }
+        .victim-count { font-weight: 700; color: #e05555; }
+        .group-link { color: #7eb3e0; text-decoration: none; font-weight: 600; }
+        .group-link:hover { color: #fff; }
+        .meta-text { color: #8899aa; font-size: 0.82rem; }
+        .dim { color: #445566; }
+        .tracker-filters { display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap; }
+        .filter-btn { padding: 0.4rem 1rem; border: 1px solid #1e3a5f; background: transparent; color: #7eb3e0; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+        .filter-btn:hover, .filter-btn.active { background: #1e3a5f; color: #fff; }
+        .tracker-meta { color: #667788; font-size: 0.85rem; margin-bottom: 1rem; }
+        .stat-bar { display: flex; gap: 2rem; margin: 1.5rem 0; }
+        .stat-item { text-align: center; }
+        .stat-num { font-size: 2rem; font-weight: 800; color: #7eb3e0; }
+        .stat-label { font-size: 0.8rem; color: #667788; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+<link rel="canonical" href="https://binary-response.com/threat-intel/ransomware-tracker.html">
+<meta property="og:title" content="Ransomware Group Tracker — Live Dark Web Monitor | Binary Response">
+<meta property="og:description" content="Live status tracker for 90 ransomware groups and their dark web leak sites. Updated continuously by Binary Response.">
+<meta property="og:url" content="https://binary-response.com/threat-intel/ransomware-tracker.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ransomware Group Tracker — Live Dark Web Monitor | Binary Response">
+<meta name="twitter:description" content="Live status tracker for 90 ransomware groups and their dark web leak sites. Updated continuously by Binary Response.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+</head>
+<body>
+<nav class="site-nav">
+<a href="/index.html" class="nav-brand">
+  <img src="/img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+    <section class="page-hero">
+        <h1>Ransomware Group Tracker</h1>
+        <p class="hero-desc">Live dark web monitoring across 90 threat actor groups. Status updated continuously.</p>
+    </section>
+
+    <main class="container">
+        <div class="stat-bar">
+            <div class="stat-item"><div class="stat-num">90</div><div class="stat-label">Groups Monitored</div></div>
+            <div class="stat-item"><div class="stat-num">89</div><div class="stat-label">Currently Active</div></div>
+            <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Offline / Seized</div></div>
+            <div class="stat-item"><div class="stat-num">16,000+</div><div class="stat-label">Victims Tracked</div></div>
+        </div>
+
+        <div class="tracker-meta">
+            <i class="fas fa-sync-alt"></i> Last updated: 05 March 2026 03:00 UTC &nbsp;|&nbsp;
+            Data sources: <a href="https://ransomware.live" target="_blank" rel="nofollow noopener">ransomware.live</a>, 
+            <a href="https://github.com/joshhighet/ransomwatch" target="_blank" rel="nofollow noopener">ransomwatch</a>,
+            <a href="https://github.com/fastfire/deepdarkCTI" target="_blank" rel="nofollow noopener">deepdarkCTI</a>,
+            Binary Response dark web monitoring
+        </div>
+
+        <div class="tracker-filters">
+            <button class="filter-btn active" onclick="filterTable('all')">All Groups</button>
+            <button class="filter-btn" onclick="filterTable('active')">Active Only</button>
+            <button class="filter-btn" onclick="filterTable('offline')">Offline / Seized</button>
+            <button class="filter-btn" onclick="filterTable('victims')">With Victims</button>
+            <input type="text" id="searchBox" placeholder="Search groups…" 
+                   oninput="searchTable(this.value)"
+                   style="padding:0.4rem 0.75rem;border:1px solid #1e3a5f;background:#0f1923;color:#7eb3e0;border-radius:4px;font-size:0.85rem;margin-left:auto;">
+        </div>
+
+        <table class="tracker-table" id="trackerTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)" style="cursor:pointer;user-select:none;">Group <span class="sort-icon">⇅</span></th>
+                    <th onclick="sortTable(1)" style="cursor:pointer;user-select:none;">Status <span class="sort-icon">⇅</span></th>
+                    <th>.onion / URL</th>
+                    <th onclick="sortTable(3)" style="cursor:pointer;user-select:none;" id="th-victims">Victims <span class="sort-icon" id="sort-victims-icon">↓</span></th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr class="active-row">
+                <td><strong>lockbit5</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://lockbitsuppyx2jegaoyiw44ica5vdho63m5ijjlmfb7omq3tfr3qhyd.onion">http://lockbitsuppyx2jegaoyiw44ica5vdho63m5ijjlmfb…</code></td>
+                <td><span class="victim-count">4</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>sinobi</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://sinobi6ftrg27d6g4sjdt65malds6cfptlnjyw52rskakqjda6uvb7yd.onion">http://sinobi6ftrg27d6g4sjdt65malds6cfptlnjyw52rsk…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>lockbit3_fs</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://lockbit7z37ntefjdbjextn6tmdkry4j546ejnru5cejeguitiopvhad.onion">http://lockbit7z37ntefjdbjextn6tmdkry4j546ejnru5ce…</code></td>
+                <td><span class="victim-count">2,145</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>lynx</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://lynxchatly4zludmhmi75jrwhycnoqvkxb4prohxmyzf4euf5gjxroad.onion/login">http://lynxchatly4zludmhmi75jrwhycnoqvkxb4prohxmyz…</code></td>
+                <td><span class="victim-count">242</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/rhysida.html" class="group-link">rhysida</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://rhysidafohrhyy2aszi7bm32tnjat5xri65fopcxkdfxhi4tidsg7cad.onion">http://rhysidafohrhyy2aszi7bm32tnjat5xri65fopcxkdf…</code></td>
+                <td><span class="victim-count">209</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/play.html" class="group-link">play</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://mbrlkbtq5jonaqkurjwmxftytyn2ethqvbxfu4rgjbkkknndqwae6byd.onion/index.php?page=13">http://mbrlkbtq5jonaqkurjwmxftytyn2ethqvbxfu4rgjbk…</code></td>
+                <td><span class="victim-count">884</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>nightspire</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://a2lyiiaq4n74tlgz4fk3ft4akolapfrzk772dk24iq32cznjsmzpanqd.onion/database">http://a2lyiiaq4n74tlgz4fk3ft4akolapfrzk772dk24iq3…</code></td>
+                <td><span class="victim-count">6</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/dragonforce.html" class="group-link">dragonforce</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://z3wqggtxft7id3ibr7srivv5gjof5fwg76slewnzwwakjuf3nlhukdid.onion/blog">http://z3wqggtxft7id3ibr7srivv5gjof5fwg76slewnzwwa…</code></td>
+                <td><span class="victim-count">119</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>threeam</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://threeamkelxicjsaf2czjyz2lc4q3ngqkxhhlexyfcp2o6raw4rphyad.onion">http://threeamkelxicjsaf2czjyz2lc4q3ngqkxhhlexyfcp…</code></td>
+                <td><span class="victim-count">55</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>nova</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://novavdivko2zvtrvtllnq45lxhba2rfzp76qigb4nrliklem5au7czqd.onion/">http://novavdivko2zvtrvtllnq45lxhba2rfzp76qigb4nrl…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>shinyhunters</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://breachforums.hn/">https://breachforums.hn/</code></td>
+                <td><span class="victim-count">309</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>interlock</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://ebhmkoohccl45qesdbvrjqtyro2hmhkmh6vkyfyjjzfllm3ix72aqaid.onion/leaks.php">http://ebhmkoohccl45qesdbvrjqtyro2hmhkmh6vkyfyjjzf…</code></td>
+                <td><span class="victim-count">4</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/akira.html" class="group-link">akira</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://akiral2iz6a7qgd3ayp3l6yub7xx2uep76idk3u2kollpj5z3z636bad.onion">https://akiral2iz6a7qgd3ayp3l6yub7xx2uep76idk3u2ko…</code></td>
+                <td><span class="victim-count">357</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>alphalocker</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://mydatae2d63il5oaxxangwnid5loq2qmtsol2ozr6vtb7yfm5ypzo6id.onion">http://mydatae2d63il5oaxxangwnid5loq2qmtsol2ozr6vt…</code></td>
+                <td><span class="victim-count">12</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>atomsilo</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://npmh5ahrgakbniuntyc7io4adm6ietbdbuejrfonowqtyqn24or556qd.onion">http://npmh5ahrgakbniuntyc7io4adm6ietbdbuejrfonowq…</code></td>
+                <td><span class="victim-count">4</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>handala</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://handala-hack.to/">https://handala-hack.to/</code></td>
+                <td><span class="victim-count">84</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/incransom.html" class="group-link">incransom</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://incblog6qu4y4mm4zvw5nrmue6qbwtgjsxpw6b7ixzssu36tsajldoad.onion/blog/disclosures">http://incblog6qu4y4mm4zvw5nrmue6qbwtgjsxpw6b7ixzs…</code></td>
+                <td><span class="victim-count">275</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>killsec</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://ks5424y3wpr5zlug5c7i6svvxweinhbdcqcfnptkfcutrncfazzgz5id.onion">http://ks5424y3wpr5zlug5c7i6svvxweinhbdcqcfnptkfcu…</code></td>
+                <td><span class="victim-count">156</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>ragnarlocker</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://rgleaktxuey67yrgspmhvtnrqtgogur35lwdrup4d3igtbm3pupc4lyd.onion/">http://rgleaktxuey67yrgspmhvtnrqtgogur35lwdrup4d3i…</code></td>
+                <td><span class="victim-count">123</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>vanirgroup</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://6xdpj3sb5kekvq5ulym5qqmzsv6ektjgvpmajns3qrafgxtyxrhokfqd.onion">http://6xdpj3sb5kekvq5ulym5qqmzsv6ektjgvpmajns3qra…</code></td>
+                <td><span class="victim-count">3</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>weyhro</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://weyhro.hk/leaks/">https://weyhro.hk/leaks/</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>chaos</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://hptqq2o2qjva7lcaaq67w36jihzivkaitkexorauw7b2yul2z6zozpqd.onion">http://hptqq2o2qjva7lcaaq67w36jihzivkaitkexorauw7b…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>worldleaks</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://worldleaksartrjm3c6vasllvgacbi5u3mgzkluehrzhk2jz4taufuid.onion">https://worldleaksartrjm3c6vasllvgacbi5u3mgzkluehr…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>pear</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://peargxn3oki34c4savcbcfqofjjwjnnyrlrbszfv6ujlx36mhrh57did.onion">http://peargxn3oki34c4savcbcfqofjjwjnnyrlrbszfv6uj…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>obscura</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://obscurad3aphckihv7wptdxvdnl5emma6t3vikcf3c5oiiqndq6y6xad.onion">http://obscurad3aphckihv7wptdxvdnl5emma6t3vikcf3c5…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>blackshrantac</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://b2ykcy2gcug4gnccm6hnrb5xapnresmyjjqgvhafaypppwgo4feixwyd.onion">http://b2ykcy2gcug4gnccm6hnrb5xapnresmyjjqgvhafayp…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>benzona</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://benzona6x5ggng3hx52h4mak5sgx5vukrdlrrd3of54g2uppqog2joyd.onion">http://benzona6x5ggng3hx52h4mak5sgx5vukrdlrrd3of54…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>tridentlocker</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://tridentfrdy6jydwywfx4vx422vnto7pktao2gyx2qdcwjanogq454ad.onion/articles">http://tridentfrdy6jydwywfx4vx422vnto7pktao2gyx2qd…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>payload</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://payloadrz5yw227brtbvdqpnlhq3rdcdekdnn3rgucbcdeawq2v6vuyd.onion">http://payloadrz5yw227brtbvdqpnlhq3rdcdekdnn3rgucb…</code></td>
+                <td><span class="victim-count">29</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>kittykatkrew</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://jzdonx6ak2swiitotgajdfh3wjpvyunpi3hatte343dvw4nw4vv2ayqd.onion">http://jzdonx6ak2swiitotgajdfh3wjpvyunpi3hatte343d…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>sarcoma</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://sarcomawmawlhov7o5mdhz4eszxxlkyaoiyiy2b5iwxnds2dmb4jakad.onion">http://sarcomawmawlhov7o5mdhz4eszxxlkyaoiyiy2b5iwx…</code></td>
+                <td><span class="victim-count">25</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>underground</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://47glxkuxyayqrvugfumgsblrdagvrah7gttfscgzn56eyss5wg3uvmqd.onion">http://47glxkuxyayqrvugfumgsblrdagvrah7gttfscgzn56…</code></td>
+                <td><span class="victim-count">23</span></td>
+                <td><span class="meta-text">ioc - hash : 0a08d9b027457da99725968eb4566eb836a7d503219ad5690f851caecabce93d</span></td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/qilin.html" class="group-link">qilin</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://ijzn3sicrcy7guixkzjkib4ukbiilwc3xhnmby4mcbccnsd7j2rekvqd.onion">http://ijzn3sicrcy7guixkzjkib4ukbiilwc3xhnmby4mcbc…</code></td>
+                <td><span class="victim-count">234</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>ransomexx</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://rnsm777cdsjrsdlbs4v5qoeppu3px6sb2igmh53jzrx7ipcrbjz5b2ad.onion/">http://rnsm777cdsjrsdlbs4v5qoeppu3px6sb2igmh53jzrx…</code></td>
+                <td><span class="victim-count">61</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>0mega</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://0mega.cc">http://0mega.cc</code></td>
+                <td><span class="victim-count">7</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>abyss</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://3ev4metjirohtdpshsqlkrqcmxq6zu3d7obrdhglpy5jpbr7whmlfgqd.onion/">http://3ev4metjirohtdpshsqlkrqcmxq6zu3d7obrdhglpy5…</code></td>
+                <td><span class="victim-count">80</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>blackout</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://black3gnkizshuynieigw6ejgpblb53mpasftzd6pydqpmq2vn2xf6yd.onion">http://black3gnkizshuynieigw6ejgpblb53mpasftzd6pyd…</code></td>
+                <td><span class="victim-count">10</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>blacksuit</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://weg7sdx54bevnvulapqu6bpzwztryeflq3s23tegbmnhkbpqz637f2yd.onion">http://weg7sdx54bevnvulapqu6bpzwztryeflq3s23tegbmn…</code></td>
+                <td><span class="victim-count">176</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/cactus.html" class="group-link">cactus</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://sonarmsng5vzwqezlvtu2iiwwdn3dxkhotftikhowpfjuzg7p3ca5eid.onion/contact/Cactus_Support">http://sonarmsng5vzwqezlvtu2iiwwdn3dxkhotftikhowpf…</code></td>
+                <td><span class="victim-count">372</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>cloak</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://cloak7jpvcb73rtx2ff7kaw2kholu7bdiivxpzbhlny4ybz75dpxckqd.onion">http://cloak7jpvcb73rtx2ff7kaw2kholu7bdiivxpzbhlny…</code></td>
+                <td><span class="victim-count">38</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/clop.html" class="group-link">clop</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://santat7kpllt6iyvqbr7q4amdv6dzrh6paatvyrzl7ry3zm72zigf4ad.onion/">http://santat7kpllt6iyvqbr7q4amdv6dzrh6paatvyrzl7r…</code></td>
+                <td><span class="victim-count">476</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>cryp70n1c0d3</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://7k4yyskpz3rxq5nyokf6ztbpywzbjtdfanweup3skctcxopmt7tq7eid.onion/databases.html">http://7k4yyskpz3rxq5nyokf6ztbpywzbjtdfanweup3skct…</code></td>
+                <td><span class="victim-count">11</span></td>
+                <td><span class="meta-text">not a ransomware group, also ref 7k4y[...]7eid.onion/documents.html</span></td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>daixin</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://7ukmkdtyxdkdivtjad57klqnd3kdsmq6tp45rrsxqnu76zzv3jvitlqd.onion">http://7ukmkdtyxdkdivtjad57klqnd3kdsmq6tp45rrsxqnu…</code></td>
+                <td><span class="victim-count">20</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>dread</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion">http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7ji…</code></td>
+                <td>—</td>
+                <td><span class="meta-text">marketplace - not a ransomware group</span></td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>embargo</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://embargobe3n5okxyzqphpmk3moinoap2snz5k6765mvtkk7hhi544jid.onion">http://embargobe3n5okxyzqphpmk3moinoap2snz5k6765mv…</code></td>
+                <td><span class="victim-count">26</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>everest</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://ransomocmou6mnbquqz44ewosbkjk3o5qjsl3orawojexfook2j7esad.onion/">http://ransomocmou6mnbquqz44ewosbkjk3o5qjsl3orawoj…</code></td>
+                <td><span class="victim-count">238</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/hunters.html" class="group-link">hunters</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://huntersinternational.org/">https://huntersinternational.org/</code></td>
+                <td><span class="victim-count">309</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>karakurt</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://karaleaks.com">https://karaleaks.com</code></td>
+                <td><span class="victim-count">74</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>kelvinsecurity</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://kelvinsecteamcyber.wixsite.com/my-site/items">https://kelvinsecteamcyber.wixsite.com/my-site/ite…</code></td>
+                <td><span class="victim-count">89</span></td>
+                <td><span class="meta-text">not a ransomware group</span></td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>lockbit3</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://lockbit3753ekiocyo5epmpy6klmejchjtzddoekjlnt6mu3qh4de2id.onion">http://lockbit3753ekiocyo5epmpy6klmejchjtzddoekjln…</code></td>
+                <td><span class="victim-count">2,168</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>malas</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://malas2urovbyyavjzaezkt5ohljvyd5lt7vv7mnsgbf2y4bwlh72doqd.onion/atom.xml">http://malas2urovbyyavjzaezkt5ohljvyd5lt7vv7mnsgbf…</code></td>
+                <td><span class="victim-count">4</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><a href="/threat-intel/medusa.html" class="group-link">medusa</a></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://xfv4jzckytb4g3ckwemcny3ihv4i5p4lqzdpi624cxisu35my5fwi5qd.onion">http://xfv4jzckytb4g3ckwemcny3ihv4i5p4lqzdpi624cxi…</code></td>
+                <td><span class="victim-count">181</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>moneymessage</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://blogvl7tjyjvsfthobttze52w36wwiz34hrfcmorgvdzb6hikucb7aqd.onion/">http://blogvl7tjyjvsfthobttze52w36wwiz34hrfcmorgvd…</code></td>
+                <td><span class="victim-count">22</span></td>
+                <td><span class="meta-text">hash : bbdac308d2b15a4724de7919bf8e9ffa713dea60ae3a482417c44c60012a654b</span></td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>ransomhouse</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://zohlm7ahjwegcedoz7lrdrti7bvpofymcayotp744qhx6gjmxbuo2yid.onion/a">http://zohlm7ahjwegcedoz7lrdrti7bvpofymcayotp744qh…</code></td>
+                <td><span class="victim-count">155</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>robinhood</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://robinhoodleaks.tumblr.com">https://robinhoodleaks.tumblr.com</code></td>
+                <td><span class="victim-count">1</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>spacebears</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://5butbkrljkaorg5maepuca25oma7eiwo6a2rlhvkblb4v6mf3ki2ovid.onion/#list">http://5butbkrljkaorg5maepuca25oma7eiwo6a2rlhvkblb…</code></td>
+                <td><span class="victim-count">73</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>toufan</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://toufanleaks.org">https://toufanleaks.org</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>werewolves</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://weerwolven.biz">https://weerwolven.biz</code></td>
+                <td><span class="victim-count">83</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>ContFR</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://zprxx7sfc26rufggreanowmme5qqouqegr2efnko6erycquwvpq5egid.onion">http://zprxx7sfc26rufggreanowmme5qqouqegr2efnko6er…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>kairos</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://nerqnacjmdy3obvevyol7qhazkwkv57dwqvye5v46k5bcujtfa6sduad.onion">http://nerqnacjmdy3obvevyol7qhazkwkv57dwqvye5v46k5…</code></td>
+                <td><span class="victim-count">39</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>termite</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://termiteuslbumdge2zmfmfcsrvmvsfe4gvyudc5j6cdnisnhtftvokid.onion">http://termiteuslbumdge2zmfmfcsrvmvsfe4gvyudc5j6cd…</code></td>
+                <td><span class="victim-count">24</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>safepay</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://safepaypfxntwixwjrlcscft433ggemlhgkkdupi2ynhtcmvdgubmoyd.onion">http://safepaypfxntwixwjrlcscft433ggemlhgkkdupi2yn…</code></td>
+                <td><span class="victim-count">2</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>funksec</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://funkxxkovrk7ctnggbjnthdajav4ggex53k6m2x3esjwlxrkb3qiztid.onion">http://funkxxkovrk7ctnggbjnthdajav4ggex53k6m2x3esj…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>kraken</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://krakenccj3wr23452a4ibkbkuph4d6soyx2xgjoogtuamc3m7u7wemad.onion">http://krakenccj3wr23452a4ibkbkuph4d6soyx2xgjoogtu…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>anubis</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://om6q4a6cyipxvt7ioudxt24cw4oqu4yodmqzl25mqd2hgllymrgu4aqd.onion">http://om6q4a6cyipxvt7ioudxt24cw4oqu4yodmqzl25mqd2…</code></td>
+                <td><span class="victim-count">2</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>secp0</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://secponewsxgrlnirowclps2kllzaotaf5w2bsvktdnz4qhjr2jnwvvyd.onion/">http://secponewsxgrlnirowclps2kllzaotaf5w2bsvktdnz…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>crypto24</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://j5o5y2feotmhvr7cbcp2j2ewayv5mn5zenl3joqwx67gtfchhezjznad.onion">http://j5o5y2feotmhvr7cbcp2j2ewayv5mn5zenl3joqwx67…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>zerolockersec</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://ghfuviaplse6nbeowu7ghhid5hdowutbwbrv77aqgwco2b2ntgj3auad.onion/">http://ghfuviaplse6nbeowu7ghhid5hdowutbwbrv77aqgwc…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>SilentRansomGroup</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://business-data-leaks.com/">https://business-data-leaks.com/</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>direwolf</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://direwolfcdkv5whaz2spehizdg22jsuf5aeje4asmetpbt6ri4jnd4qd.onion">http://direwolfcdkv5whaz2spehizdg22jsuf5aeje4asmet…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>datacarry</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://dcarryhaih5oldidg3tbqwnde4lxljytnpvberrwgj2vlvunopd46dad.onion">http://dcarryhaih5oldidg3tbqwnde4lxljytnpvberrwgj2…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>warlock</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://warlockhga5iw3t54ps5iytlilf7hlvxy7kwrkidspn4qoh64s4vsuyd.onion">http://warlockhga5iw3t54ps5iytlilf7hlvxy7kwrkidspn…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>satanlockv2</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://tzhwmgguyxrg6q3tu4q3gvopcjynrhw6ryx2bdl5ghisdkyunfua5xyd.onion">http://tzhwmgguyxrg6q3tu4q3gvopcjynrhw6ryx2bdl5ghi…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>payoutsking</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://payoutsgn7cy6uliwevdqspncjpfxpmzgirwl2au65la7rfs5x3qnbqd.onion/">https://payoutsgn7cy6uliwevdqspncjpfxpmzgirwl2au65…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>securotrop</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://securo45z554mw7rgrt7wcgv5eenj2xmxyrsdj3fcjsvindu63s4bsid.onion">http://securo45z554mw7rgrt7wcgv5eenj2xmxyrsdj3fcjs…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>beast</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://beast6azu4f7fxjakiayhnssybibsgjnmy77a6duufqw5afjzfjhzuqd.onion">http://beast6azu4f7fxjakiayhnssybibsgjnmy77a6duufq…</code></td>
+                <td><span class="victim-count">1</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>thegentlemen</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://tezwsse5czllksjb7cwp65rvnk4oobmzti2znn42i43bjdfd2prqqkad.onion">http://tezwsse5czllksjb7cwp65rvnk4oobmzti2znn42i43…</code></td>
+                <td><span class="victim-count">9</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>radar</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://4q5tsu5o3msmv4am4dfhupwhzlyg7wv3lpswbvbhcrknr4ega7xetxad.onion">http://4q5tsu5o3msmv4am4dfhupwhzlyg7wv3lpswbvbhcrk…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>coinbasecartel</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://fjg4zi4opkxkvdz7mvwp7h6goe4tcby3hhkrz43pht4j3vakhy75znyd.onion">http://fjg4zi4opkxkvdz7mvwp7h6goe4tcby3hhkrz43pht4…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>kyber</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://kyblogtz6k3jtxnjjvluee5ec4g3zcnvyvbgsnq5thumphmqidkt7xid.onion">http://kyblogtz6k3jtxnjjvluee5ec4g3zcnvyvbgsnq5thu…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>genesis</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion">http://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>tengu</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://longcc4fqrfcqt5lzceutylaxir6h66fp6df3oin6mvwvz6pfdbxc6qd.onion">http://longcc4fqrfcqt5lzceutylaxir6h66fp6df3oin6mv…</code></td>
+                <td><span class="victim-count">3</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>kazu</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://6czlbd2jfiy6765fbnbnzuwuqocg57ebvp3tbm35kib425k4qnmiiiqd.onion/ransom.html">http://6czlbd2jfiy6765fbnbnzuwuqocg57ebvp3tbm35kib…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>orion</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://cjfntkj5qeizxowuy3srceg7zo6namc3kfeor7pfn6bpdkl3w265ooid.onion">http://cjfntkj5qeizxowuy3srceg7zo6namc3kfeor7pfn6b…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>cry0</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://cryoblogedawivdcknyd4jsjxkrx3xrqqltxla6wwjjnzm3f3jaxjzqd.onion">http://cryoblogedawivdcknyd4jsjxkrx3xrqqltxla6wwjj…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>insomnia</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://i62huw7ve22rpyw6lnq3kmfump2dmsg4xpveec3ere73njwatrz74gad.onion">http://i62huw7ve22rpyw6lnq3kmfump2dmsg4xpveec3ere7…</code></td>
+                <td><span class="victim-count">1</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>reynolds</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://bs2tlg32pfjwmclm22cyngqmoo24cdlhfxzbruwrdaxumisfeory32qd.onion">http://bs2tlg32pfjwmclm22cyngqmoo24cdlhfxzbruwrdax…</code></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>lapsus$</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="https://lapsus.cz/">https://lapsus.cz/</code></td>
+                <td><span class="victim-count">10</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="active-row">
+                <td><strong>AiLock</strong></td>
+                <td><span class="tracker-badge active">ACTIVE</span></td>
+                <td><code class="onion-url" title="http://dhnsppqjaaa22lsqxl2tfhji4ca43743kubltnodvsft3hkvai77p6ad.onion">http://dhnsppqjaaa22lsqxl2tfhji4ca43743kubltnodvsf…</code></td>
+                <td><span class="victim-count">18</span></td>
+                <td>—</td>
+            </tr>
+            <tr class="offline-row">
+                <td><strong>dispossessor</strong></td>
+                <td><span class="tracker-badge offline">OFFLINE</span></td>
+                <td><code class="onion-url" title="https://dispossessor.com">https://dispossessor.com</code></td>
+                <td><span class="victim-count">28</span></td>
+                <td>—</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="cta-box" style="background:#0f1923;border:1px solid #1e3a5f;border-radius:8px;padding:2rem;margin:3rem 0;text-align:center;">
+            <h3>Has your organisation appeared on a ransomware leak site?</h3>
+            <p>Binary Response provides immediate incident response, dark web monitoring, and ransomware negotiation services.</p>
+            <a href="/contact.html" class="btn btn-primary">Contact Us Now</a>
+            &nbsp;
+            <a href="/services/dark-web-monitoring.html" class="btn btn-secondary">Dark Web Monitoring</a>
+        </div>
+    </main>
+
+<footer class="site-footer"></footer>
+
+    <script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/main.js"></script>
+    <script>
+    let sortCol = -1, sortAsc = false; // default: victims descending on first load
+
+    function getColValue(row, col) {
+        const cell = row.cells[col];
+        if (!cell) return '';
+        if (col === 3) {
+            const vc = cell.querySelector('.victim-count');
+            return vc ? parseInt(vc.textContent.replace(/,/g,''), 10) : -1;
+        }
+        return cell.textContent.trim().toLowerCase();
+    }
+
+    function sortTable(col) {
+        if (sortCol === col) { sortAsc = !sortAsc; }
+        else { sortCol = col; sortAsc = col !== 3; } // victims default desc, others asc
+        // Update icons
+        document.querySelectorAll('.sort-icon').forEach(el => el.textContent = '⇅');
+        const th = col === 0 ? document.querySelectorAll('th')[0]
+                 : col === 1 ? document.querySelectorAll('th')[1]
+                 : col === 3 ? document.getElementById('sort-victims-icon') : null;
+        if (col === 3) { document.getElementById('sort-victims-icon').textContent = sortAsc ? '↑' : '↓'; }
+        else if (th) { th.querySelector('.sort-icon').textContent = sortAsc ? '↑' : '↓'; }
+
+        const tbody = document.querySelector('#trackerTable tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort((a, b) => {
+            const av = getColValue(a, col), bv = getColValue(b, col);
+            if (typeof av === 'number' && typeof bv === 'number') return sortAsc ? av - bv : bv - av;
+            return sortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
+        });
+        rows.forEach(r => tbody.appendChild(r));
+    }
+
+    function filterTable(type) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active');
+        document.querySelectorAll('#trackerTable tbody tr').forEach(row => {
+            if (type === 'all') { row.style.display = ''; }
+            else if (type === 'active') { row.style.display = row.classList.contains('active-row') ? '' : 'none'; }
+            else if (type === 'offline') { row.style.display = row.classList.contains('offline-row') ? '' : 'none'; }
+            else if (type === 'victims') {
+                const vc = row.querySelector('.victim-count');
+                row.style.display = vc ? '' : 'none';
+            }
+        });
+    }
+
+    function searchTable(q) {
+        q = q.toLowerCase();
+        document.querySelectorAll('#trackerTable tbody tr').forEach(row => {
+            row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+        });
+    }
+
+    // Default sort: most prolific first
+    document.addEventListener('DOMContentLoaded', () => sortTable(3));
+    </script>
+</body>
+</html>

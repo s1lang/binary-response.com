@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>REvil Ransomware Negotiation (June 17, 2021) — Redacted Organisation | Binary Response</title>
+<meta name="description" content="Full verbatim transcript of a REvil ransomware negotiation (June 2021). 67 messages. Study real-world ransomware negotiation tactics and threat actor behaviour.">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/revil-20210617.html">
+<meta property="og:title" content="REvil Ransomware Negotiation (June 17, 2021) — Redacted Organisation">
+<meta property="og:description" content="Full verbatim transcript of a REvil ransomware negotiation (June 2021). 67 messages. Study real-world ransomware negotiation tactics and threat actor behaviour.">
+<meta property="og:url" content="https://binary-response.com/negotiations/revil-20210617.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "REvil Ransomware Negotiation — Redacted Organisation",
+      "description": "Full verbatim transcript of a REvil ransomware negotiation. 67 messages. Outcome: Unknown.",
+      "datePublished": "2026-03-05",
+      "author": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "mainEntityOfPage": "https://binary-response.com/negotiations/revil-20210617.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "REvil — Redacted Organisation", "item": "https://binary-response.com/negotiations/revil-20210617.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Ransomware Negotiation Transcript</span>
+<h1 style="font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">REvil Ransomware Negotiation — <span style="color:var(--accent)">Redacted Organisation</span></h1>
+
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">67</span><span class="stat-label">Messages</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Duration</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Outcome</span></div>
+</div>
+</div>
+</section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Context</span>
+<h2 class="section-title">About This Negotiation</h2>
+<p>This transcript documents a <strong>REvil</strong> ransomware negotiation with a redacted victim organisation. 
+        The negotiation consisted of 67 messages exchanged.</p>
+        <p>The initial demand is not clearly stated in the transcript. The final outcome is not confirmed in the transcript.</p>
+</div></section>
+
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Reproduced from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17 days ago &mdash; Message 1/67</div>
+hi
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17 days ago &mdash; Message 2/67</div>
+can you open these files?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17 days ago &mdash; Message 3/67</div>
+your note says you have our files in &quot;secure offline storage&quot;, what files do you actually have?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 17 days ago &mdash; Message 4/67</div>
+Hi
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 17 days ago &mdash; Message 5/67</div>
+proof-
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17 days ago &mdash; Message 6/67</div>
+this is everything you have?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 17 days ago &mdash; Message 7/67</div>
+about 5 GB of files with your recipes, customer data and much more
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 17 days ago &mdash; Message 8/67</div>
+file
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 17 days ago &mdash; Message 9/67</div>
+file
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 16 days ago &mdash; Message 10/67</div>
+Thanks for this. Is there any chance you can send more files? Asking 
+for $120k and only showing 6 files is not really convincing the owners
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 16 days ago &mdash; Message 11/67</div>
+as we said, this is a small part of the data, we will not discard all 
+the data that we have. But after payment we will delete all copies of 
+the data
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 15 days ago &mdash; Message 12/67</div>
+Thank you for sharing these files too. Do you allow any kind of discount for payment?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 15 days ago &mdash; Message 13/67</div>
+15% discount max
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 15 days ago &mdash; Message 14/67</div>
+So $102,000? This is the lowest price?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 15 days ago &mdash; Message 15/67</div>
+Yes
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 14 days ago &mdash; Message 16/67</div>
+We have a meeting coming up in a few hours to figure out what we can offer. I will update you after that
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 14 days ago &mdash; Message 17/67</div>
+we dont need to know how much you offer - you already see price
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 14 days ago &mdash; Message 18/67</div>
+We dont have $102k today and we wont have it tomorrow. I still want our files back so I am trying to find a solution.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 14 days ago &mdash; Message 19/67</div>
+then you need to collect it
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 13 days ago &mdash; Message 20/67</div>
+Well we need time to see what can happen. Everything is closed for the weekend so can you push this clock a few more days?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 13 days ago &mdash; Message 21/67</div>
+Is 2 days enough for you?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 13 days ago &mdash; Message 22/67</div>
+Can we get until Tuesday to sort this out?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 13 days ago &mdash; Message 23/67</div>
+to much time - we can expend timer only until monday
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 12 days ago &mdash; Message 24/67</div>
+Can you at least extend it to the end of the day tomorrow? Everything 
+is closed since it&#x27;s the weekend and we won&#x27;t be able to get anything 
+done until tomorrow.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 12 days ago &mdash; Message 25/67</div>
+ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 11 days ago &mdash; Message 26/67</div>
+Thanks, the timer expired it seems but I will get back to you later this afternoon
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 11 days ago &mdash; Message 27/67</div>
+The amount you&#x27;re asking from us given our size and revenue is just way
+ off base and we&#x27;re struggling to see how this number was determined. 
+Obviously you got into our systems and got some of our files, but we 
+can&#x27;t make this large of a payment. I can honestly pay you $8,775 and 
+even that is really stretching it
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 11 days ago &mdash; Message 28/67</div>
+dont waste our time
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 11 days ago &mdash; Message 29/67</div>
+How am I wasting your time? This is a real offer. Our revenue has been 
+down 70% since last year, we don&#x27;t have the ability to pay over $100k
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 11 days ago &mdash; Message 30/67</div>
+We are not interested in this.
+We have indicated the amount for you.
+Your proposal sounds stupid.
+If you are not willing to pay more.
+bye
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 11 days ago &mdash; Message 31/67</div>
+We both know we&#x27;re not able to pay $100k. What is a better price that 
+we can work toward? I can&#x27;t shell out 6 figures, we will lose our 
+business
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 11 days ago &mdash; Message 32/67</div>
+90k our last price
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 11 days ago &mdash; Message 33/67</div>
+not lower
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 11 days ago &mdash; Message 34/67</div>
+That&#x27;s a really big gap between what we have vs. 90k. I&#x27;ll need a few 
+days to get my finances in order and see if we can make something work
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 11 days ago &mdash; Message 35/67</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 36/67</div>
+news?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 37/67</div>
+I&#x27;m not even close to $90k yet, but looking into something tomorrow. I will update you tomorrow okay?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 38/67</div>
+ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 7 days ago &mdash; Message 39/67</div>
+Could you please send a couple more example files of the data you have?
+ I&#x27;m working to get a bit more cash today and should have an answer for 
+you in a couple of hours
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 40/67</div>
+wait for answer
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 41/67</div>
+proof 3
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 7 days ago &mdash; Message 42/67</div>
+Thanks
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 7 days ago &mdash; Message 43/67</div>
+I don&#x27;t know where you are in the world, but Alaska relies heavily on 
+tourism for revenue. With 2020/COVID, no travel to Alaska was permitted,
+ so we lost ~30% of sales revenue from this. No one was buying our 
+product, even through the summer months (which is usually high time for 
+tourists). Without these tourists, we really struggled to make ends 
+meet. I&#x27;m making slow progress to get extra cash, the most I have right 
+now is $12,825
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 44/67</div>
+not interested
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 45/67</div>
+make a really interested offer for my boss
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 7 days ago &mdash; Message 46/67</div>
+We&#x27;ll never have $90k, please help me out on this. What I&#x27;m offering is
+ a lot for a small business owner like myself, I don&#x27;t have the kind of 
+cash flow like other years. Talk to your boss for me please
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 47/67</div>
+my boss can offer 20% discount
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 4 days ago &mdash; Message 48/67</div>
+hello , are you ready for dialogue ?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 4 days ago &mdash; Message 49/67</div>
+Sorry we had issues reaching your site over the weekend but I&#x27;m here
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 4 days ago &mdash; Message 50/67</div>
+20% discount off the $90,000? So this would be $72,000?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 4 days ago &mdash; Message 51/67</div>
+yes
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 4 days ago &mdash; Message 52/67</div>
+I only have about $13,000 right now
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 4 days ago &mdash; Message 53/67</div>
+then you need to collect money
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 4 days ago &mdash; Message 54/67</div>
+I don&#x27;t think I can ever get 70k, that&#x27;s more than I make in a year
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 3 days ago &mdash; Message 55/67</div>
+Any chance you can wait for next week and I should have a bit more ?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 3 days ago &mdash; Message 56/67</div>
+You ask for too much time
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 3 days ago &mdash; Message 57/67</div>
+I don&#x27;t have $70k
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 3 days ago &mdash; Message 58/67</div>
+Can you wait for Friday then?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 3 days ago &mdash; Message 59/67</div>
+friday its last day for you
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 22 hours ago &mdash; Message 60/67</div>
+hello, are you ready to pay ?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 19 hours ago &mdash; Message 61/67</div>
+Hi, I don&#x27;t have the entire amount, it&#x27;s really not something I can easily get. Today I have $15,300
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 19 hours ago &mdash; Message 62/67</div>
+Can we agree to that?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 19 hours ago &mdash; Message 63/67</div>
+wait for answer
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 17 hours ago &mdash; Message 64/67</div>
+ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17 hours ago &mdash; Message 65/67</div>
+You agree to this?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 15 hours ago &mdash; Message 66/67</div>
+yes
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 13 hours ago &mdash; Message 67/67</div>
+Okay I can do it on Monday thanks
+</div></div>
+</div>
+</div></section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Analyst Observations</h2>
+<ul style="list-style:none;padding:0">
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">REvil (also known as Sodinokibi) was responsible for high-profile attacks including Kaseya and JBS. The group was disrupted by law enforcement in late 2021 and early 2022.</li>
+</ul>
+</div></section>
+
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

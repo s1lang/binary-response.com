@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Avaddon Ransomware Negotiation — 20210518 | Binary Response</title>
+<meta name="description" content="Full verbatim transcript of a Avaddon ransomware negotiation (May 2021). Initial demand: $80,000. Outcome: Refused. Real-world case from Binary Response's pu...">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/avaddon-20210518-3.html">
+<meta property="og:title" content="Avaddon Ransomware Negotiation — 20210518">
+<meta property="og:description" content="Full verbatim transcript of a Avaddon ransomware negotiation (May 2021). Initial demand: $80,000. Outcome: Refused. Real-world case from Binary Response's pu...">
+<meta property="og:url" content="https://binary-response.com/negotiations/avaddon-20210518-3.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Avaddon Ransomware Negotiation — 20210518",
+      "description": "Full verbatim transcript of a Avaddon ransomware negotiation with 20210518. Initial demand: $80,000. Outcome: Refused.",
+      "datePublished": "2026-03-05",
+      "author": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "mainEntityOfPage": "https://binary-response.com/negotiations/avaddon-20210518-3.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "Avaddon — 20210518", "item": "https://binary-response.com/negotiations/avaddon-20210518-3.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Ransomware Negotiation Transcript</span>
+<h1 style="font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">Avaddon Ransomware Negotiation — <span style="color:var(--accent)">20210518</span></h1>
+
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">103</span><span class="stat-label">Messages</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Duration</span></div>
+<div class="nego-stat"><span class="stat-value">$80,000</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">Refused</span><span class="stat-label">Outcome</span></div>
+</div>
+</div>
+</section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Context</span>
+<h2 class="section-title">About This Negotiation</h2>
+<p>This transcript documents a <strong>Avaddon</strong> ransomware negotiation with <strong>20210518</strong>. 
+        The negotiation consisted of 103 messages exchanged.</p>
+        <p>The initial ransom demand was $80,000. The victim refused to pay.</p>
+</div></section>
+
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Reproduced from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 11:19 18.05.2021 &mdash; Message 1/103</div>
+hello can you help us recover our data/
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 11:20 18.05.2021 &mdash; Message 2/103</div>
+can we call you to discuss how you can help us? we didn&#x27;t see a telephone number or company name on the page.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 11:25 18.05.2021 &mdash; Message 3/103</div>
+Hello! You have been infected by the Avaddon ransomware. Price for you is $80,000. To receive a general decryptor, you need to pay the amount indicated to you in the BTC on the landing page. After paying the ransom, you will receive a general decryptor that will decrypt absolutely all PCs and servers on your network. We will also provide you with a list of vulnerabilities in your network so that a similar situation does not happen to you in the future. We also guarantee the anonymity of the and attack no one will recognize this incident. We are ready to talk to you and discuss on this matter.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 11:26 18.05.2021 &mdash; Message 4/103</div>
+We are here 24/7, for all your questions, write here and we will help you.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 11:37 18.05.2021 &mdash; Message 5/103</div>
+to be honest we will not need all your services, we just need 2 files to be restored from you. hopefully we have most data but there are some recent backups that cannot be restored to a recent point. So can you restore these with 5.000$? we are ready to cooperate with you to get recent data.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 12:48 18.05.2021 &mdash; Message 6/103</div>
+You must understand that the amount is indicated for everything together. We cannot provide you with a decryptor for only part of the files. The decryptor will decrypt all files.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 13:04 18.05.2021 &mdash; Message 7/103</div>
+so can you please give me a price that i can pay, so that i can purchase your service? mention that i live in greece and cannot find the money you said, not even close to it. So i want to work with you if you can help me recover my files. If you cannot i have to recreate about 30 days of entries in the database and it will take me probably 20 days to do so. I am now checking if you can help me skip the manual entries.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:08 18.05.2021 &mdash; Message 8/103</div>
+We understand your situation and are ready to offer you a 15% discount on the total amount.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 13:35 18.05.2021 &mdash; Message 9/103</div>
+unfortunately cannot pay for your service. Can you find a solution i can pay so we can work together? The amounts you ask is for US corporation. I own office in greece and i just need part of your service. i have my data, but need to skip manual work for now. Do you believe you can give me a price i can pay?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 14:10 18.05.2021 &mdash; Message 10/103</div>
+How much can you offer us, but please note that we cannot agree on $ 5,000.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 15:04 18.05.2021 &mdash; Message 11/103</div>
+6000 $ ? How fast we can have the data back? we have already started the manual entries of invoices so until tomorrow i will have clear picture of what we have. also we are moving all our restored data to microsoft 365, eveyrhting seems to be ok apart from our 2 databases with missing data. I will know tomorrow how much work we need of manual entries.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 15:11 18.05.2021 &mdash; Message 12/103</div>
+$ 6,000 is still not enough. We cannot work with this amount. You need to offer more.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 15:20 18.05.2021 &mdash; Message 13/103</div>
+as i understand we cannot work together. So we will see what we can recover with manual work in the following days. Your service would help me a lot save time if it is fast but you are very expensive for me.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 15:25 18.05.2021 &mdash; Message 14/103</div>
+After payment we will give you our Avaddon Decryptor, which will decrypt all your files on all your PCs and servers in a few hours. You can get back to work very quickly.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 15:52 18.05.2021 &mdash; Message 15/103</div>
+that is vey good news. but we cannot meet your price needs.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 15:56 18.05.2021 &mdash; Message 16/103</div>
+We want to help you and have made a big discount, but we cannot accept such a small amount.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 15:57 18.05.2021 &mdash; Message 17/103</div>
+You need to offer more so that we can work.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 18:30 18.05.2021 &mdash; Message 18/103</div>
+what about 8.5k ?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 20:01 18.05.2021 &mdash; Message 19/103</div>
+you give us amounts that we are not interested in at all, if you want to get a decryptor you need to offer a much higher amount
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 20:31 18.05.2021 &mdash; Message 20/103</div>
+please give us a price we can pay so we can decide if we can move further. Mention that we are not US, our office is in greece and we just opened after 3 lockdowns. If you cannot give us an amount we can pay we will just move forward. I really don&#x27;t want to waste your time.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 20:43 18.05.2021 &mdash; Message 21/103</div>
+we understand the current situation and are ready to make concessions to you and charge a new price of $ 60,000
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 21:03 18.05.2021 &mdash; Message 22/103</div>
+the price range you give is unfortunately out of reach, i guess we will proceed without your service. thank you for your support.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 21:11 18.05.2021 &mdash; Message 23/103</div>
+what is the maximum amount you are willing to offer us?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 05:20 19.05.2021 &mdash; Message 24/103</div>
+Guys ?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 08:06 19.05.2021 &mdash; Message 25/103</div>
+Ok we are ready to pay 55k$ is it ok with you?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 08:12 19.05.2021 &mdash; Message 26/103</div>
+Are you there?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 08:17 19.05.2021 &mdash; Message 27/103</div>
+Ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 08:18 19.05.2021 &mdash; Message 28/103</div>
+You need to send 1.44 BTC to Bitcoin address: [redacted]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 09:22 19.05.2021 &mdash; Message 29/103</div>
+I am unable to pay you ? is your bitcoin address correct?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 09:24 19.05.2021 &mdash; Message 30/103</div>
+[redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 09:24 19.05.2021 &mdash; Message 31/103</div>
+This address is correct.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 10:01 19.05.2021 &mdash; Message 32/103</div>
+It&#x27;s segwit address and due to that I believe I am getting the error
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 10:04 19.05.2021 &mdash; Message 33/103</div>
+Have you already figured out the problem? Because the address is correct, the problem is on your part.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 10:13 19.05.2021 &mdash; Message 34/103</div>
+Still facing issue
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 10:44 19.05.2021 &mdash; Message 35/103</div>
+If you yourself cannot buy, then seek help from a specialist. Because everything works from our side.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 13:15 19.05.2021 &mdash; Message 36/103</div>
+hi there, i want to know if you can give us a price we can pay so we can pay you. If we delay a lot discussing and chatting there is no interest from our side to buy your service. We already have setup most things in Microsoft. Our emails are ok, oru files were recovered from offline backups but we are missing 2 databases. These contain important data but we have hardcopies of invoices. Our accountants started inputting theses invoices in the old database. We have two ways here. We can work manually and in a few weeks people will put all the invoices to our offline backups and this is 100% certain. It costs man hours but will work 100%. On the other hand we have you through a chat asking insane amounts of money and we are not certain 100% that you will help us since you don&#x27;t give us your company name. We told you that we will not allocate a lot of money to that. One way is certain with delay but your way is uncertain and you are asking unrealistic amounts.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:37 19.05.2021 &mdash; Message 37/103</div>
+Guys, what nonsense are you starting to say, you just tried to put $ 55k into our account and work with us, and now you start telling us tales that this is a lot of money, a lot of money is millions of dollars, and you work with us for only 55k despite the fact that we gave you a huge discount !? Did you lie to us that you tried to send money? We are a serious organization we are &quot;Avaddon Ransomware&quot;. If you have doubts about data decryption, then on your landing page there is a &quot;Test Decryption&quot; section, upload an image file weighing up to 2MB and after a while you will receive a decrypted file.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:40 19.05.2021 &mdash; Message 38/103</div>
+Guys, do you want us to give you the motivation to pay us?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:40 19.05.2021 &mdash; Message 39/103</div>
+:D
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:42 19.05.2021 &mdash; Message 40/103</div>
+Take it. We&#x27;ve stolen over 25GB of data from your network. What if I tell you the exact number of files? These are 50382 files!
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:47 19.05.2021 &mdash; Message 41/103</div>
+If payment is not made within 24 hours, we will publish a post about the leakage of your data, make mass spam by emails of your competitors, clients, partners and tell them that all confidential data that they had associated with you was leaked through your fault. Believe me, we know how much money will be spent on investigations and lawsuits. It will be much more than 55k.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:48 19.05.2021 &mdash; Message 42/103</div>
+Do you need confirmation that we have the data? This is not a problem, we will provide them to you. Just tell us to do it.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:49 19.05.2021 &mdash; Message 43/103</div>
+I hope you pay and I don’t have to tell you what else we will do with your network in case of non-payment...
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:51 19.05.2021 &mdash; Message 44/103</div>
+Cooperating with us, we guarantee you complete confidentiality on our part, General decryptor with which you can restore absolutely all files on your PCs / Servers, a complete tree of the files we have taken from you and confirmation of their deletion after payment. We will also point out to you the vulnerabilities in your network and give recommendations on what to do to eliminate these vulnerabilities, following our security recommendations, you will be practically invisible to hacker attacks.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:57 19.05.2021 &mdash; Message 45/103</div>
+I think the choice is obvious. I changed the time for you to 24 hours, the time has gone. Tick tock tick tock
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 14:07 19.05.2021 &mdash; Message 46/103</div>
+Sir we are not interested in your whole services. We cannot pay for it. Can you recover for us 2 files? Also we never told you that we can pay so high. We were willing to buy your service for 8.5k. Please lets find a way to work in this range so it has some value to us. The amount you ask is unfortunately out of reach by far.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 14:15 19.05.2021 &mdash; Message 47/103</div>
+these are your words &quot;Ok we are ready to pay 55k$ is it ok with you? &quot;
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 14:32 19.05.2021 &mdash; Message 48/103</div>
+no sir. I didn&#x27;t say that. we cannot find that money, not even close. Although we could give you money for your service, because it will help us save time. this is 5 times more than we can afford. don&#x27;t forget i told you that our office is in greece. not in the united states of america or germany. So we cannot afford your services. So if you don&#x27;t help us pay, we cannot pay.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 14:45 19.05.2021 &mdash; Message 49/103</div>
+In the Meaning, you didn&#x27;t say that? Check out our communication history above, you wrote it.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 15:06 19.05.2021 &mdash; Message 50/103</div>
+sir we cannot pay 55k. 5k yes we can pay instantly for your work.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 16:03 19.05.2021 &mdash; Message 51/103</div>
+We are not interested in this price.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 17:39 19.05.2021 &mdash; Message 52/103</div>
+ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 21:35 19.05.2021 &mdash; Message 53/103</div>
+do you believe that 11000$ will work for you? i just want to see if we can help each other come to an amount that 1) can be paid 2) can be found quickly by our side, because we could be able to find some money more but we need extra time, probably a 1-2 weeks to apply for some loan. But if we delay there is no meaning for us. just let me know because we need to decide during the weekend cause i need to inform our boss to take a decision.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 21:47 19.05.2021 &mdash; Message 54/103</div>
+11,000 $ are not enough.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 21:48 19.05.2021 &mdash; Message 55/103</div>
+You need to offer more if you do not want us to publish your files.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 22:50 19.05.2021 &mdash; Message 56/103</div>
+the only thing we want from your service is to have our recent files back. if we agree on that and to the amount we can pay in 3-4 days because we need some days to gather 11.000$
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 22:57 19.05.2021 &mdash; Message 57/103</div>
+its late here. i need to go to sleep. please decide soon if you accept so we can start finding the money. every day of manual work costs about 250$, we estimated that we need about 2 months to finish manual work with invoices and update our lost data. so if you give us good price, our boss will decide to pay you for faster results.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 23:13 19.05.2021 &mdash; Message 58/103</div>
+Guys, you do not understand, you have a lot of problems. To restore the normal mode of operation, you need a lot of time and money. If you do not pay, then you are waiting for news in our blog, we will publish a lot of your files that you will not like. You will get damage to much more than $ 55,000. We offer you a solution to all these issues for an adequate price.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 23:15 19.05.2021 &mdash; Message 59/103</div>
+We have already made a big discount for you and are ready to work with you, but we are not satisfied with $ 11,000.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 01:25 20.05.2021 &mdash; Message 60/103</div>
+We are ready to make a small discount for you.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 06:08 20.05.2021 &mdash; Message 61/103</div>
+you constantly say other things. not interested. we just need 2 files and an amount we can pay. small discount cannot be paid. big discount from your side will be paid. just need those files faster. why you always say not satisfied? right now we can pay you 8000$, we can find another 3000-8000$ by next week. but we cannot make money appear out of nothing. clients need to pay us for us to find the money. if you cannot work with this unfortunately we cannot afford your service. please help us pay you.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 07:05 20.05.2021 &mdash; Message 62/103</div>
+Perhaps we can go down a little lower, but the price you offer absolutely does not suit us, we have already made you a big discount, if you do not go up then there will be no deal.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 09:11 20.05.2021 &mdash; Message 63/103</div>
+can we pay in installments like 5000$ for 3 weeks? please help us purchase the service. we cannot pay with money we don&#x27;t have. i am trying to figure out a way to work with you, but your demands still are 3 times more than we can afford to pay.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 09:17 20.05.2021 &mdash; Message 64/103</div>
+take a loan or find money in some other way, if your files are important to you, then you will find money.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 11:10 20.05.2021 &mdash; Message 65/103</div>
+our boss visited the bank this morning, loan will take about a week to reply to us. They cannot tell us yet if they can loan to us money. I will keep you updated. But we will need time. In the meantime let me know if we can find a way with less money so we can purchase part of your services.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 11:12 20.05.2021 &mdash; Message 66/103</div>
+You cannot pay for only 1 decrypted file, you either buy the General Decryptor which will decrypt absolutely all your files or there will be no deal.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 11:12 20.05.2021 &mdash; Message 67/103</div>
+We will give you additional time to search for money, and we will not publish a publication about your data leak while you are looking for money.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 11:18 20.05.2021 &mdash; Message 68/103</div>
+i would like to know if we can reach an amount of 20k in 2 weeks so i can see if we can reach something like this after some time. Because everyday we pay people to input old invoices. So if we find an amount we can meet your demands or there is no chance we can reach each other demands and convenience.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 11:32 20.05.2021 &mdash; Message 69/103</div>
+Guys, look, we will give you the last price, $ 30k, this price is no longer discussed, either you pay exactly 30k or there will be no deal and we can say goodbye to you.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 12:30 20.05.2021 &mdash; Message 70/103</div>
+allow us 1 week to see if we can find the funds and when.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:28 20.05.2021 &mdash; Message 71/103</div>
+Ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 13:29 20.05.2021 &mdash; Message 72/103</div>
+done
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 07:19 21.05.2021 &mdash; Message 73/103</div>
+hi
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 07:21 21.05.2021 &mdash; Message 74/103</div>
+hello
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 07:30 21.05.2021 &mdash; Message 75/103</div>
+Hello, how can i help you?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 07:51 21.05.2021 &mdash; Message 76/103</div>
+we have found an employee that has monero. we will buy from him today and we can pay him in installments so we will pay today to save time.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 07:54 21.05.2021 &mdash; Message 77/103</div>
+please promise that when we pay you you will recover all our files and you will stop any bad actions to our network. Also you will tell us how we will secure our network in the future.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 07:56 21.05.2021 &mdash; Message 78/103</div>
+After you make a payment, we guarantee the anonymity of the attack. We will not disseminate information about hacking your network, no one will know that your company was attacked. We will provide global decryption that will decipher all your files throughout your network. We also delete all your data and send you evidence of deletion. In addition, we guarantee you immunity from attacks on your company in the future.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 08:48 21.05.2021 &mdash; Message 79/103</div>
+When will you pay?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 09:45 21.05.2021 &mdash; Message 80/103</div>
+probably today.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 09:45 21.05.2021 &mdash; Message 81/103</div>
+probably today
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 09:47 21.05.2021 &mdash; Message 82/103</div>
+We tried to decrypt this file in test decryption: [redacted].jpg.[redacted].[redacted] but it rejects it
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 09:48 21.05.2021 &mdash; Message 83/103</div>
+i tried to decrypt this file in test: [redacted].jpg.[redacted].[redacted]. It doesn&#x27;t decrypt it.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 09:48 21.05.2021 &mdash; Message 84/103</div>
+i tried to decrypt this file in test: [redacted].jpg.[redacted].[redacted]. It doesn&#x27;t decrypt it.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 09:50 21.05.2021 &mdash; Message 85/103</div>
+your chat has problems today. i submit my chat 10 times before it accepts it.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 10:12 21.05.2021 &mdash; Message 86/103</div>
+Try another image with extension .jpg
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 20:06 21.05.2021 &mdash; Message 87/103</div>
+ok sir ?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 20:12 21.05.2021 &mdash; Message 88/103</div>
+why try another image? What will happen to these files that have double extention? Will they be decrypted?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 20:15 21.05.2021 &mdash; Message 89/103</div>
+my most important files have 2 additional extensions and they are not accepted by test decryption. I am starting to worry about your service to be honest
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 20:27 21.05.2021 &mdash; Message 90/103</div>
+This extension is not decrypt in test decryption. In test decryption, how can you see only files with certain extensions can be decrypted. Do not worry, General Decryptor will decrypt absolutely all files on your PCs and servers.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 20:43 21.05.2021 &mdash; Message 91/103</div>
+so you guarantee that all files, even files with double extention will be decrypted right?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 20:55 21.05.2021 &mdash; Message 92/103</div>
+Of course, Sir absolutely all files will be decrypted, there will be no problems with it, we promise you.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 21:02 21.05.2021 &mdash; Message 93/103</div>
+check the test decryption. i uploaded a file and it doesn&#x27;t work. it doesn&#x27;t open.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 21:06 21.05.2021 &mdash; Message 94/103</div>
+Wait a bit
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 21:29 21.05.2021 &mdash; Message 95/103</div>
+u can download your file [redacted].png
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 22:58 21.05.2021 &mdash; Message 96/103</div>
+file cannot open/ try to open it and send me screenshot.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 23:15 21.05.2021 &mdash; Message 97/103</div>
+Send us 1 image file and we will decrypt. Use [REDACTED URL]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[20210518]</span> &mdash; 23:39 21.05.2021 &mdash; Message 98/103</div>
+ok. this is the file: [REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 23:49 21.05.2021 &mdash; Message 99/103</div>
+Ok, we&#x27;ll decrypt and send it to you.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 07:06 22.05.2021 &mdash; Message 100/103</div>
+Archive: [REDACTED URL] Password: [redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 07:09 22.05.2021 &mdash; Message 101/103</div>
+Here is the decrypted file
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 11:30 22.05.2021 &mdash; Message 102/103</div>
+We received $ 100 from you. You can send the rest.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Avaddon]</span> &mdash; 20:42 22.05.2021 &mdash; Message 103/103</div>
+You can download the decryptor on your payment page, update it. Run the decryptor according to the instructions.
+</div></div>
+</div>
+</div></section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Analyst Observations</h2>
+<ul style="list-style:none;padding:0">
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">This is an unusually long negotiation, suggesting extended back-and-forth and significant engagement from both parties.</li>
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">The victim explicitly refused to pay. This is a definitive outcome that typically results in data publication.</li>
+</ul>
+</div></section>
+
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

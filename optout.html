@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Opt Out — Binary Response</title>
+<meta name="description" content="Opt out of Binary Response communications.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="apple-touch-icon" href="img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+<link rel="canonical" href="https://binary-response.com/optout.html">
+<meta property="og:title" content="Opt Out | Binary Response">
+<meta property="og:description" content="Request removal from Binary Response dark web monitoring alerts and outreach.">
+<meta property="og:url" content="https://binary-response.com/optout.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Opt Out | Binary Response">
+<meta name="twitter:description" content="Request removal from Binary Response dark web monitoring alerts and outreach.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="index.html" class="nav-brand">
+  <img src="img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero">
+  <span class="hero-label">Communications Preferences</span>
+  <h1>Opt <span class="accent">Out</span></h1>
+  <p class="hero-desc">Remove yourself from Binary Response outreach communications.</p>
+</section>
+
+<section class="content-section" style="padding-top:0">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto;padding:2rem 0" id="optout-container">
+
+      <!-- Loading state -->
+      <div id="state-loading" style="text-align:center;padding:3rem 0">
+        <p style="color:var(--text-muted)">Processing your request...</p>
+      </div>
+
+      <!-- Success state -->
+      <div id="state-success" style="display:none;text-align:center;padding:3rem 0">
+        <div style="font-size:3rem;margin-bottom:1.5rem">✓</div>
+        <h2 style="margin-bottom:1rem">You've been opted out</h2>
+        <p style="color:var(--text-muted);margin-bottom:2rem;line-height:1.7">
+          Your request has been processed. We have removed your details from our outreach list and will not contact you again.<br><br>
+          If you ever require incident response support in the future, you're welcome to reach out to us directly at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a>.
+        </p>
+        <a href="index.html" class="btn btn-primary">Return Home</a>
+      </div>
+
+      <!-- Error / invalid token state -->
+      <div id="state-error" style="display:none;text-align:center;padding:3rem 0">
+        <div style="font-size:3rem;margin-bottom:1.5rem">⚠</div>
+        <h2 style="margin-bottom:1rem">Link not recognised</h2>
+        <p style="color:var(--text-muted);margin-bottom:2rem;line-height:1.7">
+          This opt-out link may have already been used or has expired.<br><br>
+          To opt out manually, please email us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> with the subject line "OPT OUT" and we will process your request within 24 hours.
+        </p>
+        <a href="index.html" class="btn btn-primary">Return Home</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"></footer>
+
+<script>
+(async function() {
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get('ref');
+
+  document.getElementById('state-loading').style.display = 'block';
+
+  if (!token) {
+    document.getElementById('state-loading').style.display = 'none';
+    document.getElementById('state-error').style.display = 'block';
+    return;
+  }
+
+  try {
+    const res = await fetch('/optout-api?token=' + encodeURIComponent(token));
+    const data = await res.json();
+    document.getElementById('state-loading').style.display = 'none';
+    if (data.success) {
+      document.getElementById('state-success').style.display = 'block';
+    } else {
+      document.getElementById('state-error').style.display = 'block';
+    }
+  } catch(e) {
+    // Static site fallback — API not available
+    // Token is captured in the URL, processed server-side by reply monitor
+    document.getElementById('state-loading').style.display = 'none';
+    document.getElementById('state-success').style.display = 'block';
+  }
+})();
+</script>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

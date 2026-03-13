@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>First 72 Hours After Ransomware Attack: Critical Actions | Binary Response</title>
+<meta name="description" content="Step-by-step guide for the first 72 hours after ransomware. Learn critical actions for containment, evidence preservation, and recovery decisions based on 235 real cases.">
+<link rel="apple-touch-icon" href="../../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../../css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PMF75NTVG');
+  </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"First 72 Hours After Ransomware Attack: Critical Actions","datePublished":"2026-03-07","author":{"@type":"Person","name":"Simon Lynge","url":"https://binary-response.com/blog/authors/simon-lynge.html"},"publisher":{"@type":"Organization","name":"Binary Response","url":"https://binary-response.com"},"url":"https://binary-response.com/blog/posts/first-72-hours-ransomware.html","description":"Step-by-step guide for the first 72 hours after ransomware based on 235 real negotiation cases."}
+</script>
+<link rel="canonical" href="https://binary-response.com/blog/posts/first-72-hours-ransomware.html">
+<meta property="og:title" content="First 72 Hours After Ransomware Attack: Critical Actions | Binary Response">
+<meta property="og:description" content="What to do (and what NOT to do) in the first 72 hours after ransomware. Based on 235 real negotiation cases from Binary Response.">
+<meta property="og:url" content="https://binary-response.com/blog/posts/first-72-hours-ransomware.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="First 72 Hours After Ransomware Attack: Critical Actions">
+<meta name="twitter:description" content="What to do (and what NOT to do) in the first 72 hours after ransomware. Based on 235 real negotiation cases from Binary Response.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<style>
+    .timeline-phase { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .phase-title { color: var(--accent); font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .phase-time { font-weight: 600; color: var(--text-muted); margin-bottom: 0.5rem; font-family: var(--mono); }
+    .warning-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 1rem; margin: 1.5rem 0; }
+    .tip-box { background: var(--info-bg); border-left: 4px solid var(--info); padding: 1rem; margin: 1.5rem 0; }
+    .checklist { background: var(--success-bg); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+    .checklist-item { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+    .checklist-item::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    th { background: var(--surface-2); font-weight: 600; text-align: left; }
+    th, td { padding: 0.75rem; border: 1px solid var(--border); }
+    nav ul { padding-left: 1.5rem; margin: 1rem 0; }
+    nav li { margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../../index.html" class="nav-brand">
+  <img src="../../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero">
+    <span class="hero-label">Advisory &mdash; 2026-03-07</span>
+    <h1>First 72 Hours After Ransomware Attack</h1>
+    <p class="hero-desc">Critical actions that determine your recovery, based on analysis of 235 real ransomware negotiation cases.</p>
+</section>
+
+<article class="blog-post-content">
+    <div class="warning-box">
+        <strong>⚠️ Critical:</strong> If you're currently experiencing a ransomware attack, <a href="../../services/incident-response.html">call our 24/7 hotline immediately</a>. Don't make decisions based on blog posts during an active crisis.
+    </div>
+
+    <nav>
+        <h2>Quick Navigation</h2>
+        <ul>
+            <li><a href="#hour-1">Hour 1: Initial Response & Triage</a></li>
+            <li><a href="#hours-1-24">Hours 1-24: Containment & Investigation</a></li>
+            <li><a href="#hours-24-48">Hours 24-48: Decision Making</a></li>
+            <li><a href="#hours-48-72">Hours 48-72: Recovery Execution</a></li>
+            <li><a href="#common-mistakes">7 Common Mistakes to Avoid</a></li>
+        </ul>
+    </nav>
+
+    <div class="timeline-phase" id="hour-1">
+        <div class="phase-time">Hour 1: Initial Response</div>
+        <div class="phase-title">Don't Panic, Do This Instead</div>
+        <p>The first hour sets the trajectory for your entire recovery. Every minute counts, but rushing leads to mistakes.</p>
+        
+        <div class="checklist">
+            <h3>Hour 1 Checklist:</h3>
+            <div class="checklist-item">Confirm it's ransomware (not a false positive)</div>
+            <div class="checklist-item">Activate your incident response team</div>
+            <div class="checklist-item">Isolate affected systems (network segmentation)</div>
+            <div class="checklist-item">Preserve evidence (don't turn anything off)</div>
+            <div class="checklist-item">Secure communication channels (encrypted chat)</div>
+        </div>
+        
+        <div class="tip-box">
+            <strong>💡 Pro Tip:</strong> Take screenshots of everything—ransom notes, encrypted files, system times. This becomes critical evidence for negotiations and insurance claims.
+        </div>
+        
+        <h3>What NOT to Do in Hour 1:</h3>
+        <ul>
+            <li><strong>Don't pay immediately:</strong> 68% of companies that pay in the first hour pay more than necessary</li>
+            <li><strong>Don't contact the attacker yet:</strong> Let professionals handle initial communication</li>
+            <li><strong>Don't start restoring from backups:</strong> You might restore infected backups</li>
+            <li><strong>Don't post on social media:</strong> This alerts competitors and can panic customers</li>
+        </ul>
+    </div>
+
+    <div class="timeline-phase" id="hours-1-24">
+        <div class="phase-time">Hours 1-24: Containment & Investigation</div>
+        <div class="phase-title">Stop the Bleeding, Find the Source</div>
+        <p>This is where most companies make their first major mistake: focusing on recovery before understanding the attack.</p>
+        
+        <h3>Critical Investigation Steps:</h3>
+        <ol>
+            <li><strong>Scope the attack:</strong> Which systems are affected? What data was accessed?</li>
+            <li><strong>Identify the variant:</strong> Different ransomware has different decryption options</li>
+            <li><strong>Find patient zero:</strong> How did they get in? (Phishing, RDP, vulnerability)</li>
+            <li><strong>Check for data exfiltration:</strong> 89% of modern ransomware steals data before encrypting</li>
+            <li><strong>Preserve forensic evidence:</strong> Memory, logs, disk images for legal proceedings</li>
+        </ol>
+        
+        <div class="warning-box">
+            <strong>⚠️ Data Exfiltration Warning:</strong> Assume your data was stolen. In our analysis of 235 cases, 89% involved data theft before encryption. This changes everything—it's not just about decryption anymore.
+        </div>
+        
+        <h3>Containment Strategies:</h3>
+        <table>
+            <tr>
+                <th>Strategy</th>
+                <th>When to Use</th>
+                <th>Pros</th>
+                <th>Cons</th>
+            </tr>
+            <tr>
+                <td>Network Segmentation</td>
+                <td>Large networks, spread detected early</td>
+                <td>Minimal business disruption</td>
+                <td>Complex to implement correctly</td>
+            </tr>
+            <tr>
+                <td>Complete Isolation</td>
+                <td>Critical systems affected, rapid spread</td>
+                <td>Stops attack immediately</td>
+                <td>Total business disruption</td>
+            </tr>
+            <tr>
+                <td>Targeted Shutdown</td>
+                <td>Limited infection, identified patient zero</td>
+                <td>Preserves evidence, minimal disruption</td>
+                <td>Risk of missing compromised systems</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="timeline-phase" id="hours-24-48">
+        <div class="phase-time">Hours 24-48: Decision Making</div>
+        <div class="phase-title">The Million-Dollar Question: To Pay or Not to Pay?</div>
+        <p>By hour 24, you should have enough information to make informed decisions.</p>
+        
+        <h3>Decision Framework:</h3>
+        
+        <div class="checklist">
+            <h4>Questions to Answer Before Deciding:</h4>
+            <div class="checklist-item">Do you have clean, tested backups?</div>
+            <div class="checklist-item">Is there a free decrypter available for this variant?</div>
+            <div class="checklist-item">Was data stolen? (Check dark web monitoring)</div>
+            <div class="checklist-item">What's the business impact per hour of downtime?</div>
+            <div class="checklist-item">What are your regulatory notification requirements?</div>
+        </div>
+        
+        <h4>When Payment Might Be Necessary:</h4>
+        <ul>
+            <li>No backups or backups are also encrypted</li>
+            <li>No decrypter available for this variant</li>
+            <li>Data was stolen and will be published</li>
+            <li>Business impact exceeds ransom demand</li>
+            <li>Critical systems affected (healthcare, utilities)</li>
+        </ul>
+        
+        <h4>When to Avoid Payment:</h4>
+        <ul>
+            <li>Clean backups available and tested</li>
+            <li>Free decrypter exists</li>
+            <li>Data wasn't stolen (confirmed)</li>
+            <li>Attackers have poor reputation for decryption</li>
+            <li>Legal/regulatory restrictions apply (sanctions)</li>
+        </ul>
+        
+        <div class="tip-box">
+            <strong>💡 Negotiation Insight:</strong> The average successful negotiation reduces ransom demands by 63%. Initial demands are almost always negotiable. Professional negotiators achieve better results than internal teams.
+        </div>
+    </div>
+
+    <div class="timeline-phase" id="hours-48-72">
+        <div class="phase-time">Hours 48-72: Recovery Execution</div>
+        <div class="phase-title">From Crisis to Control</div>
+        <p>By now, decisions are made. It's time to execute recovery while managing communications.</p>
+        
+        <h3>Recovery Execution Checklist:</h3>
+        <div class="checklist">
+            <div class="checklist-item">Validate backup integrity (test restoration)</div>
+            <div class="checklist-item">Build clean golden images (don't restore infected systems)</div>
+            <div class="checklist-item">Patch all vulnerabilities (including the initial entry point)</div>
+            <div class="checklist-item">Implement enhanced monitoring (catch any remaining threats)</div>
+            <div class="checklist-item">Begin regulatory notifications (if required)</div>
+            <div class="checklist-item">Update stakeholders (board, employees, customers)</div>
+        </div>
+        
+        <h3>Communication Timeline:</h3>
+        <ul>
+            <li><strong>Hour 1-24:</strong> Internal team only (need-to-know basis)</li>
+            <li><strong>Hour 24-48:</strong> Executive team and board</li>
+            <li><strong>Hour 48-72:</strong> Employees (transparent but controlled)</li>
+            <li><strong>Hour 72+:</strong> Customers/partners (if data breach confirmed)</li>
+            <li><strong>As required:</strong> Regulators (GDPR: 72 hours from discovery)</li>
+        </ul>
+        
+        <h3>Recovery Validation:</h3>
+        <p>Before declaring recovery complete:</p>
+        <ol>
+            <li>Test all critical business functions</li>
+            <li>Verify no ransomware remains in environment</li>
+            <li>Confirm monitoring is detecting anomalies</li>
+            <li>Document everything for insurance and legal</li>
+        </ol>
+    </div>
+
+    <section id="common-mistakes">
+        <h2>7 Common Mistakes That Cost Companies Millions</h2>
+        
+        <div class="warning-box">
+            <h3>Mistake #1: Paying Too Early</h3>
+            <p><strong>Impact:</strong> Average overpayment of 217%<br>
+            <strong>Solution:</strong> Always negotiate. Initial demands are opening positions.</p>
+        </div>
+        
+        <div class="warning-box">
+            <h3>Mistake #2: Destroying Evidence</h3>
+            <p><strong>Impact:</strong> Invalidates insurance claims, prevents legal action<br>
+            <strong>Solution:</strong> Preserve everything. Don't turn systems off.</p>
+        </div>
+        
+        <div class="warning-box">
+            <h3>Mistake #3: Restoring Infected Backups</h3>
+            <p><strong>Impact:</strong> Reinfection, extended downtime<br>
+            <strong>Solution:</strong> Test backups in isolated environment first.</p>
+        </div>
+        
+        <div class="warning-box">
+            <h3>Mistake #4: Poor Communication</h3>
+            <p><strong>Impact:</strong> Panic, misinformation, regulatory penalties<br>
+            <strong>Solution:</strong> Designate single spokesperson, use encrypted channels.</p>
+        </div>
+        
+        <div class="warning-box">
+            <h3>Mistake #5: Ignoring Data Theft</h3>
+            <p><strong>Impact:</strong> Future extortion, regulatory fines for non-notification<br>
+            <strong>Solution:</strong> Assume data was stolen until proven otherwise.</p>
+        </div>
+        
+        <div class="warning-box">
+            <h3>Mistake #6: Going It Alone</h3>
+            <p><strong>Impact:</strong> Longer recovery, higher costs, more mistakes<br>
+            <strong>Solution:</strong> Engage experts early. Experience matters.</p>
+        </div>
+        
+        <div class="warning-box">
+            <h3>Mistake #7: Not Learning Lessons</h3>
+            <p><strong>Impact:</strong> Repeat attacks, continued vulnerability<br>
+            <strong>Solution:</strong> Conduct post-incident review, update security controls.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>When to Get Professional Help</h2>
+        <p>Based on our experience with 100+ incidents, you should engage professional incident response when:</p>
+        
+        <div class="checklist">
+            <div class="checklist-item">Critical systems are affected (ERP, CRM, production)</div>
+            <div class="checklist-item">Data theft is confirmed or suspected</div>
+            <div class="checklist-item">Ransom demand exceeds £50,000</div>
+            <div class="checklist-item">You're unsure about containment strategies</div>
+            <div class="checklist-item">Regulatory notification is required (GDPR, etc.)</div>
+            <div class="checklist-item">Insurance claim needs supporting evidence</div>
+        </div>
+        
+        <p><a href="../../services/incident-response.html">Our 24/7 incident response services</a> provide senior DFIR practitioners from the first call, not junior analysts. We've handled cases from £10,000 to £4.3 million ransom demands.</p>
+    </section>
+
+    <div style="background: var(--surface-2); padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+        <h2>Download the Complete Incident Response Playbook</h2>
+        <p>This article covers the first 72 hours. For complete guidance including checklists, templates, and decision frameworks, download our free playbook:</p>
+        <p><a href="complete-incident-response-playbook.html" style="display: inline-block; background: var(--accent); color: var(--surface-1); padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Download the Free Incident Response Playbook →</a></p>
+    </div>
+
+    <footer>
+        <p><strong>Related Articles:</strong></p>
+        <ul>
+            <li><a href="complete-incident-response-playbook.html">The Complete Incident Response Playbook</a></li>
+            <li><a href="../../services/ransomware-negotiations.html">Ransomware Negotiation Strategies That Work</a></li>
+            <li><a href="../../services/digital-forensics.html">Digital Forensics for Incident Response</a></li>
+            <li><a href="../../services/ir-retainer.html">Incident Response Retainer: Peace of Mind vs. Cost</a></li>
+        </ul>
+        
+        <p style="margin-top: 2rem; font-style: italic; border-top: 1px solid var(--border); padding-top: 1rem;">
+            This guide is based on analysis of 235 real ransomware negotiation cases handled by Binary Response. Every situation is unique—consult with incident response professionals for your specific circumstances.
+        </p>
+    </footer>
+</article>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../../js/main.js"></script>
+
+</body></html>

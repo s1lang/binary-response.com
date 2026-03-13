@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>How to Contain a Data Breach Without Destroying Evidence | Binary Response</title>
+<meta name="description" content="Practical guide to containing data breaches while preserving forensic evidence. Learn the techniques that protect your legal position and insurance claim from day one.">
+<link rel="apple-touch-icon" href="../../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../../css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PMF75NTVG');
+  </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Contain a Data Breach Without Destroying Evidence","datePublished":"2026-03-07","dateModified":"2026-03-07","author":{"@type":"Person","name":"Simon Lynge","url":"https://binary-response.com/blog/authors/simon-lynge.html"},"publisher":{"@type":"Organization","name":"Binary Response","url":"https://binary-response.com"},"url":"https://binary-response.com/blog/posts/data-breach-containment-evidence.html","description":"Practical guide to containing data breaches while preserving forensic evidence for legal and insurance purposes.","mainEntityOfPage":"https://binary-response.com/blog/posts/data-breach-containment-evidence.html"}
+</script>
+<link rel="canonical" href="https://binary-response.com/blog/posts/data-breach-containment-evidence.html">
+<meta property="og:title" content="How to Contain a Data Breach Without Destroying Evidence | Binary Response">
+<meta property="og:description" content="Contain the breach. Preserve the evidence. Protect your legal position. A practical guide from the DFIR frontlines.">
+<meta property="og:url" content="https://binary-response.com/blog/posts/data-breach-containment-evidence.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Contain a Data Breach Without Destroying Evidence">
+<meta name="twitter:description" content="Contain the breach. Preserve the evidence. Protect your legal position. A practical guide from the DFIR frontlines.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<style>
+    .warning-box { background: rgba(255, 107, 107, 0.1); border-left: 4px solid #ff6b6b; padding: 1rem 1.5rem; margin: 1.5rem 0; }
+    .tip-box { background: rgba(78, 205, 196, 0.1); border-left: 4px solid #4ecdc4; padding: 1rem 1.5rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface-2); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--accent); }
+    .evidence-card h4 { margin-top: 0; color: var(--accent); }
+    .volatility-order { counter-reset: vol-counter; list-style: none; padding: 0; }
+    .volatility-order li { counter-increment: vol-counter; padding: 0.75rem 0 0.75rem 3rem; position: relative; border-bottom: 1px solid var(--border); }
+    .volatility-order li::before { content: counter(vol-counter); position: absolute; left: 0; width: 2rem; height: 2rem; background: var(--accent); color: var(--surface-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+    .phase-header { border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-top: 3rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    th { background: var(--surface-2); font-weight: 600; text-align: left; }
+    th, td { padding: 0.75rem; border: 1px solid var(--border); }
+    .mistake-box { background: rgba(255, 107, 107, 0.08); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 1px solid rgba(255, 107, 107, 0.2); }
+    .mistake-box h3 { color: #ff6b6b; margin-top: 0; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../../index.html" class="nav-brand">
+  <img src="../../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero">
+    <span class="hero-label">Digital Forensics &mdash; 2026-03-07</span>
+    <h1>How to Contain a Data Breach Without Destroying Evidence</h1>
+    <p class="hero-desc">The decisions you make in the first hour determine whether your forensic evidence survives. Here's how to get containment right.</p>
+</section>
+
+<article class="blog-post-content">
+
+    <p>You've confirmed a data breach. Systems are compromised. The instinct is to shut everything down, wipe and rebuild, get back to normal as fast as possible.</p>
+
+    <p><strong>That instinct will cost you.</strong></p>
+
+    <p>In our experience across hundreds of incidents, the evidence destroyed in the first hour of response causes more long-term damage than the breach itself. It undermines insurance claims, weakens legal positions, and makes it impossible to determine what was actually stolen.</p>
+
+    <p>This guide covers how to contain a breach effectively while keeping your forensic evidence intact.</p>
+
+    <h2 class="phase-header">Why Evidence Matters More Than You Think</h2>
+
+    <p>Evidence isn't just for catching the attacker (though it helps). It's critical for:</p>
+
+    <ul>
+        <li><strong>Insurance claims:</strong> Insurers increasingly require forensic evidence to validate claims. No evidence, reduced payout &mdash; or denial.</li>
+        <li><strong>Regulatory compliance:</strong> GDPR Article 33 requires you to document the nature of the breach, categories of data affected, and likely consequences. You can't document what you've destroyed.</li>
+        <li><strong>Notification scope:</strong> Forensic evidence determines how many people you need to notify. Without it, you may have to assume worst-case scope &mdash; notifying everyone instead of just affected individuals.</li>
+        <li><strong>Legal proceedings:</strong> Whether you pursue the attacker, defend against litigation from affected parties, or negotiate with regulators &mdash; evidence is your foundation.</li>
+        <li><strong>Root cause analysis:</strong> How did they get in? If you don't know, you can't prevent it happening again.</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>⚠️ Real cost of evidence destruction:</strong> We've seen cases where wiping systems before forensic analysis forced organisations to notify 50,000 individuals instead of 847 &mdash; because without evidence, they couldn't limit the scope. The unnecessary notification cost exceeded £1.2M.
+    </div>
+
+    <h2 class="phase-header">The Order of Volatility</h2>
+
+    <p>Digital evidence has a shelf life. Some evidence disappears in seconds, some persists for months. Collect in order of volatility:</p>
+
+    <ol class="volatility-order">
+        <li><strong>CPU registers and cache</strong> &mdash; Gone the instant power is lost. Rarely collected outside specialist forensics.</li>
+        <li><strong>Memory (RAM)</strong> &mdash; Contains running processes, encryption keys, network connections, malware in execution. <strong>This is the single most valuable evidence source.</strong> Lost when system is powered off or rebooted.</li>
+        <li><strong>Network state</strong> &mdash; Active connections, routing tables, ARP cache. Changes constantly. Capture immediately.</li>
+        <li><strong>Running processes</strong> &mdash; What's executing right now? Process lists, open files, loaded DLLs. Changes with every second.</li>
+        <li><strong>Disk contents</strong> &mdash; File system, logs, registry, deleted files. More persistent but can be overwritten by continued system use.</li>
+        <li><strong>Network logs</strong> &mdash; Firewall logs, proxy logs, DNS logs, SIEM data. Usually retained for days to months depending on configuration.</li>
+        <li><strong>Backups and archives</strong> &mdash; Historical data. Most persistent but may also be compromised.</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>💡 The golden rule:</strong> Never power off a compromised system until volatile evidence has been captured. A running compromised system is a goldmine of evidence. A powered-off system is a brick with an encrypted disk.
+    </div>
+
+    <h2 class="phase-header">Containment Without Destruction</h2>
+
+    <h3>Strategy 1: Network Isolation (Preferred)</h3>
+
+    <p>Disconnect the system from the network while keeping it powered on. This stops the attacker's access and prevents lateral movement while preserving all volatile evidence.</p>
+
+    <div class="evidence-card">
+        <h4>How to isolate correctly:</h4>
+        <ul>
+            <li>Disconnect the network cable (don't disable the adapter in software &mdash; that can trigger malware kill switches)</li>
+            <li>For wireless: disable the access point or block the MAC address at the router, not on the endpoint</li>
+            <li>Move the system to an isolated VLAN if physical disconnection isn't feasible</li>
+            <li>Do NOT shut down, reboot, or log off</li>
+        </ul>
+    </div>
+
+    <h3>Strategy 2: Firewall Segmentation</h3>
+
+    <p>When you can't physically disconnect systems (production servers, cloud infrastructure), use firewall rules to isolate them:</p>
+
+    <ul>
+        <li>Block all outbound traffic from compromised systems</li>
+        <li>Allow only forensic tool traffic inbound</li>
+        <li>Log all blocked connection attempts (valuable intelligence)</li>
+        <li>Keep the systems running and accessible to forensic teams</li>
+    </ul>
+
+    <h3>Strategy 3: Credential Isolation</h3>
+
+    <p>Sometimes the fastest containment is revoking the attacker's access without touching the systems:</p>
+
+    <ul>
+        <li>Reset all compromised account passwords (including service accounts)</li>
+        <li>Revoke active sessions and tokens</li>
+        <li>Disable compromised VPN profiles</li>
+        <li>Rotate API keys and certificates</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>💡 Credential rotation order matters.</strong> Reset the accounts the attacker is using first (check active session logs), then work outward. If you reset everything simultaneously, you may alert the attacker and trigger destructive actions.
+    </div>
+
+    <h2 class="phase-header">Evidence Collection: What to Capture and How</h2>
+
+    <h3>Immediate Captures (First 30 Minutes)</h3>
+
+    <table>
+        <tr>
+            <th>Evidence Type</th>
+            <th>Tool / Method</th>
+            <th>Why It Matters</th>
+        </tr>
+        <tr>
+            <td><strong>Memory dump</strong></td>
+            <td>WinPMEM, FTK Imager, LiME (Linux)</td>
+            <td>Captures running malware, encryption keys, attacker tools in memory</td>
+        </tr>
+        <tr>
+            <td><strong>Process list</strong></td>
+            <td>tasklist /v, ps aux, Volatility</td>
+            <td>Shows what was running at time of detection</td>
+        </tr>
+        <tr>
+            <td><strong>Network connections</strong></td>
+            <td>netstat -anob, ss -tulpn</td>
+            <td>Reveals C2 servers, lateral movement, data exfiltration endpoints</td>
+        </tr>
+        <tr>
+            <td><strong>Event logs</strong></td>
+            <td>wevtutil, journalctl</td>
+            <td>Authentication events, process creation, privilege escalation</td>
+        </tr>
+        <tr>
+            <td><strong>Screenshots</strong></td>
+            <td>Phone camera, screenshot tool</td>
+            <td>Ransom notes, error messages, unusual displays &mdash; simple but often forgotten</td>
+        </tr>
+    </table>
+
+    <h3>Secondary Captures (Hours 1-24)</h3>
+
+    <table>
+        <tr>
+            <th>Evidence Type</th>
+            <th>Tool / Method</th>
+            <th>Why It Matters</th>
+        </tr>
+        <tr>
+            <td><strong>Full disk image</strong></td>
+            <td>FTK Imager, dd, KAPE</td>
+            <td>Complete forensic copy for detailed analysis</td>
+        </tr>
+        <tr>
+            <td><strong>Firewall/proxy logs</strong></td>
+            <td>SIEM export, syslog</td>
+            <td>Data exfiltration timeline, C2 communication patterns</td>
+        </tr>
+        <tr>
+            <td><strong>Email headers</strong></td>
+            <td>Exchange/M365 message trace</td>
+            <td>Phishing email analysis, lateral phishing detection</td>
+        </tr>
+        <tr>
+            <td><strong>Cloud audit logs</strong></td>
+            <td>Azure AD, AWS CloudTrail, GCP</td>
+            <td>Unauthorised access, configuration changes, data access</td>
+        </tr>
+        <tr>
+            <td><strong>Endpoint detection logs</strong></td>
+            <td>EDR console export</td>
+            <td>Malware detections, process trees, timeline reconstruction</td>
+        </tr>
+    </table>
+
+    <h2 class="phase-header">The 5 Evidence-Destroying Mistakes We See Every Week</h2>
+
+    <div class="mistake-box">
+        <h3>Mistake 1: Powering Off Systems</h3>
+        <p><strong>Why it happens:</strong> Panic. "Turn it off" feels like containment.</p>
+        <p><strong>What you lose:</strong> All volatile memory &mdash; running processes, encryption keys, active network connections, malware in execution.</p>
+        <p><strong>Instead:</strong> Network isolate. Keep systems running.</p>
+    </div>
+
+    <div class="mistake-box">
+        <h3>Mistake 2: Running Antivirus Scans</h3>
+        <p><strong>Why it happens:</strong> "We need to clean the infection."</p>
+        <p><strong>What you lose:</strong> The malware itself (quarantined or deleted), file timestamps, disk state.</p>
+        <p><strong>Instead:</strong> Capture evidence first, remediate second. The malware IS the evidence.</p>
+    </div>
+
+    <div class="mistake-box">
+        <h3>Mistake 3: Rebuilding from Backup Immediately</h3>
+        <p><strong>Why it happens:</strong> "We need to get back to business."</p>
+        <p><strong>What you lose:</strong> The compromised system's evidence. Also risk restoring infected backups.</p>
+        <p><strong>Instead:</strong> Image the compromised system first. Test backups in isolation. Then restore.</p>
+    </div>
+
+    <div class="mistake-box">
+        <h3>Mistake 4: Resetting All Passwords at Once</h3>
+        <p><strong>Why it happens:</strong> "Lock everything down."</p>
+        <p><strong>What you lose:</strong> The attacker's active sessions (evidence of what they were doing). May also trigger attacker's dead man's switch.</p>
+        <p><strong>Instead:</strong> Targeted credential rotation. Monitor, then contain.</p>
+    </div>
+
+    <div class="mistake-box">
+        <h3>Mistake 5: Communicating on Compromised Channels</h3>
+        <p><strong>Why it happens:</strong> Using the company's normal email and Slack to coordinate response.</p>
+        <p><strong>What you lose:</strong> Operational security. The attacker reads your response plans.</p>
+        <p><strong>Instead:</strong> Switch to out-of-band communications immediately. Personal phones, encrypted messaging, separate email accounts.</p>
+    </div>
+
+    <h2 class="phase-header">Chain of Custody</h2>
+
+    <p>Evidence is only useful if it's admissible. Maintain chain of custody from the start:</p>
+
+    <ul>
+        <li><strong>Document who collected what, when, and how</strong></li>
+        <li><strong>Hash all evidence</strong> (MD5 + SHA-256) immediately upon collection</li>
+        <li><strong>Store originals separately</strong> &mdash; work only with forensic copies</li>
+        <li><strong>Use write-blockers</strong> for disk imaging where possible</li>
+        <li><strong>Maintain a written log</strong> of all evidence handling</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>💡 Simple evidence log template:</strong> Date/Time | System/Source | Evidence Type | Collected By | Hash (SHA-256) | Storage Location. Keep this in a separate document &mdash; not on a compromised system.
+    </div>
+
+    <h2 class="phase-header">When to Call for Help</h2>
+
+    <p>If any of these apply, engage professional DFIR support before proceeding:</p>
+
+    <ul>
+        <li>Active attacker still in your environment</li>
+        <li>Data exfiltration confirmed or suspected</li>
+        <li>Regulatory notification may be required</li>
+        <li>Insurance claim likely</li>
+        <li>Legal proceedings possible</li>
+        <li>You're not sure what you're looking at</li>
+    </ul>
+
+    <p>Professional incident responders have done this hundreds of times. They know what evidence matters, how to collect it without contamination, and how to present it to insurers, regulators, and courts.</p>
+
+    <div style="background: var(--surface-2); padding: 2rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+        <h2>Evidence-Preserving Incident Response</h2>
+        <p>Our DFIR team specialises in forensically sound containment and investigation. Every engagement produces court-admissible evidence and comprehensive reporting.</p>
+        <p><a href="../../services/digital-forensics.html" style="display: inline-block; background: var(--accent); color: var(--surface-1); padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Learn About Our Forensics Services →</a></p>
+        <p style="margin-top: 1rem;"><a href="complete-incident-response-playbook.html">Download our free Incident Response Playbook</a></p>
+    </div>
+
+    <footer>
+        <p><strong>Related Reading:</strong></p>
+        <ul>
+            <li><a href="first-72-hours-ransomware.html">First 72 Hours After Ransomware Attack</a></li>
+            <li><a href="ransomware-negotiation-strategies.html">Ransomware Negotiation Strategies That Work</a></li>
+            <li><a href="complete-incident-response-playbook.html">The Complete Incident Response Playbook (Free Download)</a></li>
+            <li><a href="../../services/digital-forensics.html">Digital Forensics Services</a></li>
+            <li><a href="../../services/incident-response.html">24/7 Incident Response</a></li>
+        </ul>
+
+        <p style="margin-top: 2rem; font-style: italic; border-top: 1px solid var(--border); padding-top: 1rem;">
+            Based on real-world incident response experience. Case details anonymised. For your specific situation, engage qualified DFIR professionals.
+        </p>
+    </footer>
+</article>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../../js/main.js"></script>
+
+</body></html>

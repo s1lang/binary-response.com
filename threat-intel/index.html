@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Threat Intelligence &mdash; Binary Response</title>
+<meta name="description" content="Ransomware threat intelligence, daily briefs, landscape analysis and dark web research from Binary Response's monitoring platform.">
+<link rel="apple-touch-icon" href="/img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="/img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"Threat Intelligence — Binary Response","url":"https://binary-response.com/threat-intel/","publisher":{"@type":"Organization","name":"Binary Response","url":"https://binary-response.com"}}
+</script>
+<style>
+  .blog-tag.daily-brief{background:rgba(200,50,50,0.12);color:#e05555}
+  .blog-tag.analysis{background:rgba(126,179,224,0.12);color:#7eb3e0}
+  .ti-quick-links{display:flex;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
+</style>
+<link rel="canonical" href="https://binary-response.com/threat-intel/index.html">
+<meta property="og:title" content="Threat Intelligence | Binary Response">
+<meta property="og:description" content="Ransomware threat intelligence, daily briefs and landscape analysis from Binary Response's dark web monitoring platform. Covering 90+ active threat actor groups.">
+<meta property="og:url" content="https://binary-response.com/threat-intel/index.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Threat Intelligence | Binary Response">
+<meta name="twitter:description" content="Ransomware threat intelligence, daily briefs and landscape analysis from Binary Response's dark web monitoring platform. Covering 90+ active threat actor groups.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="/index.html" class="nav-brand">
+  <img src="/img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero"><span class="hero-label"><span class="pulse-dot"></span> Live Intelligence Feed</span>
+<h1>Threat <span class="accent">Intelligence</span></h1>
+<p class="hero-desc">Ransomware trends, dark web developments, daily briefs and practical IR guidance.</p></section>
+
+<section class="content-section" style="padding-top:0"><div class="container">
+
+  <div class="ti-quick-links">
+    <a href="/threat-intel/groups/" class="btn btn-secondary">&#128274; Threat Actor Profiles</a>
+    <a href="/threat-intel/ransomware-tracker.html" class="btn btn-secondary">&#128225; Live Ransomware Tracker</a>
+  </div>
+
+  <div id="ti-posts" class="blog-grid"><p style="color:var(--text-muted);text-align:center;padding:3rem;grid-column:1/-1">Loading intelligence...</p></div>
+
+</div></section>
+
+<footer class="site-footer"></footer>
+
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/main.js"></script>
+<script>
+async function loadTIPosts() {
+  const c = document.getElementById('ti-posts');
+  if (!c) return;
+  try {
+    const r = await fetch('/threat-intel/posts.json');
+    const posts = await r.json();
+    if (!posts.length) {
+      c.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:3rem;grid-column:1/-1">No posts yet.</p>';
+      return;
+    }
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    c.innerHTML = posts.map(p => {
+      const url = p.url || ('/threat-intel/posts/' + p.slug + '.html');
+      return `<a href="${url}" class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-tag ${p.tag}">${p.tagLabel}</span>
+          <h3>${p.title}</h3>
+          <p class="excerpt">${p.excerpt}</p>
+          <div class="meta">
+            <span>${p.date}</span>
+            <span>${p.readTime || '3 min read'}</span>
+          </div>
+        </div>
+      </a>`;
+    }).join('');
+  } catch(e) {
+    c.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:3rem">Unable to load posts.</p>';
+  }
+}
+document.addEventListener('DOMContentLoaded', loadTIPosts);
+</script>
+</body>
+</html>

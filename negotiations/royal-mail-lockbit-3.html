@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Royal Mail vs LockBit 3.0: The Full Ransomware Negotiation Transcript | Binary Response</title>
+<meta name="description" content="The complete Royal Mail LockBit 3.0 ransomware negotiation transcript — £66M demand refused. Full verbatim chat, expert analysis, and five key lessons for an...">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/royal-mail-lockbit-3.html">
+<meta property="og:title" content="Royal Mail vs LockBit 3.0: The Full Ransomware Negotiation Transcript">
+<meta property="og:description" content="The complete Royal Mail LockBit 3.0 ransomware negotiation transcript — £66M demand refused. Full verbatim chat, expert analysis, and five key lessons.">
+<meta property="og:url" content="https://binary-response.com/negotiations/royal-mail-lockbit-3.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Royal Mail vs LockBit 3.0: Full Ransomware Negotiation Transcript">
+<meta name="twitter:description" content="£66M demand refused. 34 days. 103 messages. The complete verbatim transcript with expert analysis.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Royal Mail vs LockBit 3.0: The Full Ransomware Negotiation Transcript",
+      "description": "The complete Royal Mail LockBit 3.0 ransomware negotiation transcript — £66M demand refused. Full verbatim chat, expert analysis, and five key lessons for any organisation facing ransomware.",
+      "datePublished": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "author": {
+        "@type": "Organization",
+        "name": "Binary Response",
+        "url": "https://binary-response.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Binary Response",
+        "url": "https://binary-response.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://binary-response.com/img/logo-icon.webp"
+        }
+      },
+      "mainEntityOfPage": "https://binary-response.com/negotiations/royal-mail-lockbit-3.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "Royal Mail vs LockBit 3.0", "item": "https://binary-response.com/negotiations/royal-mail-lockbit-3.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Did Royal Mail pay the ransom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Royal Mail refused the £66M ($80M) demand entirely. LockBit subsequently published the stolen data on 14 February 2023."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who conducted the Royal Mail negotiation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The identity of Royal Mail's negotiator was not publicly confirmed. Experts believe it may have been a professional ransomware negotiator. LockBit themselves called them 'very clever.'"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happened to LockBit after the Royal Mail attack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LockBit continued operating until February 2024, when Operation Cronos — a joint law enforcement operation — took down their infrastructure, arrested affiliates, and effectively ended the group's operations."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<!-- Hero -->
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Case Study: Ransomware Negotiation</span>
+<h1 style="font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">Royal Mail vs LockBit 3.0: How a £66M Ransom Demand Was <span style="color:var(--accent)">Refused</span></h1>
+<p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;max-width:700px">The complete negotiation transcript — verbatim. 34 days. 103 messages. The demand that was never paid.</p>
+
+<div class="nego-stats-bar" style="margin-top:2rem">
+<div class="nego-stat"><span class="stat-value">£66M</span><span class="stat-label">Initial Demand ($80M)</span></div>
+<div class="nego-stat"><span class="stat-value">34</span><span class="stat-label">Days of Negotiation</span></div>
+<div class="nego-stat"><span class="stat-value">103</span><span class="stat-label">Messages Exchanged</span></div>
+<div class="nego-stat" style="border-color:rgba(255,77,106,0.2)"><span class="stat-value" style="color:var(--red,#ff4d6a)">Refused</span><span class="stat-label">Data Published</span></div>
+<div class="nego-stat"><span class="stat-value">LockBit 3.0</span><span class="stat-label">Threat Actor</span></div>
+</div>
+</div>
+</section>
+
+<!-- Background: What Happened -->
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Background</span>
+<h2 class="section-title">What Happened</h2>
+
+<p>On <strong>10 January 2023</strong>, LockBit 3.0 — then the world's most prolific ransomware group — successfully attacked Royal Mail's international distribution systems. The attack crippled Royal Mail International's ability to process overseas parcels and letters, causing immediate disruption to a service that handles millions of items daily.</p>
+
+<p>Two days later, on 12 January, a Royal Mail representative connected to LockBit's encrypted negotiation portal on the dark web. What followed was one of the most extraordinary ransomware negotiations ever documented — 103 messages over 34 days, ending with a flat refusal and LockBit publishing both the stolen data and the entire transcript on <strong>14 February 2023</strong> — Valentine's Day.</p>
+
+<p>LockBit's opening demand was <strong>$80 million</strong> — calculated as 0.5% of the parent company's annual revenue. But there was a critical error in their calculation: they had attacked <strong>Royal Mail International</strong>, a subsidiary of International Distribution Services (IDS), not the Royal Mail plc entity whose revenue figures they were using. Royal Mail International was, at the time, a loss-making subsidiary with significantly lower revenue than the parent group.</p>
+
+<p>The Royal Mail negotiator exploited this distinction brilliantly, repeatedly explaining the corporate structure, citing publicly available financial reports showing losses, and framing the $80M demand as "absurd" relative to the actual entity that had been compromised. Meanwhile, the negotiator deployed a masterclass in delay tactics: citing board meetings over weekends, requesting decryptor verification for large files, raising questions about file integrity, and maintaining a tone that was simultaneously cooperative and immovable.</p>
+
+<p>After 18 days, the board delivered its verdict through the negotiator: <em>"Under no circumstances will we pay you the absurd amount of money you have demanded."</em> The negotiations continued for another two weeks with LockBit reducing their ask, but Royal Mail had already made its decision. LockBit eventually published all stolen data and the full transcript, labelling Royal Mail as a failed negotiation and the negotiator as "a very clever negotiator" who needed to be replaced.</p>
+
+<p>This case is widely considered one of the most successful non-payment negotiations in the public record. It demonstrated that even against the world's most aggressive ransomware group, a well-prepared negotiator with genuine arguments could refuse to pay — and survive.</p>
+</div></section>
+
+<!-- Key Numbers -->
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">£66M / $80M</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">34 days</span><span class="stat-label">Negotiation Duration</span></div>
+<div class="nego-stat"><span class="stat-value">12.5%</span><span class="stat-label">LockBit's Offered Discount</span></div>
+<div class="nego-stat" style="border-color:rgba(0,229,160,0.3)"><span class="stat-value" style="font-size:2.5rem">£0</span><span class="stat-label">Amount Paid</span></div>
+</div>
+</div></section>
+
+<!-- Five Lessons -->
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Five Lessons from Royal Mail's Negotiation</h2>
+<p style="color:var(--text-secondary);margin-bottom:2rem">What this transcript teaches every organisation about ransomware negotiation — whether you plan to pay or not.</p>
+
+<div class="lesson-card">
+<h3>1. Play the Subsidiary Card</h3>
+<p>Royal Mail brilliantly — and accurately — argued that LockBit had attacked Royal Mail International, not Royal Mail plc. The revenue figures LockBit was using were wrong. They'd calculated 0.5% of the parent company's revenue, which included UK domestic operations, GLS logistics in Europe, and other entities entirely unrelated to the compromised network.</p>
+<p>This genuine distinction let the negotiator honestly push back on the $80M demand as completely disproportionate. When LockBit cited Wikipedia and TechCrunch articles about "Royal Mail," the negotiator calmly explained that Royal Mail International was a separate entity with its own Managing Director, its own financials, and crucially — its own losses.</p>
+<div class="lesson-takeaway">&#9889; <strong>Lesson:</strong> Know your corporate structure and be prepared to explain it clearly and accurately. If your attacker has miscalculated your revenue, that's your strongest card.</div>
+</div>
+
+<div class="lesson-card">
+<h3>2. Use Delaying Tactics Without Lying</h3>
+<p>The Royal Mail negotiator was masterful at buying time — without once making a false statement. Citing weekend board meetings that genuinely needed to happen. Requesting file verification that legitimately needed to be done. Raising concerns about large file decryption that were technically valid.</p>
+<p>Every delay was framed as the negotiator trying their best to work with LockBit, but being constrained by internal processes. LockBit eventually recognised this, stating: <em>"You are a very clever negotiator, I appreciate your experience in stalling and bamboozling."</em> Even after this acknowledgment, the delays continued successfully.</p>
+<div class="lesson-takeaway">&#9889; <strong>Lesson:</strong> Every day of delay is a day for recovery and decision-making. Frame delays as legitimate process requirements — because they usually are.</div>
+</div>
+
+<div class="lesson-card">
+<h3>3. Humanise Your Position — Without Weakness</h3>
+<p>The negotiator repeatedly positioned themselves as caught between LockBit and a board that was hard to persuade: <em>"I am trying to help our Senior Team understand this."</em> This is a classic negotiation technique — creating the impression of an internal advocate who wants to help but faces resistance from above.</p>
+<p>By humanising their position, the negotiator made LockBit feel like they had an ally inside Royal Mail — someone who would bring their case to the board. In reality, this technique created an additional layer of abstraction between LockBit and the actual decision-makers, making it impossible for LockBit to apply direct pressure.</p>
+<div class="lesson-takeaway">&#9889; <strong>Lesson:</strong> Make the threat actor feel like you're on their side, even when you're not moving. The "good cop" technique works even in ransomware negotiations.</div>
+</div>
+
+<div class="lesson-card">
+<h3>4. Challenge the Decryptor Early</h3>
+<p>The question about whether the decryptor worked on large files — tied to a 6GB file associated with medical devices — was an excellent dual-purpose tactic. It served as both a legitimate due diligence requirement and a powerful stalling mechanism.</p>
+<p>LockBit spent significant time addressing this concern, providing test decryptions, explaining their process, and even offering to re-encrypt and decrypt Royal Mail's own systems as proof. Each exchange added days to the timeline. The medical device angle also introduced a humanitarian dimension that made LockBit uncomfortable.</p>
+<div class="lesson-takeaway">&#9889; <strong>Lesson:</strong> Decryptor verification is both a due diligence requirement and a powerful stalling mechanism. Always challenge the decryptor's capabilities.</div>
+</div>
+
+<div class="lesson-card">
+<h3>5. Know When the Answer Is No</h3>
+<p>Royal Mail had clearly determined early that they were not going to pay £66M. The entire negotiation was time-buying. The board's final message — <em>"Under no circumstances will we pay you the absurd amount of money you have demanded"</em> — came 18 days into talks, but the decision was almost certainly made within the first few days.</p>
+<p>Knowing the answer was "no" from the outset gave every subsequent move clarity and purpose. The negotiator wasn't trying to reach a settlement — they were maximising recovery time, gathering intelligence about the threat actor, and building a comprehensive understanding of what data had been stolen.</p>
+<div class="lesson-takeaway">&#9889; <strong>Lesson:</strong> Deciding your walk-away position in advance lets every negotiation move serve a clear purpose. If the answer is no, use the time wisely.</div>
+</div>
+</div></section>
+
+<!-- Full Transcript -->
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">The Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Published by LockBit 3.0 on 14 February 2023 after negotiations failed. The following is the complete transcript of 103 messages, reproduced verbatim from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 12.01.2023 13:44:06 UTC &mdash; Message 1/103</div>
+[Chat started]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 12.01.2023 13:44:19 UTC &mdash; Message 2/103</div>
+Hi. Did this work?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:46:44 UTC &mdash; Message 3/103</div>
+hi
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:46:48 UTC &mdash; Message 4/103</div>
+i&#x27;m here
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:47:01 UTC &mdash; Message 5/103</div>
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:47:07 UTC &mdash; Message 6/103</div>
+tree stolen data
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:47:34 UTC &mdash; Message 7/103</div>
+password @fA@KM@YY(X2%Z%tbvHn%re2a
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 12.01.2023 13:47:40 UTC &mdash; Message 8/103</div>
+Now I am worried about the other link with data in the other chat. Is that link gone now? so no one sees it
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:48:54 UTC &mdash; Message 9/103</div>
+If you have already downloaded it, it is no longer available
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 12.01.2023 13:49:09 UTC &mdash; Message 10/103</div>
+Thank you. 
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 12.01.2023 13:49:28 UTC &mdash; Message 11/103</div>
+Is this showing all the data you have taken from us?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:49:41 UTC &mdash; Message 12/103</div>
+the link is not available, did you download the tree or download it again?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:50:05 UTC &mdash; Message 13/103</div>
+Yes, all stolen data
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 12.01.2023 13:50:15 UTC &mdash; Message 14/103</div>
+I did open it and download a file from it. Is that the data?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:51:04 UTC &mdash; Message 15/103</div>
+there was a tree of data stolen from us at the link. you can select some files, we will send them to you
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 12.01.2023 13:52:12 UTC &mdash; Message 16/103</div>
+I will open the file and show it to my management
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:53:54 UTC &mdash; Message 17/103</div>
+Yes, don&#x27;t delay. time is not playing in your favor. so far we have not reported the attack on our blog
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 13:54:10 UTC &mdash; Message 18/103</div>
+to whom am I speaking?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 12.01.2023 13:55:54 UTC &mdash; Message 19/103</div>
+I work in our IT. Our senior management have asked me to contact you as it said in your note
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 14:14:34 UTC &mdash; Message 20/103</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 12.01.2023 19:44:46 UTC &mdash; Message 21/103</div>
+what does management say?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 13.01.2023 15:31:42 UTC &mdash; Message 22/103</div>
+Hi. I gave them the file. I am still waiting for them to come back to me. 
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 13.01.2023 17:32:45 UTC &mdash; Message 23/103</div>
+ok. hurry up
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 13.01.2023 20:00:02 UTC &mdash; Message 24/103</div>
+We shall return to speak on Monday following the weekend and lengthy discussions with our internal stakeholders.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 13.01.2023 20:56:51 UTC &mdash; Message 25/103</div>
+Try to spend them productively, and please us. our patience is not infinite
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 13.01.2023 20:58:19 UTC &mdash; Message 26/103</div>
+what can we expect by monday?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 13.01.2023 20:58:47 UTC &mdash; Message 27/103</div>
+We will let you know
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 13.01.2023 20:59:18 UTC &mdash; Message 28/103</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 16.01.2023 21:47:26 UTC &mdash; Message 29/103</div>
+Hello. We waited the time you asked for. Now it&#x27;s time to pay.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 17.01.2023 19:12:33 UTC &mdash; Message 30/103</div>
+Apologies for the delay as this is a lot for us to deal with. We shall get back to you tomorrow with some file names from your large list to request to see.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 18.01.2023 17:16:04 UTC &mdash; Message 31/103</div>
+File: [requested_files.txt]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 18.01.2023 17:16:27 UTC &mdash; Message 32/103</div>
+These are the files we would like to see that you have
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 18.01.2023 19:16:19 UTC &mdash; Message 33/103</div>
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 18.01.2023 19:16:34 UTC &mdash; Message 34/103</div>
+pass pMjd07L82^VYVexJyF6etQZ31
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 20.01.2023 11:29:08 UTC &mdash; Message 35/103</div>
+Hello, it&#x27;s time to pay.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 20.01.2023 14:54:24 UTC &mdash; Message 36/103</div>
+What do we need to test your decryption ability with our files?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 20.01.2023 19:30:05 UTC &mdash; Message 37/103</div>
+each machine has its own ID.  In order to decrypt the file you need to take the file from one PC, and go to the chat with the ID of this PC. then the test decrypt will be successful
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 20.01.2023 20:07:52 UTC &mdash; Message 38/103</div>
+Okay, we&#x27;ll see what we can do to identify the ID from each. Will come back to you.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 20.01.2023 21:28:19 UTC &mdash; Message 39/103</div>
+Also you can send me 5-10 files, I will decrypt it for you
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 20.01.2023 21:28:36 UTC &mdash; Message 40/103</div>
+Use this sites File Share: lockbitfile2tcudkcqqt2ve6btssyvqwlizbpv5vz337lslmhff2uad.onion lockbitfilzhrvt6eya2lvnp7te4iifzmwybendqclgujqbzu3k4gaid.onion lockbitfilzu5e62fybhieutf6653cpv6wco7twgjtkqwdgubn4q5rad.onion
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 21.01.2023 04:00:32 UTC &mdash; Message 41/103</div>
+Think I did this right. Here&#x27;s some files: [REDACTED URL]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 21.01.2023 04:03:07 UTC &mdash; Message 42/103</div>
+I also have a 6 GB file that is very important. It&#x27;s associated with medical devices that can&#x27;t yet be shipped out because this file is locked. Please please if you can unlock this too it will help save lives. I don&#x27;t know how to send it over
+</div></div>
+<div class="analyst-note">💡 <strong>Classic tactic:</strong> Appeal to human cost while simultaneously creating a verification task that buys days. The 6GB medical device file becomes both a humanitarian argument and a technical roadblock.</div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 21.01.2023 13:12:02 UTC &mdash; Message 43/103</div>
+File: [1.png]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 21.01.2023 13:12:08 UTC &mdash; Message 44/103</div>
+File: [2.png]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 21.01.2023 13:12:15 UTC &mdash; Message 45/103</div>
+File: [3.png]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 21.01.2023 13:12:49 UTC &mdash; Message 46/103</div>
+File: [smh_installer.log.7z]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 21.01.2023 13:12:58 UTC &mdash; Message 47/103</div>
+File: [WindowsUpdate.log.7z]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 21.01.2023 13:22:32 UTC &mdash; Message 48/103</div>
+You gave me valuable files that can help restore your systems without paying for a decryptor, so I only gave back some of your files, and screenshots of the valuable files.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 21.01.2023 13:24:40 UTC &mdash; Message 49/103</div>
+About 6 gigabytes of data that will supposedly save someone&#x27;s life, is it one file weighing 6 gigabytes, or is it many files weighing 6 gigabytes in total? Something tells me that you are bluffing and you are doing system recovery and want to get free decryption of critical files needed for recovery. Tell me in detail what the medical equipment is and what the 6 gigabyte files are.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 21.01.2023 16:28:17 UTC &mdash; Message 50/103</div>
+There are 2 files that are a combined 6 gigabytes when compressed. You know how much of our data is encrypted and when you see the files, you will understand that they will not allow us to recover. We are only pressing this because of the medical concern and we do not believe that your intent is to hurt anyone.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 21.01.2023 20:35:45 UTC &mdash; Message 51/103</div>
+What are these files? What is their function? What medical equipment are these files for? And what does the postal service have to do with medical software? Where is the logic?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 22.01.2023 18:15:53 UTC &mdash; Message 52/103</div>
+We are not just a postal service. We handle both letters and parcels, where roughly 60% of our business is parcels - international export of global  medical supplies, contribute to a significant element of that! These supplies include vital replacement equipment parts, COVID-19 test kits, prescription drugs etc. The files that we have provided should allow us to resume shipping some of this equipment, not only here in the UK, but globally as well. Our transportation of this medical equipment does play a vital role in ensuring that people in need are being helped by these products. Given that the files are renamed, we are making our best assumption that this is the right dataset, and we would greatly appreciate the assistance. 
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 22.01.2023 18:39:32 UTC &mdash; Message 53/103</div>
+If you pretend that you do not believe that the decryptor really works, you can send me 10-20 other less important files, e.g. not related to virtualization systems and not containing RAM dumps, you can send me personal documents, photos, and many other things that do not help you without paying for my postpaid pentest services. If you were really worried about medical equipment, just pay for my work and get a decryptor within 5 minutes. You are making multi-billion dollar profits from your business and don&#x27;t want to part with the money, don&#x27;t you think that&#x27;s odd? It&#x27;s your greed that makes the people who are waiting for their packages suffer.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 24.01.2023 12:51:35 UTC &mdash; Message 54/103</div>
+We are not pretending anything and apologise if it appears that way. It is just that my management have heard that your decryptor might not work on large files, that is why they asked and wanted to see if it did. I am trying to convince them to work with you here, they are just asking for more proof of what we will get from you. As you probably know, we are already a loss making company, so we are not gaining anything from dragging this out. There are several articles on Google about our financial situation and how bad it is currently.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 24.01.2023 13:47:58 UTC &mdash; Message 55/103</div>
+You can send me other large files, I will decrypt for you those files that I think are not valuable, that way you can be sure that the decryptor works on large files. Your financial situation is fine, you have a multi-billion dollar turnover, and a huge profit, the sooner you pay, the sooner this whole nightmare will be over for you. If you continue to stretch time I will be forced to publish your information on the blog with an offer to change negotiators, thank you for your understanding.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 25.01.2023 17:27:01 UTC &mdash; Message 56/103</div>
+We are collecting some larger files that are not valuable to provide you. It&#x27;s important for us to understand these can be decrypted of course so we appreciate you providing that opportunity to us. Ahead of this, we haven&#x27;t even heard from you what it is that you want.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 25.01.2023 17:52:34 UTC &mdash; Message 57/103</div>
+I&#x27;m waiting for the next batch of files to be decrypted. We want as 0.5% of your revenue.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 25.01.2023 17:55:27 UTC &mdash; Message 58/103</div>
+And how much is that?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 25.01.2023 17:55:48 UTC &mdash; Message 59/103</div>
+How much your revenue?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 25.01.2023 17:57:54 UTC &mdash; Message 60/103</div>
+All we have had is losses. Here, you can read about it yourself. [REDACTED URL]  [REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 25.01.2023 18:05:40 UTC &mdash; Message 61/103</div>
+We understand you very well, we are all suffering from the global crisis and our income has fallen as much as yours, anyway you are hundreds of times richer than us. 0.5% of annual global turnover is much less than a 4% fine from your government.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 25.01.2023 18:12:52 UTC &mdash; Message 62/103</div>
+Just name the amount already so we can let the leadership know.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 25.01.2023 18:17:10 UTC &mdash; Message 63/103</div>
+$80 million is 0.5% of your revenue, $640 million is 4% of your revenue. We are asking 8 times less than your state. In addition to this price you get a decrypt of your data.
+</div></div>
+<div class="analyst-note">💡 <strong>Note:</strong> LockBit calculated 0.5% of Royal Mail plc's total revenue, not Royal Mail International — an entity with ~£800M turnover, not billions. The $80M demand was based on fundamentally wrong figures.</div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 25.01.2023 18:28:24 UTC &mdash; Message 64/103</div>
+Do you really think the government doesn&#x27;t already know about this? Even if they were to fine us, paying you or not does not change this.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 25.01.2023 18:32:06 UTC &mdash; Message 65/103</div>
+We&#x27;ll get you the files and we can continue these talks later.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 25.01.2023 18:32:49 UTC &mdash; Message 66/103</div>
+As long as we haven&#x27;t published any of your files, you can&#x27;t be fined. If you can negotiate with us, the government will be left without your $640 million. It is much better for you to negotiate with us and continue your very successful business with a long history and impeccable reputation. I personally used the services of your company and was very satisfied. I wouldn&#x27;t want you to suffer so much from the government.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 25.01.2023 18:34:07 UTC &mdash; Message 67/103</div>
+Talk to you later
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 25.01.2023 18:34:15 UTC &mdash; Message 68/103</div>
+Ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 26.01.2023 19:35:54 UTC &mdash; Message 69/103</div>
+How do I give you these large files? They are larger than your 2GB limit
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 26.01.2023 19:46:40 UTC &mdash; Message 70/103</div>
+My internet does not allow me to download such huge files, my internet speed is 50 kilobytes per second, send me files up to 50-100 megabytes at most. At the same time I can offer you to do the following, I will create a build of the encryptor and give you together with the decryptor, you will encrypt any files on your virtual machine and this way you can check the successful decryption of files larger than 2 gigabytes.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 26.01.2023 20:04:08 UTC &mdash; Message 71/103</div>
+Okay, I guess we can try that. We just want to have confidence your decryption tool will work on these large files
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 26.01.2023 20:11:35 UTC &mdash; Message 72/103</div>
+You don&#x27;t have to worry, thousands of people have successfully decrypted their files for almost four years.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 26.01.2023 20:12:23 UTC &mdash; Message 73/103</div>
+I believe you, but we need to see it ourselves before we can consider this
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 26.01.2023 20:17:33 UTC &mdash; Message 74/103</div>
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 26.01.2023 20:18:51 UTC &mdash; Message 75/103</div>
+Encrypt any of your computers or virtual machines, any amount or amount of information. Write to me via a note and I will give you a decryptor in a new chat in which you will write to me.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 26.01.2023 20:23:33 UTC &mdash; Message 76/103</div>
+To start the encryption, simply run the file as administrator.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 26.01.2023 21:58:06 UTC &mdash; Message 77/103</div>
+There is still some confusion over who we are, you are basing your revenue on what is a holding company and not Royal Mail Group. IDS (International Distribution Services) have several companies that exist under that umbrella who are independent to each other. We are Royal Mail International who is a separate entity, with an entirely independent Managing Director and Senior Official. Our Company’s revenue is in decline, as we have tried to explain to you previously and Royal Mail International is the Company that is affected by your penetration testing. Our current financial turnover is expected to be 800 million. Based on your calculation for payment (0.5% of total revenue) this equals 4 million dollars. If there is any negotiation at this percentage level the starting figure needs to represent what I have just described. I am trying to help our Senior Team understand this and I am grateful that you have offered to help them see that your decryptor can work to restore our services, by offering to decrypt some larger files. We will have to accept what we have for now and will see if this is good enough for them or not..
+</div></div>
+<div class="analyst-note">💡 <strong>Analyst note:</strong> This is both accurate and tactically brilliant — reframing the entire demand basis. Royal Mail International was a separate, loss-making subsidiary. The negotiator uses a genuine corporate structure distinction to undermine the ransom calculation.</div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 26.01.2023 23:41:08 UTC &mdash; Message 78/103</div>
+You&#x27;re bluffing, 800 million is your net profit per year, so 80 million is not that much money for you.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 27.01.2023 13:45:18 UTC &mdash; Message 79/103</div>
+What company are you looking at to get those numbers?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 27.01.2023 19:40:56 UTC &mdash; Message 80/103</div>
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 27.01.2023 19:41:15 UTC &mdash; Message 81/103</div>
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 27.01.2023 19:41:37 UTC &mdash; Message 82/103</div>
+[REDACTED URL]&amp;guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAHuwwya8Vr_ETqomIFym90OHoOGvCLlLONYPwCbLmCiF19qs4A2x68Rge0ICtwVtRfnOeQIctYx5A0epfJT5t2u73JkDFGhBtrJFtpwWWlf3Y_Qbxtj8aL5TcfVxyrg_tvh7vJNNb3y9Ex0WXLu5iuj7visZOGG5yE8wufn912Bq
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 27.01.2023 23:20:22 UTC &mdash; Message 83/103</div>
+Trying to explain we are Royal Mail International, who is a separate entity, with an entirely independent Managing Director and Senior Official, and not &quot;Royal Mail&quot; as the overall entity. What you attacked is just a small portion and our revenue is not that of Royal Mail.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 27.01.2023 23:21:48 UTC &mdash; Message 84/103</div>
+Anyways, time for bed. The board has meetings this weekend and we will not have anything new to speak about until Monday while they make their decision.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 28.01.2023 01:33:39 UTC &mdash; Message 85/103</div>
+You are a very clever negotiator, I appreciate your experience in stalling and bamboozling, when you are trying to deceive you need to provide evidence for greater credibility, only a fool would believe in the honest word of a lawyer defending his client.
+</div></div>
+<div class="analyst-note">💡 <strong>A rare moment:</strong> The threat actor acknowledging the negotiator's skill. LockBit knew they were being managed. Despite this awareness, they couldn't break the negotiator's strategy.</div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 28.01.2023 13:06:43 UTC &mdash; Message 86/103</div>
+Not here to deceive or bamboozle. Just being transparent about what we&#x27;re doing. The board having meetings this weekend shows our seriousness. Please confirm you will wait for their decision on Monday
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 28.01.2023 16:25:17 UTC &mdash; Message 87/103</div>
+Your seriousness can consist only in a desire to pay 80 million dollars, all other promises of meetings of your management, which allegedly will be held, this is just a tactical move, increasing the time of negotiations calculated that I will be nervous and agree to a smaller amount of money that you will offer. I am ready to wait until Monday, I am sure that your directors have more than 100 million dollars on their personal cryptocurrency wallet, so it will not take much time to finish this nightmare.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 30.01.2023 21:12:55 UTC &mdash; Message 88/103</div>
+As we informed you, we have a response from our board to provide you. Under no circumstances will we pay you the absurd amount of money you have demanded. We have repeatedly tried to explain to you we are not the large entity you have assumed we are, but rather a smaller subsidiary without the resources you think we have. But you continue to refuse to listen to us. This is an amount that could never be taken seriously by our board.
+</div></div>
+<div class="analyst-note">💡 <strong>The walk-away.</strong> Delivered clearly, firmly, after 18 days of buying time. The board had made its decision before day 3. Everything between was tactical delay — and it worked.</div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 31.01.2023 23:55:53 UTC &mdash; Message 89/103</div>
+If I did not want to make a deal with you, your data would have already been published and the decryptor deleted. I am not forcing you to prove anything, I just kindly asked, refusing to give me such simple information says that you do not intend to cooperate with me honestly and tell me the truth. We are not attacking critical infrastructure, your commercial mail company with dozens of similar competitors is not. If you believe the news that your management is releasing, your mail services are fully restored and you are functioning as you are, humanitarian and medical supplies will be successfully delivered by your competitors, you will just get a little less profit, because you are very greedy and don&#x27;t want to pay for my services. I&#x27;m sure you could easily pay $80 million, your income allows you to do so. If you want a discount, then make a counter offer, we are here to have constructive negotiations, not for me to give you a discount after every bluff you make until you say I&#x27;m fine with getting a free decryptor and free removal of stolen information. Any specific offer you make will be considered. You have a chance to make me an adequate payment offer by consulting with your board of directors, whose salaries are in the hundreds of thousands of pounds, but that does not stop them from being very greedy and not making concrete proposals to save the reputation of your commercial company which has more reasonable competitors who have already paid us money and successfully continue to earn new excess profits billions of pounds. Good day gentlemen.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 01.02.2023 21:41:07 UTC &mdash; Message 90/103</div>
+I am still trying to work with you here. I am trying to get the board to find a solution with you, but they have two major concerns. You haven&#x27;t showed us that you could handle the large files, and your starting point here is way too high. We have told you who we are, and our numbers wouldn&#x27;t at all justify the demand you have put forward. I am doing what I can to drive things forward on my end, but your demand is simply too high for the board to consider. If you can give me a lower starting point, I think I may be able to get the board to work with you. I really want to find a solution here, please help me do that.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 01.02.2023 23:24:58 UTC &mdash; Message 91/103</div>
+I&#x27;m ready to help you, I want to make money just like you, you and I have the same motivation in the form of money, your task is to reduce the price as much as possible, my task is to get the maximum amount. I have shown you that I can handle large files, you can encrypt and decrypt any files you want, why haven&#x27;t you done that until now? The price is based on a multi-billion dollar company&#x27;s profits, it&#x27;s not the case that a company making billions of dollars pays the same price as an ordinary company making tens of millions of dollars. The more profits a company makes, the higher the buyout price, that&#x27;s the math, you and your board of directors should understand that. Out of respect for you, I&#x27;m willing to step up and give you a 12.5% discount.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 02.02.2023 21:16:44 UTC &mdash; Message 92/103</div>
+Thank you for this. I appreciate you coming forward like this. I will bring this to my management and get back to you.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 03.02.2023 10:14:28 UTC &mdash; Message 93/103</div>
+Ok.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 03.02.2023 20:54:50 UTC &mdash; Message 94/103</div>
+I just want to let you know, that I am still waiting for a reply. My manager told me, that he is waiting to hear back from the board. He has promised me I’ll get an answer on Monday. I will let you know as soon as I hear anything.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 03.02.2023 21:01:26 UTC &mdash; Message 95/103</div>
+Very long, the company from the UK paid on the second day after the attack because they care more about their business and reputation, strange that for you it is not so important, because you make a lot more money.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 04.02.2023 13:26:31 UTC &mdash; Message 96/103</div>
+Maybe you didn&#x27;t ask them for such a large amount. That would probably make it easier to pay quickly. My manager hasn&#x27;t gotten an update from the board yet, can I check back in with you Monday?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 04.02.2023 16:40:24 UTC &mdash; Message 97/103</div>
+Naturally, I asked them for a smaller amount, their revenue is 58 times less than yours, they earn money 58 times less than you, I always ask for a fair and adequate amount from each company, I do not ask for what the company can not pay. Why do you have such a long chain of middlemen? why can&#x27;t you communicate directly with the director? I will wait until Monday, but I think it is time to end this case. The journalists are asking me why I haven&#x27;t published your information while I ignore their questions, they really want to see your files.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 06.02.2023 11:17:00 UTC &mdash; Message 98/103</div>
+You need pay.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 06.02.2023 12:52:43 UTC &mdash; Message 99/103</div>
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 06.02.2023 12:52:56 UTC &mdash; Message 100/103</div>
+You have 50 hours for payment.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Royal Mail]</span> &mdash; 06.02.2023 22:20:26 UTC &mdash; Message 101/103</div>
+I just want to let you know, that I am still waiting to hear back from my management. It is not a quick decision for them, and I can’t just tell the board to hurry up. To be honest with you I have heard that they might not want to pay you for this. In our perspective the files got leaked when you took them from our system, and paying you won’t undo that in any way. I will get back to you as soon as I have further news.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 07.02.2023 03:42:02 UTC &mdash; Message 102/103</div>
+I just want to let you know that the data is ready to be published and the decryptor is ready to be deleted. You have had plenty of time to make your decision, your time is up.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[LockBit 3.0]</span> &mdash; 09.02.2023 12:41:40 UTC &mdash; Message 103/103</div>
+Do you have any offer for me?
+</div></div>
+</div>
+</div></section>
+
+<!-- What Happened Next -->
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Aftermath</span>
+<h2 class="section-title">What Happened Next</h2>
+
+<div style="display:grid;gap:1.5rem">
+<div style="display:flex;gap:1rem;align-items:flex-start">
+<span style="font-family:var(--mono);font-size:0.8rem;color:var(--red,#ff4d6a);min-width:100px;padding-top:0.2rem">14 Feb 2023</span>
+<p style="margin:0">LockBit published all stolen data on their leak site — on Valentine's Day. They also published the full negotiation transcript, adding commentary that Royal Mail needed "a new negotiator." The irony: publishing the transcript showcased exactly how skilled the negotiator actually was.</p>
+</div>
+<div style="display:flex;gap:1rem;align-items:flex-start">
+<span style="font-family:var(--mono);font-size:0.8rem;color:var(--text-secondary);min-width:100px;padding-top:0.2rem">Feb–Mar 2023</span>
+<p style="margin:0">Royal Mail continued operations with limited international service for several weeks. The disruption was significant but manageable. Critically, no ransom was paid — confirmed publicly by Royal Mail and widely reported.</p>
+</div>
+<div style="display:flex;gap:1rem;align-items:flex-start">
+<span style="font-family:var(--mono);font-size:0.8rem;color:var(--text-secondary);min-width:100px;padding-top:0.2rem">2023</span>
+<p style="margin:0">Royal Mail's negotiator was widely praised by cybersecurity experts. The transcript became required reading in incident response training programmes and was cited as a textbook example of how to handle a ransomware negotiation when payment is not an option.</p>
+</div>
+<div style="display:flex;gap:1rem;align-items:flex-start">
+<span style="font-family:var(--mono);font-size:0.8rem;color:var(--accent);min-width:100px;padding-top:0.2rem">Feb 2024</span>
+<p style="margin:0"><strong>Operation Cronos</strong> — a joint law enforcement operation led by the NCA, FBI, and Europol — took down LockBit's infrastructure, arrested key affiliates, and effectively ended the group's operations. Exactly one year after the Royal Mail transcript was published.</p>
+</div>
+</div>
+</div></section>
+
+<!-- Professional Analysis -->
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Expert Perspective</span>
+<h2 class="section-title">What Would a Professional Negotiator Have Added?</h2>
+<p style="color:var(--text-secondary);margin-bottom:2rem">Royal Mail's negotiator performed excellently. But there are additional capabilities a specialist ransomware negotiation firm brings to every engagement:</p>
+
+<div style="display:grid;gap:1rem">
+<div style="padding:1rem 1.25rem;background:rgba(0,229,160,0.04);border-left:2px solid var(--accent);border-radius:0 8px 8px 0">
+<strong style="color:var(--accent)">Threat Actor Intelligence</strong>
+<p style="margin:0.5rem 0 0;color:var(--text-secondary)">LockBit's payment rate, average discount given, known bluffs, and historical behaviour patterns. Understanding whether a threat actor's deadline is genuine or theatrical changes the negotiation calculus entirely.</p>
+</div>
+<div style="padding:1rem 1.25rem;background:rgba(0,229,160,0.04);border-left:2px solid var(--accent);border-radius:0 8px 8px 0">
+<strong style="color:var(--accent)">Sanctions Screening</strong>
+<p style="margin:0.5rem 0 0;color:var(--text-secondary)">Ensuring any potential payment would not violate OFAC (US), OFSI (UK), or EU sanctions regulations. This is a legal requirement that many organisations overlook in the heat of an incident.</p>
+</div>
+<div style="padding:1rem 1.25rem;background:rgba(0,229,160,0.04);border-left:2px solid var(--accent);border-radius:0 8px 8px 0">
+<strong style="color:var(--accent)">Cryptocurrency Tracing</strong>
+<p style="margin:0.5rem 0 0;color:var(--text-secondary)">Assessing whether a payment could be tracked post-transaction and whether the receiving wallet has been flagged by law enforcement or exchanges.</p>
+</div>
+<div style="padding:1rem 1.25rem;background:rgba(0,229,160,0.04);border-left:2px solid var(--accent);border-radius:0 8px 8px 0">
+<strong style="color:var(--accent)">Structured Decryptor Validation</strong>
+<p style="margin:0.5rem 0 0;color:var(--text-secondary)">A formal testing protocol rather than ad-hoc file testing — ensuring the decryptor works across file types, sizes, and operating systems before any payment decision is made.</p>
+</div>
+<div style="padding:1rem 1.25rem;background:rgba(0,229,160,0.04);border-left:2px solid var(--accent);border-radius:0 8px 8px 0">
+<strong style="color:var(--accent)">Post-Negotiation Data Verification</strong>
+<p style="margin:0.5rem 0 0;color:var(--text-secondary)">Confirming, where possible, that published data was contained and assessing the realistic exposure from the data that was leaked.</p>
+</div>
+</div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome. We bring threat actor intelligence, sanctions compliance, and negotiation expertise to every engagement.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<!-- Related Transcripts -->
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Related</span>
+<h2 class="section-title">Other Notable Transcripts</h2>
+<div class="grid-3" style="margin-top:1.5rem">
+<a href="lockbit3.0-continental_com.html" class="card card-glow" style="text-decoration:none">
+<div class="card-icon">&#128196;</div>
+<h3>Continental vs LockBit 3.0</h3>
+<p style="font-size:0.85rem;color:var(--text-secondary)">37 messages &mdash; Major automotive supplier targeted</p>
+<span class="card-link">Read transcript &rarr;</span>
+</a>
+<a href="lockbit3.0-entrust_com.html" class="card card-glow" style="text-decoration:none">
+<div class="card-icon">&#128196;</div>
+<h3>Entrust vs LockBit 3.0</h3>
+<p style="font-size:0.85rem;color:var(--text-secondary)">29 messages &mdash; Cybersecurity firm breached</p>
+<span class="card-link">Read transcript &rarr;</span>
+</a>
+<a href="lockbit3.0-samyang_com.html" class="card card-glow" style="text-decoration:none">
+<div class="card-icon">&#128196;</div>
+<h3>Samyang vs LockBit 3.0</h3>
+<p style="font-size:0.85rem;color:var(--text-secondary)">237 messages &mdash; The longest LockBit negotiation</p>
+<span class="card-link">Read transcript &rarr;</span>
+</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

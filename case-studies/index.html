@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Case Studies &mdash; Binary Response</title>
+<meta name="description" content="Anonymised case studies from Binary Response — ransomware response, BEC investigation, dark web alerts, and insider threat cases.">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PMF75NTVG');
+  </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Case Studies — Binary Response","url":"https://binary-response.com/case-studies/index.html"}
+</script>
+<link rel="canonical" href="https://binary-response.com/case-studies/index.html">
+<meta property="og:title" content="Case Studies | Binary Response">
+<meta property="og:description" content="Real-world incident response case studies — how Binary Response helped organisations recover from ransomware, data breaches and cyber attacks.">
+<meta property="og:url" content="https://binary-response.com/case-studies/index.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case Studies | Binary Response">
+<meta name="twitter:description" content="Real-world incident response case studies — how Binary Response helped organisations recover from ransomware, data breaches and cyber attacks.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero">
+<span class="hero-label">// Engagements</span>
+<h1>Case <span class="accent">Studies</span></h1>
+<p class="hero-desc">Anonymised accounts of real engagements. Names, sectors, and identifying details have been changed or omitted to protect client confidentiality.</p>
+</section>
+
+<section class="content-section" style="padding-top:0"><div class="container">
+
+<div style="display:grid;gap:2rem;max-width:900px;margin:0 auto">
+
+<!-- Case Study 1 -->
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2.5rem">
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--accent);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);padding:0.3rem 0.75rem;border-radius:4px;letter-spacing:0.08em">Ransomware Response</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Manufacturing</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">850 Employees</span>
+  </div>
+  <h2 style="font-size:1.3rem;margin-bottom:1rem">LockBit Attack on Manufacturing Client: 11-Day Recovery</h2>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Situation:</strong> A UK manufacturing company with 850 employees discovered their entire VMware ESXi environment encrypted at 06:00 on a Monday morning. Production lines halted. Backup servers had been encrypted alongside primary infrastructure. The threat actor had been present in the environment for 18 days before deploying ransomware.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Response:</strong> Binary Response was engaged at 07:30. Within two hours we had identified the initial access vector (an unpatched Fortinet VPN appliance), contained the incident by isolating affected network segments, and begun forensic triage. Negotiation advisory commenced in parallel. The threat actor's demand was reduced by 62% over four days of structured negotiation. Decryptors were tested before any payment was considered.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Outcome:</strong> Full operational recovery achieved in 11 days. Forensic investigation established the complete attacker timeline and identified two additional dormant persistence mechanisms that would have enabled re-attack. ICO notification filed at day 4. Client enrolled in IR retainer post-engagement.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">11</div><div style="font-size:0.8rem;color:var(--text-secondary)">Days to full recovery</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">62%</div><div style="font-size:0.8rem;color:var(--text-secondary)">Demand reduction</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">2</div><div style="font-size:0.8rem;color:var(--text-secondary)">Persistence mechanisms found</div></div>
+  </div>
+</div>
+
+<!-- Case Study 2 -->
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2.5rem">
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--accent);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);padding:0.3rem 0.75rem;border-radius:4px;letter-spacing:0.08em">BEC Investigation</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Professional Services</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">M365 Environment</span>
+  </div>
+  <h2 style="font-size:1.3rem;margin-bottom:1rem">Business Email Compromise: &pound;340k Fraudulent Transfer Investigation</h2>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Situation:</strong> A professional services firm discovered a &pound;340,000 payment had been made to a fraudulent bank account following a business email compromise. The finance director&rsquo;s Microsoft 365 account had been compromised six weeks earlier. The attacker had been silently monitoring email traffic and intercepted a legitimate supplier payment instruction, substituting their own account details.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Investigation:</strong> Binary Response conducted a full M365 forensic investigation. We reconstructed the complete attacker timeline — from initial account compromise via a consent phishing email, through six weeks of surveillance, to the payment interception. We identified that two additional senior accounts had been compromised and were still under attacker control. We also identified a forwarding rule silently copying all emails to an external address.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Outcome:</strong> Evidence package submitted to Action Fraud and the firm&rsquo;s bank within 48 hours. &pound;210,000 was recovered via the banking sector fraud recall process. The forensic evidence supported a subsequent civil claim. ICO notification filed. Full post-incident hardening recommendations implemented.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">&pound;210k</div><div style="font-size:0.8rem;color:var(--text-secondary)">Funds recovered</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">48hrs</div><div style="font-size:0.8rem;color:var(--text-secondary)">To evidence submission</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">6wks</div><div style="font-size:0.8rem;color:var(--text-secondary)">Attacker dwell time found</div></div>
+  </div>
+</div>
+
+<!-- Case Study 3 -->
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2.5rem">
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--accent);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);padding:0.3rem 0.75rem;border-radius:4px;letter-spacing:0.08em">Dark Web Monitoring</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Healthcare</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Proactive Disclosure</span>
+  </div>
+  <h2 style="font-size:1.3rem;margin-bottom:1rem">Dark Web Alert Prevents Ransomware Deployment</h2>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Situation:</strong> At 14:30 on a Tuesday, Binary Response dark web monitoring detected a posting on a criminal forum advertising access to a private healthcare provider&rsquo;s network. The post included evidence screenshots showing active RDP sessions and domain administrator credentials. The client had no awareness of any compromise.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Response:</strong> The client&rsquo;s named incident contact was called within 20 minutes of the alert. Emergency IR engagement commenced immediately. We confirmed the access was live, identified the compromised system (an unpatched remote desktop gateway), and worked with the client&rsquo;s IT team to isolate it within three hours. Forensic investigation confirmed the threat actor had been present for four days and had conducted reconnaissance but had not yet deployed ransomware or exfiltrated data.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Outcome:</strong> Ransomware deployment prevented entirely. No data exfiltration confirmed. ICO notification not required (no personal data at risk). Client enrolled in IR retainer with dark web monitoring as a direct result. Estimated avoided cost based on similar healthcare sector incidents: &pound;1.2M–&pound;3M.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">20min</div><div style="font-size:0.8rem;color:var(--text-secondary)">Alert to client call</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">3hrs</div><div style="font-size:0.8rem;color:var(--text-secondary)">To access removed</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">&pound;0</div><div style="font-size:0.8rem;color:var(--text-secondary)">Ransom paid</div></div>
+  </div>
+</div>
+
+<!-- Case Study 4 -->
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2.5rem">
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--accent);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);padding:0.3rem 0.75rem;border-radius:4px;letter-spacing:0.08em">Insider Threat</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Financial Services</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Employment Dispute</span>
+  </div>
+  <h2 style="font-size:1.3rem;margin-bottom:1rem">Covert Data Exfiltration by Departing Senior Employee</h2>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Situation:</strong> A financial services firm suspected a departing director had exfiltrated a client database and confidential pricing models to a competitor. The director had resigned with one week&rsquo;s notice and started at a competitor ten days later. IT had seized the laptop but lacked forensic capability.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Investigation:</strong> Binary Response conducted forensic examination of the laptop and M365 account. We identified over 4,000 documents accessed in the 72 hours before resignation, with 847 uploaded to a personal OneDrive account. Network logs confirmed large data transfers to a personal cloud storage service. We also identified a personal USB drive had been connected on the final day in the office, with evidence of file copying.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Outcome:</strong> Expert witness report produced for High Court injunction proceedings. Emergency injunction granted within 48 hours, requiring the former employee to preserve and return all company data. The evidence package was provided to the firm&rsquo;s employment lawyers for ongoing litigation. A financial settlement was reached before trial.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">847</div><div style="font-size:0.8rem;color:var(--text-secondary)">Documents exfiltrated</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">48hrs</div><div style="font-size:0.8rem;color:var(--text-secondary)">To court injunction</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">&#10003;</div><div style="font-size:0.8rem;color:var(--text-secondary)">Settlement reached</div></div>
+  </div>
+</div>
+
+</div>
+
+<!-- Case Study 5 -->
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2.5rem">
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--accent);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);padding:0.3rem 0.75rem;border-radius:4px;letter-spacing:0.08em">Ransomware Negotiation</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Legal/Professional Services</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">ALPHV/BlackCat</span>
+  </div>
+  <h2 style="font-size:1.3rem;margin-bottom:1rem">Ransomware Negotiation Saves Professional Services Firm &pound;2.1M</h2>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Situation:</strong> An SRA-regulated professional services firm was hit by ALPHV/BlackCat with a &pound;2.4M ransom demand. The firm held highly sensitive client data across multiple active matters, and the threat actor had exfiltrated a significant volume before deploying ransomware. Regulatory obligations were complex and time-sensitive.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Response:</strong> Binary Response conducted detailed threat actor profiling on the ALPHV/BlackCat group, including analysis of their negotiation patterns and decryptor reliability. Full OFAC/OFSI sanctions screening was completed before any engagement. Over four weeks of structured negotiation, the demand was reduced from &pound;2.4M to &pound;310k. The decryptor was validated on sample data before payment. A delayed payment window was negotiated to give the firm time to arrange cryptocurrency acquisition.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Outcome:</strong> &pound;2.09M saved against original demand &mdash; an 87% reduction. The decryptor worked on first run with no data loss. SRA and ICO were notified within 72 hours. The firm&rsquo;s professional indemnity insurer was fully briefed throughout.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">&pound;2.1M</div><div style="font-size:0.8rem;color:var(--text-secondary)">Saved</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">87%</div><div style="font-size:0.8rem;color:var(--text-secondary)">Demand reduction</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">100%</div><div style="font-size:0.8rem;color:var(--text-secondary)">Decryptor success</div></div>
+  </div>
+</div>
+
+<!-- Case Study 6 -->
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2.5rem">
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--accent);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);padding:0.3rem 0.75rem;border-radius:4px;letter-spacing:0.08em">Dark Web Alert</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Financial Services</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Initial Access Broker</span>
+  </div>
+  <h2 style="font-size:1.3rem;margin-bottom:1rem">Dark Web Alert Prevents Secondary Attack on Financial Services Client</h2>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Situation:</strong> A financial services client received a proactive dark web alert from Binary Response after we identified their corporate credentials being offered for sale on an initial access broker forum. The listing included domain admin credentials and evidence of persistent access. No ransomware had been deployed yet &mdash; the access was being sold to the highest bidder.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Response:</strong> Emergency incident response was initiated within 30 minutes of the alert. Our team identified a Cobalt Strike beacon active on a domain controller, confirmed the threat actor had been present for approximately 12 days conducting reconnaissance. The attacker was ejected, all compromised credentials were reset, and a full network sweep was conducted over 48 hours to confirm no additional persistence mechanisms.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Outcome:</strong> Ransomware was never deployed. Zero data was exfiltrated. The FCA was notified as a precaution. The client enrolled in an IR retainer with continuous dark web monitoring. This case demonstrates why proactive monitoring catches threats that traditional security tools miss.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">&pound;0</div><div style="font-size:0.8rem;color:var(--text-secondary)">Ransom paid</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">Proactive</div><div style="font-size:0.8rem;color:var(--text-secondary)">Detection method</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">48h</div><div style="font-size:0.8rem;color:var(--text-secondary)">Full containment</div></div>
+  </div>
+</div>
+
+<!-- Case Study 7 -->
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2.5rem">
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--accent);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);padding:0.3rem 0.75rem;border-radius:4px;letter-spacing:0.08em">Ransomware Response</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">Manufacturing</span>
+    <span style="font-family:var(--mono);font-size:0.72rem;text-transform:uppercase;color:var(--text-secondary);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.3rem 0.75rem;border-radius:4px">LockBit 3.0</span>
+  </div>
+  <h2 style="font-size:1.3rem;margin-bottom:1rem">Manufacturing Recovery from LockBit in 72 Hours</h2>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Situation:</strong> LockBit 3.0 struck a UK manufacturing company at 17:00 on a Friday &mdash; a deliberate timing choice by the threat actor. With 340 employees and 90% of systems encrypted, production lines halted immediately. Estimated downtime cost was &pound;80,000 per day. The ransomware demand was significant.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Response:</strong> Binary Response was engaged within 90 minutes. Rapid triage identified that the OT (operational technology) network had not been fully compromised and was isolated before encryption could spread to production control systems. Clean backups were identified from an air-gapped backup server. Parallel negotiation advisory was provided while technical recovery proceeded &mdash; ultimately the ransom was not paid.</p>
+  <p style="color:var(--text-secondary)"><strong style="color:var(--text-primary)">Outcome:</strong> Core systems were restored within 72 hours. Full production resumed by Monday morning. Total cost avoidance was &pound;420k compared to the projected &pound;600k+ had recovery taken the industry average of 21 days. ICO was notified. Post-incident forensics confirmed zero data was leaked.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">72h</div><div style="font-size:0.8rem;color:var(--text-secondary)">Recovery time</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">&pound;420k</div><div style="font-size:0.8rem;color:var(--text-secondary)">Cost avoidance</div></div>
+    <div style="text-align:center"><div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent)">0</div><div style="font-size:0.8rem;color:var(--text-secondary)">Data leaked</div></div>
+  </div>
+</div>
+
+<div style="text-align:center;margin-top:3rem;padding:2.5rem;background:rgba(0,229,160,0.04);border:1px solid rgba(0,229,160,0.15);border-radius:12px;max-width:700px;margin-left:auto;margin-right:auto">
+  <h3 style="margin-bottom:0.75rem">Discuss Your Situation</h3>
+  <p style="color:var(--text-secondary);margin-bottom:1.5rem">Every engagement is different. Contact us to discuss your specific situation — whether you're dealing with an active incident or planning ahead.</p>
+  <a href="../contact.html" class="btn-primary">&#9889; Get In Touch</a>
+</div>
+
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

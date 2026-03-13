@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Conti Ransomware Negotiation (June 02, 2021) — Redacted Organisation | Binary Response</title>
+<meta name="description" content="Full verbatim transcript of a Conti ransomware negotiation (June 2021). 81 messages. Initial demand: $1. Outcome: Paid. Study real-world negotiation tactics ...">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/conti-20210602.html">
+<meta property="og:title" content="Conti Ransomware Negotiation (June 02, 2021) — Redacted Organisation">
+<meta property="og:description" content="Full verbatim transcript of a Conti ransomware negotiation (June 2021). 81 messages. Initial demand: $1. Outcome: Paid. Study real-world negotiation tactics ...">
+<meta property="og:url" content="https://binary-response.com/negotiations/conti-20210602.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Conti Ransomware Negotiation — Redacted Organisation",
+      "description": "Full verbatim transcript of a Conti ransomware negotiation. 81 messages. Initial demand: $1.7M. Outcome: Paid.",
+      "datePublished": "2026-03-05",
+      "author": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "mainEntityOfPage": "https://binary-response.com/negotiations/conti-20210602.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "Conti — Redacted Organisation", "item": "https://binary-response.com/negotiations/conti-20210602.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Ransomware Negotiation Transcript</span>
+<h1 style="font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">Conti Ransomware Negotiation — <span style="color:var(--accent)">Redacted Organisation</span></h1>
+
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">81</span><span class="stat-label">Messages</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Duration</span></div>
+<div class="nego-stat"><span class="stat-value">$1.7M</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">Paid</span><span class="stat-label">Outcome</span></div>
+</div>
+</div>
+</section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Context</span>
+<h2 class="section-title">About This Negotiation</h2>
+<p>This transcript documents a <strong>Conti</strong> ransomware negotiation with a redacted victim organisation. 
+        The negotiation consisted of 81 messages exchanged.</p>
+        <p>The initial ransom demand was $1.7M. The negotiation resulted in a confirmed payment.</p>
+</div></section>
+
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Reproduced from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 02/06/2021, 15:17:16 &mdash; Message 1/81</div>
+What do you want?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 02/06/2021, 15:19:29 &mdash; Message 2/81</div>
+Hello?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 02/06/2021, 15:22:24 &mdash; Message 3/81</div>
+readme.txt [ 1kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 02/06/2021, 16:39:33 &mdash; Message 4/81</div>
+Hello, please wait answer
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 02/06/2021, 16:43:25 &mdash; Message 5/81</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 02/06/2021, 16:46:55 &mdash; Message 6/81</div>
+As you already know - your network and all of your data were encrypted by CONTI team. Besides the encryption process we&#x27;ve downloaded a large pack of your internal documents and files that will be published in case our negotiations fail. How it happens can be seen on our website.
+The recovery price is $1700000 (45 BTC). If you want to make sure we can recover all of your data - you can send us the two files of your choice and we will decrypt them free of charge.
+If we reach mutual agreement your will be provided with decryption tool, none of your internal data will be published and you will be provided with security tips on how to avoid further breaches.
+We strongly recommend to review our offer in a timely manner to avoid additional expenses from your side on security software and on building the new network from scratch.
+The example data pack will be provided soon, which will include part of the file tree list and some actual data you can review.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 02/06/2021, 19:42:25 &mdash; Message 7/81</div>
+30perclisting.zip [ 223kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 02/06/2021, 19:43:06 &mdash; Message 8/81</div>
+You can choose any 2 files from the listing, we will discard them as proof that the files were really stolen
+You can also send 2 files for a free decrypt
+---
+Upon conclusion of the agreement, our price includes
+1) Universal decryptor for your network
+2) Permanently delete all stolen information + logs of removing
+3) Security advisories and report how we infiltrated your system
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 02/06/2021, 19:52:47 &mdash; Message 9/81</div>
+datapack.7z [ 47.2MB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 03/06/2021, 20:29:32 &mdash; Message 10/81</div>
+Have you reviewed the documents and our offer?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 04/06/2021, 14:51:59 &mdash; Message 11/81</div>
+If we will not receive the response today we shall start transmitting your data to 3-rd parties step by step notifying your clients and employees about the breach and on how you guard their data.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 15:23:33 &mdash; Message 12/81</div>
+we have just pulled down the files for review.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 15:25:59 &mdash; Message 13/81</div>
+i will let you know when we are done.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 15:26:48 &mdash; Message 14/81</div>
+how do we know if you are able to recover our machines?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 04/06/2021, 15:27:25 &mdash; Message 15/81</div>
+You can provide two random low-value encrypted files and we will decrypt them as a proof and upload back
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 04/06/2021, 15:28:02 &mdash; Message 16/81</div>
+It took you two days to download files from review? We are not that patient and you should be more operative otherwise we will consider you stalling
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 15:51:55 &mdash; Message 17/81</div>
+will provide the files.  No, it did not take us 2 days to download the files and review. we only logged back on this morning and saw that you sent them.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 15:52:40 &mdash; Message 18/81</div>
+[redacted] Office.doc.[redacted] [ 533kB ]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 15:52:50 &mdash; Message 19/81</div>
+[redacted].pdf.[redacted] [ 75kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 04/06/2021, 15:53:14 &mdash; Message 20/81</div>
+Will upload the decrypted files asap.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 04/06/2021, 17:03:30 &mdash; Message 21/81</div>
+[redacted].pdf [ 74kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 04/06/2021, 17:03:51 &mdash; Message 22/81</div>
+[redacted] Office.doc [ 533kB ]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 17:46:33 &mdash; Message 23/81</div>
+ok thank you
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 21:50:59 &mdash; Message 24/81</div>
+we are currently still reviewing everything.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 04/06/2021, 21:52:18 &mdash; Message 25/81</div>
+additionally, my higher up are requesting additional proofs because you are asking 45btc which is quite a lot of money.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 04/06/2021, 22:09:21 &mdash; Message 26/81</div>
+What proof do you need?
+We showed that we can decrypt files
+Select any 2 files from the listing archive and we will discard them to you
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 05/06/2021, 03:31:54 &mdash; Message 27/81</div>
+Having received the decryptor, you can start working in 2 hours
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 05/06/2021, 03:32:46 &mdash; Message 28/81</div>
+Read about us on the Internet - we work honestly. It is much more profitable to conclude an agreement with us than to incur losses
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 05/06/2021, 04:00:17 &mdash; Message 29/81</div>
+thats for that additional information.  will pass this information along to my boss.  I will also let you know the file names once they let me know.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 05/06/2021, 15:08:34 &mdash; Message 30/81</div>
+Still haven&#x27;t heard anything yet.  Will try to get an answer as soon as possible.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 05/06/2021, 15:23:01 &mdash; Message 31/81</div>
+Ok, keep me updated
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 05/06/2021, 15:28:55 &mdash; Message 32/81</div>
+will do.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 06/06/2021, 17:01:44 &mdash; Message 33/81</div>
+haven&#x27;t heard anything yet from my boss (most likely because it is the weekend). I should have more information tomorrow
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 07/06/2021, 15:42:21 &mdash; Message 34/81</div>
+good morning.  I have a meeting here shortly and should have those file names for proof of decryption
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 07/06/2021, 15:55:10 &mdash; Message 35/81</div>
+hello
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 07/06/2021, 15:56:02 &mdash; Message 36/81</div>
+what file names ? Are you talking about 100% listing?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 07/06/2021, 15:58:25 &mdash; Message 37/81</div>
+from the file listing you sent me earlier
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 07/06/2021, 16:02:22 &mdash; Message 38/81</div>
+Proof of file decryption - you sent 2 files to us, we deciphered them and threw them off.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 07/06/2021, 16:03:21 &mdash; Message 39/81</div>
+File with the title &quot;30perclisting.zip&quot;
+Here is a list of 20 - 30 percent stolen information from your network.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 07/06/2021, 16:05:27 &mdash; Message 40/81</div>
+When you conclude an agreement, you will receive a decryptor for your entire network and return the state of computers to their previous state in a few hours
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 07/06/2021, 16:09:02 &mdash; Message 41/81</div>
+yes im sorry. I confused myself.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 09:59:41 &mdash; Message 42/81</div>
+any updates?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 08/06/2021, 15:29:23 &mdash; Message 43/81</div>
+yes sorry, sending the filenames over now.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 15:41:50 &mdash; Message 44/81</div>
+ok, waiting.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 08/06/2021, 16:03:04 &mdash; Message 45/81</div>
+ok finally received the list
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 08/06/2021, 16:03:12 &mdash; Message 46/81</div>
+uploading the text file now
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 08/06/2021, 16:03:35 &mdash; Message 47/81</div>
+FileRequest.txt [ 2kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 16:05:01 &mdash; Message 48/81</div>
+Well, it&#x27;s way more than 2 files, but we will provide.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 08/06/2021, 16:05:54 &mdash; Message 49/81</div>
+Sorry about that but definitely appreciated!
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:00:10 &mdash; Message 50/81</div>
+2019_[redacted].xlsx [ 43kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:00:28 &mdash; Message 51/81</div>
+2019_[redacted].xlsx [ 152kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:00:32 &mdash; Message 52/81</div>
+Logo [redacted].pdf [ 87kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:00:50 &mdash; Message 53/81</div>
+[redacted].pdf [ 69kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:00:54 &mdash; Message 54/81</div>
+[redacted] - Employee agreement [redacted].docx [ 44kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:00:59 &mdash; Message 55/81</div>
+[redacted] - Employee agreement [redacted].docx [ 46kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:01:04 &mdash; Message 56/81</div>
+[redacted].PNG [ 83kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:01:08 &mdash; Message 57/81</div>
+Agreement [redacted].docx [ 42kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:01:11 &mdash; Message 58/81</div>
+2020 [redacted] (1).xlsx [ 21kB ]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 08/06/2021, 22:01:51 &mdash; Message 59/81</div>
+[redacted].pdf [ 5.4MB ]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 09/06/2021, 19:48:31 &mdash; Message 60/81</div>
+thank you, pulling those files down now
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 10/06/2021, 22:33:54 &mdash; Message 61/81</div>
+just wanted to let you know, my boss and the higher ups are having meetings to discuss this.  I will keep you updated, as much as i can.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 11/06/2021, 00:15:13 &mdash; Message 62/81</div>
+thanks
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 13/06/2021, 14:26:20 &mdash; Message 63/81</div>
+definitely appreciate your patience. Haven&#x27;t received work yet (most likely due to the weekend). Will keep you updated.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 16/06/2021, 17:56:06 &mdash; Message 64/81</div>
+do we have an agreement?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 16/06/2021, 18:02:14 &mdash; Message 65/81</div>
+We are still waiting, but not for too long.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 16/06/2021, 18:22:08 &mdash; Message 66/81</div>
+are you declining our offer?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 16/06/2021, 18:28:09 &mdash; Message 67/81</div>
+would you please repeat your offer, seems like your message didn&#x27;t go through
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 16/06/2021, 18:29:28 &mdash; Message 68/81</div>
+This message was send before -    thats still out of our range($274,350).  our offer $175k.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 16/06/2021, 18:30:16 &mdash; Message 69/81</div>
+I an confused, where have you sent your offer?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 16/06/2021, 18:30:34 &mdash; Message 70/81</div>
+I don&#x27;t see any relevant message within this chat
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17/06/2021, 15:19:02 &mdash; Message 71/81</div>
+woah... I am just seeing those messages now.   I did not send those messages
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17/06/2021, 15:21:07 &mdash; Message 72/81</div>
+are you in talks with other people? maybe the framework picked up cross talk?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 17/06/2021, 15:21:44 &mdash; Message 73/81</div>
+Perhaps one of your employees writes here
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 17/06/2021, 15:23:47 &mdash; Message 74/81</div>
+Send your current offer now
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 17/06/2021, 16:22:00 &mdash; Message 75/81</div>
+No, that&#x27;s impossible, suppose some of your employees send the messages, maybe we should move to another chat making it private?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17/06/2021, 18:19:20 &mdash; Message 76/81</div>
+i am working on getting that answer for you.    yeah moving to a new chat might be best.  how can we do that?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17/06/2021, 20:41:17 &mdash; Message 77/81</div>
+i have an update from my boss/higher ups
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 17/06/2021, 20:42:04 &mdash; Message 78/81</div>
+I will provide the new chat ID within an hour.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 17/06/2021, 20:42:19 &mdash; Message 79/81</div>
+ok thanks.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 18/06/2021, 16:56:18 &mdash; Message 80/81</div>
+Ok, i made it over to that chat and sent a msg.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Conti]</span> &mdash; 18/06/2021, 17:00:48 &mdash; Message 81/81</div>
+Ok, let&#x27;s move there, should I block this chat forever?
+</div></div>
+</div>
+</div></section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Analyst Observations</h2>
+<ul style="list-style:none;padding:0">
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">The final settlement represented a 100% reduction from the initial demand — a significant discount achieved through negotiation.</li>
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">Conti was a major ransomware operation that effectively shut down in May 2022 after internal chat logs were leaked. Members dispersed to other groups including Royal, BlackBasta, and Karakurt.</li>
+</ul>
+</div></section>
+
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

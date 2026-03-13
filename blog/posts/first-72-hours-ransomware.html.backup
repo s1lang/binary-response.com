@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The First 72 Hours &mdash; Binary Response</title>
+<meta name="description" content="What to do in the first 72 hours of a ransomware attack. Practical guidance from hundreds of real incident response engagements by Binary Response.">
+<link rel="apple-touch-icon" href="../../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../../css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PMF75NTVG');
+  </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"The First 72 Hours: Critical Decisions in a Ransomware Response","datePublished":"2026-02-20","author":{"@type":"Organization","name":"Binary Response"},"publisher":{"@type":"Organization","name":"Binary Response","url":"https://binary-response.com"},"url":"https://binary-response.com/blog/posts/first-72-hours-ransomware.html"}
+</script>
+<link rel="canonical" href="https://binary-response.com/blog/posts/first-72-hours-ransomware.html">
+<meta property="og:title" content="The First 72 Hours of a Ransomware Incident | Binary Response">
+<meta property="og:description" content="What to do in the first 72 hours of a ransomware attack — containment, communication, evidence preservation and recovery steps from Binary Response practitioners.">
+<meta property="og:url" content="https://binary-response.com/blog/posts/first-72-hours-ransomware.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The First 72 Hours of a Ransomware Incident | Binary Response">
+<meta name="twitter:description" content="What to do in the first 72 hours of a ransomware attack — containment, communication, evidence preservation and recovery steps from Binary Response practitioners.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The First 72 Hours &mdash; Binary Response",
+  "description": "What to do in the first 72 hours of a ransomware attack. Practical guidance from hundreds of real incident response engagements by Binary Response.",
+  "author": {
+    "@type": "Organization",
+    "name": "Binary Response"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Binary Response",
+    "url": "https://binary-response.com"
+  },
+  "datePublished": "2026-03-01",
+  "url": "https://binary-response.com/blog/posts/first-72-hours-ransomware.html",
+  "mainEntityOfPage": "https://binary-response.com/blog/posts/first-72-hours-ransomware.html"
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../../index.html" class="nav-brand">
+  <img src="../../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero"><span class="hero-label">Advisory &mdash; 2026-02-20</span>
+<h1>The First 72 Hours</h1></section>
+<article class="blog-post-content"><h2>Hour 0&ndash;4: Containment</h2><p>Isolate affected systems but do not power off — you will lose volatile memory evidence. Disable compromised accounts, assess if the attacker still has active access, notify your cyber insurer.</p><h2>Hour 4&ndash;24: Scoping</h2><ul><li>Identify the threat actor and ransomware variant</li><li>Determine encryption scope and data exfiltration</li><li>Assess backup integrity</li><li>Begin forensic evidence preservation</li></ul><h2>Hour 24&ndash;72: Critical Decisions</h2><p>Whether to engage with the threat actor, how to communicate with regulators, and how to plan recovery. These decisions define outcomes.</p>
+<blockquote>Contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> for bespoke threat intelligence briefings.</blockquote>
+</article>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../../js/main.js"></script>
+
+</body></html>

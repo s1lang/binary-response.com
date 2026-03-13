@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<title>Careers — Join the Binary Response Team | DFIR Jobs UK & North America</title>
+<meta name="description" content="Join Binary Response — a global DFIR team hiring incident responders, forensic analysts, and operations professionals across the UK and North America.">
+<link rel="apple-touch-icon" href="img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Careers at Binary Response",
+  "url": "https://binary-response.com/careers.html",
+  "description": "Binary Response is building a global DFIR team. Expressions of interest welcomed from incident responders, forensic analysts, threat intelligence professionals, and operations staff across the UK and North America.",
+  "mainEntity": {"@type": "Organization","name": "Binary Response","url": "https://binary-response.com"}
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4PMF75NTVG');
+</script>
+<link rel="canonical" href="https://binary-response.com/careers.html">
+<meta property="og:title" content="Careers — Join the Binary Response Team | DFIR Jobs UK & North America">
+<meta property="og:description" content="We're building a global team of DFIR practitioners. Expressions of interest welcomed from incident responders, forensic analysts, and operations professionals.">
+<meta property="og:url" content="https://binary-response.com/careers.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Careers — Join Binary Response | DFIR Jobs UK & North America">
+<meta name="twitter:description" content="We're building a global team of DFIR practitioners. Expressions of interest welcomed from incident responders, forensic analysts, and operations professionals.">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<style>
+.career-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.7rem;
+  border-radius: 100px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.4rem;
+}
+.tag-technical { background: rgba(0,229,160,0.12); color: var(--accent); }
+.tag-operations { background: rgba(100,149,237,0.15); color: #6495ed; }
+.tag-specialist { background: rgba(255,165,0,0.12); color: #ffa500; }
+.tag-uk, .tag-na { background: rgba(255,255,255,0.06); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); }
+
+.region-heading {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,229,160,0.15);
+  margin: 3rem 0 2rem;
+}
+
+.jd-card {
+  background: rgba(0,229,160,0.02);
+  border: 1px solid rgba(0,229,160,0.1);
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.jd-header {
+  padding: 1.5rem 2rem 1.25rem;
+  border-bottom: 1px solid rgba(0,229,160,0.08);
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+.jd-header:hover { background: rgba(0,229,160,0.04); }
+.jd-title {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0.5rem 0 0.25rem;
+}
+.jd-chevron {
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.6rem;
+  transition: transform 0.25s;
+}
+.jd-chevron.open { transform: rotate(180deg); }
+.jd-body {
+  display: none;
+  padding: 1.75rem 2rem 2rem;
+}
+.jd-body.open { display: block; }
+.jd-section-title {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 1.5rem 0 0.75rem;
+}
+.jd-section-title:first-child { margin-top: 0; }
+.jd-overview {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 0 0 0.5rem;
+}
+.jd-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.jd-list li {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  padding: 0.3rem 0 0.3rem 1.25rem;
+  position: relative;
+}
+.jd-list li::before {
+  content: '//';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  top: 0.45rem;
+}
+.jd-apply-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid rgba(0,229,160,0.35);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.jd-apply-btn:hover { background: rgba(0,229,160,0.1); border-color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="index.html" class="nav-brand">
+  <img src="img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div>
+</nav>
+
+<section class="page-hero">
+<span class="hero-label"><span class="pulse-dot"></span> // Careers</span>
+<h1>Work With <span class="accent">The Best</span></h1>
+<p class="hero-desc">We're building a global team of serious practitioners. No entry-level roles, no vendor fluff — just high-calibre people doing real incident response work.</p>
+</section>
+
+<section class="content-section" style="padding-top:0">
+<div class="container">
+
+  <div style="background:rgba(0,229,160,0.05);border:1px solid rgba(0,229,160,0.2);border-radius:12px;padding:1.5rem 2rem;margin-bottom:1rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between">
+    <div>
+      <div style="font-family:var(--mono);font-size:0.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.4rem">// Expressions of Interest</div>
+      <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin:0;max-width:620px">We're not always actively recruiting — but we're always building our network. If you're exceptional at what you do, we want to hear from you now. When the right role opens, we call the right people first.</p>
+    </div>
+    <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Binary Response" class="btn-primary" style="white-space:nowrap">&#9889; Express Interest</a>
+  </div>
+  <p style="color:var(--text-secondary);font-size:0.85rem;font-family:var(--mono);margin-bottom:2rem;padding-left:0.25rem">All roles are fully remote. UK roles require right-to-work in the United Kingdom. North America roles require right-to-work in the US or Canada.</p>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- UK TECHNICAL -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="region-heading">&#127468;&#127463; United Kingdom — Technical</div>
+
+  <!-- UK SR1: Senior Incident Responder -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-technical">Technical</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">Senior Incident Responder</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will lead the technical response on complex cyber incidents for Binary Response clients — ranging from ransomware and business email compromise to insider threats and data exfiltration events. This is a hands-on practitioner role. You will scope incidents, direct containment activity, perform forensic analysis, advise on recovery decisions, and produce clear, board-ready reporting. You are equally comfortable briefing a CTO in plain language as you are running a live triage session at 3am.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Lead technical scoping calls with clients in the first hour of engagement, establishing attack type, affected systems, and immediate priorities</li>
+        <li>Direct containment and eradication activities across Windows, Linux, and cloud environments</li>
+        <li>Perform forensic analysis of compromised endpoints, servers, Active Directory, and cloud infrastructure</li>
+        <li>Reconstruct attacker timelines and identify initial access vectors, lateral movement paths, and data staging activity</li>
+        <li>Advise clients on ransomware negotiation strategy and recovery decision-making in parallel with technical response</li>
+        <li>Produce post-incident reports suitable for senior leadership, legal counsel, insurers, and regulators</li>
+        <li>Support ICO breach notification assessments under UK GDPR 72-hour requirements</li>
+        <li>Contribute to threat intelligence — documenting tactics, techniques, and procedures observed during engagements</li>
+        <li>Mentor junior team members and contribute to internal knowledge development</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 5 years of hands-on incident response experience in a commercial, consultancy, or government setting</li>
+        <li>Demonstrable expertise in ransomware intrusion response, including working knowledge of major threat actor TTPs</li>
+        <li>Proficiency with DFIR tooling: Velociraptor, KAPE, FTK, Axiom, Volatility, or equivalent</li>
+        <li>Strong understanding of Windows internals, Active Directory attack paths, and common post-exploitation frameworks (Cobalt Strike, Metasploit, etc.)</li>
+        <li>Experience with cloud incident response (Azure, AWS, or M365/Entra) in production environments</li>
+        <li>Ability to manage multiple client engagements simultaneously under significant time pressure</li>
+        <li>Exceptional written and verbal communication skills — you can write a clear executive summary and explain log artefacts to a non-technical audience</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>CREST Certified Incident Responder (CCIR) or equivalent</li>
+        <li>GIAC certifications (GCFE, GCFA, GCIH, GREM)</li>
+        <li>Certified Cyber Security Professional (ChCSP)</li>
+        <li>Experience in a regulated industry environment (financial services, healthcare, critical national infrastructure)</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Senior Incident Responder (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- UK SR2: Digital Forensics Analyst -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-technical">Technical</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">Digital Forensics Analyst</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will perform forensic acquisition and examination of digital evidence recovered from client environments during cyber incidents and legal investigations. Your work is the technical foundation of Binary Response's engagements — from identifying attacker artefacts that determine the scope of a breach, to producing forensic reports that hold up in court. You work carefully, document everything, and understand that how you handle evidence is as important as what you find.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Acquire forensic images of endpoints, servers, mobile devices, and cloud environments using industry-standard tooling</li>
+        <li>Perform triage analysis to rapidly identify attacker activity, persistence mechanisms, and data access</li>
+        <li>Examine Windows artefacts including event logs, registry, prefetch, LNK files, NTFS metadata, and USN journals</li>
+        <li>Analyse memory captures for in-memory malware, injected code, and credential material</li>
+        <li>Produce detailed forensic examination reports suitable for legal proceedings, insurers, and regulatory bodies</li>
+        <li>Maintain a robust chain of custody and evidence handling procedures on every engagement</li>
+        <li>Support expert witness testimony preparation where required</li>
+        <li>Contribute findings to attacker TTP documentation and internal knowledge base</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years of hands-on digital forensics experience in a commercial, law enforcement, or government context</li>
+        <li>Proficiency with one or more leading forensic platforms: EnCase, X-Ways Forensics, Magnet Axiom, or FTK</li>
+        <li>Strong working knowledge of Windows forensic artefacts and the NTFS file system</li>
+        <li>Experience with memory forensics using Volatility or similar</li>
+        <li>Solid understanding of network forensics and the ability to interpret packet captures and flow data</li>
+        <li>Meticulous documentation practices and understanding of evidence integrity requirements</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>EnCE (EnCase Certified Examiner) or equivalent</li>
+        <li>GIAC GCFE, GCFA, or GASF</li>
+        <li>Experience producing court-admissible reports under UK Civil Procedure Rules (CPR Part 35)</li>
+        <li>Mobile device forensics experience (Cellebrite UFED, MSAB XRY)</li>
+        <li>Cloud forensics experience (M365, Azure, AWS CloudTrail)</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Digital Forensics Analyst (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- UK SR3: Threat Intelligence Analyst -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-technical">Technical</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">Threat Intelligence Analyst</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will operate at the intersection of dark web intelligence and operational incident response. Your job is to monitor the threat landscape continuously — tracking ransomware groups, identifying newly disclosed victims, profiling threat actor tactics, and feeding actionable intelligence into live engagements. You are comfortable navigating TOR networks, underground forums, and data breach markets, and you understand how to extract signal from noise and present it in a form that drives decisions.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Monitor 50+ ransomware and extortion leak sites for newly disclosed victim organisations</li>
+        <li>Track threat actor activity across dark web forums, Telegram channels, and underground marketplaces</li>
+        <li>Profile ransomware groups — TTPs, tooling, affiliate behaviour, negotiation tendencies, and decryptor reliability</li>
+        <li>Produce daily and weekly threat intelligence briefings for internal teams and clients</li>
+        <li>Support live incident response engagements with real-time threat actor intelligence</li>
+        <li>Identify early indicators of client exposure before public disclosure</li>
+        <li>Develop and maintain threat actor profiles and TTP databases</li>
+        <li>Contribute to public-facing threat intelligence content on the Binary Response website</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years in a threat intelligence, SOC, or dark web monitoring role</li>
+        <li>Hands-on experience operating within TOR-based environments safely and effectively</li>
+        <li>Proficiency with OSINT tooling and methodology — Maltego, Shodan, MISP, or equivalent</li>
+        <li>Working knowledge of MITRE ATT&amp;CK framework and its practical application</li>
+        <li>Ability to track and attribute threat actor activity across fragmented sources</li>
+        <li>Clear writing skills — you produce intelligence products people actually read and act on</li>
+        <li>Strong operational security discipline</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>GIAC GCTI (Cyber Threat Intelligence)</li>
+        <li>Experience in a DFIR or managed detection environment</li>
+        <li>Proficiency in a scripting language (Python preferred) for automation of collection and processing tasks</li>
+        <li>Previous exposure to ransomware negotiation intelligence support</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Threat Intelligence Analyst (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- UK SR4: Malware Analyst -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-technical">Technical</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">Malware Analyst</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will analyse malware samples recovered from client environments during active incident response engagements. Your analysis informs containment decisions, establishes attacker capabilities, identifies indicators of compromise, and contributes to attribution. You work in a fast-paced environment where speed matters — but accuracy matters more. You understand both the science of reverse engineering and the operational context in which your findings are used.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Perform static and dynamic analysis of malware samples — ransomware payloads, loaders, droppers, RATs, and post-exploitation tooling</li>
+        <li>Identify and document capabilities, persistence mechanisms, C2 communication patterns, and anti-analysis techniques</li>
+        <li>Extract indicators of compromise (IOCs) for use in containment, detection, and threat intelligence</li>
+        <li>Contribute to attribution assessments based on code similarities, tooling overlap, and infrastructure reuse</li>
+        <li>Maintain an isolated, secure malware analysis environment</li>
+        <li>Produce clear technical analysis reports consumable by both technical responders and executive stakeholders</li>
+        <li>Contribute to internal knowledge base with malware family profiles and analysis techniques</li>
+        <li>Stay current on emerging ransomware families, loaders, and post-exploitation frameworks</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years of hands-on malware analysis experience</li>
+        <li>Proficiency with disassembly and decompilation tools: IDA Pro, Ghidra, Binary Ninja, or equivalent</li>
+        <li>Experience with dynamic analysis platforms: Any.run, Cuckoo, CAPE, or custom sandboxes</li>
+        <li>Strong understanding of Windows internals, PE file format, and common evasion techniques</li>
+        <li>Ability to analyse obfuscated scripts (PowerShell, VBScript, JavaScript) and packed binaries</li>
+        <li>Working knowledge of network protocol analysis relevant to C2 communications</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>GIAC GREM (Reverse Engineering Malware)</li>
+        <li>Experience analysing ransomware families (LockBit, Akira, BlackCat/ALPHV, Cl0p)</li>
+        <li>Scripting proficiency in Python for automation of analysis tasks</li>
+        <li>Familiarity with Linux malware and cross-platform threats</li>
+        <li>Experience with firmware or embedded systems analysis is a plus</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Malware Analyst (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- UK OPERATIONS -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="region-heading">&#127468;&#127463; United Kingdom — Operations &amp; Support</div>
+
+  <!-- UK Ops1: IR Operations Coordinator -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-operations">Operations</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">IR Operations Coordinator</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You are the operational backbone of Binary Response engagements. When an incident is declared, technical practitioners need to focus entirely on the response — your job is to ensure everything around them runs without friction. You coordinate resources, manage schedules, track case progress, handle client communication logistics, and make sure nothing falls through the cracks. You thrive under pressure, communicate clearly, and understand that in incident response, delays cost clients money and data.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Coordinate resource allocation across concurrent incident response engagements</li>
+        <li>Manage engagement scheduling, on-call rotas, and practitioner availability</li>
+        <li>Track case progress, milestones, and deliverable deadlines across the engagement portfolio</li>
+        <li>Maintain client communication logs and coordinate status updates between technical leads and client contacts</li>
+        <li>Manage engagement documentation — ensuring statements of work, engagement letters, and reports are filed correctly</li>
+        <li>Support onboarding of new retainer clients — account setup, contact directories, escalation paths</li>
+        <li>Identify and flag operational bottlenecks, resource conflicts, and scheduling risks</li>
+        <li>Assist with post-engagement client satisfaction reviews and lessons learned</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years in an operations, project coordination, or service delivery role within professional services, managed security, or a similarly fast-paced environment</li>
+        <li>Proven ability to manage multiple concurrent workstreams with competing priorities</li>
+        <li>Excellent written and verbal communication — you are the first point of contact for clients when their technical lead is heads-down on an investigation</li>
+        <li>High proficiency with project management and collaboration tooling</li>
+        <li>Composure under pressure — you will regularly be coordinating during active crisis situations</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>Background in a managed security service provider (MSSP), consultancy, or incident response firm</li>
+        <li>Familiarity with cybersecurity terminology and incident lifecycle — you don't need to be technical, but you need to understand what the team is doing</li>
+        <li>Prince2, PMP, or equivalent project management qualification</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — IR Operations Coordinator (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- UK Ops2: Client Services Manager -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-operations">Operations</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">Client Services Manager</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will own the client relationship at Binary Response from initial onboarding through to post-incident follow-up. Clients who engage us during a crisis are often under enormous pressure — they need a calm, knowledgeable point of contact who understands their situation and advocates for them internally. You bridge the gap between our technical team and the client's senior stakeholders, ensuring expectations are managed, commitments are met, and relationships are maintained long after the incident is resolved.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Own client relationships across the Binary Response portfolio — retainer clients and reactive engagements</li>
+        <li>Lead client onboarding for new retainer accounts — establish contacts, communication protocols, escalation paths, and service expectations</li>
+        <li>Serve as the senior point of contact for client stakeholders during active engagements</li>
+        <li>Coordinate post-incident follow-up, debrief scheduling, and lessons learned reviews</li>
+        <li>Monitor client satisfaction and proactively address concerns before they become problems</li>
+        <li>Identify opportunities to deepen client relationships — additional services, expanded retainer scope, tabletop exercises</li>
+        <li>Maintain accurate account records — contacts, contracts, renewal dates, billing status</li>
+        <li>Feed client insights back into service development and internal improvement initiatives</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 4 years in client services, account management, or customer success within professional services, IT services, or cybersecurity</li>
+        <li>Proven track record managing senior stakeholder relationships — C-suite and board-level exposure preferred</li>
+        <li>Excellent communication skills across written, verbal, and presentation formats</li>
+        <li>Ability to remain calm and client-focused during high-pressure, time-sensitive situations</li>
+        <li>Commercial acumen — understanding of contract management, renewal cycles, and account growth</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>Background in cybersecurity, managed security services, or IT consultancy</li>
+        <li>Experience managing retainer or subscription-based client accounts</li>
+        <li>Familiarity with GDPR, cyber insurance, and the regulatory landscape around breach notification</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Client Services Manager (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- UK Ops3: Finance & Billing Administrator -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-operations">Operations</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">Finance &amp; Billing Administrator</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will manage the financial operations of Binary Response — ensuring accurate and timely invoicing, maintaining retainer billing schedules, processing expenses, and supporting financial reporting. This is a critical operational role in a growing firm where engagements move fast and billing accuracy matters. You are organised, detail-oriented, and comfortable working within a professional services billing model where time-and-materials and fixed-fee engagements run concurrently.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Produce and issue invoices for retainer clients, reactive engagements, and project-based work</li>
+        <li>Manage retainer billing schedules — ensuring monthly and quarterly billing runs correctly and on time</li>
+        <li>Track time-and-materials billing against engagement budgets and flag overruns</li>
+        <li>Process practitioner and operational expenses, ensuring compliance with company policy</li>
+        <li>Maintain accounts receivable — chase outstanding invoices and manage aged debt</li>
+        <li>Support monthly and quarterly financial reporting for management review</li>
+        <li>Liaise with external accountants for VAT returns, year-end accounts, and statutory filings</li>
+        <li>Maintain accurate financial records and ensure billing documentation is audit-ready</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years in a finance, billing, or accounts administration role</li>
+        <li>Experience within a professional services, consultancy, or time-and-materials billing environment</li>
+        <li>Proficiency with accounting software — Xero, QuickBooks, or Sage preferred</li>
+        <li>Strong attention to detail and accuracy in financial processing</li>
+        <li>Understanding of UK VAT and basic financial compliance requirements</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>AAT qualification or equivalent bookkeeping certification</li>
+        <li>Experience in a managed services or subscription-billing environment</li>
+        <li>Familiarity with retainer contract structures</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Finance and Billing Administrator (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- UK SPECIALIST -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="region-heading">&#127468;&#127463; United Kingdom — Specialist</div>
+
+  <!-- UK Spec1: Expert Witness Consultant -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-specialist">Specialist</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">Expert Witness Consultant</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will provide forensic expert witness services in support of criminal prosecutions, civil litigation, regulatory investigations, and employment disputes involving digital evidence. Your reports and testimony carry the weight of Binary Response's reputation in the courtroom. You understand your overriding duty to the court, produce reports that comply with CPR Part 35, and give oral evidence with authority and clarity under cross-examination.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Accept instructions from solicitors, barristers, and directly from corporate clients for expert witness engagements</li>
+        <li>Examine and interpret digital evidence relevant to the case — including device forensics, network logs, cloud data, and communications</li>
+        <li>Produce expert witness reports compliant with CPR Part 35 and the Criminal Procedure Rules</li>
+        <li>Attend court to give oral evidence and withstand cross-examination on your findings and methodology</li>
+        <li>Participate in joint expert meetings and produce agreed statements of facts where directed by the court</li>
+        <li>Advise instructing solicitors on technical aspects of digital evidence prior to and throughout proceedings</li>
+        <li>Maintain up-to-date knowledge of relevant case law, forensic standards, and admissibility requirements</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Established track record as a practising expert witness in digital forensics or cybersecurity matters</li>
+        <li>Experience giving oral testimony in Crown Court, High Court, County Court, or Employment Tribunal</li>
+        <li>Deep technical expertise in digital forensics — your court experience must be grounded in genuine hands-on capability</li>
+        <li>Comprehensive understanding of CPR Part 35 obligations and the duty of the expert to the court</li>
+        <li>Professional indemnity insurance in place or willingness to obtain appropriate cover</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>Bond Solon Expert Witness Certificate or equivalent accreditation</li>
+        <li>CREST or ACPO-aligned forensic certifications</li>
+        <li>Experience in both criminal and civil proceedings</li>
+        <li>Existing solicitor relationships and instruction pipeline</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Expert Witness Consultant (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- UK Spec2: Cyber Insurance Liaison -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-specialist">Specialist</span><span class="career-tag tag-uk">UK Remote</span>
+        <div class="jd-title">Cyber Insurance Liaison</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will act as the dedicated interface between Binary Response, cyber insurers, and loss adjusters during live incident response engagements and post-incident claims. This is a niche but critical role — understanding both the technical realities of a cyber incident and the commercial and contractual obligations of the insurance policy. You protect the client's coverage position while enabling the fastest possible response, and you build lasting relationships with underwriters and adjusters that drive Binary Response panel appointments.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Engage with insurers and loss adjusters at the point of incident notification on behalf of clients</li>
+        <li>Review policy wording to establish coverage parameters, exclusions, and notification obligations</li>
+        <li>Coordinate insurer approval for response expenditure, specialist resource deployment, and ransom payment decisions</li>
+        <li>Manage insurer expectations throughout the engagement lifecycle — initial notification through to final claim settlement</li>
+        <li>Produce insurer-specific incident summaries and progress updates in formats aligned to claims requirements</li>
+        <li>Advise clients on policy-compliant response decisions — particularly around ransom payment, sanctions screening, and evidence preservation</li>
+        <li>Develop and maintain relationships with cyber underwriters, claims teams, and panel managers</li>
+        <li>Support Binary Response panel appointments with insurers and TPAs</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 4 years in cyber insurance, insurance claims, or a loss adjusting role with cyber specialism</li>
+        <li>Strong understanding of cyber insurance policy structures, coverage triggers, and common exclusions</li>
+        <li>Direct experience working with cyber incident response teams in an insurer or adjuster capacity</li>
+        <li>Commercial negotiation skills — you can navigate insurer approval processes without slowing down the response</li>
+        <li>Understanding of UK regulatory notification obligations (ICO, FCA, PRA) as they interact with insurance claims</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>CII qualification or equivalent insurance industry accreditation</li>
+        <li>Existing relationships within the London Market cyber underwriting community</li>
+        <li>Background in an incident response firm, MSSP, or specialist cyber claims unit</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Cyber Insurance Liaison (UK)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NORTH AMERICA TECHNICAL -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="region-heading">&#127482;&#127480; North America — Technical</div>
+
+  <!-- NA Tech1: Senior Incident Responder -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-technical">Technical</span><span class="career-tag tag-na">US / Canada Remote</span>
+        <div class="jd-title">Senior Incident Responder</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will lead the technical response on complex cyber incidents for Binary Response's North American clients. The role mirrors our UK Senior IR function but with specific focus on the US and Canadian regulatory environment — SEC incident disclosure rules, HIPAA breach notification, state-level breach notification laws, and Canadian PIPEDA obligations. You understand that regulatory timelines are as demanding as technical ones, and you factor compliance into every response decision from hour one.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Lead technical scoping and triage on North American client engagements across all industry verticals</li>
+        <li>Direct containment, eradication, and recovery activities with particular attention to regulatory notification timelines</li>
+        <li>Perform forensic analysis to establish breach scope, affected data types, and regulatory notification obligations</li>
+        <li>Advise on HIPAA breach determination, SEC material incident assessment, and state attorney general notification requirements</li>
+        <li>Liaise with US and Canadian law enforcement (FBI, CISA, RCMP) where appropriate</li>
+        <li>Produce post-incident reports suitable for legal counsel, cyber insurers, and regulatory submissions</li>
+        <li>Support OFAC sanctions screening decisions in ransom payment scenarios</li>
+        <li>Work across time zones with the Binary Response UK team to support global engagements</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 5 years of hands-on incident response experience within the US or Canadian market</li>
+        <li>Demonstrable knowledge of US and Canadian breach notification obligations across federal and state/provincial levels</li>
+        <li>Experience with SEC cybersecurity disclosure rules (Form 8-K material incident reporting)</li>
+        <li>Proficiency with DFIR tooling: Velociraptor, KAPE, CrowdStrike, SentinelOne, or equivalent</li>
+        <li>Strong cloud IR capability — AWS, Azure, M365, and GCP experience in production environments</li>
+        <li>Prior engagement with FBI, CISA, or equivalent law enforcement on cyber matters preferred</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>GIAC GCIH, GCFA, or GCFE</li>
+        <li>CISSP or equivalent senior security certification</li>
+        <li>Healthcare (HIPAA) or financial services (GLBA, PCI DSS) incident response experience</li>
+        <li>Experience working with cyber insurance carriers and TPAs in the US market</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Senior Incident Responder (North America)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- NA Tech2: Ransomware Negotiation Advisor -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-technical">Technical</span><span class="career-tag tag-na">US / Canada Remote</span>
+        <div class="jd-title">Ransomware Negotiation Advisor</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will manage ransom negotiations with threat actors on behalf of Binary Response clients across North America. This is one of the most demanding and consequential roles in incident response — decisions made in negotiations directly affect whether a client recovers their data, what they pay, and whether they face regulatory or legal exposure. You combine technical understanding of ransomware operations with the communication discipline, emotional control, and strategic thinking needed to achieve the best possible outcome for clients under extreme pressure.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Manage all communications with ransomware threat actors on behalf of clients from first contact through to resolution</li>
+        <li>Develop and execute negotiation strategy — demand reduction, timeline extension, proof of life, decryptor testing</li>
+        <li>Conduct OFAC/OFSI sanctions screening prior to any payment recommendation</li>
+        <li>Advise clients on payment options, cryptocurrency acquisition, and transaction security</li>
+        <li>Coordinate decryptor testing and validate viability before payment is authorised</li>
+        <li>Maintain detailed communication logs for legal, regulatory, and insurance purposes</li>
+        <li>Brief client legal counsel, insurers, and executives on negotiation status and recommendations</li>
+        <li>Provide post-negotiation debrief and threat actor intelligence to internal teams</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years of direct ransomware negotiation experience in a DFIR or crisis management context</li>
+        <li>Demonstrable track record of successful demand reduction outcomes</li>
+        <li>Deep knowledge of major ransomware groups — communication styles, typical demands, decryptor reliability, and known behaviours</li>
+        <li>Thorough understanding of OFAC sanctions requirements and cryptocurrency transaction mechanics</li>
+        <li>Exceptional written communication skills — every message to a threat actor is a strategic decision</li>
+        <li>Composure under significant time pressure and client stress</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>Background in crisis negotiation, law enforcement negotiation, or hostage/crisis communication</li>
+        <li>Experience working across insurance-funded and self-funded engagements</li>
+        <li>Knowledge of US Treasury OFAC reporting requirements for ransomware payments</li>
+        <li>Technical IR background that informs negotiation decisions (recovery viability, data verification)</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Ransomware Negotiation Advisor (North America)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- NA Tech3: Forensic Examiner -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-technical">Technical</span><span class="career-tag tag-na">US / Canada Remote</span>
+        <div class="jd-title">Forensic Examiner</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will perform forensic examination of digital evidence across North American client engagements — supporting incident response investigations, legal proceedings, regulatory inquiries, and insurance claims. Your work establishes the facts of a breach: what was accessed, what was taken, when it happened, and how. You produce findings that are technically rigorous and legally defensible, and you understand the evidentiary standards required in US federal and state courts and Canadian proceedings.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Acquire and examine forensic images from Windows, macOS, Linux, and cloud environments</li>
+        <li>Perform triage analysis to rapidly identify attacker activity, persistence, and data staging</li>
+        <li>Produce forensic examination reports suitable for legal counsel, regulatory submissions, and court proceedings</li>
+        <li>Support HIPAA breach determination analysis — identifying what PHI was accessed or exfiltrated</li>
+        <li>Assist with e-discovery collections and processing where digital forensics intersects with litigation</li>
+        <li>Maintain strict chain of custody and evidence handling protocols on every engagement</li>
+        <li>Support expert witness testimony preparation where required</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years of digital forensics experience — commercial, law enforcement, or government</li>
+        <li>Proficiency with EnCase, X-Ways, Magnet Axiom, FTK, or equivalent platforms</li>
+        <li>Experience with cloud forensics — M365, Azure, AWS CloudTrail, and Google Workspace</li>
+        <li>Understanding of US federal rules of evidence and state court admissibility standards for digital evidence</li>
+        <li>HIPAA breach investigation experience is highly desirable</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>EnCE (EnCase Certified Examiner) or equivalent</li>
+        <li>GIAC GCFE or GCFA</li>
+        <li>Cellebrite UFED certification for mobile device forensics</li>
+        <li>Experience with e-discovery platforms (Relativity, Nuix)</li>
+        <li>Prior law enforcement or government forensic experience</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Forensic Examiner (North America)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NORTH AMERICA OPERATIONS -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="region-heading">&#127482;&#127480; North America — Operations &amp; Support</div>
+
+  <!-- NA Ops1: IR Operations Coordinator -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-operations">Operations</span><span class="career-tag tag-na">US / Canada Remote</span>
+        <div class="jd-title">IR Operations Coordinator</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will provide operational coordination for Binary Response's North American client engagements, covering US and Canadian timezones. The core function mirrors our UK Operations Coordinator role — but your primary value is timezone coverage. North American clients dealing with a live incident at 2am EST need an operational point of contact, not an out-of-hours voicemail. You keep engagements moving while the UK team sleeps, and hand off cleanly when they come online.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Provide operational coordination across North American client engagements during US/Canada business hours and on-call coverage</li>
+        <li>Manage scheduling, resource requests, and practitioner allocation for NA-based engagements</li>
+        <li>Handle client communication coordination — status updates, scheduling, escalation management</li>
+        <li>Maintain case tracking across the NA engagement portfolio</li>
+        <li>Ensure seamless handoff between NA and UK operational teams</li>
+        <li>Support client onboarding for North American retainer accounts</li>
+        <li>Coordinate with US/Canadian legal counsel, insurers, and law enforcement contacts as required during engagements</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years in an operations, project coordination, or service delivery role</li>
+        <li>Experience in a 24/7 or shift-based operational environment preferred</li>
+        <li>Strong communication skills — comfortable dealing directly with senior client stakeholders during high-pressure situations</li>
+        <li>Ability to work across time zones and coordinate with a globally distributed team</li>
+        <li>Familiarity with cybersecurity or managed IT services is preferred but not essential</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>Background in an MSSP, IT consultancy, or crisis management environment</li>
+        <li>Experience with US or Canadian regulatory notification processes (HIPAA, SEC, state AG)</li>
+        <li>PMP, Prince2, or equivalent coordination qualification</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — IR Operations Coordinator (North America)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- NA Ops2: Business Development Representative -->
+  <div class="jd-card">
+    <div class="jd-header" onclick="toggleJD(this)">
+      <div>
+        <span class="career-tag tag-operations">Operations</span><span class="career-tag tag-na">US / Canada Remote</span>
+        <div class="jd-title">Business Development Representative</div>
+      </div>
+      <div class="jd-chevron">&#9660;</div>
+    </div>
+    <div class="jd-body">
+      <div class="jd-section-title">// The Role</div>
+      <p class="jd-overview">You will build and manage Binary Response's commercial pipeline across the North American market. The primary focus is IR retainer acquisition — identifying organisations that need a standing incident response capability and don't yet have one. You understand that buying IR retainer services is a considered decision made by CISOs, legal counsel, and risk officers, and you know how to build the trust and relationships that lead to those conversations. You also work closely with cyber insurance brokers, law firms, and MSSPs to develop referral channels that generate consistent inbound opportunity.</p>
+
+      <div class="jd-section-title">// Key Responsibilities</div>
+      <ul class="jd-list">
+        <li>Identify and develop a pipeline of IR retainer prospects across mid-market and enterprise organisations in the US and Canada</li>
+        <li>Build and manage relationships with cyber insurance brokers, law firms, and MSSPs as referral partners</li>
+        <li>Lead outreach, qualification, and early-stage sales conversations — handing off to senior team for technical discussions</li>
+        <li>Represent Binary Response at industry events, webinars, and conferences</li>
+        <li>Develop market intelligence on competitor positioning, pricing, and panel appointments</li>
+        <li>Maintain accurate pipeline records and provide regular forecasting</li>
+        <li>Work with the UK team to develop NA-specific service collateral and case studies</li>
+        <li>Support marketing initiatives targeting North American audiences</li>
+      </ul>
+
+      <div class="jd-section-title">// Required Experience</div>
+      <ul class="jd-list">
+        <li>Minimum 3 years in business development, sales, or partnerships within cybersecurity, professional services, or financial services</li>
+        <li>Demonstrable track record of pipeline development and deal closure in a B2B environment</li>
+        <li>Existing network within the US/Canadian cyber insurance, legal, or enterprise security community is a significant advantage</li>
+        <li>Understanding of the cybersecurity buyer journey — you know how CISOs and risk leaders make decisions</li>
+        <li>Confident, credible communicator — you can hold a conversation with a CISO or GC without technical back-up in the room</li>
+      </ul>
+
+      <div class="jd-section-title">// Preferred Qualifications</div>
+      <ul class="jd-list">
+        <li>Background in IR retainer or MSSP sales</li>
+        <li>Established relationships with cyber insurance carriers or brokers in the Lloyd's or US admitted market</li>
+        <li>Experience selling to regulated industries — healthcare, financial services, legal</li>
+      </ul>
+
+      <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Business Development Representative (North America)" class="jd-apply-btn">&#9889; Register Interest</a>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div style="background:rgba(0,229,160,0.04);border:1px solid rgba(0,229,160,0.15);border-radius:12px;padding:2rem;text-align:center;margin-top:3rem">
+    <div style="font-family:var(--mono);font-size:0.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem">// How to Register Your Interest</div>
+    <p style="color:var(--text-secondary);line-height:1.8;max-width:560px;margin:0 auto 1.5rem">Send a brief note to <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Binary Response" style="color:var(--accent);text-decoration:none">enquiries@binary-response.com</a> with the role you're interested in, your location, and a short summary of your background. No CV templates, no cover letter theatre — just tell us what you've done and what you're looking for.</p>
+    <a href="mailto:enquiries@binary-response.com?subject=Expression of Interest — Binary Response" class="btn-primary">&#9889; Get In Touch</a>
+  </div>
+
+</div>
+</section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="js/main.js"></script>
+<script>
+function toggleJD(header) {
+  var body = header.nextElementSibling;
+  var chevron = header.querySelector('.jd-chevron');
+  var isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  chevron.classList.toggle('open', !isOpen);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>REvil Ransomware Negotiation (June 09, 2021) — Redacted Organisation | Binary Response</title>
+<meta name="description" content="Full verbatim transcript of a REvil ransomware negotiation (June 2021). 58 messages. Initial demand: $300,000. Study real-world ransomware negotiation tactic...">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/revil-20210609.html">
+<meta property="og:title" content="REvil Ransomware Negotiation (June 09, 2021) — Redacted Organisation">
+<meta property="og:description" content="Full verbatim transcript of a REvil ransomware negotiation (June 2021). 58 messages. Initial demand: $300,000. Study real-world ransomware negotiation tactic...">
+<meta property="og:url" content="https://binary-response.com/negotiations/revil-20210609.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "REvil Ransomware Negotiation — Redacted Organisation",
+      "description": "Full verbatim transcript of a REvil ransomware negotiation. 58 messages. Initial demand: $300,000. Outcome: Unknown.",
+      "datePublished": "2026-03-05",
+      "author": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "mainEntityOfPage": "https://binary-response.com/negotiations/revil-20210609.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "REvil — Redacted Organisation", "item": "https://binary-response.com/negotiations/revil-20210609.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Ransomware Negotiation Transcript</span>
+<h1 style="font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">REvil Ransomware Negotiation — <span style="color:var(--accent)">Redacted Organisation</span></h1>
+
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">58</span><span class="stat-label">Messages</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Duration</span></div>
+<div class="nego-stat"><span class="stat-value">$300,000</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Outcome</span></div>
+</div>
+</div>
+</section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Context</span>
+<h2 class="section-title">About This Negotiation</h2>
+<p>This transcript documents a <strong>REvil</strong> ransomware negotiation with a redacted victim organisation. 
+        The negotiation consisted of 58 messages exchanged.</p>
+        <p>The initial ransom demand was $300,000. The final outcome is not confirmed in the transcript.</p>
+</div></section>
+
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Reproduced from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 1/58</div>
+Hello,
+
+We are REvil Group.
+We want to inform that your company local network have been hacked and encrypted. We have all your local network data. The Price to unlock is $300,000. Now we&#x27;re keeping it a secret, but if you do not reply us within 3 days it will be posted on our news-site. Think about the financial damage to your stock price from this publication. In case of successful negotiations we guarantee that you will get decryptors for all your machines, non recoverable removal of downloaded data and security report on how you were hacked to fix your vulnerabilities. We hope that you can correctly assess the risks for your company.
+You can find more information about REvil group in Google.
+
+
+
+Posting on our blog and further publications in the media will lead to significant losses for your company: court and government fines, data recovery, loss of reputation, abandonment of clients, drop in limits.
+
+But don&#x27;t panic! We are in business, not in war.
+We can unblock your data and keep everything secret. All we need is a ransom.
+In this case, you also get: a security report, a complete tree of compromised data files, permanently deleting downloaded data, support with tips on unlocking and protecting.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 2/58</div>
+Hi, 
+
+Our business has been seriously affected by the current Covid Pandemic since early last year. Our country (Singapore) is in lock down mode currently. Everybody is suffering and life is very tough here. Our company is no exception. Our company is small local family company and not a Listed Company. Our Company finance has become very tight right now. We really cannot afford your asking price. We could only fork up to US$20,000.
+
+We have already finalised our recovery plan and with the offline back up data, we are in the process of rebuilding some data and files now. We do not have P&amp;C data with Government, Customers or Vendors. However, we wish to save our business recovery time and cost. Hence, we sincerely come to you and hope to reach a mutual agreement and settle this amicably.
+
+Hope to hear from you soon.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 3/58</div>
+Hello!
+We took note of your communication and concluded:
+
+1) If you could cope without our help, you would not contact us.
+
+2) And yet, we are ready to make concessions to you, and throw the price down to $75,000.
+
+We await your decision.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 4/58</div>
+Hi
+
+Appreciate your reply. 
+We wish to pay $75,000 and settle amicably. However, it is still very tough for us. We are willing to double our initial offer to $40,000.
+
+We have only one condition (just to safeguard our side here), that is we pay 50% first and in return, you give us the decryption tool for our files in two (2) hosts :
+1) Host name &#x27;SAP-VEEAM&#x27; (file extension .[redacted]), and
+2) Host name &#x27;apps-fs&#x27; (file extension .[redacted], .[redacted], [redacted])
+
+Once we successfully decrypt the above-mentioned files, we shall immediately settle the balance 50% without delay in return for all the balance decryption.
+(Please be reassured that once we achieve agreement to pay, we shall honor our word)
+
+For payment to you in XMR (currently trad around US$ 287 now), our local Crypto platform do not support this transfer network. Can we pay you in Bitcoin/Ethereum instead?
+
+Hope to see your favorable reply soon.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 5/58</div>
+Let my boss think, next couple of hours.
+
+In any case, we are not ready for a down payment of 50%. So we don&#x27;t work.
+You can send us some not very important files so that we can confirm the functionality of our build. To do this, skip the file and note this extension.
+
+I&#x27;ll tell you in advance if the boss does not agrees to 40.000, try to offer a little more.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 6/58</div>
+i talked with my boss so the last price is 50.000$ It is the minimal price we can offer to you.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 7/58</div>
+you can pay in btc
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 8/58</div>
+Hi,
+Ultimately, how do we be sure that after we pay 100% in advance you would give us 100% decryption? 
+we may not get anything at all after we make payment.
+Therefore, please reconsider our suggestion that we pay you 50% and you decrypt our files as mentioned earlier on.
+We assured you that once we reach an agreement with you, we will definitely honor our payment.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 9/58</div>
+We have a long reputation, you can read reviews about us.
+In addition, you ask to decrypt the server with backups.
+
+We have already done everything possible for our cooperation in the form of a proposed discount.
+
+You will receive a utility that will run on all extensions at once on your network.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 10/58</div>
+Hi,
+Can you provide the links for the review about you?
+How many Bitcoin do we have to pay? Bitcoin price now is $38,650. Can you provide Bitcoin Transfer address/details?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 11/58</div>
+1.36 btc
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 12/58</div>
+Can you provide the links for the review about you?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 13/58</div>
+Use google &quot;REvil&quot;
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 14/58</div>
+Hi,
+Can you decrypt below 3 files to show you have the tools/keys? Thanks.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 15/58</div>
+wait
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 16/58</div>
+file
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 17/58</div>
+APPS-SAP Backup.vbm.[redacted]
+
+Choose another file for test decryption
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 18/58</div>
+Regional - Employee Master Data (Latest).xls
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 19/58</div>
+Do you really take us for fools?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 20/58</div>
+send another test file
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 21/58</div>
+The Employee file is critical actually. Pls decrypt for us.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 22/58</div>
+no
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 23/58</div>
+The Employee file is NOT critical actually.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 24/58</div>
+send another file
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 25/58</div>
+try this please
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 26/58</div>
+file
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 27/58</div>
+this is the 3rd file please
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 28/58</div>
+file
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 29/58</div>
+Can I have last 2 more files to show my boss? Please.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 30/58</div>
+Only 3 file test
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 31/58</div>
+If you need more , pay
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 32/58</div>
+Now the BTC is $38,820 x 1.287 = $50,000, 
+Can we agree with 1.287 BTC coins?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 33/58</div>
+1.295
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 34/58</div>
+we pay you 1.295 BTC coins, you send us the decryption tools/keys for all files. Do we have a deal?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 35/58</div>
+yes
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 36/58</div>
+We need to remit money to our Cryto Platform to buy BTC, it may be late tomorrow to transfer the coins to you. Please bear with us.
+can you also send me the BTC transfer details?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 37/58</div>
+You can find btc ID on main page
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 38/58</div>
+I only saw XMR address?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 39/58</div>
+click &quot;Bitcoin + 10%&quot;
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 40/58</div>
+in the Recipient Address, I put this correct?
+[redacted]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 41/58</div>
+What should I put in Recipient Full Name?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 42/58</div>
+Please confirm
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 43/58</div>
+[redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 44/58</div>
+Yes, this wallet.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 45/58</div>
+3. Wait for 3 confirmations by blockchain
+What does the above means?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 6 days ago &mdash; Message 46/58</div>
+This is a confirmation of the transaction in the blockchain network. The usual procedure for transferring cryptocurrencies.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 47/58</div>
+Ok 
+what should I put the full name for the recipient?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 5 days ago &mdash; Message 48/58</div>
+nothing. Wallet Only
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 49/58</div>
+Ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 50/58</div>
+Hi, we finally gathered enough BTC 1.295. But it is coming from 2 sources due to time constraint.
+We shall transfer BTC 0.42546345 from our local Crypto Platform first.
+Once you receive it, please let us know before we transfer the balance BTC to you from another Crypto Platform
+Is that okay with you?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 51/58</div>
+Please let us know quickly
+We want to transfer now but need you to confirm okay first.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 52/58</div>
+Hi, 
+We managed to transfer BTC 1.295 to your below address. Pls check and confirm.
+[redacted]
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 53/58</div>
+Please see attached jpg image for the successful transfer of BTC 1.295.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 5 days ago &mdash; Message 54/58</div>
+waiting till 3 conformations,after that you can download decryption program
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 55/58</div>
+Where do we find these 3 confirmations?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 56/58</div>
+We have done email confirmation and phone confirm for our BTC transfer just now.
+is it related to the above 3 confirmations?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 5 days ago &mdash; Message 57/58</div>
+wait please
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 5 days ago &mdash; Message 58/58</div>
+To use a decryptor run it as administrator and turn off antivirus before.
+You can use a decryptor as gui application or through cmd.
+
+CMD commands:
+UniversalDecryptor.exe -full
+UniversalDecryptor.exe -path &quot;C:\folder&quot;
+UniversalDecryptor.exe -file &quot;C:\folder\file.txt.random_ext&quot;
+
+* decryptor with -full option will decrypt all with default params.
+
+If you use it as gui application, mI recommend you choose &quot;create backups&quot; option. If you use decryptor without this option, you should not interrupt decryption process, otherwise some files will be irreversibly damaged.
+</div></div>
+</div>
+</div></section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Analyst Observations</h2>
+<ul style="list-style:none;padding:0">
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">REvil (also known as Sodinokibi) was responsible for high-profile attacks including Kaseya and JBS. The group was disrupted by law enforcement in late 2021 and early 2022.</li>
+</ul>
+</div></section>
+
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>

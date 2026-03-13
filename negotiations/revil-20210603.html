@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>REvil Ransomware Negotiation (June 03, 2021) — Redacted Organisation | Binary Response</title>
+<meta name="description" content="Full verbatim transcript of a REvil ransomware negotiation (June 2021). 63 messages. Initial demand: $2. Outcome: Refused. Study real-world negotiation tacti...">
+<link rel="apple-touch-icon" href="../img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="../img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMF75NTVG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4PMF75NTVG');</script>
+<link rel="canonical" href="https://binary-response.com/negotiations/revil-20210603.html">
+<meta property="og:title" content="REvil Ransomware Negotiation (June 03, 2021) — Redacted Organisation">
+<meta property="og:description" content="Full verbatim transcript of a REvil ransomware negotiation (June 2021). 63 messages. Initial demand: $2. Outcome: Refused. Study real-world negotiation tacti...">
+<meta property="og:url" content="https://binary-response.com/negotiations/revil-20210603.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://binary-response.com/img/logo-icon.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "REvil Ransomware Negotiation — Redacted Organisation",
+      "description": "Full verbatim transcript of a REvil ransomware negotiation. 63 messages. Initial demand: $2.5M. Outcome: Refused.",
+      "datePublished": "2026-03-05",
+      "author": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "publisher": {"@type": "Organization", "name": "Binary Response", "url": "https://binary-response.com"},
+      "mainEntityOfPage": "https://binary-response.com/negotiations/revil-20210603.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://binary-response.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Negotiations", "item": "https://binary-response.com/negotiations/"},
+        {"@type": "ListItem", "position": 3, "name": "REvil — Redacted Organisation", "item": "https://binary-response.com/negotiations/revil-20210603.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="../index.html" class="nav-brand">
+  <img src="../img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div></nav>
+
+<section class="page-hero" style="position:relative;z-index:2;padding:clamp(6rem,12vw,10rem) 2rem clamp(2rem,4vw,4rem)">
+<div style="max-width:900px;margin:0 auto">
+<span class="section-label">// Ransomware Negotiation Transcript</span>
+<h1 style="font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin:1rem 0 1.5rem">REvil Ransomware Negotiation — <span style="color:var(--accent)">Redacted Organisation</span></h1>
+
+<div class="nego-stats-bar">
+<div class="nego-stat"><span class="stat-value">63</span><span class="stat-label">Messages</span></div>
+<div class="nego-stat"><span class="stat-value">Unknown</span><span class="stat-label">Duration</span></div>
+<div class="nego-stat"><span class="stat-value">$2.5M</span><span class="stat-label">Initial Demand</span></div>
+<div class="nego-stat"><span class="stat-value">Refused</span><span class="stat-label">Outcome</span></div>
+</div>
+</div>
+</section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Context</span>
+<h2 class="section-title">About This Negotiation</h2>
+<p>This transcript documents a <strong>REvil</strong> ransomware negotiation with a redacted victim organisation. 
+        The negotiation consisted of 63 messages exchanged.</p>
+        <p>The initial ransom demand was $2.5M. The victim refused to pay.</p>
+</div></section>
+
+<section class="content-section alt-bg"><div class="container" style="max-width:900px">
+<span class="section-label">// Primary Source</span>
+<h2 class="section-title">Full Transcript — Verbatim</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Reproduced from Casualtek's <a href="https://github.com/Casualtek/Ransomchats" target="_blank" rel="noopener" style="color:var(--accent)">Ransomchats</a> archive. URLs have been redacted.</p>
+
+<div class="nego-disclaimer">
+Victim names are shown only where the breach was publicly reported in mainstream media. Any organisation wishing their name redacted can contact us at <a href="mailto:enquiries@binary-response.com" style="color:var(--accent)">enquiries@binary-response.com</a> — we will act promptly.
+</div>
+
+<div class="transcript-container">
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 15 days ago &mdash; Message 1/63</div>
+We are REvil Group.
+We want to inform that your company local network have been hacked and encrypted. We have all your local network data. The Price to unlock is $2,500,000. Now we&#x27;re keeping it a secret, but if you do not reply us within 7 days it will be posted on our news-site. Think about the financial damage to your stock price from this publication. In case of successful negotiations we guarantee that you will get decryptors for all your machines, non recoverable removal of downloaded data and security report on how you were hacked to fix your vulnerabilities. We hope that you can correctly assess the risks for your company.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 14 days ago &mdash; Message 2/63</div>
+Hello REvil Team - We are IT team helping client with the discussions with you and recovering. We would like to discuss how to proceed with this situation and reach a mutual agreement. For us the value of data is certainly very important. Can you provide us with some files your operative acquired from systems. I would suggest 5 files, from 5 different systems, you can choose. If you prefer to provide a file-tree of the files you have it would help us to work with the client to assess the appropriate value. 
+
+We also have a few logistical issues we need your help with:
+
+1. Payment will need to in BTC, XMR is not possible on this situation
+2. Please provide an extra 48 hours to the clock. This is a long weekend and time will run out on Monday, but all banks are closed on Monday and closed on weekend. So we would appreciate the extra time so we can reach an understanding. 
+
+Thank you, looking forward to working with you again.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 14 days ago &mdash; Message 3/63</div>
+You can use Bitcoin instead of Monero, but it will be more expensive for you in case of our merchant additional fee,
+so if u want to pay in BTC u need to add +10%. Btc enabled
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 14 days ago &mdash; Message 4/63</div>
+It will take us a little time to collect the necessary data.
+Timer updated
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 14 days ago &mdash; Message 5/63</div>
+Thank you. Standing by.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 13 days ago &mdash; Message 6/63</div>
+[REDACTED URL]
+
+password for download: [redacted]
+password for archive: [redacted]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 13 days ago &mdash; Message 7/63</div>
+So that you understand what data we have
+
+[REDACTED URL]
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 13 days ago &mdash; Message 8/63</div>
+(Use TOR browser)
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 13 days ago &mdash; Message 9/63</div>
+thank you. We are checking
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 13 days ago &mdash; Message 10/63</div>
+Hello - Our client has reviewed the data you provided. Based on available funds our client is in a position to offer $192,580 to have the assurance that the data is deleted. The client is already in the process of notifying clients of the situation. I would like to recommend that the offer is accepted soonest. Much graciousness.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 12 days ago &mdash; Message 11/63</div>
+Hi, all my boss has to offer is a 10% discount.
+We know the scale of this company&#x27;s problems.
+Such low amounts are not even considered
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 12 days ago &mdash; Message 12/63</div>
+To solve your problem, you need to increase your offer by at least 10-fold.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 12 days ago &mdash; Message 13/63</div>
+Good morning - I understand you offer a 10% discount. Can you please discuss with your boss, the situation is not urgent, nor does the client require decryptors. We work with you in the past on many cases, this is not a matter where such high amount will work to benefit. $192,580 is a lot of money in this case but I spoke to the client and they were able after a lot of accounting investigation to increase the amount to $237,290. Since we are coming to weekend, in many places this is a long weekend and the response will be delay. I recommend if you can speak to boss to try and close as soon as possible.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 12 days ago &mdash; Message 14/63</div>
+My boss is not interested in this amount.
+You have a few days before publishing in the blog and in the media
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 12 days ago &mdash; Message 15/63</div>
+your boss is not interested in $237,290. We understand, it is your decision.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 12 days ago &mdash; Message 16/63</div>
+Friend, you shouldn&#x27;t start this game, we know very well how much damage has been done to your client.
+If it was insignificant, you would not write here.
+If you have nothing more to offer, we have nothing to talk about
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 12 days ago &mdash; Message 17/63</div>
+No games. Like I said, client is back to operations and no decryptors are needed. I am being upfront in terms of numbers. They cannot pay 10x of initial offer.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 12 days ago &mdash; Message 18/63</div>
+Not interested in wasting your time or mine.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 12 days ago &mdash; Message 19/63</div>
+As we said earlier. Your proposal is not interesting
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 20/63</div>
+It took me over 2 days to convince the client to come back to the discussion. What can you do to get to a more reasonable number? Decryptors are not needed.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 21/63</div>
+It doesn&#x27;t matter for us whether you need decoders or not, for us this is not an argument, one way or another you will get them
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 22/63</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 23/63</div>
+We have voiced our proposal to you earlier if you cannot approach it then there is no point in continuing the dialogue
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 24/63</div>
+sounds like you do not really want to discuss, I will update the client. Client will not pay what you are asking. 10% is nothing.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 25/63</div>
+We are ready to consider the issue of the discount again, but what you are offering sounds silly.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 26/63</div>
+The client is an appliance retailer. they will use the money in a different way to protect employees so unless I get a more serious discount. otherwise you are right, this is not going anywhere.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 27/63</div>
+I have nothing more to add data will be sold and you must understand this
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 28/63</div>
+here is what you need to understand. No one will buy this info. You publish anything and we are done with this dance. The number you provided is not happening go back and get a better number that the client will consider or we are going nowhere. I am trying to tell you that they are willing to pay something, but your demand of 2.7mil after btc conversion is not worth the data you have.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 29/63</div>
+If this data is useless, what are you doing here? If you have nothing to pay so much for, then why are you discussing the price?
+Either make an offer that will interest my boss, or the publication will be in 19 hours and the &quot;dancing&quot; will end.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 30/63</div>
+I gave you an offer on the table which you choose to ignore and state its not interesting. Value is that you do not play silly games with your publishing, trying to protect employees. Anything else is meaningless. I can try to push to 350k.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 31/63</div>
+Not interested
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 32/63</div>
+ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 33/63</div>
+if your boss or you change your mind my email is: [redacted]@mail.com
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 9 days ago &mdash; Message 34/63</div>
+You shouldn&#x27;t use the old tricks.
+Leave your email with you
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 9 days ago &mdash; Message 35/63</div>
+Had a final discussion with management, final price is 400k. Your answer?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 36/63</div>
+I must say right away that the amount is less than 1kk my boss is not interested
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 37/63</div>
+If you agree, we close the publication and continue cooperation if not. I think you yourself know
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 38/63</div>
+Like I said, 400k is last amount. Publication is now 0$. I tried to explain to you how things are, but you decide you know better. Too bad.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 39/63</div>
+Okay my boss agree price update you can pay.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 40/63</div>
+ok hold on I need to bring client back.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 41/63</div>
+Ok we confirm the bitcoin amount to settle the situation. Thanks for updating price on site. We are working with a broker to get the bitcoins and do transfer within 24 hours.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 42/63</div>
+ok
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 43/63</div>
+Please confirm you will provide after payment:
+1. Universal decryptor, and technical support in case of problems,
+2. Detailed proof of the downloaded data - complete file tree of all of compromised data files, 
+3. Confirmation of 100% proof of permanent deletion of all compromised data from all your data storage locations and a shred/wiping log,
+4. Confirmation that you will delete and will never publish any of the data or this chat or release the company name anywhere, including on your publishing Happy Blog/leaks site, or on the dark web or the Internet, 
+5. A security report on how company was breached, so we can prevent future problems, and
+6. Promise to never again breach or attack company’s networks or websites.
+Please confirm 1 to 6. Thank you
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 44/63</div>
+Um no.
+You said that your client does not need a universal decoder, so we will not provide one.
+We confirm everything else
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 8 days ago &mdash; Message 45/63</div>
+The price is formed solely on the fact that you need to completely delete the data and everything from points 2-6.
+For a decryptor, the payment will be much higher.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 46/63</div>
+OK, understood. Thanks for confirming 2-6.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 8 days ago &mdash; Message 47/63</div>
+OK, understood. Thanks for confirming 2-6.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 48/63</div>
+Hello , are you ready to pay ?
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 7 days ago &mdash; Message 49/63</div>
+yes, standby
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 7 days ago &mdash; Message 50/63</div>
+OK, the transfer is confirmed. What is your timing on delivering the items above?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 7 days ago &mdash; Message 51/63</div>
+wait for answer
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 6 days ago &mdash; Message 52/63</div>
+Hello - what&#x27;s your ETA? Thanks
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 5 days ago &mdash; Message 53/63</div>
+Hi we are waiting for your reply?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 4 days ago &mdash; Message 54/63</div>
+Hello we deleted all information about company
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 4 days ago &mdash; Message 55/63</div>
+Thanks for confirming. Please provide the agreed items: 2. Complete file tree of all of compromised data files, 3. Shred/wiping file data deletion log, 4. Security report. Thank you
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 3 days ago &mdash; Message 56/63</div>
+??
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 2 days ago &mdash; Message 57/63</div>
+Hi we are waiting for your reply?
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 2 days ago &mdash; Message 58/63</div>
+1. Administrators must work in browsers in in-private mode
+2. Administrators are prohibited from saving passwords in browsers
+3. Administrators are prohibited from saving files with password lists on their computers or shared resources, as well as sending them by e-mail
+4. All users are forbidden to open suspicious mail, punish with money. Allocate for this one computer without connection to the corporate network
+5. Administrators work in virtual machines. Virtual machines must be in cryptocontainers
+6. Configure firewalls so that administrator&#x27;s computers do not have direct access to critical servers, but virtual machines have it (firewall rules and network ranges)
+7. Limit the list of domain administrators. Split domain administrator password between security department and administration department (password is very long)
+8. Delegate small roles to administrators for daily work (resetting passwords, creating users)
+9. Use strong antivirus, Cylaence or Сarbon Black or Cortex (we do not advertise antivirus, think byr yourself)
+10. Limit access to the Internet on servers and admin&#x27;s computers. Create a terminal server in the DMZ and use the terminal browser applications
+11. All suspicious letters with links should be sent to the IT department for verification on a stand alone virtual machine.
+12. Configure mail filters to work with white lists. Anything that is not included in the whitelist must be moderated.
+13. Prevent users from launching scripting programming languages ​​(vbs, js and others) and unknown file extensions. If you doubt about openning link, transfer it to the IT department for verification on a stand alone virtual machine.
+14. Open documents with macros only from trusted users. If you doubt about openning document, transfer it to the IT department for verification on a stand alone virtual machine.
+15. If the user has launched a suspicious file, he should immediately contact the IT department.
+16. Disable remote launch for powershell
+17. Set 2FA Authorisation for network infrustructure. (Backups)
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 2 days ago &mdash; Message 59/63</div>
+The data was deleted automatically, we, for our part, did not have time to save the deletion log
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 2 days ago &mdash; Message 60/63</div>
+That was not the deal. You confirmed you would provide the complete file trees and proof of deletion / shred logs. We are working on 3 other recovery cases with your group and now we have to tell all our clients and their legal, advisors that you are not following up on promises.
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 2 days ago &mdash; Message 61/63</div>
+ok
+</div></div>
+<div class="transcript-msg threat-actor">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[REvil]</span> &mdash; 2 days ago &mdash; Message 62/63</div>
+Our team noticed that you have already started spreading dirty rumors to other companies.
+So, look, if this continues, we are starting data recovery for all the cases that we have worked with previously.
+Publishing all remote blogs and spreading information in the media that your companies (victims) paid us a ransom.
+Don&#x27;t consider yourself an almighty friend.
+A new hacker worked with your case, who foolishly deleted the data after payment. This will no longer be the case, and rest assured that we do not store the data of the victims you paid for. Let&#x27;s forget about this case and continue working. Don&#x27;t try to fight.
+</div></div>
+<div class="transcript-msg victim">
+<div class="msg-bubble">
+<div class="msg-meta"><span class="msg-party">[Victim]</span> &mdash; 2 days ago &mdash; Message 63/63</div>
+ok
+</div></div>
+</div>
+</div></section>
+
+<section class="content-section"><div class="container" style="max-width:900px">
+<span class="section-label">// Analysis</span>
+<h2 class="section-title">Analyst Observations</h2>
+<ul style="list-style:none;padding:0">
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">The victim explicitly refused to pay. This is a definitive outcome that typically results in data publication.</li>
+<li style="margin-bottom:0.75rem;color:var(--text-secondary)">REvil (also known as Sodinokibi) was responsible for high-profile attacks including Kaseya and JBS. The group was disrupted by law enforcement in late 2021 and early 2022.</li>
+</ul>
+</div></section>
+
+<section class="cta-banner"><div class="cta-box">
+<h2>Facing a Ransomware Demand?</h2>
+<p style="max-width:600px;margin:0 auto 2rem">Whether you choose to negotiate or refuse — having specialists in the room changes the outcome.</p>
+<div class="btn-group" style="justify-content:center">
+<a href="../contact.html" class="btn-primary">&#9889; Contact Us Now</a>
+<a href="../services/ransomware-negotiations.html" class="btn-secondary">Our Negotiations Service &rarr;</a>
+</div>
+</div></section>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body></html>
