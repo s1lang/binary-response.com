@@ -298,3 +298,7 @@ Redirect 301 /negotiations/trinity-0012.html /negotiations/trinity/trinity-0012.
 Redirect 301 /negotiations/trinity-0013.html /negotiations/trinity/trinity-0013.html
 Redirect 301 /negotiations/trinity-0014.html /negotiations/trinity/trinity-0014.html
 # END negotiations-redirects
+
+# BEGIN for-redirects
+RedirectMatch 301 ^/for/(.*)$ /industries/$1
+# END for-redirects
