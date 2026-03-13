@@ -27,13 +27,13 @@
     '<a href="/blog/">Blog</a>' +
     '<a href="/case-studies/">Case Studies</a>' +
     '<a href="/negotiations/">Negotiations</a>' +
-    '<div class="nav-dropdown"><a href="/for/">Industries &#9662;</a>' +
+    '<div class="nav-dropdown"><a href="/industries/">Industries &#9662;</a>' +
     '<div class="nav-dropdown-menu"><div class="nav-dropdown-inner">' +
-    '<a href="/for/healthcare.html">Healthcare</a>' +
-    '<a href="/for/legal.html">Legal</a>' +
-    '<a href="/for/manufacturing.html">Manufacturing</a>' +
-    '<a href="/for/financial-services.html">Financial Services</a>' +
-    '<a href="/for/education.html">Education</a>' +
+    '<a href="/industries/healthcare.html">Healthcare</a>' +
+    '<a href="/industries/legal.html">Legal</a>' +
+    '<a href="/industries/manufacturing.html">Manufacturing</a>' +
+    '<a href="/industries/financial-services.html">Financial Services</a>' +
+    '<a href="/industries/education.html">Education</a>' +
     '</div></div></div>' +
     '<a href="/resources/">Resources</a>' +
     '<a href="/about.html">About</a>' +
@@ -68,8 +68,8 @@
       active = path.startsWith('/threat-intel/') && path !== '/threat-intel/ransomware-tracker.html';
     } else if (h === '/services.html') {
       active = path.startsWith('/services');
-    } else if (h === '/for/') {
-      active = path.startsWith('/for/');
+    } else if (h === '/industries/') {
+      active = path.startsWith('/industries/');
     } else if (h === '/negotiations/') {
       active = path.startsWith('/negotiations/');
     } else if (h === '/resources/') {
