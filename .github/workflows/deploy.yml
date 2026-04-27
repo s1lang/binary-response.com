@@ -12,21 +12,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup rsync
-        run: sudo apt-get update && sudo apt-get install -y rsync
+      - name: Setup lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
 
       - name: Deploy to IONOS
         env:
-          SFTP_HOST: access-5019920255.webspace-host.com
-          SFTP_USER: su296924
           SFTP_PASSWORD: ${{ secrets.IONOS_SFTP_PASSWORD }}
         run: |
-          export SSHPASS="$SFTP_PASSWORD"
-          sshpass -e rsync -avz --delete \
-            -e "ssh -o StrictHostKeyChecking=no -o ConnectTimeout=30" \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='node_modules' \
-            --exclude='scripts/__pycache__' \
-            ./ \
-            "$SFTP_USER@$SFTP_HOST:/public/"
+          cat > /tmp/deploy_lftp.txt << 'LFTPEOF'
+          set net:timeout 60
+          set sftp:max-protocol-version 3
+          open -u "su296924,$SFTP_PASSWORD" sftp://access-5019920255.webspace-host.com
+          cd /public
+          lcd .
+          mirror --parallel=8 -e -R . .
+          bye
+          LFTPEOF
+          sshpass -p "$SFTP_PASSWORD" lftp -f /tmp/deploy_lftp.txt
