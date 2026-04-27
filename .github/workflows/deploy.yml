@@ -12,18 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup sshpass
-        run: sudo apt-get update && sudo apt-get install -y sshpass
-
-      - name: Deploy to IONOS via SFTP
-        env:
-          SFTP_HOST: access-5019920255.webspace-host.com
-          SFTP_USER: su296924
-          SFTP_PASSWORD: ${{ secrets.IONOS_SFTP_PASSWORD }}
-        run: |
-          sshpass -p "$SFTP_PASSWORD" sftp -o StrictHostKeyChecking=no -o ConnectTimeout=30 $SFTP_USER@$SFTP_HOST << 'EOF'
-          cd /public
-          lcd .
-          put -r ransomware-tracker/victim ./
-          bye
-          EOF
+      - name: Deploy to IONOS
+        uses: easingthemes/sshfs@v2
+        with:
+          host: access-5019920255.webspace-host.com
+          username: su296924
+          password: ${{ secrets.IONOS_SFTP_PASSWORD }}
+          port: 22
+          remote_dir: /public
+          local_dir: .
