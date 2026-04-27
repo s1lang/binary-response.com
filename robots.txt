@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+# Block AI crawlers from scraping proprietary threat intelligence
+User-agent: CCBot
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: Google-Extended
+User-agent: Anthropic AI
+User-agent: Bytespider
+User-agent: Claude-Web
+User-agent:Omgibot
+User-agent: Diffbot
+User-agent: FacebookBot
+Disallow: /ransomware-tracker/victim/
+Disallow: /ransomware-tracker/data/
+Disallow: /threat-intel/
+Disallow: /negotiations/
+
 Sitemap: https://binary-response.com/sitemap.xml

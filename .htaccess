@@ -1,3 +1,39 @@
+# Enable Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json text/xml application/xml application/rss+xml
+    AddOutputFilterByType DEFLATE font/ttf font/otf image/svg+xml
+    Header append Vary Accept-Encoding
+</IfModule>
+
+# Enable Brotli compression (if available)
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/css application/javascript text/javascript application/json text/xml application/xml
+</IfModule>
+
+# Cache control
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Leverage browser caching (fallback)
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(html)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+</IfModule>
+
 # Force HTTPS and non-www canonical URL
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -302,3 +338,18 @@ Redirect 301 /negotiations/trinity-0014.html /negotiations/trinity/trinity-0014.
 # BEGIN for-redirects
 RedirectMatch 301 ^/for/(.*)$ /industries/$1
 # END for-redirects
+
+# BEGIN trailing-slash-redirects
+# Redirect bare directory paths to .html files (fix duplicate content)
+RewriteEngine On
+RewriteBase /
+
+# about/ -> about.html
+RewriteRule ^about/$ /about.html [R=301,L]
+
+# services/ -> services.html
+RewriteRule ^services/$ /services.html [R=301,L]
+
+# contact/ -> contact.html
+RewriteRule ^contact/$ /contact.html [R=301,L]
+# END trailing-slash-redirects

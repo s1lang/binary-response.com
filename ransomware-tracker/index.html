@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ransomware Victim Tracker — 17,000+ Attacks Tracked | Binary Response</title>
+<meta name="description" content="Search and filter 17,000+ ransomware victims across 200 threat actor groups and 100 countries. Updated every 2 hours from dark web monitoring.">
+<link rel="apple-touch-icon" href="/img/logo-icon-192.webp">
+<link rel="icon" type="image/png" href="/img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&family=Instrument+Sans:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="canonical" href="https://binary-response.com/ransomware-tracker/">
+<meta property="og:title" content="Ransomware Victim Tracker — 17,000+ Attacks Tracked | Binary Response">
+<meta property="og:description" content="Search and filter 17,000+ ransomware victims across 200 threat actor groups and 100 countries. Updated every 2 hours from dark web monitoring.">
+<meta property="og:url" content="https://binary-response.com/ransomware-tracker/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://binary-response.com/img/logo-icon.webp">
+<meta property="og:site_name" content="Binary Response">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://binary-response.com/"},{"@type":"ListItem","position":2,"name":"Tracker","item":"https://binary-response.com/ransomware-tracker/"}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Ransomware Victim Tracker \u2014 Binary Response",
+  "description": "Search and filter 17,000+ ransomware victims across 200 threat actor groups and 100 countries. Updated every 2 hours from dark web monitoring.",
+  "url": "https://binary-response.com/ransomware-tracker/",
+  "creator": {
+    "@type": "Organization",
+    "name": "Binary Response",
+    "url": "https://binary-response.com"
+  },
+  "temporalCoverage": "2021/..",
+  "isAccessibleForFree": true
+}
+</script>
+<style>
+
+/* Tracker shared styles */
+.tracker-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+.breadcrumbs { font-size: 0.78rem; color: #556677; margin: 1.5rem 0 0.5rem; }
+.bc-link { color: #7eb3e0; text-decoration: none; }
+.bc-link:hover { text-decoration: underline; }
+.bc-current { color: #8899aa; }
+
+.stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.stat-box { background: rgba(126,179,224,0.05); border: 1px solid rgba(126,179,224,0.12); border-radius: 6px; padding: 1rem; text-align: center; }
+.stat-num { font-size: 1.8rem; font-weight: 800; color: #7eb3e0; font-family: 'JetBrains Mono', monospace; }
+.stat-label { font-size: 0.72rem; color: #667788; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.3rem; }
+
+.search-wrap { margin: 1.5rem 0; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.search-input { flex: 1; min-width: 200px; padding: 0.6rem 1rem; background: rgba(126,179,224,0.06); border: 1px solid rgba(126,179,224,0.2); border-radius: 6px; color: #e0e8f0; font-size: 0.9rem; font-family: inherit; }
+.search-input::placeholder { color: #556677; }
+.search-input:focus { outline: none; border-color: #7eb3e0; }
+.filter-select { padding: 0.6rem 0.8rem; background: rgba(126,179,224,0.06); border: 1px solid rgba(126,179,224,0.2); border-radius: 6px; color: #e0e8f0; font-size: 0.82rem; font-family: inherit; min-width: 140px; }
+.filter-select option { background: #0d1117; }
+
+.victim-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+.victim-table th { text-align: left; padding: 0.6rem 0.8rem; color: #7eb3e0; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(126,179,224,0.2); cursor: pointer; white-space: nowrap; user-select: none; }
+.victim-table th:hover { color: #a0d0ff; }
+.victim-table td { padding: 0.55rem 0.8rem; border-bottom: 1px solid rgba(126,179,224,0.06); color: #bcccd8; }
+.victim-table tr:hover td { background: rgba(126,179,224,0.04); }
+.victim-table a { color: #7eb3e0; text-decoration: none; }
+.victim-table a:hover { text-decoration: underline; }
+
+.tag { display: inline-block; font-size: 0.7rem; padding: 2px 6px; border-radius: 3px; font-family: 'JetBrains Mono', monospace; }
+.tag-group { background: rgba(224,85,85,0.1); color: #e05555; }
+.tag-country { background: rgba(126,179,224,0.1); color: #7eb3e0; }
+.tag-sector { background: rgba(0,200,100,0.08); color: #00c864; }
+
+.pagination { display: flex; gap: 0.5rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap; }
+.page-btn { padding: 0.4rem 0.8rem; background: rgba(126,179,224,0.08); border: 1px solid rgba(126,179,224,0.15); border-radius: 4px; color: #7eb3e0; cursor: pointer; font-size: 0.8rem; font-family: inherit; }
+.page-btn:hover { background: rgba(126,179,224,0.15); }
+.page-btn.active { background: #7eb3e0; color: #0d1117; font-weight: 700; }
+
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.5rem 0; }
+.detail-item { background: rgba(126,179,224,0.04); border: 1px solid rgba(126,179,224,0.1); border-radius: 6px; padding: 0.8rem 1rem; }
+.detail-label { font-size: 0.7rem; color: #556677; text-transform: uppercase; letter-spacing: 1px; }
+.detail-value { font-size: 0.95rem; color: #ccd8e0; margin-top: 0.25rem; }
+.detail-value a { color: #7eb3e0; text-decoration: none; }
+.detail-value a:hover { text-decoration: underline; }
+
+.desc-box { background: rgba(126,179,224,0.03); border: 1px solid rgba(126,179,224,0.1); border-radius: 6px; padding: 1.2rem; margin: 1.5rem 0; color: #8899aa; line-height: 1.7; font-size: 0.9rem; }
+
+.hub-intro { color: #8899aa; line-height: 1.7; font-size: 0.92rem; margin: 1rem 0 2rem; max-width: 800px; }
+
+.related-links { display: flex; gap: 1rem; flex-wrap: wrap; margin: 2rem 0; }
+.related-link { display: inline-block; padding: 0.5rem 1rem; background: rgba(126,179,224,0.06); border: 1px solid rgba(126,179,224,0.15); border-radius: 6px; color: #7eb3e0; text-decoration: none; font-size: 0.85rem; }
+.related-link:hover { background: rgba(126,179,224,0.12); }
+
+.last-updated { font-size: 0.75rem; color: #445566; text-align: center; margin: 2rem 0; font-family: 'JetBrains Mono', monospace; }
+
+@media(max-width:768px) {
+  .detail-grid { grid-template-columns: 1fr; }
+  .victim-table { font-size: 0.78rem; }
+  .stat-num { font-size: 1.4rem; }
+  .search-wrap { flex-direction: column; }
+}
+
+
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise-overlay"></div><div class="scanline"></div>
+<nav class="site-nav">
+<a href="/index.html" class="nav-brand">
+  <img src="/img/logo-icon.webp" alt="Binary Response" class="nav-logo" width="32" height="32" fetchpriority="high">
+  <span class="nav-name">Binary Response</span>
+</a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links"></div>
+</nav>
+
+<div class="tracker-container">
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="https://binary-response.com/" class="bc-link">Home</a> / <span class="bc-current">Tracker</span></nav>
+
+  <div style="text-align:center;padding:2rem 0 1rem">
+    <span style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:#7eb3e0;margin-bottom:0.5rem">
+      <span style="width:8px;height:8px;background:#00c864;border-radius:50%;animation:pulse 2s infinite"></span> Updated Every 2 Hours
+    </span>
+    <h1 style="font-size:2.2rem;margin:0.5rem 0">Ransomware <span class="accent">Victim Tracker</span></h1>
+    <p style="color:#8899aa;max-width:650px;margin:1rem auto;line-height:1.7;font-size:0.92rem">
+      Search 18,234 ransomware victims across 216 threat actor groups and 96 countries.
+      Built from Binary Response's continuous dark web monitoring of ransomware group leak sites.
+      Data sourced from Tor-hosted leak pages, threat intelligence APIs, and open-source disclosure feeds since 2021.
+    </p>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-box"><div class="stat-num">18,234</div><div class="stat-label">Victims Tracked</div></div>
+    <div class="stat-box"><div class="stat-num">216</div><div class="stat-label">Threat Actors</div></div>
+    <div class="stat-box"><div class="stat-num">96</div><div class="stat-label">Countries</div></div>
+    <div class="stat-box"><div class="stat-num">948</div><div class="stat-label">Last 30 Days</div></div>
+  </div>
+
+  <div id="recent-victims-section" style="margin: 2rem 0;">
+    <h2 style="color:#7eb3e0;font-size:1.1rem;margin-bottom:1rem;border-bottom:1px solid rgba(126,179,224,0.15);padding-bottom:0.5rem">Recently Added Victims</h2>
+    <p style="color:#8899aa;font-size:0.9rem;margin-bottom:1rem">The latest victims added to the tracker. Updated every 2 hours.</p>
+    <div id="recent-victims-list" style="background:rgba(126,179,224,0.04);border:1px solid rgba(126,179,224,0.12);border-radius:6px;padding:1rem;">
+      <p style="color:#667788;text-align:center;margin:1rem">Loading recent victims...</p>
+    </div>
+    <p style="color:#8899aa;font-size:0.8rem;margin-top:0.5rem">Full list available in the searchable table below.</p>
+  </div>
+
+  
+
+  <div class="search-wrap">
+    <input type="text" id="search-q" class="search-input" placeholder="Search by company name, domain, or group..." oninput="applyFilters()">
+    <select id="filter-group" class="filter-select" onchange="applyFilters()">
+      <option value="">All Groups</option>
+      <option value="lockbit3">lockbit3 (2033)</option>
+<option value="lockbit2">lockbit2 (996)</option>
+<option value="ransomhub">ransomhub (963)</option>
+<option value="play">play (923)</option>
+<option value="alphv">alphv (755)</option>
+<option value="Akira">Akira (601)</option>
+<option value="bianlian">bianlian (601)</option>
+<option value="clop">clop (478)</option>
+<option value="akira">akira (460)</option>
+<option value="blackbasta">blackbasta (447)</option>
+<option value="8base">8base (411)</option>
+<option value="qilin">qilin (380)</option>
+<option value="cactus">cactus (372)</option>
+<option value="conti">conti (333)</option>
+<option value="incransom">incransom (327)</option>
+<option value="hunters">hunters (308)</option>
+<option value="pysa">pysa (307)</option>
+<option value="Rhysida">Rhysida (252)</option>
+<option value="lynx">lynx (251)</option>
+<option value="everest">everest (246)</option>
+<option value="dragonforce">dragonforce (209)</option>
+<option value="rhysida">rhysida (209)</option>
+<option value="hiveleak">hiveleak (206)</option>
+<option value="royal">royal (192)</option>
+<option value="medusa">medusa (181)</option>
+<option value="blacksuit">blacksuit (176)</option>
+<option value="vicesociety">vicesociety (174)</option>
+<option value="ransomhouse">ransomhouse (158)</option>
+<option value="killsecurity">killsecurity (156)</option>
+<option value="snatch">snatch (145)</option>
+<option value="avaddon">avaddon (142)</option>
+<option value="ragroup">ragroup (140)</option>
+<option value="blackbyte">blackbyte (138)</option>
+<option value="handala">handala (127)</option>
+<option value="FOG">FOG (127)</option>
+<option value="noescape">noescape (123)</option>
+<option value="ragnarlocker">ragnarlocker (123)</option>
+<option value="bashe">bashe (114)</option>
+<option value="lockbit3_fs">lockbit3_fs (112)</option>
+<option value="monti">monti (111)</option>
+<option value="thegentlemen">thegentlemen (104)</option>
+<option value="cuba">cuba (102)</option>
+<option value="stormous">stormous (92)</option>
+<option value="nightspire">nightspire (89)</option>
+<option value="arcusmedia">arcusmedia (87)</option>
+<option value="abyss">abyss (80)</option>
+<option value="spacebears">spacebears (78)</option>
+<option value="lockbit5">lockbit5 (77)</option>
+<option value="lorenz">lorenz (77)</option>
+<option value="karakurt">karakurt (74)</option>
+<option value="ransomedvc">ransomedvc (73)</option>
+<option value="eldorado">eldorado (72)</option>
+<option value="coinbasecartel">coinbasecartel (68)</option>
+<option value="quantum">quantum (67)</option>
+<option value="lv">lv (63)</option>
+<option value="ransomexx">ransomexx (61)</option>
+<option value="flocker">flocker (55)</option>
+<option value="threeam">threeam (55)</option>
+<option value="darkvault">darkvault (55)</option>
+<option value="trigona">trigona (55)</option>
+<option value="mallox">mallox (53)</option>
+<option value="losttrust">losttrust (53)</option>
+<option value="meow">meow (48)</option>
+<option value="ransomblog_noname">ransomblog_noname (47)</option>
+<option value="kairos">kairos (46)</option>
+<option value="cicada3301">cicada3301 (45)</option>
+<option value="donutleaks">donutleaks (44)</option>
+<option value="revil">revil (41)</option>
+<option value="midas">midas (41)</option>
+<option value="Sarcoma">Sarcoma (40)</option>
+<option value="arvinclub">arvinclub (39)</option>
+<option value="darkleakmarket">darkleakmarket (39)</option>
+<option value="cloak">cloak (38)</option>
+<option value="knight">knight (37)</option>
+<option value="nokoyawa">nokoyawa (36)</option>
+<option value="spook">spook (35)</option>
+<option value="helldown">helldown (33)</option>
+<option value="embargo">embargo (32)</option>
+<option value="braincipher">braincipher (32)</option>
+<option value="dAn0n">dAn0n (32)</option>
+<option value="marketo">marketo (32)</option>
+<option value="blackmatter">blackmatter (31)</option>
+<option value="suncrypt">suncrypt (30)</option>
+<option value="payloadbin">payloadbin (29)</option>
+<option value="ciphbit">ciphbit (28)</option>
+<option value="dispossessor">dispossessor (28)</option>
+<option value="onyx">onyx (28)</option>
+<option value="Dragonforce">Dragonforce (27)</option>
+<option value="AiLock">AiLock (27)</option>
+<option value="nitrogen">nitrogen (27)</option>
+<option value="sarcoma">sarcoma (26)</option>
+<option value="termite">termite (26)</option>
+<option value="kelvinsecurity">kelvinsecurity (26)</option>
+<option value="shinyhunters">shinyhunters (25)</option>
+<option value="payload">payload (25)</option>
+<option value="Bashe">Bashe (24)</option>
+<option value="metaencryptor">metaencryptor (24)</option>
+<option value="underground">underground (23)</option>
+<option value="lockbit3_cronos">lockbit3_cronos (23)</option>
+<option value="moneymessage">moneymessage (22)</option>
+    </select>
+    <select id="filter-country" class="filter-select" onchange="applyFilters()">
+      <option value="">All Countries</option>
+      <option value="US">United States (649)</option>
+<option value="DE">Germany (78)</option>
+<option value="FR">France (66)</option>
+<option value="CA">Canada (62)</option>
+<option value="GB">United Kingdom (59)</option>
+<option value="IT">Italy (52)</option>
+<option value="BR">Brazil (33)</option>
+<option value="ES">Spain (28)</option>
+<option value="AU">Australia (27)</option>
+<option value="JP">Japan (25)</option>
+<option value="CH">Switzerland (25)</option>
+<option value="MX">Mexico (21)</option>
+<option value="IL">Israel (18)</option>
+<option value="TH">Thailand (17)</option>
+<option value="IN">India (17)</option>
+<option value="TW">Taiwan (14)</option>
+<option value="AR">Argentina (12)</option>
+<option value="CZ">Czech Republic (11)</option>
+<option value="KR">South Korea (11)</option>
+<option value="TR">Turkey (10)</option>
+<option value="CN">China (10)</option>
+<option value="SG">Singapore (9)</option>
+<option value="AT">Austria (9)</option>
+<option value="NL">Netherlands (8)</option>
+<option value="ZA">South Africa (8)</option>
+<option value="PL">Poland (8)</option>
+<option value="CO">Colombia (7)</option>
+<option value="PE">Peru (7)</option>
+<option value="HK">Hong Kong (7)</option>
+<option value="SE">Sweden (7)</option>
+<option value="MY">Malaysia (6)</option>
+<option value="AE">United Arab Emirates (6)</option>
+<option value="ID">Indonesia (5)</option>
+<option value="RO">Romania (5)</option>
+<option value="EG">Egypt (5)</option>
+<option value="BE">Belgium (5)</option>
+<option value="PH">Philippines (5)</option>
+<option value="HT">HT (5)</option>
+<option value="PA">Panama (4)</option>
+<option value="CL">Chile (4)</option>
+<option value="IR">IR (4)</option>
+<option value="GR">Greece (4)</option>
+<option value="PR">PR (4)</option>
+<option value="DO">Dominican Republic (3)</option>
+<option value="PT">Portugal (3)</option>
+<option value="SK">Slovakia (3)</option>
+<option value="DK">Denmark (3)</option>
+<option value="NO">Norway (3)</option>
+<option value="FI">Finland (3)</option>
+<option value="NY">NY (2)</option>
+<option value="NZ">New Zealand (2)</option>
+<option value="MT">Malta (2)</option>
+<option value="VE">VE (2)</option>
+<option value="JO">JO (2)</option>
+<option value="IE">Ireland (2)</option>
+<option value="BD">Bangladesh (2)</option>
+<option value="WS">WS (2)</option>
+<option value="HR">Croatia (2)</option>
+<option value="KW">KW (2)</option>
+<option value="PY">PY (2)</option>
+<option value="BA">Bosnia and Herzegovina (2)</option>
+<option value="OM">OM (2)</option>
+<option value="MA">MA (2)</option>
+<option value="LY">LY (1)</option>
+<option value="VN">Vietnam (1)</option>
+<option value="BW">BW (1)</option>
+<option value="SI">Slovenia (1)</option>
+<option value="LK">Sri Lanka (1)</option>
+<option value="TZ">Tanzania (1)</option>
+<option value="PK">Pakistan (1)</option>
+<option value="LU">Luxembourg (1)</option>
+<option value="NA">NA (1)</option>
+<option value="AD">AD (1)</option>
+<option value="IQ">IQ (1)</option>
+<option value="BH">BH (1)</option>
+<option value="RS">Serbia (1)</option>
+<option value="HU">Hungary (1)</option>
+<option value="PS">PS (1)</option>
+<option value="LB">LB (1)</option>
+<option value="ET">ET (1)</option>
+<option value="MG">MG (1)</option>
+<option value="BI">BI (1)</option>
+<option value="FU">FU (1)</option>
+<option value="IM">IM (1)</option>
+<option value="SA">Saudi Arabia (1)</option>
+<option value="BS">BS (1)</option>
+<option value="SO">SO (1)</option>
+<option value="GE">GE (1)</option>
+<option value="LT">Lithuania (1)</option>
+<option value="EZ">EZ (1)</option>
+<option value="DZ">DZ (1)</option>
+<option value="QC">QC (1)</option>
+<option value="EU">EU (1)</option>
+<option value="SV">SV (1)</option>
+<option value="QA">QA (1)</option>
+<option value="KE">Kenya (1)</option>
+    </select>
+    <select id="filter-sector" class="filter-select" onchange="applyFilters()">
+      <option value="">All Sectors</option>
+      <option value="Manufacturing">Manufacturing (74)</option>
+<option value="Healthcare">Healthcare (40)</option>
+<option value="Technology">Technology (38)</option>
+<option value="Business Services">Business Services (32)</option>
+<option value="Agriculture and Food Production">Agriculture and Food Production (18)</option>
+<option value="Education">Education (18)</option>
+<option value="Government">Government (17)</option>
+<option value="Consumer Services">Consumer Services (12)</option>
+<option value="Transportation/Logistics">Transportation/Logistics (12)</option>
+<option value="Public Sector">Public Sector (10)</option>
+<option value="Hospitality and Tourism">Hospitality and Tourism (9)</option>
+<option value="Construction">Construction (8)</option>
+<option value="Energy">Energy (7)</option>
+<option value="Financial">Financial (6)</option>
+<option value="Financial Services">Financial Services (5)</option>
+<option value="Telecommunication">Telecommunication (1)</option>
+<option value="Retail">Retail (1)</option>
+    </select>
+  </div>
+
+  <p id="result-count" style="color:#667788;font-size:0.82rem;margin:0.5rem 0">Loading...</p>
+  <p id="load-status" style="color:#7eb3e0;font-size:0.9rem;margin:0.5rem 0"></p>
+  <div id="results"><p style="color:#445566">Loading tracker data...</p></div>
+
+  <h2 style="color:#7eb3e0;font-size:1.1rem;margin:3rem 0 1rem;border-bottom:1px solid rgba(126,179,224,0.15);padding-bottom:0.5rem">Top Threat Actor Groups</h2>
+  <div class="related-links" style="margin-top:0.5rem"><a href="/threat-intel/groups/lockbit3.html" class="related-link">lockbit3 (2033)</a> <a href="/threat-intel/groups/lockbit2.html" class="related-link">lockbit2 (996)</a> <a href="/threat-intel/groups/ransomhub.html" class="related-link">ransomhub (963)</a> <a href="/threat-intel/groups/play.html" class="related-link">play (923)</a> <a href="/threat-intel/groups/alphv.html" class="related-link">alphv (755)</a> <a href="/threat-intel/groups/akira.html" class="related-link">Akira (601)</a> <a href="/threat-intel/groups/bianlian.html" class="related-link">bianlian (601)</a> <a href="/threat-intel/groups/clop.html" class="related-link">clop (478)</a> <a href="/threat-intel/groups/akira.html" class="related-link">akira (460)</a> <a href="/threat-intel/groups/blackbasta.html" class="related-link">blackbasta (447)</a> <a href="/threat-intel/groups/8base.html" class="related-link">8base (411)</a> <a href="/threat-intel/groups/qilin.html" class="related-link">qilin (380)</a> <a href="/threat-intel/groups/cactus.html" class="related-link">cactus (372)</a> <a href="/threat-intel/groups/conti.html" class="related-link">conti (333)</a> <a href="/threat-intel/groups/incransom.html" class="related-link">incransom (327)</a></div>
+
+  <h2 style="color:#7eb3e0;font-size:1.1rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(126,179,224,0.15);padding-bottom:0.5rem">Most Targeted Countries</h2>
+  <div class="related-links" style="margin-top:0.5rem"><a href="/ransomware-tracker/country/US/index.html" class="related-link">United States (649)</a> <a href="/ransomware-tracker/country/DE/index.html" class="related-link">Germany (78)</a> <a href="/ransomware-tracker/country/FR/index.html" class="related-link">France (66)</a> <a href="/ransomware-tracker/country/CA/index.html" class="related-link">Canada (62)</a> <a href="/ransomware-tracker/country/GB/index.html" class="related-link">United Kingdom (59)</a> <a href="/ransomware-tracker/country/IT/index.html" class="related-link">Italy (52)</a> <a href="/ransomware-tracker/country/BR/index.html" class="related-link">Brazil (33)</a> <a href="/ransomware-tracker/country/ES/index.html" class="related-link">Spain (28)</a> <a href="/ransomware-tracker/country/AU/index.html" class="related-link">Australia (27)</a> <a href="/ransomware-tracker/country/JP/index.html" class="related-link">Japan (25)</a> <a href="/ransomware-tracker/country/CH/index.html" class="related-link">Switzerland (25)</a> <a href="/ransomware-tracker/country/MX/index.html" class="related-link">Mexico (21)</a> <a href="/ransomware-tracker/country/IL/index.html" class="related-link">Israel (18)</a> <a href="/ransomware-tracker/country/TH/index.html" class="related-link">Thailand (17)</a> <a href="/ransomware-tracker/country/IN/index.html" class="related-link">India (17)</a></div>
+
+  <div style="background:rgba(126,179,224,0.04);border:1px solid rgba(126,179,224,0.12);border-radius:6px;padding:1.5rem;margin:3rem 0">
+    <h2 style="color:#e0e8f0;font-size:1rem;margin:0 0 0.8rem">About This Tracker</h2>
+    <p style="color:#8899aa;font-size:0.88rem;line-height:1.7;margin:0">
+      Binary Response monitors 90+ ransomware group leak sites on Tor and the clearnet. When a threat actor publishes a new victim claim,
+      our automated pipeline captures the disclosure and adds it to this tracker. Data covers claims from 2021 to the present day.
+      Victim names appear as published by threat actors. Binary Response does not verify all claims. Some records may reflect
+      exaggerated or unconfirmed disclosures. Treat this data as threat intelligence, not confirmed incident reports.
+      For incident response support, <a href="/contact.html" style="color:#7eb3e0">contact our team</a>.
+    </p>
+  </div>
+
+  <p class="last-updated">Last updated: 27 Apr 2026 21:36 UTC</p>
+</div>
+
+<footer class="site-footer"></footer>
+<script src="/js/footer.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script>
+let allVictims = [];
+let fuse = null;
+const PAGE_SIZE = 50;
+let currentPage = 1;
+let filtered = [];
+
+async function fetchChunk(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20000);
+  try {
+    const r = await fetch(url + '?v=' + Date.now(), { signal: controller.signal });
+    clearTimeout(timeout);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return await r.json();
+  } catch(e) { clearTimeout(timeout); throw e; }
+}
+
+async function initTracker() {
+  const statusEl = document.getElementById('load-status');
+  const resultsEl = document.getElementById('results');
+  const BASE = '/ransomware-tracker/data';
+  try {
+    statusEl.textContent = 'Loading data…';
+    const manifest = await fetchChunk(BASE + '/victims-manifest.json');
+    const { total, chunks } = manifest;
+
+    // Load first chunk immediately for fast first render
+    const first = await fetchChunk(BASE + '/victims-chunk-0.json');
+    allVictims = first;
+    allVictims.sort((a, b) => (b.dt || '').localeCompare(a.dt || ''));
+    filtered = allVictims;
+    statusEl.textContent = `Loaded ${allVictims.length.toLocaleString()} of ${total.toLocaleString()} records…`;
+    renderTable();
+
+    // Fetch remaining chunks in background
+    for (let i = 1; i < chunks; i++) {
+      const chunk = await fetchChunk(BASE + '/victims-chunk-' + i + '.json');
+      allVictims = allVictims.concat(chunk);
+      statusEl.textContent = `Loaded ${allVictims.length.toLocaleString()} of ${total.toLocaleString()} records…`;
+    }
+
+    // All loaded — build full search index
+    allVictims.sort((a, b) => (b.dt || '').localeCompare(a.dt || ''));
+    fuse = new Fuse(allVictims, { keys: ['n', 'g', 'd'], threshold: 0.3, limit: 500 });
+    filtered = allVictims;
+    statusEl.textContent = '';
+    renderTable();
+  } catch(e) {
+    const msg = e.name === 'AbortError' ? 'Connection timed out — check your signal and retry.' : 'Failed to load: ' + e.message;
+    statusEl.textContent = '';
+    resultsEl.innerHTML = '<p style="color:#e05555">' + msg + ' <button onclick="initTracker()" style="margin-left:1rem;padding:0.3rem 0.8rem;background:#7eb3e0;border:none;border-radius:4px;color:#0a1628;cursor:pointer">Retry</button></p>';
+  }
+}
+
+function applyFilters() {
+  const q = document.getElementById('search-q').value.trim();
+  const group = document.getElementById('filter-group').value;
+  const country = document.getElementById('filter-country').value;
+  const sector = document.getElementById('filter-sector').value;
+
+  let results = q ? fuse.search(q).map(r => r.item) : [...allVictims];
+
+  if (group) results = results.filter(v => v.g === group);
+  if (country) results = results.filter(v => v.r === country);
+  if (sector) results = results.filter(v => v.s === sector);
+
+  filtered = results;
+  currentPage = 1;
+  renderTable();
+}
+
+function renderTable() {
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const page = filtered.slice(start, start + PAGE_SIZE);
+  const total = filtered.length;
+
+  document.getElementById('result-count').textContent = total.toLocaleString() + ' results';
+
+  let html = '<table class="victim-table"><thead><tr><th>Organisation</th><th>Group</th><th>Country</th><th>Sector</th><th title="Date the ransomware group claimed or published the attack on their leak site. May differ from the actual breach date.">Est. Publication Date ⓘ</th></tr></thead><tbody>';
+  for (const v of page) {
+    html += '<tr>';
+    html += '<td><a href="/victim/' + v.sl + '.html">' + esc(v.n) + '</a></td>';
+    html += '<td><a href="/threat-intel/groups/' + encodeURIComponent(v.gs) + '.html" class="tag tag-group">' + esc(v.g) + '</a></td>';
+    html += '<td>' + esc(v.rn || v.r || '') + '</td>';
+    html += '<td>' + esc(v.s || '') + '</td>';
+    html += '<td>' + esc(v.dt || '') + '</td>';
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+
+  // Pagination
+  const totalPages = Math.ceil(total / PAGE_SIZE);
+  if (totalPages > 1) {
+    html += '<div class="pagination">';
+    if (currentPage > 1) html += '<button class="page-btn" onclick="goPage(' + (currentPage-1) + ')">Prev</button>';
+    const startP = Math.max(1, currentPage - 3);
+    const endP = Math.min(totalPages, currentPage + 3);
+    for (let p = startP; p <= endP; p++) {
+      html += '<button class="page-btn' + (p === currentPage ? ' active' : '') + '" onclick="goPage(' + p + ')">' + p + '</button>';
+    }
+    if (currentPage < totalPages) html += '<button class="page-btn" onclick="goPage(' + (currentPage+1) + ')">Next</button>';
+    html += '</div>';
+  }
+
+  document.getElementById('results').innerHTML = html;
+}
+
+function goPage(p) { currentPage = p; renderTable(); window.scrollTo({top: document.getElementById('results').offsetTop - 80, behavior: 'smooth'}); }
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+async function fetchRecentVictims() {
+  const el = document.getElementById('recent-victims-list');
+  if (!el) return;
+  try {
+    const r = await fetch('/ransomware-tracker/data/recent-victims.json?v=' + Date.now(), { cache: 'no-cache' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    if (!data.victims || !data.victims.length) { el.innerHTML = '<p style="color:#667788;text-align:center">No recent victims.</p>'; return; }
+    const rows = data.victims.slice(0, 10).map(v => {
+      const name = esc(v.n) || 'Unknown';
+      const group = esc(v.g) || 'Unknown';
+      const region = esc(v.r) || '';
+      const sector = esc(v.s) || '';
+      const date = (v.dt || '').slice(0, 10);
+      const slug = esc(v.sl) || '';
+      return `<tr><td><a href="/victim/${slug}.html">${name}</a></td><td><a href="/threat-intel/groups/${group}.html" class="tag tag-group">${group}</a></td><td>${region}</td><td>${sector}</td><td>${date}</td></tr>`;
+    }).join('');
+    el.innerHTML = `<table class="victim-table" style="font-size:0.82rem;width:100%"><thead><tr><th>Organisation</th><th>Group</th><th>Country</th><th>Sector</th><th>Added</th></tr></thead><tbody>${rows}</tbody></table>`;
+  } catch(e) {
+    el.innerHTML = '<p style="color:#667788;text-align:center">Failed to load recent victims.</p>';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => { initTracker(); fetchRecentVictims(); });
+</script>
+
+</body>
+</html>

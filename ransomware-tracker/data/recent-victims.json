@@ -1,8 +1,138 @@
 {
-  "generated_at": "2026-04-27T12:56:42.885483Z",
+  "generated_at": "2026-04-27T17:05:26.830335Z",
   "count": 20,
   "days": 7,
   "victims": [
+    {
+      "id": 19722,
+      "n": "Stelia North America",
+      "g": "rhysida",
+      "dt": "2026-04-27 16:12:23.663338",
+      "r": "US",
+      "s": "",
+      "d": "",
+      "sl": "stelia-north-america"
+    },
+    {
+      "id": 19705,
+      "n": "Raich Sp. z o.o.",
+      "g": "AiLock",
+      "dt": "2026-04-27 15:48:54.069255",
+      "r": "PL",
+      "s": "",
+      "d": "raich.net",
+      "sl": "raich-sp-z-oo"
+    },
+    {
+      "id": 19706,
+      "n": "TokyoHosoKogyo Corporation",
+      "g": "qilin",
+      "dt": "2026-04-27 14:59:18.393085",
+      "r": "JP",
+      "s": "",
+      "d": "tokyohoso.co.jp",
+      "sl": "tokyohosokogyo-corporation"
+    },
+    {
+      "id": 19707,
+      "n": "rosehillgardens.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 13:31:05.343750",
+      "r": "US",
+      "s": "",
+      "d": "rosehillgardens.com",
+      "sl": "rosehillgardenscom"
+    },
+    {
+      "id": 19708,
+      "n": "gelatissimo.com.au",
+      "g": "dragonforce",
+      "dt": "2026-04-27 13:25:56.837810",
+      "r": "AU",
+      "s": "",
+      "d": "gelatissimo.com.au",
+      "sl": "gelatissimocomau"
+    },
+    {
+      "id": 19709,
+      "n": "avalonflooring.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 13:22:13.792878",
+      "r": "US",
+      "s": "",
+      "d": "avalonflooring.com",
+      "sl": "avalonflooringcom"
+    },
+    {
+      "id": 19710,
+      "n": "mopec.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 13:18:47.379882",
+      "r": "US",
+      "s": "",
+      "d": "mopec.com",
+      "sl": "mopeccom"
+    },
+    {
+      "id": 19711,
+      "n": "fatbrands.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 13:15:13.753081",
+      "r": "US",
+      "s": "",
+      "d": "fatbrands.com",
+      "sl": "fatbrandscom"
+    },
+    {
+      "id": 19712,
+      "n": "andrewtjohnson.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 13:11:50.754729",
+      "r": "US",
+      "s": "",
+      "d": "andrewtjohnson.com",
+      "sl": "andrewtjohnsoncom"
+    },
+    {
+      "id": 19713,
+      "n": "wmsopko.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 13:08:33.385089",
+      "r": "UA",
+      "s": "",
+      "d": "wmsopko.com",
+      "sl": "wmsopkocom"
+    },
+    {
+      "id": 19714,
+      "n": "aotco.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 13:04:21.691858",
+      "r": "",
+      "s": "",
+      "d": "aotco.com",
+      "sl": "aotcocom"
+    },
+    {
+      "id": 19715,
+      "n": "delonhampton.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 12:52:57.311976",
+      "r": "GB",
+      "s": "",
+      "d": "delonhampton.com",
+      "sl": "delonhamptoncom"
+    },
+    {
+      "id": 19716,
+      "n": "ibswebsite.com",
+      "g": "dragonforce",
+      "dt": "2026-04-27 12:49:11.384220",
+      "r": "US",
+      "s": "",
+      "d": "ibswebsite.com",
+      "sl": "ibswebsitecom"
+    },
     {
       "id": 18959,
       "n": "Rural Municipality of Gimli",
@@ -72,136 +202,6 @@
       "s": "",
       "d": "www.ransomware.live",
       "sl": "narteks-tekstil-as"
-    },
-    {
-      "id": 18966,
-      "n": "MTCI",
-      "g": "incransom",
-      "dt": "2026-04-26 20:00:00.000000",
-      "r": "US",
-      "s": "",
-      "d": "www.ransomware.live",
-      "sl": "mtci"
-    },
-    {
-      "id": 18967,
-      "n": "Synmosa Biopharma",
-      "g": "dragonforce",
-      "dt": "2026-04-26 17:56:19.933136",
-      "r": "TW",
-      "s": "",
-      "d": "synmosa.com.tw",
-      "sl": "synmosa-biopharma"
-    },
-    {
-      "id": 18948,
-      "n": "EEC Group",
-      "g": "thegentlemen",
-      "dt": "2026-04-26 15:52:06.109820",
-      "r": "EG",
-      "s": "",
-      "d": "eecegypt.com",
-      "sl": "eec-group"
-    },
-    {
-      "id": 18949,
-      "n": "Coralina",
-      "g": "thegentlemen",
-      "dt": "2026-04-26 15:52:00.568266",
-      "r": "CO",
-      "s": "",
-      "d": "coralina.gov.co",
-      "sl": "coralina"
-    },
-    {
-      "id": 18950,
-      "n": "Lawson Software",
-      "g": "thegentlemen",
-      "dt": "2026-04-26 15:51:56.614186",
-      "r": "TH",
-      "s": "",
-      "d": "lawson.co.th",
-      "sl": "lawson-software"
-    },
-    {
-      "id": 18968,
-      "n": "reddycardiology.com",
-      "g": "incransom",
-      "dt": "2026-04-26 14:40:00.000000",
-      "r": "US",
-      "s": "",
-      "d": "reddycardiology.com",
-      "sl": "reddycardiologycom"
-    },
-    {
-      "id": 18969,
-      "n": "Istarpal",
-      "g": "qilin",
-      "dt": "2026-04-26 00:00:00.000000",
-      "r": "PS",
-      "s": "",
-      "d": "istarpal.com",
-      "sl": "istarpal"
-    },
-    {
-      "id": 18970,
-      "n": "RT Software",
-      "g": "tridentlocker",
-      "dt": "2026-04-26 00:00:00.000000",
-      "r": "",
-      "s": "",
-      "d": "www.ransomware.live",
-      "sl": "rt-software"
-    },
-    {
-      "id": 18944,
-      "n": "Apple Film Group",
-      "g": "lamashtu",
-      "dt": "2026-04-25 16:42:14.660647",
-      "r": "DE",
-      "s": "",
-      "d": "applefilm-group.com",
-      "sl": "apple-film-group"
-    },
-    {
-      "id": 18934,
-      "n": "Buckley Powder",
-      "g": "qilin",
-      "dt": "2026-04-25 14:48:25.481823",
-      "r": "CA",
-      "s": "",
-      "d": "buckleypowder.com",
-      "sl": "buckley-powder"
-    },
-    {
-      "id": 18935,
-      "n": "Cahbo Produkter",
-      "g": "qilin",
-      "dt": "2026-04-25 14:48:08.709942",
-      "r": "SE",
-      "s": "",
-      "d": "cahbo.se",
-      "sl": "cahbo-produkter"
-    },
-    {
-      "id": 18936,
-      "n": "Leistritz Turbine Technology",
-      "g": "qilin",
-      "dt": "2026-04-25 14:47:51.912227",
-      "r": "DE",
-      "s": "",
-      "d": "turbines.leistritz.com",
-      "sl": "leistritz-turbine-technology"
-    },
-    {
-      "id": 18937,
-      "n": "KEMBA Indianapolis Credit Union",
-      "g": "qilin",
-      "dt": "2026-04-25 14:47:35.388552",
-      "r": "US",
-      "s": "",
-      "d": "mykemba.org",
-      "sl": "kemba-indianapolis-credit-union"
     }
   ]
 }
