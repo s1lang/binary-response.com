@@ -12,12 +12,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
       - name: Deploy to IONOS
-        uses: easingthemes/sshfs@v2
-        with:
-          host: access-5019920255.webspace-host.com
-          username: su296924
-          password: ${{ secrets.IONOS_SFTP_PASSWORD }}
-          port: 22
-          remote_dir: /public
-          local_dir: .
+        env:
+          SFTP_HOST: access-5019920255.webspace-host.com
+          SFTP_USER: su296924
+          SFTP_PASSWORD: ${{ secrets.IONOS_SFTP_PASSWORD }}
+        run: |
+          export SSHPASS="$SFTP_PASSWORD"
+          sshpass -e rsync -avz --delete \
+            -e "ssh -o StrictHostKeyChecking=no -o ConnectTimeout=30" \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            --exclude='scripts/__pycache__' \
+            ./ \
+            "$SFTP_USER@$SFTP_HOST:/public/"
