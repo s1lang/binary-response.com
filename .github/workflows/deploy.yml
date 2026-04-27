@@ -24,6 +24,6 @@ jobs:
           sshpass -p "$SFTP_PASSWORD" sftp -o StrictHostKeyChecking=no -o ConnectTimeout=30 $SFTP_USER@$SFTP_HOST << 'EOF'
           cd /public
           lcd .
-          put -r * ./
+          put -r ransomware-tracker/victim ./
           bye
           EOF

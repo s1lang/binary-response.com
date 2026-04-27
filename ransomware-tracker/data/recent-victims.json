@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-04-27T12:56:42.885483Z",
+  "count": 20,
+  "days": 7,
+  "victims": [
+    {
+      "id": 18959,
+      "n": "Rural Municipality of Gimli",
+      "g": "payload",
+      "dt": "2026-04-27 08:16:20.428726",
+      "r": "CA",
+      "s": "",
+      "d": "www.ransomware.live",
+      "sl": "rural-municipality-of-gimli"
+    },
+    {
+      "id": 18960,
+      "n": "Exclusive Networks",
+      "g": "qilin",
+      "dt": "2026-04-27 07:49:25.242277",
+      "r": "FR",
+      "s": "",
+      "d": "exclusive-networks.com",
+      "sl": "exclusive-networks"
+    },
+    {
+      "id": 18961,
+      "n": "Longwood Engineering Company",
+      "g": "qilin",
+      "dt": "2026-04-27 07:49:08.680171",
+      "r": "GB",
+      "s": "",
+      "d": "longwoodengineering.co.uk",
+      "sl": "longwood-engineering-company"
+    },
+    {
+      "id": 18962,
+      "n": "A & A Building Material",
+      "g": "qilin",
+      "dt": "2026-04-27 07:48:52.240145",
+      "r": "US",
+      "s": "",
+      "d": "arcadiabuildingmaterials.com",
+      "sl": "a-a-building-material"
+    },
+    {
+      "id": 18963,
+      "n": "\ufeff\ufeffMuller Technology",
+      "g": "qilin",
+      "dt": "2026-04-27 07:48:35.306641",
+      "r": "DE",
+      "s": "",
+      "d": "muller-technology.com",
+      "sl": "muller-technology"
+    },
+    {
+      "id": 18964,
+      "n": "Inspira",
+      "g": "qilin",
+      "dt": "2026-04-27 07:48:14.533059",
+      "r": "PR",
+      "s": "",
+      "d": "inspirapr.com",
+      "sl": "inspira"
+    },
+    {
+      "id": 18965,
+      "n": "Narteks Tekstil A.S",
+      "g": "krybit",
+      "dt": "2026-04-27 07:45:49.818868",
+      "r": "TR",
+      "s": "",
+      "d": "www.ransomware.live",
+      "sl": "narteks-tekstil-as"
+    },
+    {
+      "id": 18966,
+      "n": "MTCI",
+      "g": "incransom",
+      "dt": "2026-04-26 20:00:00.000000",
+      "r": "US",
+      "s": "",
+      "d": "www.ransomware.live",
+      "sl": "mtci"
+    },
+    {
+      "id": 18967,
+      "n": "Synmosa Biopharma",
+      "g": "dragonforce",
+      "dt": "2026-04-26 17:56:19.933136",
+      "r": "TW",
+      "s": "",
+      "d": "synmosa.com.tw",
+      "sl": "synmosa-biopharma"
+    },
+    {
+      "id": 18948,
+      "n": "EEC Group",
+      "g": "thegentlemen",
+      "dt": "2026-04-26 15:52:06.109820",
+      "r": "EG",
+      "s": "",
+      "d": "eecegypt.com",
+      "sl": "eec-group"
+    },
+    {
+      "id": 18949,
+      "n": "Coralina",
+      "g": "thegentlemen",
+      "dt": "2026-04-26 15:52:00.568266",
+      "r": "CO",
+      "s": "",
+      "d": "coralina.gov.co",
+      "sl": "coralina"
+    },
+    {
+      "id": 18950,
+      "n": "Lawson Software",
+      "g": "thegentlemen",
+      "dt": "2026-04-26 15:51:56.614186",
+      "r": "TH",
+      "s": "",
+      "d": "lawson.co.th",
+      "sl": "lawson-software"
+    },
+    {
+      "id": 18968,
+      "n": "reddycardiology.com",
+      "g": "incransom",
+      "dt": "2026-04-26 14:40:00.000000",
+      "r": "US",
+      "s": "",
+      "d": "reddycardiology.com",
+      "sl": "reddycardiologycom"
+    },
+    {
+      "id": 18969,
+      "n": "Istarpal",
+      "g": "qilin",
+      "dt": "2026-04-26 00:00:00.000000",
+      "r": "PS",
+      "s": "",
+      "d": "istarpal.com",
+      "sl": "istarpal"
+    },
+    {
+      "id": 18970,
+      "n": "RT Software",
+      "g": "tridentlocker",
+      "dt": "2026-04-26 00:00:00.000000",
+      "r": "",
+      "s": "",
+      "d": "www.ransomware.live",
+      "sl": "rt-software"
+    },
+    {
+      "id": 18944,
+      "n": "Apple Film Group",
+      "g": "lamashtu",
+      "dt": "2026-04-25 16:42:14.660647",
+      "r": "DE",
+      "s": "",
+      "d": "applefilm-group.com",
+      "sl": "apple-film-group"
+    },
+    {
+      "id": 18934,
+      "n": "Buckley Powder",
+      "g": "qilin",
+      "dt": "2026-04-25 14:48:25.481823",
+      "r": "CA",
+      "s": "",
+      "d": "buckleypowder.com",
+      "sl": "buckley-powder"
+    },
+    {
+      "id": 18935,
+      "n": "Cahbo Produkter",
+      "g": "qilin",
+      "dt": "2026-04-25 14:48:08.709942",
+      "r": "SE",
+      "s": "",
+      "d": "cahbo.se",
+      "sl": "cahbo-produkter"
+    },
+    {
+      "id": 18936,
+      "n": "Leistritz Turbine Technology",
+      "g": "qilin",
+      "dt": "2026-04-25 14:47:51.912227",
+      "r": "DE",
+      "s": "",
+      "d": "turbines.leistritz.com",
+      "sl": "leistritz-turbine-technology"
+    },
+    {
+      "id": 18937,
+      "n": "KEMBA Indianapolis Credit Union",
+      "g": "qilin",
+      "dt": "2026-04-25 14:47:35.388552",
+      "r": "US",
+      "s": "",
+      "d": "mykemba.org",
+      "sl": "kemba-indianapolis-credit-union"
+    }
+  ]
+}
