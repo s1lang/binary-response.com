@@ -148,12 +148,15 @@ def victim_page(row, all_groups, slug=None):
     status_raw = row["status"] or "new"
     status_label, status_cls = status_map.get(status_raw, (status_raw, "status-new"))
 
+    # Treat N/A as empty — must be defined before JSON-LD
+    desc_clean = desc if desc and desc.strip().upper() != "N/A" else ""
+
     # JSON-LD
     ld = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": f"{name} — Ransomware Victim",
-        "description": desc[:200] if desc else f"{name} was listed as a victim by {actor}.",
+        "description": desc_clean[:200] if desc_clean else f"{name} was listed as a ransomware victim by {actor}.",
         "datePublished": disc_iso,
         "author": {"@type": "Person", "name": "Simon Lynge", "url": f"{SITE_URL}/about.html"},
         "publisher": {"@type": "Organization", "name": "Binary Response", "url": SITE_URL},
@@ -161,8 +164,8 @@ def victim_page(row, all_groups, slug=None):
     }
 
     # Precompute meta desc (f-strings can't contain backslash in expression)
-    meta_desc = esc((desc[:160] if desc else f"{name} was listed as a ransomware victim by {actor} on their dark web leak site.")[:160])
-    og_desc   = esc((desc[:160] if desc else f"{name} ransomware victim listing by {actor}.")[:160])
+    meta_desc = esc((desc_clean[:160] if desc_clean else f"{name} was listed as a ransomware victim by {actor} on their dark web leak site.")[:160])
+    og_desc   = esc((desc_clean[:160] if desc_clean else f"{name} ransomware victim listing by {actor}.")[:160])
 
     # Precompute detail card values
     country_link = (f"<a href='/ransomware-tracker/country/" + esc(region_c) + "/index.html'>" + esc(region_n) + "</a>") if region_n else "Unknown"
@@ -171,7 +174,7 @@ def victim_page(row, all_groups, slug=None):
     data_pub_val = "Yes — data posted to leak site" if row["data_published"] else "Not yet published"
     vol_card     = (f"<div class='detail-card'><div class='detail-label'>Data Volume</div><div class='detail-value'>" + esc(vol_str) + "</div></div>") if vol_str else ""
     data_types_card = ("<div class='detail-card'><div class='detail-label'>Data Types</div><div class='detail-value'>" + ", ".join(f"<span class='data-tag'>" + esc(t) + "</span>" for t in data_types[:6]) + "</div></div>") if data_types else ""
-    desc_html    = ("<div class='section'><h2>Incident Description</h2><div class='victim-description'>" + "<p>" + "</p><p>".join(esc(d).strip() for d in desc.split("\n") if d.strip()) + "</p></div></div>") if desc else ""
+    desc_html    = ("<div class='section'><h2>Incident Description</h2><div class='victim-description'>" + "<p>" + "</p><p>".join(esc(d).strip() for d in desc_clean.split("\n") if d.strip()) + "</p></div></div>") if desc_clean else ""
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
