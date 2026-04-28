@@ -19,9 +19,11 @@ jobs:
         env:
           SFTP_PASSWORD: ${{ secrets.IONOS_SFTP_PASSWORD }}
         run: |
+          # Pre-accept the SFTP host key to avoid StrictHostKeyChecking prompts
+          ssh-keyscan -H access-5019920255.webspace-host.com >> ~/.ssh/known_hosts 2>/dev/null
+
           cat > /tmp/deploy_lftp.txt << 'LFTPEOF'
           set net:timeout 60
-          set sftp:max-protocol-version 3
           open -u "su296924,$SFTP_PASSWORD" sftp://access-5019920255.webspace-host.com
           cd /public
           lcd .
