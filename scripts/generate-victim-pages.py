@@ -15,6 +15,7 @@ import json
 import re
 import unicodedata
 import argparse
+import base64
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -46,6 +47,51 @@ def esc(s):
         .replace(">", "&gt;")
         .replace('"', "&quot;")
         .replace("'", "&#39;"))
+
+
+# ── Enrichment helpers ─────────────────────────────────────────────────────
+
+def parse_source_site(source_site):
+    """Derive a human-readable leak site name from source_site field."""
+    if not source_site:
+        return "the group's dark web leak site"
+    # e.g. "ransomware_live_api", "qilin_tor", "everest_tor", "lockbit3_tor"
+    site = source_site.replace("_api", "").replace("_tor", "").replace("_web", "")
+    site = site.replace("_", " ").strip()
+    # Capitalise nicely
+    site = " ".join(w.capitalize() for w in site.split())
+    return f"the {site} leak site"
+
+
+def decode_ransomware_live_url(external_id):
+    """Decode a ransomware.live victim ID to get the victim name from base64."""
+    if not external_id or "ransomware.live" not in str(external_id):
+        return None
+    try:
+        b64 = str(external_id).split("/id/")[-1]
+        # Add padding if needed
+        pad = (4 - len(b64) % 4) % 4
+        decoded = base64.b64decode(b64 + "=" * pad).decode("utf-8", errors="replace")
+        # Clean up garbage chars (nulls, form feeds, etc.)
+        decoded = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", decoded)
+        decoded = decoded.strip()
+        if decoded and len(decoded) > 2:
+            return decoded
+    except Exception:
+        pass
+    return None
+
+
+def get_leak_site_url(source_site, external_id):
+    """Build a direct link to the ransomware.live victim page if available."""
+    if not source_site:
+        return ""
+    # Only link for ransomware_live_api source
+    if "ransomware_live_api" not in str(source_site):
+        return ""
+    if not external_id or "ransomware.live" not in str(external_id):
+        return ""
+    return str(external_id).strip()
 
 
 def region_name(code):
@@ -98,7 +144,10 @@ def victim_page(row, all_groups, slug=None):
     claim_url = row["claim_url"] or ""
     source_url = row["source_url"] or ""
     source    = row["source_site"] or ""
-    desc      = row["description"] or ""
+    external_id    = row["external_id"] or ""
+    screenshot_url = row["screenshot_url"] or ""
+    case_ref       = row["case_ref"] or ""
+
     disc_date = row["disclosure_date"] or ""
     disc_dt   = disc_date[:10] if disc_date else ""
     disc_full = disc_date if disc_date else ""
@@ -148,8 +197,54 @@ def victim_page(row, all_groups, slug=None):
     status_raw = row["status"] or "new"
     status_label, status_cls = status_map.get(status_raw, (status_raw, "status-new"))
 
-    # Treat N/A as empty — must be defined before JSON-LD
-    desc_clean = desc if desc and desc.strip().upper() != "N/A" else ""
+    desc = row["description"] or ""
+    # Strip bracketed junk and N/A variants, then check if anything useful remains
+    stripped = re.sub(r'\s*\[\s*N/A\s*\]|\[\s*N/A\s*\]|\[\s*AI generated\s*\]|\bN/A\b', '', desc, flags=re.IGNORECASE).strip()
+    desc_clean = stripped if stripped else ""
+
+    # ── Enrichment for thin records ───────────────────────────────────────────
+    leak_site_name = parse_source_site(source)
+    leak_url = get_leak_site_url(source, external_id)
+    decoded_name = decode_ransomware_live_url(external_id)
+    if not desc_clean and (decoded_name or source or disc_fmt):
+        parts = []
+        if decoded_name and decoded_name.lower() != name.lower():
+            parts.append(f"Listed as '{decoded_name}'")
+        elif disc_fmt:
+            parts.append(f"Victim was listed on {disc_fmt}")
+        else:
+            parts.append(f"Victim was listed by {actor}")
+        if source and "live" not in source.lower():
+            parts.append(f"Source: {source.replace('_', ' ').title()}")
+        if leak_url:
+            parts.append(f"<a href='{leak_url}' target='_blank' rel='noopener'>View on Ransomware Live →</a>")
+        fallback_desc = ". ".join(parts)
+    else:
+        fallback_desc = ""
+
+    screenshot_card = (
+        f"<div class='section'><h2>Leak Site Evidence</h2>"
+        f"<div class='screenshot-wrapper'>"
+        f"<img src='{screenshot_url}' alt='Screenshot from {actor} leak site' "
+        f"loading='lazy' style='max-width:100%;border-radius:8px;border:1px solid #1e3a5f;'>"
+        f"<p style='margin-top:0.5rem;font-size:0.8rem;color:#556677;'>"
+        f"Screenshot captured from {actor} leak site. "
+        f"<a href='{leak_url}' target='_blank' rel='noopener' style='color:#7eb3e0;'>View live page →</a>"
+        f"</p></div></div>"
+    ) if screenshot_url and leak_url else (
+        f"<div class='section'><h2>Leak Site Evidence</h2>"
+        f"<p style='color:#556677;font-size:0.9rem;'>Screenshot captured from {actor} leak site.</p></div>"
+    ) if screenshot_url else ""
+
+    case_card = (
+        f"<div class='detail-card'><div class='detail-label'>Case Reference</div>"
+        f"<div class='detail-value' style='font-family:\"JetBrains Mono\",monospace;font-size:0.85rem;'>{esc(case_ref)}</div></div>"
+    ) if case_ref else ""
+
+    leak_card = (
+        f"<div class='detail-card'><div class='detail-label'>Leak Site</div>"
+        f"<div class='detail-value'><a href='{leak_url}' target='_blank' rel='noopener'>{leak_url[:70]}…</a></div></div>"
+    ) if leak_url else ""
 
     # JSON-LD
     ld = {
@@ -174,7 +269,7 @@ def victim_page(row, all_groups, slug=None):
     data_pub_val = "Yes — data posted to leak site" if row["data_published"] else "Not yet published"
     vol_card     = (f"<div class='detail-card'><div class='detail-label'>Data Volume</div><div class='detail-value'>" + esc(vol_str) + "</div></div>") if vol_str else ""
     data_types_card = ("<div class='detail-card'><div class='detail-label'>Data Types</div><div class='detail-value'>" + ", ".join(f"<span class='data-tag'>" + esc(t) + "</span>" for t in data_types[:6]) + "</div></div>") if data_types else ""
-    desc_html    = ("<div class='section'><h2>Incident Description</h2><div class='victim-description'>" + "<p>" + "</p><p>".join(esc(d).strip() for d in desc_clean.split("\n") if d.strip()) + "</p></div></div>") if desc_clean else ""
+    desc_html    = ("<div class='section'><h2>Incident Description</h2><div class='victim-description'>" + "<p>" + "</p><p>".join(esc(d).strip() for d in desc_clean.split("\n") if d.strip()) + "</p></div></div>") if desc_clean else ("<div class='section'><h2>Incident Description</h2><div class='victim-description'><p>" + fallback_desc + "</p></div></div>") if fallback_desc else ""
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -280,9 +375,12 @@ def victim_page(row, all_groups, slug=None):
     </div>
     {vol_card}
     {data_types_card}
+    {leak_card}
+    {case_card}
   </div>
 
   {desc_html}
+  {screenshot_card}
 
   <div class="section">
     <h2>Threat Actor Profile</h2>
