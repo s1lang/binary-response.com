@@ -44,6 +44,165 @@ def esc(s):
         .replace('"', "&quot;")
         .replace("'", "&#39;"))
 
+def infer_sector(name):
+    """Infer sector from company name keywords. Handles domain-only names by stripping TLDs."""
+    if not name:
+        return ""
+    name = name.strip()
+    # Strip trailing URL artifacts and amounts
+    name = re.sub(r'https?://\S+', '', name)
+    name = re.sub(r'\$\S+', '', name)
+    name = re.sub(r'\b\d+[\d.,]*\s*(GB|MB|TB|KB)', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'DISCLOSED|<.*?>|&[a-z]+;', '', name)
+    name = re.sub(r'\s+', ' ', name).strip()
+    if not name:
+        return ""
+
+    n = name.lower()
+
+    # Strip common TLDs and corporate suffixes to match on root domain / base name
+    root = re.sub(r'\.(com|org|net|io|co|gov|edu|gov\.in|com\.br|com\.au|com\.hk|com\.cn|co\.uk|co\.za|co\.nz|co\.il|it|be|de|fr|es|nl|pl|ru|jp|kr|in|ca|ie|at|ch|se|no|dk|fi)\b.*$', '', n, flags=re.IGNORECASE)
+    root = re.sub(r'\b(inc|llc|ltd|limited|gmbh|spa|s\.a|corp|corporation|plc|ag|co|holdings|group|holdings?|associates|services|enterprises?|solutions|international|partners|systems|technologies|consulting|advisors?)\b.*$', '', root)
+    root = re.sub(r'[-\s]+', ' ', root).strip()
+
+    all_text = n + ' ' + root
+    # Education
+    if any(k in all_text for k in ["university", "college", "school", "academy", "institute", "education", "learning", "training", "student", "campus", "nsw edu", "isd", "school district"]):
+        return "Education"
+    # Healthcare
+    if any(k in all_text for k in ["hospital", "clinic", "health", "medical", "pharma", "dental", "care center", "healthcare", "clinical", "diagnostic", "laboratory", "lab ", "surgery", "urgic", "eye center", "dermatology", "orthopedic", "physiotherapy", "rehabilitation", "nursing", "senior care", "assisted living", "hospice"]):
+        return "Healthcare"
+    # Government
+    if any(k in all_text for k in ["police", "gov", "government", "municipality", "county", "city of", "town of", "state of", "department", "agency", "courthouse", "judicial", "army", "navy", "air force", "defense", "military", "veterans", "irs", "tax", "licensing", "dmv", "permit", "regulatory", "port authority", "transit authority"]):
+        return "Government"
+    # Financial
+    if any(k in all_text for k in ["bank", "finance", "financial", "credit", "investment", "insurance", "insurer", "wealth", "capital", "securities", "trading", "loan", "lending", "mortgage", "asset management", "hedge fund", "pension", "401k", "broker", "advisory", "accounting", "cpa", "tax"]):
+        return "Financial Services"
+    # Technology
+    if any(k in all_text for k in ["tech", "software", "digital", "cyber", "cloud", "data center", "datacenter", "hosting", "saas", "it services", "it solution", "systems", "networks", "telecom", "telecommunications", "isp", "broadband", "fiber", "wireless", "satellite", "iot", "semiconductor", "chip", "electronics", "manufacturing", "ai ", "machine learning"]):
+        return "Technology"
+    # Critical Infrastructure / Energy
+    if any(k in all_text for k in ["energy", "power", "electric", "utility", "gas", "oil", "petroleum", "pipeline", "refinery", "nuclear", "solar", "wind", "hydro", "grid", "water supply", "sewage", "wastewater", "infrastructure", "transportation", "railway", "railroad", "metro", "airline", "aviation", "airport", "port", "shipping", "logistics", "freight", "supply chain", "construction", "engineering"]):
+        return "Critical Infrastructure"
+    # Legal
+    if any(k in all_text for k in ["law", "legal", "attorney", "advocate", "solicitor", "barrister", "counsel", "law firm", "legal services", "notary"]):
+        return "Legal Services"
+    # Manufacturing
+    if any(k in all_text for k in ["manufacturing", "factory", "industrial", "machinery", "equipment", "parts", "components", "assembly", "production", "metal", "steel", "automotive", "aerospace", "defense contractor", "chemical", "textile", "pharmaceutical"]):
+        return "Manufacturing"
+    # Retail / Hospitality
+    if any(k in all_text for k in ["retail", "store", "shop", "mall", "supermarket", "grocery", "restaurant", "hotel", "hospitality", "resort", "casino", "gaming", "entertainment", "theater", "cinema", "amusement", "tourism", "travel agency"]):
+        return "Retail & Hospitality"
+    # Real Estate / Construction
+    if any(k in all_text for k in ["real estate", "property", "realty", "realtor", "brokerage", "construction", "contractor", "builder", "developer", "architecture", "architect", "engineering firm", "surveying"]):
+        return "Real Estate & Construction"
+    # Media / Professional Services
+    if any(k in all_text for k in ["media", "publishing", "broadcast", "news", "journalism", "newspaper", "magazine", "radio", "television", "advertising", "marketing", "pr ", "public relations", "consulting", "advisory", "management", "outsourcing", "staffing", "recruitment", "headhunter", "professional services"]):
+        return "Professional Services"
+    # Agriculture
+    if any(k in all_text for k in ["agriculture", "farming", "farm", "food processing", "beverage", "dairy", "livestock", "seed", "fertilizer", "agritech"]):
+        return "Agriculture"
+    # Non-profit
+    if any(k in all_text for k in ["charity", "nonprofit", "non-profit", "ngo", "foundation", "religious", "church", "mosque", "synagogue", "temple", "faith", "community services", "social services", "humanitarian", "relief"]):
+        return "Non-Profit"
+    # Automotive
+    if any(k in all_text for k in ["automotive", "auto dealer", "car dealership", "vehicle", "motor", "tire", "repair", "mechanic", "collision", "auto parts", "dealership"]):
+        return "Automotive"
+    # Consulting / Services
+    if any(k in all_text for k in ["consulting", "consultancy", "advisory", "professional services", "outsourcing", "staffing", "recruitment", "headhunter", "project consulting", "management consulting", "business consulting"]):
+        return "Professional Services"
+    # Energy / Oil & Gas
+    if any(k in all_text for k in ["oil", "petroleum", "energy", "gas", "refinery", "pipeline", " Aramco", " Shell", " Chevron", " Exxon", " BP ", " Lukoil", " petro", " drill", " upstream", " downstream", " oilfield"]):
+        return "Energy"
+    # Food & Beverage
+    if any(k in all_text for k in ["food", "beverage", "restaurant", "cafe", "coffee", "dining", "catering", "brewery", "winery", "distillery", "meat", "seafood", "poultry", "dairy"]):
+        return "Food & Beverage"
+    # Furniture / Office
+    if any(k in all_text for k in ["furniture", "office", "furnishings", "interior", "design", "decor"]):
+        return "Furniture & Office"
+    # Fashion / Apparel
+    if any(k in all_text for k in ["fashion", "apparel", "clothing", "garment", "textile", "shoes", "footwear", "luxury", "boutique", "jewelry", "watch", "accessories"]):
+        return "Fashion & Apparel"
+    # Insurance
+    if any(k in all_text for k in ["insurance", "insurer", "reinsurance", "underwriting", "assurance"]):
+        return "Insurance"
+    # Telecommunications
+    if any(k in all_text for k in ["telecom", "wireless", "mobile", "cellular", "isp", "broadband", "satellite communications", "network provider"]):
+        return "Telecommunications"
+    # Aviation / Aerospace
+    if any(k in all_text for k in ["aviation", "airline", "airways", "air cargo", "aerospace", "airport", "air force", "flight", "pilot", "jet", "aircraft", "pilatus", "emery air", "sky", "aerodrome"]):
+        return "Aviation & Aerospace"
+    # Security / Cybersecurity
+    if any(k in all_text for k in ["security", "cybersecurity", "cyber defense", "infosec", "security solution", "security services", "protect", "defense"]):
+        return "Security & Cybersecurity"
+    # Cleaning / Facilities
+    if any(k in all_text for k in ["cleaning", "clean", "janitorial", "facilities", "maintenance", "hvac", "plumbing", "electrical contractor", "mechanical contractor"]):
+        return "Facilities Management"
+    # Printing / Graphics
+    if any(k in all_text for k in ["printing", "print", "graphics", "signage", "signs", "banner", "promotional", "branding"]):
+        return "Printing & Graphics"
+    # Environmental / Waste
+    if any(k in all_text for k in ["environmental", "waste management", "recycling", "wastewater", "pollution", "remediation", "hazardous"]):
+        return "Environmental Services"
+    # Dental / Medical Supplies
+    if any(k in all_text for k in ["dental", "optical", "vision", "eyecare", "lens", "optometry", "ophthalmology"]):
+        return "Healthcare"
+    # HVAC / Building Systems
+    if any(k in all_text for k in ["hvac", "heating", "ventilation", "air conditioning", "refrigeration", "cold chain", "mechanical"]):
+        return "Building Systems"
+    # Procurement / Trading
+    if any(k in all_text for k in ["trading", "trader", "commodities", "exporter", "importer", "supply", "procurement", "distributor"]):
+        return "Trading & Distribution"
+    # Research / Lab Testing
+    if any(k in all_text for k in ["research", "laboratory", "testing", "lab ", "lab.", "analytical", "qc ", "quality control", "r&d"]):
+        return "Research & Testing"
+    # Parking / Transportation Services
+    if any(k in all_text for k in ["parking", "transportation", "transit", "shuttle", "bus", "metro", "railway", "railroad"]):
+        return "Transportation"
+    # Architecture / Interior Design
+    if any(k in all_text for k in ["architecture", "architect", "interior design", "interior", "space planning", "fit-out"]):
+        return "Real Estate & Construction"
+    # Music / Audio / Events
+    if any(k in all_text for k in ["music", "audio", "sound", "recording", "studio", "event", "concerts", "ticketing"]):
+        return "Entertainment & Arts"
+    # Sports / Fitness / Recreation
+    if any(k in all_text for k in ["fitness", "gym", "sports", "athletic", "recreation", "club", "wellness", "spa"]):
+        return "Sports & Recreation"
+    # Hotels / Resorts / Hospitality
+    if any(k in all_text for k in ["hotel", "resort", "inn", "suites", "hospitality", "lodge", "motel", "accommodation"]):
+        return "Retail & Hospitality"
+    # Film / Photography / Media Production
+    if any(k in all_text for k in ["film", "photography", "photo", "camera", "production company", "post-production"]):
+        return "Entertainment & Arts"
+    # Agriculture / Forestry
+    if any(k in all_text for k in ["forestry", "timber", "wood", "paper", "pulp", "logging"]):
+        return "Agriculture & Forestry"
+    # Parking / Auto Services
+    if any(k in all_text for k in ["collision", "auto body", "body shop", "tire", "tires", "mechanic", "auto repair", "automotive"]):
+        return "Automotive"
+    # Mining / Resources
+    if any(k in all_text for k in ["mining", "minerals", "extraction", "quarry", "aggregates", "cement", "limestone", "gold", "copper", "coal", "oilfield", "petro"]):
+        return "Mining & Resources"
+    # Marine / Nautical
+    if any(k in all_text for k in ["marine", "naval", "ship", "yacht", "vessel", "port", "harbor", "maritime", "boat", "sailing", "ferry", "coast guard"]):
+        return "Marine & Maritime"
+    # Veterinary / Animal
+    if any(k in all_text for k in ["veterinary", "vet ", "clinic", "animal", "pet ", "zoo", "equine", "livestock", "breed", "horse", "cattle"]):
+        return "Veterinary & Animal Services"
+    # Surveying / Engineering
+    if any(k in all_text for k in ["surveying", "surveyor", "geomatics", "geospatial", "cartography", "mapping"]):
+        return "Surveying & Engineering"
+    # Dance / Entertainment / Arts
+    if any(k in all_text for k in ["dance", "ballet", "theater", "theatre", "performing arts", "cinema", "film", "production", "studio", "media", "entertainment", "event", "venue", "amphitheater"]):
+        return "Entertainment & Arts"
+    # Accounting / Bookkeeping
+    if any(k in all_text for k in ["accounting", "accountant", "bookkeeping", "cpa", "tax preparation", "payroll", "audit"]):
+        return "Accounting & Bookkeeping"
+    # HR / Workforce
+    if any(k in all_text for k in ["human resources", "hr ", "workforce", "people operations", "talent", "labor", "employment"]):
+        return "Human Resources"
+    return ""
+
 def region_name(code):
     MAP = {
         "US":"United States","GB":"United Kingdom","DE":"Germany","FR":"France",
@@ -219,17 +378,35 @@ def build_country_page(country_code, victims, total_count):
         name = v["company_name"] or "Unknown"
         v_slug = slugify(name)
         v_url = f"{TRACKER_URL}/victim/{v_slug}.html"
-        actor = v["threat_actor"] or "Unknown"
+        sector = v["sector"] or infer_sector(name)
         disc = (v["disclosure_date"] or "")[:10] if v["disclosure_date"] else "Unknown"
-        sector = v["sector"] or ""
         items.append(
             f'      <li class="victim-list-item">'
             f'<a href="{v_url}" class="victim-name">{esc(name)}</a>'
-            f'<span class="victim-meta">{esc(actor)} — {disc}</span>'
+            f'<span class="victim-meta">{esc(sector)} — {disc}</span>'
             f'</li>'
         )
     items_str = "\n".join(items)
     count = len(victims)
+
+    # Sector breakdown
+    sectors = {}
+    for v in victims:
+        s = v["sector"] or "Unknown"
+        sectors[s] = sectors.get(s, 0) + 1
+    sector_bars = []
+    if sectors:
+        top_sectors = sorted(sectors.items(), key=lambda x: -x[1])[:5]
+        for s, c in top_sectors:
+            pct = int(c / count * 100)
+            sector_bars.append(
+                f'        <div class="sector-bar">'
+                f'<span class="sector-name">{esc(s)}</span>'
+                f'<div class="sector-track"><div class="sector-fill" style="width:{pct}%"></div></div>'
+                f'<span class="sector-count">{c}</span>'
+                f'</div>'
+            )
+    sector_html = "<div class='sector-breakdown'><h3>Top Sectors</h3>\n" + "\n".join(sector_bars) + "\n      </div>" if sector_bars else ""
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -281,6 +458,7 @@ def build_country_page(country_code, victims, total_count):
 
 <div class="container">
   <div class="section">
+{sector_html}
     <h2 class="section-title">All Victims in {esc(country_name)}</h2>
     <ul class="victim-list">
 {items_str}
