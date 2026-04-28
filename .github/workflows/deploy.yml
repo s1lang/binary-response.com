@@ -20,6 +20,7 @@ jobs:
           SFTP_PASSWORD: ${{ secrets.IONOS_SFTP_PASSWORD }}
         run: |
           # Pre-accept the SFTP host key to avoid StrictHostKeyChecking prompts
+          mkdir -p ~/.ssh
           ssh-keyscan -H access-5019920255.webspace-host.com >> ~/.ssh/known_hosts 2>/dev/null
 
           cat > /tmp/deploy_lftp.txt << 'LFTPEOF'
